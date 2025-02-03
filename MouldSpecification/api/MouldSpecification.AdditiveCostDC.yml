@@ -1,0 +1,868 @@
+### YamlMime:ManagedReference
+items:
+- uid: MouldSpecification.AdditiveCostDC
+  commentId: T:MouldSpecification.AdditiveCostDC
+  id: AdditiveCostDC
+  parent: MouldSpecification
+  children:
+  - MouldSpecification.AdditiveCostDC.#ctor
+  - MouldSpecification.AdditiveCostDC.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Decimal,System.String,System.String,System.String,System.DateTime)
+  - MouldSpecification.AdditiveCostDC.Additive
+  - MouldSpecification.AdditiveCostDC.AdditiveCode
+  - MouldSpecification.AdditiveCostDC.AdditiveID
+  - MouldSpecification.AdditiveCostDC.Comment
+  - MouldSpecification.AdditiveCostDC.CostPerKg
+  - MouldSpecification.AdditiveCostDC.Description
+  - MouldSpecification.AdditiveCostDC.last_updated_by
+  - MouldSpecification.AdditiveCostDC.last_updated_on
+  - MouldSpecification.AdditiveCostDC.Supplier
+  - MouldSpecification.AdditiveCostDC.Type
+  langs:
+  - csharp
+  - vb
+  name: AdditiveCostDC
+  nameWithType: AdditiveCostDC
+  fullName: MouldSpecification.AdditiveCostDC
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/AdditiveCostDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: AdditiveCostDC
+    path: AdditiveCostDC.cs
+    startLine: 4
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public class AdditiveCostDC
+    content.vb: Public Class AdditiveCostDC
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MouldSpecification.AdditiveCostDC.AdditiveID
+  commentId: P:MouldSpecification.AdditiveCostDC.AdditiveID
+  id: AdditiveID
+  parent: MouldSpecification.AdditiveCostDC
+  langs:
+  - csharp
+  - vb
+  name: AdditiveID
+  nameWithType: AdditiveCostDC.AdditiveID
+  fullName: MouldSpecification.AdditiveCostDC.AdditiveID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/AdditiveCostDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: AdditiveID
+    path: AdditiveCostDC.cs
+    startLine: 6
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int AdditiveID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property AdditiveID As Integer
+  overload: MouldSpecification.AdditiveCostDC.AdditiveID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.AdditiveCostDC.Additive
+  commentId: P:MouldSpecification.AdditiveCostDC.Additive
+  id: Additive
+  parent: MouldSpecification.AdditiveCostDC
+  langs:
+  - csharp
+  - vb
+  name: Additive
+  nameWithType: AdditiveCostDC.Additive
+  fullName: MouldSpecification.AdditiveCostDC.Additive
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/AdditiveCostDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Additive
+    path: AdditiveCostDC.cs
+    startLine: 7
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string Additive { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Additive As String
+  overload: MouldSpecification.AdditiveCostDC.Additive*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.AdditiveCostDC.AdditiveCode
+  commentId: P:MouldSpecification.AdditiveCostDC.AdditiveCode
+  id: AdditiveCode
+  parent: MouldSpecification.AdditiveCostDC
+  langs:
+  - csharp
+  - vb
+  name: AdditiveCode
+  nameWithType: AdditiveCostDC.AdditiveCode
+  fullName: MouldSpecification.AdditiveCostDC.AdditiveCode
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/AdditiveCostDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: AdditiveCode
+    path: AdditiveCostDC.cs
+    startLine: 8
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string AdditiveCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AdditiveCode As String
+  overload: MouldSpecification.AdditiveCostDC.AdditiveCode*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.AdditiveCostDC.Type
+  commentId: P:MouldSpecification.AdditiveCostDC.Type
+  id: Type
+  parent: MouldSpecification.AdditiveCostDC
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: AdditiveCostDC.Type
+  fullName: MouldSpecification.AdditiveCostDC.Type
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/AdditiveCostDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Type
+    path: AdditiveCostDC.cs
+    startLine: 9
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string Type { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Type As String
+  overload: MouldSpecification.AdditiveCostDC.Type*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.AdditiveCostDC.Description
+  commentId: P:MouldSpecification.AdditiveCostDC.Description
+  id: Description
+  parent: MouldSpecification.AdditiveCostDC
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: AdditiveCostDC.Description
+  fullName: MouldSpecification.AdditiveCostDC.Description
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/AdditiveCostDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Description
+    path: AdditiveCostDC.cs
+    startLine: 10
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: MouldSpecification.AdditiveCostDC.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.AdditiveCostDC.CostPerKg
+  commentId: P:MouldSpecification.AdditiveCostDC.CostPerKg
+  id: CostPerKg
+  parent: MouldSpecification.AdditiveCostDC
+  langs:
+  - csharp
+  - vb
+  name: CostPerKg
+  nameWithType: AdditiveCostDC.CostPerKg
+  fullName: MouldSpecification.AdditiveCostDC.CostPerKg
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/AdditiveCostDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CostPerKg
+    path: AdditiveCostDC.cs
+    startLine: 11
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public decimal CostPerKg { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property CostPerKg As Decimal
+  overload: MouldSpecification.AdditiveCostDC.CostPerKg*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.AdditiveCostDC.Comment
+  commentId: P:MouldSpecification.AdditiveCostDC.Comment
+  id: Comment
+  parent: MouldSpecification.AdditiveCostDC
+  langs:
+  - csharp
+  - vb
+  name: Comment
+  nameWithType: AdditiveCostDC.Comment
+  fullName: MouldSpecification.AdditiveCostDC.Comment
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/AdditiveCostDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Comment
+    path: AdditiveCostDC.cs
+    startLine: 12
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string Comment { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Comment As String
+  overload: MouldSpecification.AdditiveCostDC.Comment*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.AdditiveCostDC.Supplier
+  commentId: P:MouldSpecification.AdditiveCostDC.Supplier
+  id: Supplier
+  parent: MouldSpecification.AdditiveCostDC
+  langs:
+  - csharp
+  - vb
+  name: Supplier
+  nameWithType: AdditiveCostDC.Supplier
+  fullName: MouldSpecification.AdditiveCostDC.Supplier
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/AdditiveCostDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Supplier
+    path: AdditiveCostDC.cs
+    startLine: 13
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string Supplier { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Supplier As String
+  overload: MouldSpecification.AdditiveCostDC.Supplier*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.AdditiveCostDC.last_updated_by
+  commentId: P:MouldSpecification.AdditiveCostDC.last_updated_by
+  id: last_updated_by
+  parent: MouldSpecification.AdditiveCostDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_by
+  nameWithType: AdditiveCostDC.last_updated_by
+  fullName: MouldSpecification.AdditiveCostDC.last_updated_by
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/AdditiveCostDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_by
+    path: AdditiveCostDC.cs
+    startLine: 14
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string last_updated_by { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property last_updated_by As String
+  overload: MouldSpecification.AdditiveCostDC.last_updated_by*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.AdditiveCostDC.last_updated_on
+  commentId: P:MouldSpecification.AdditiveCostDC.last_updated_on
+  id: last_updated_on
+  parent: MouldSpecification.AdditiveCostDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_on
+  nameWithType: AdditiveCostDC.last_updated_on
+  fullName: MouldSpecification.AdditiveCostDC.last_updated_on
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/AdditiveCostDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_on
+    path: AdditiveCostDC.cs
+    startLine: 15
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public DateTime last_updated_on { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property last_updated_on As Date
+  overload: MouldSpecification.AdditiveCostDC.last_updated_on*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.AdditiveCostDC.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Decimal,System.String,System.String,System.String,System.DateTime)
+  commentId: M:MouldSpecification.AdditiveCostDC.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Decimal,System.String,System.String,System.String,System.DateTime)
+  id: '#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Decimal,System.String,System.String,System.String,System.DateTime)'
+  parent: MouldSpecification.AdditiveCostDC
+  langs:
+  - csharp
+  - vb
+  name: AdditiveCostDC(Int32, String, String, String, String, Decimal, String, String, String, DateTime)
+  nameWithType: AdditiveCostDC.AdditiveCostDC(Int32, String, String, String, String, Decimal, String, String, String, DateTime)
+  fullName: MouldSpecification.AdditiveCostDC.AdditiveCostDC(System.Int32, System.String, System.String, System.String, System.String, System.Decimal, System.String, System.String, System.String, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/AdditiveCostDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: AdditiveCostDC.cs
+    startLine: 17
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public AdditiveCostDC(int AdditiveID_, string Additive_, string AdditiveCode_, string Type_, string Description_, decimal CostPerKg_, string Comment_, string Supplier_, string last_updated_by_, DateTime last_updated_on_)
+    parameters:
+    - id: AdditiveID_
+      type: System.Int32
+    - id: Additive_
+      type: System.String
+    - id: AdditiveCode_
+      type: System.String
+    - id: Type_
+      type: System.String
+    - id: Description_
+      type: System.String
+    - id: CostPerKg_
+      type: System.Decimal
+    - id: Comment_
+      type: System.String
+    - id: Supplier_
+      type: System.String
+    - id: last_updated_by_
+      type: System.String
+    - id: last_updated_on_
+      type: System.DateTime
+    content.vb: Public Sub New(AdditiveID_ As Integer, Additive_ As String, AdditiveCode_ As String, Type_ As String, Description_ As String, CostPerKg_ As Decimal, Comment_ As String, Supplier_ As String, last_updated_by_ As String, last_updated_on_ As Date)
+  overload: MouldSpecification.AdditiveCostDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.AdditiveCostDC.#ctor
+  commentId: M:MouldSpecification.AdditiveCostDC.#ctor
+  id: '#ctor'
+  parent: MouldSpecification.AdditiveCostDC
+  langs:
+  - csharp
+  - vb
+  name: AdditiveCostDC()
+  nameWithType: AdditiveCostDC.AdditiveCostDC()
+  fullName: MouldSpecification.AdditiveCostDC.AdditiveCostDC()
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/AdditiveCostDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: AdditiveCostDC.cs
+    startLine: 31
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public AdditiveCostDC()
+    content.vb: Public Sub New
+  overload: MouldSpecification.AdditiveCostDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MouldSpecification
+  commentId: N:MouldSpecification
+  name: MouldSpecification
+  nameWithType: MouldSpecification
+  fullName: MouldSpecification
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MouldSpecification.AdditiveCostDC.AdditiveID*
+  commentId: Overload:MouldSpecification.AdditiveCostDC.AdditiveID
+  name: AdditiveID
+  nameWithType: AdditiveCostDC.AdditiveID
+  fullName: MouldSpecification.AdditiveCostDC.AdditiveID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MouldSpecification.AdditiveCostDC.Additive*
+  commentId: Overload:MouldSpecification.AdditiveCostDC.Additive
+  name: Additive
+  nameWithType: AdditiveCostDC.Additive
+  fullName: MouldSpecification.AdditiveCostDC.Additive
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MouldSpecification.AdditiveCostDC.AdditiveCode*
+  commentId: Overload:MouldSpecification.AdditiveCostDC.AdditiveCode
+  name: AdditiveCode
+  nameWithType: AdditiveCostDC.AdditiveCode
+  fullName: MouldSpecification.AdditiveCostDC.AdditiveCode
+- uid: MouldSpecification.AdditiveCostDC.Type*
+  commentId: Overload:MouldSpecification.AdditiveCostDC.Type
+  name: Type
+  nameWithType: AdditiveCostDC.Type
+  fullName: MouldSpecification.AdditiveCostDC.Type
+- uid: MouldSpecification.AdditiveCostDC.Description*
+  commentId: Overload:MouldSpecification.AdditiveCostDC.Description
+  name: Description
+  nameWithType: AdditiveCostDC.Description
+  fullName: MouldSpecification.AdditiveCostDC.Description
+- uid: MouldSpecification.AdditiveCostDC.CostPerKg*
+  commentId: Overload:MouldSpecification.AdditiveCostDC.CostPerKg
+  name: CostPerKg
+  nameWithType: AdditiveCostDC.CostPerKg
+  fullName: MouldSpecification.AdditiveCostDC.CostPerKg
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: MouldSpecification.AdditiveCostDC.Comment*
+  commentId: Overload:MouldSpecification.AdditiveCostDC.Comment
+  name: Comment
+  nameWithType: AdditiveCostDC.Comment
+  fullName: MouldSpecification.AdditiveCostDC.Comment
+- uid: MouldSpecification.AdditiveCostDC.Supplier*
+  commentId: Overload:MouldSpecification.AdditiveCostDC.Supplier
+  name: Supplier
+  nameWithType: AdditiveCostDC.Supplier
+  fullName: MouldSpecification.AdditiveCostDC.Supplier
+- uid: MouldSpecification.AdditiveCostDC.last_updated_by*
+  commentId: Overload:MouldSpecification.AdditiveCostDC.last_updated_by
+  name: last_updated_by
+  nameWithType: AdditiveCostDC.last_updated_by
+  fullName: MouldSpecification.AdditiveCostDC.last_updated_by
+- uid: MouldSpecification.AdditiveCostDC.last_updated_on*
+  commentId: Overload:MouldSpecification.AdditiveCostDC.last_updated_on
+  name: last_updated_on
+  nameWithType: AdditiveCostDC.last_updated_on
+  fullName: MouldSpecification.AdditiveCostDC.last_updated_on
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: MouldSpecification.AdditiveCostDC.#ctor*
+  commentId: Overload:MouldSpecification.AdditiveCostDC.#ctor
+  name: AdditiveCostDC
+  nameWithType: AdditiveCostDC.AdditiveCostDC
+  fullName: MouldSpecification.AdditiveCostDC.AdditiveCostDC

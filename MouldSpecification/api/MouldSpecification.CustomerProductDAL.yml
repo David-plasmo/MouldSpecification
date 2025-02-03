@@ -1,0 +1,1918 @@
+### YamlMime:ManagedReference
+items:
+- uid: MouldSpecification.CustomerProductDAL
+  commentId: T:MouldSpecification.CustomerProductDAL
+  id: CustomerProductDAL
+  parent: MouldSpecification
+  children:
+  - MouldSpecification.CustomerProductDAL.AddCustomerProduct(MouldSpecification.CustomerProductDC)
+  - MouldSpecification.CustomerProductDAL.DeleteCustomerProduct(MouldSpecification.CustomerProductDC)
+  - MouldSpecification.CustomerProductDAL.UpdateCustomerProduct(System.Data.DataSet,System.String)
+  langs:
+  - csharp
+  - vb
+  name: CustomerProductDAL
+  nameWithType: CustomerProductDAL
+  fullName: MouldSpecification.CustomerProductDAL
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/CustomerProductDAL.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CustomerProductDAL
+    path: CustomerProductDAL.cs
+    startLine: 9
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: 'public class CustomerProductDAL : DataAccessBase'
+    content.vb: >-
+      Public Class CustomerProductDAL
+          Inherits DataAccessBase
+  inheritance:
+  - System.Object
+  - DataService.DataAccessBase
+  inheritedMembers:
+  - DataService.DataAccessBase.GetConnectionString
+  - DataService.DataAccessBase.GetConnectionString(System.String)
+  - DataService.DataAccessBase.BeginTransaction
+  - DataService.DataAccessBase.ExecuteDataSet(System.String,System.Data.IDataParameter[])
+  - DataService.DataAccessBase.ExecuteDataSet(System.Data.SqlClient.SqlCommand@,System.String,System.Data.IDataParameter[])
+  - DataService.DataAccessBase.ExecuteNonQuery(System.String,System.Data.IDataParameter[])
+  - DataService.DataAccessBase.ExecuteNonQuery(System.Data.SqlClient.SqlCommand@,System.String,System.Data.IDataParameter[])
+  - DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object)
+  - DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Data.ParameterDirection)
+  - DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Data.ParameterDirection)
+  - DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32)
+  - DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Data.ParameterDirection)
+  - DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Byte)
+  - DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Byte,System.Data.ParameterDirection)
+  - DataService.DataAccessBase.GetGuid(System.Object)
+  - DataService.DataAccessBase.CheckParamValue(System.String)
+  - DataService.DataAccessBase.CheckParamValue(System.Guid)
+  - DataService.DataAccessBase.CheckParamValue(System.DateTime)
+  - DataService.DataAccessBase.CheckParamValue(System.Double)
+  - DataService.DataAccessBase.CheckParamValue(System.Single)
+  - DataService.DataAccessBase.CheckParamValue(System.Decimal)
+  - DataService.DataAccessBase.CheckParamValue(System.Int32)
+  - DataService.DataAccessBase.Txn
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MouldSpecification.CustomerProductDAL.UpdateCustomerProduct(System.Data.DataSet,System.String)
+  commentId: M:MouldSpecification.CustomerProductDAL.UpdateCustomerProduct(System.Data.DataSet,System.String)
+  id: UpdateCustomerProduct(System.Data.DataSet,System.String)
+  parent: MouldSpecification.CustomerProductDAL
+  langs:
+  - csharp
+  - vb
+  name: UpdateCustomerProduct(DataSet, String)
+  nameWithType: CustomerProductDAL.UpdateCustomerProduct(DataSet, String)
+  fullName: MouldSpecification.CustomerProductDAL.UpdateCustomerProduct(System.Data.DataSet, System.String)
+  type: Method
+  source:
+    remote:
+      path: MouldSpecification/CustomerProductDAL.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: UpdateCustomerProduct
+    path: CustomerProductDAL.cs
+    startLine: 12
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public void UpdateCustomerProduct(DataSet ds, string tableName)
+    parameters:
+    - id: ds
+      type: System.Data.DataSet
+    - id: tableName
+      type: System.String
+    content.vb: Public Sub UpdateCustomerProduct(ds As DataSet, tableName As String)
+  overload: MouldSpecification.CustomerProductDAL.UpdateCustomerProduct*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerProductDAL.AddCustomerProduct(MouldSpecification.CustomerProductDC)
+  commentId: M:MouldSpecification.CustomerProductDAL.AddCustomerProduct(MouldSpecification.CustomerProductDC)
+  id: AddCustomerProduct(MouldSpecification.CustomerProductDC)
+  parent: MouldSpecification.CustomerProductDAL
+  langs:
+  - csharp
+  - vb
+  name: AddCustomerProduct(CustomerProductDC)
+  nameWithType: CustomerProductDAL.AddCustomerProduct(CustomerProductDC)
+  fullName: MouldSpecification.CustomerProductDAL.AddCustomerProduct(MouldSpecification.CustomerProductDC)
+  type: Method
+  source:
+    remote:
+      path: MouldSpecification/CustomerProductDAL.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: AddCustomerProduct
+    path: CustomerProductDAL.cs
+    startLine: 65
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public static void AddCustomerProduct(CustomerProductDC dc)
+    parameters:
+    - id: dc
+      type: MouldSpecification.CustomerProductDC
+    content.vb: Public Shared Sub AddCustomerProduct(dc As CustomerProductDC)
+  overload: MouldSpecification.CustomerProductDAL.AddCustomerProduct*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: MouldSpecification.CustomerProductDAL.DeleteCustomerProduct(MouldSpecification.CustomerProductDC)
+  commentId: M:MouldSpecification.CustomerProductDAL.DeleteCustomerProduct(MouldSpecification.CustomerProductDC)
+  id: DeleteCustomerProduct(MouldSpecification.CustomerProductDC)
+  parent: MouldSpecification.CustomerProductDAL
+  langs:
+  - csharp
+  - vb
+  name: DeleteCustomerProduct(CustomerProductDC)
+  nameWithType: CustomerProductDAL.DeleteCustomerProduct(CustomerProductDC)
+  fullName: MouldSpecification.CustomerProductDAL.DeleteCustomerProduct(MouldSpecification.CustomerProductDC)
+  type: Method
+  source:
+    remote:
+      path: MouldSpecification/CustomerProductDAL.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: DeleteCustomerProduct
+    path: CustomerProductDAL.cs
+    startLine: 92
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public static void DeleteCustomerProduct(CustomerProductDC dc)
+    parameters:
+    - id: dc
+      type: MouldSpecification.CustomerProductDC
+    content.vb: Public Shared Sub DeleteCustomerProduct(dc As CustomerProductDC)
+  overload: MouldSpecification.CustomerProductDAL.DeleteCustomerProduct*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: MouldSpecification
+  commentId: N:MouldSpecification
+  name: MouldSpecification
+  nameWithType: MouldSpecification
+  fullName: MouldSpecification
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: DataService.DataAccessBase
+  commentId: T:DataService.DataAccessBase
+  parent: DataService
+  isExternal: true
+  name: DataAccessBase
+  nameWithType: DataAccessBase
+  fullName: DataService.DataAccessBase
+- uid: DataService.DataAccessBase.GetConnectionString
+  commentId: M:DataService.DataAccessBase.GetConnectionString
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: GetConnectionString()
+  nameWithType: DataAccessBase.GetConnectionString()
+  fullName: DataService.DataAccessBase.GetConnectionString()
+  spec.csharp:
+  - uid: DataService.DataAccessBase.GetConnectionString
+    name: GetConnectionString
+    nameWithType: DataAccessBase.GetConnectionString
+    fullName: DataService.DataAccessBase.GetConnectionString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.GetConnectionString
+    name: GetConnectionString
+    nameWithType: DataAccessBase.GetConnectionString
+    fullName: DataService.DataAccessBase.GetConnectionString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.GetConnectionString(System.String)
+  commentId: M:DataService.DataAccessBase.GetConnectionString(System.String)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: GetConnectionString(String)
+  nameWithType: DataAccessBase.GetConnectionString(String)
+  fullName: DataService.DataAccessBase.GetConnectionString(System.String)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.GetConnectionString(System.String)
+    name: GetConnectionString
+    nameWithType: DataAccessBase.GetConnectionString
+    fullName: DataService.DataAccessBase.GetConnectionString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.GetConnectionString(System.String)
+    name: GetConnectionString
+    nameWithType: DataAccessBase.GetConnectionString
+    fullName: DataService.DataAccessBase.GetConnectionString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.BeginTransaction
+  commentId: M:DataService.DataAccessBase.BeginTransaction
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: BeginTransaction()
+  nameWithType: DataAccessBase.BeginTransaction()
+  fullName: DataService.DataAccessBase.BeginTransaction()
+  spec.csharp:
+  - uid: DataService.DataAccessBase.BeginTransaction
+    name: BeginTransaction
+    nameWithType: DataAccessBase.BeginTransaction
+    fullName: DataService.DataAccessBase.BeginTransaction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.BeginTransaction
+    name: BeginTransaction
+    nameWithType: DataAccessBase.BeginTransaction
+    fullName: DataService.DataAccessBase.BeginTransaction
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.ExecuteDataSet(System.String,System.Data.IDataParameter[])
+  commentId: M:DataService.DataAccessBase.ExecuteDataSet(System.String,System.Data.IDataParameter[])
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: ExecuteDataSet(String, IDataParameter[])
+  nameWithType: DataAccessBase.ExecuteDataSet(String, IDataParameter[])
+  fullName: DataService.DataAccessBase.ExecuteDataSet(System.String, System.Data.IDataParameter[])
+  nameWithType.vb: DataAccessBase.ExecuteDataSet(String, IDataParameter())
+  fullName.vb: DataService.DataAccessBase.ExecuteDataSet(System.String, System.Data.IDataParameter())
+  name.vb: ExecuteDataSet(String, IDataParameter())
+  spec.csharp:
+  - uid: DataService.DataAccessBase.ExecuteDataSet(System.String,System.Data.IDataParameter[])
+    name: ExecuteDataSet
+    nameWithType: DataAccessBase.ExecuteDataSet
+    fullName: DataService.DataAccessBase.ExecuteDataSet
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.IDataParameter
+    name: IDataParameter
+    nameWithType: IDataParameter
+    fullName: System.Data.IDataParameter
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.ExecuteDataSet(System.String,System.Data.IDataParameter[])
+    name: ExecuteDataSet
+    nameWithType: DataAccessBase.ExecuteDataSet
+    fullName: DataService.DataAccessBase.ExecuteDataSet
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.IDataParameter
+    name: IDataParameter
+    nameWithType: IDataParameter
+    fullName: System.Data.IDataParameter
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.ExecuteDataSet(System.Data.SqlClient.SqlCommand@,System.String,System.Data.IDataParameter[])
+  commentId: M:DataService.DataAccessBase.ExecuteDataSet(System.Data.SqlClient.SqlCommand@,System.String,System.Data.IDataParameter[])
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: ExecuteDataSet(SqlCommand, String, IDataParameter[])
+  nameWithType: DataAccessBase.ExecuteDataSet(SqlCommand, String, IDataParameter[])
+  fullName: DataService.DataAccessBase.ExecuteDataSet(System.Data.SqlClient.SqlCommand, System.String, System.Data.IDataParameter[])
+  nameWithType.vb: DataAccessBase.ExecuteDataSet(SqlCommand, String, IDataParameter())
+  fullName.vb: DataService.DataAccessBase.ExecuteDataSet(System.Data.SqlClient.SqlCommand, System.String, System.Data.IDataParameter())
+  name.vb: ExecuteDataSet(SqlCommand, String, IDataParameter())
+  spec.csharp:
+  - uid: DataService.DataAccessBase.ExecuteDataSet(System.Data.SqlClient.SqlCommand@,System.String,System.Data.IDataParameter[])
+    name: ExecuteDataSet
+    nameWithType: DataAccessBase.ExecuteDataSet
+    fullName: DataService.DataAccessBase.ExecuteDataSet
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.SqlClient.SqlCommand
+    name: SqlCommand
+    nameWithType: SqlCommand
+    fullName: System.Data.SqlClient.SqlCommand
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.IDataParameter
+    name: IDataParameter
+    nameWithType: IDataParameter
+    fullName: System.Data.IDataParameter
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.ExecuteDataSet(System.Data.SqlClient.SqlCommand@,System.String,System.Data.IDataParameter[])
+    name: ExecuteDataSet
+    nameWithType: DataAccessBase.ExecuteDataSet
+    fullName: DataService.DataAccessBase.ExecuteDataSet
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.SqlClient.SqlCommand
+    name: SqlCommand
+    nameWithType: SqlCommand
+    fullName: System.Data.SqlClient.SqlCommand
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.IDataParameter
+    name: IDataParameter
+    nameWithType: IDataParameter
+    fullName: System.Data.IDataParameter
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.ExecuteNonQuery(System.String,System.Data.IDataParameter[])
+  commentId: M:DataService.DataAccessBase.ExecuteNonQuery(System.String,System.Data.IDataParameter[])
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: ExecuteNonQuery(String, IDataParameter[])
+  nameWithType: DataAccessBase.ExecuteNonQuery(String, IDataParameter[])
+  fullName: DataService.DataAccessBase.ExecuteNonQuery(System.String, System.Data.IDataParameter[])
+  nameWithType.vb: DataAccessBase.ExecuteNonQuery(String, IDataParameter())
+  fullName.vb: DataService.DataAccessBase.ExecuteNonQuery(System.String, System.Data.IDataParameter())
+  name.vb: ExecuteNonQuery(String, IDataParameter())
+  spec.csharp:
+  - uid: DataService.DataAccessBase.ExecuteNonQuery(System.String,System.Data.IDataParameter[])
+    name: ExecuteNonQuery
+    nameWithType: DataAccessBase.ExecuteNonQuery
+    fullName: DataService.DataAccessBase.ExecuteNonQuery
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.IDataParameter
+    name: IDataParameter
+    nameWithType: IDataParameter
+    fullName: System.Data.IDataParameter
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.ExecuteNonQuery(System.String,System.Data.IDataParameter[])
+    name: ExecuteNonQuery
+    nameWithType: DataAccessBase.ExecuteNonQuery
+    fullName: DataService.DataAccessBase.ExecuteNonQuery
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.IDataParameter
+    name: IDataParameter
+    nameWithType: IDataParameter
+    fullName: System.Data.IDataParameter
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.ExecuteNonQuery(System.Data.SqlClient.SqlCommand@,System.String,System.Data.IDataParameter[])
+  commentId: M:DataService.DataAccessBase.ExecuteNonQuery(System.Data.SqlClient.SqlCommand@,System.String,System.Data.IDataParameter[])
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: ExecuteNonQuery(SqlCommand, String, IDataParameter[])
+  nameWithType: DataAccessBase.ExecuteNonQuery(SqlCommand, String, IDataParameter[])
+  fullName: DataService.DataAccessBase.ExecuteNonQuery(System.Data.SqlClient.SqlCommand, System.String, System.Data.IDataParameter[])
+  nameWithType.vb: DataAccessBase.ExecuteNonQuery(SqlCommand, String, IDataParameter())
+  fullName.vb: DataService.DataAccessBase.ExecuteNonQuery(System.Data.SqlClient.SqlCommand, System.String, System.Data.IDataParameter())
+  name.vb: ExecuteNonQuery(SqlCommand, String, IDataParameter())
+  spec.csharp:
+  - uid: DataService.DataAccessBase.ExecuteNonQuery(System.Data.SqlClient.SqlCommand@,System.String,System.Data.IDataParameter[])
+    name: ExecuteNonQuery
+    nameWithType: DataAccessBase.ExecuteNonQuery
+    fullName: DataService.DataAccessBase.ExecuteNonQuery
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.SqlClient.SqlCommand
+    name: SqlCommand
+    nameWithType: SqlCommand
+    fullName: System.Data.SqlClient.SqlCommand
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.IDataParameter
+    name: IDataParameter
+    nameWithType: IDataParameter
+    fullName: System.Data.IDataParameter
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.ExecuteNonQuery(System.Data.SqlClient.SqlCommand@,System.String,System.Data.IDataParameter[])
+    name: ExecuteNonQuery
+    nameWithType: DataAccessBase.ExecuteNonQuery
+    fullName: DataService.DataAccessBase.ExecuteNonQuery
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Data.SqlClient.SqlCommand
+    name: SqlCommand
+    nameWithType: SqlCommand
+    fullName: System.Data.SqlClient.SqlCommand
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.IDataParameter
+    name: IDataParameter
+    nameWithType: IDataParameter
+    fullName: System.Data.IDataParameter
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object)
+  commentId: M:DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: CreateParameter(String, SqlDbType, Object)
+  nameWithType: DataAccessBase.CreateParameter(String, SqlDbType, Object)
+  fullName: DataService.DataAccessBase.CreateParameter(System.String, System.Data.SqlDbType, System.Object)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object)
+    name: CreateParameter
+    nameWithType: DataAccessBase.CreateParameter
+    fullName: DataService.DataAccessBase.CreateParameter
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.SqlDbType
+    name: SqlDbType
+    nameWithType: SqlDbType
+    fullName: System.Data.SqlDbType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object)
+    name: CreateParameter
+    nameWithType: DataAccessBase.CreateParameter
+    fullName: DataService.DataAccessBase.CreateParameter
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.SqlDbType
+    name: SqlDbType
+    nameWithType: SqlDbType
+    fullName: System.Data.SqlDbType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Data.ParameterDirection)
+  commentId: M:DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Data.ParameterDirection)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: CreateParameter(String, SqlDbType, ParameterDirection)
+  nameWithType: DataAccessBase.CreateParameter(String, SqlDbType, ParameterDirection)
+  fullName: DataService.DataAccessBase.CreateParameter(System.String, System.Data.SqlDbType, System.Data.ParameterDirection)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Data.ParameterDirection)
+    name: CreateParameter
+    nameWithType: DataAccessBase.CreateParameter
+    fullName: DataService.DataAccessBase.CreateParameter
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.SqlDbType
+    name: SqlDbType
+    nameWithType: SqlDbType
+    fullName: System.Data.SqlDbType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.ParameterDirection
+    name: ParameterDirection
+    nameWithType: ParameterDirection
+    fullName: System.Data.ParameterDirection
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Data.ParameterDirection)
+    name: CreateParameter
+    nameWithType: DataAccessBase.CreateParameter
+    fullName: DataService.DataAccessBase.CreateParameter
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.SqlDbType
+    name: SqlDbType
+    nameWithType: SqlDbType
+    fullName: System.Data.SqlDbType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.ParameterDirection
+    name: ParameterDirection
+    nameWithType: ParameterDirection
+    fullName: System.Data.ParameterDirection
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Data.ParameterDirection)
+  commentId: M:DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Data.ParameterDirection)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: CreateParameter(String, SqlDbType, Object, ParameterDirection)
+  nameWithType: DataAccessBase.CreateParameter(String, SqlDbType, Object, ParameterDirection)
+  fullName: DataService.DataAccessBase.CreateParameter(System.String, System.Data.SqlDbType, System.Object, System.Data.ParameterDirection)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Data.ParameterDirection)
+    name: CreateParameter
+    nameWithType: DataAccessBase.CreateParameter
+    fullName: DataService.DataAccessBase.CreateParameter
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.SqlDbType
+    name: SqlDbType
+    nameWithType: SqlDbType
+    fullName: System.Data.SqlDbType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.ParameterDirection
+    name: ParameterDirection
+    nameWithType: ParameterDirection
+    fullName: System.Data.ParameterDirection
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Data.ParameterDirection)
+    name: CreateParameter
+    nameWithType: DataAccessBase.CreateParameter
+    fullName: DataService.DataAccessBase.CreateParameter
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.SqlDbType
+    name: SqlDbType
+    nameWithType: SqlDbType
+    fullName: System.Data.SqlDbType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.ParameterDirection
+    name: ParameterDirection
+    nameWithType: ParameterDirection
+    fullName: System.Data.ParameterDirection
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32)
+  commentId: M:DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: CreateParameter(String, SqlDbType, Object, Int32)
+  nameWithType: DataAccessBase.CreateParameter(String, SqlDbType, Object, Int32)
+  fullName: DataService.DataAccessBase.CreateParameter(System.String, System.Data.SqlDbType, System.Object, System.Int32)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32)
+    name: CreateParameter
+    nameWithType: DataAccessBase.CreateParameter
+    fullName: DataService.DataAccessBase.CreateParameter
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.SqlDbType
+    name: SqlDbType
+    nameWithType: SqlDbType
+    fullName: System.Data.SqlDbType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32)
+    name: CreateParameter
+    nameWithType: DataAccessBase.CreateParameter
+    fullName: DataService.DataAccessBase.CreateParameter
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.SqlDbType
+    name: SqlDbType
+    nameWithType: SqlDbType
+    fullName: System.Data.SqlDbType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Data.ParameterDirection)
+  commentId: M:DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Data.ParameterDirection)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: CreateParameter(String, SqlDbType, Object, Int32, ParameterDirection)
+  nameWithType: DataAccessBase.CreateParameter(String, SqlDbType, Object, Int32, ParameterDirection)
+  fullName: DataService.DataAccessBase.CreateParameter(System.String, System.Data.SqlDbType, System.Object, System.Int32, System.Data.ParameterDirection)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Data.ParameterDirection)
+    name: CreateParameter
+    nameWithType: DataAccessBase.CreateParameter
+    fullName: DataService.DataAccessBase.CreateParameter
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.SqlDbType
+    name: SqlDbType
+    nameWithType: SqlDbType
+    fullName: System.Data.SqlDbType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.ParameterDirection
+    name: ParameterDirection
+    nameWithType: ParameterDirection
+    fullName: System.Data.ParameterDirection
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Data.ParameterDirection)
+    name: CreateParameter
+    nameWithType: DataAccessBase.CreateParameter
+    fullName: DataService.DataAccessBase.CreateParameter
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.SqlDbType
+    name: SqlDbType
+    nameWithType: SqlDbType
+    fullName: System.Data.SqlDbType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.ParameterDirection
+    name: ParameterDirection
+    nameWithType: ParameterDirection
+    fullName: System.Data.ParameterDirection
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Byte)
+  commentId: M:DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Byte)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: CreateParameter(String, SqlDbType, Object, Int32, Byte)
+  nameWithType: DataAccessBase.CreateParameter(String, SqlDbType, Object, Int32, Byte)
+  fullName: DataService.DataAccessBase.CreateParameter(System.String, System.Data.SqlDbType, System.Object, System.Int32, System.Byte)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Byte)
+    name: CreateParameter
+    nameWithType: DataAccessBase.CreateParameter
+    fullName: DataService.DataAccessBase.CreateParameter
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.SqlDbType
+    name: SqlDbType
+    nameWithType: SqlDbType
+    fullName: System.Data.SqlDbType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Byte)
+    name: CreateParameter
+    nameWithType: DataAccessBase.CreateParameter
+    fullName: DataService.DataAccessBase.CreateParameter
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.SqlDbType
+    name: SqlDbType
+    nameWithType: SqlDbType
+    fullName: System.Data.SqlDbType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Byte,System.Data.ParameterDirection)
+  commentId: M:DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Byte,System.Data.ParameterDirection)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: CreateParameter(String, SqlDbType, Object, Int32, Byte, ParameterDirection)
+  nameWithType: DataAccessBase.CreateParameter(String, SqlDbType, Object, Int32, Byte, ParameterDirection)
+  fullName: DataService.DataAccessBase.CreateParameter(System.String, System.Data.SqlDbType, System.Object, System.Int32, System.Byte, System.Data.ParameterDirection)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Byte,System.Data.ParameterDirection)
+    name: CreateParameter
+    nameWithType: DataAccessBase.CreateParameter
+    fullName: DataService.DataAccessBase.CreateParameter
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.SqlDbType
+    name: SqlDbType
+    nameWithType: SqlDbType
+    fullName: System.Data.SqlDbType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.ParameterDirection
+    name: ParameterDirection
+    nameWithType: ParameterDirection
+    fullName: System.Data.ParameterDirection
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.CreateParameter(System.String,System.Data.SqlDbType,System.Object,System.Int32,System.Byte,System.Data.ParameterDirection)
+    name: CreateParameter
+    nameWithType: DataAccessBase.CreateParameter
+    fullName: DataService.DataAccessBase.CreateParameter
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.SqlDbType
+    name: SqlDbType
+    nameWithType: SqlDbType
+    fullName: System.Data.SqlDbType
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Data.ParameterDirection
+    name: ParameterDirection
+    nameWithType: ParameterDirection
+    fullName: System.Data.ParameterDirection
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.GetGuid(System.Object)
+  commentId: M:DataService.DataAccessBase.GetGuid(System.Object)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: GetGuid(Object)
+  nameWithType: DataAccessBase.GetGuid(Object)
+  fullName: DataService.DataAccessBase.GetGuid(System.Object)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.GetGuid(System.Object)
+    name: GetGuid
+    nameWithType: DataAccessBase.GetGuid
+    fullName: DataService.DataAccessBase.GetGuid
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.GetGuid(System.Object)
+    name: GetGuid
+    nameWithType: DataAccessBase.GetGuid
+    fullName: DataService.DataAccessBase.GetGuid
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.CheckParamValue(System.String)
+  commentId: M:DataService.DataAccessBase.CheckParamValue(System.String)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: CheckParamValue(String)
+  nameWithType: DataAccessBase.CheckParamValue(String)
+  fullName: DataService.DataAccessBase.CheckParamValue(System.String)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.CheckParamValue(System.String)
+    name: CheckParamValue
+    nameWithType: DataAccessBase.CheckParamValue
+    fullName: DataService.DataAccessBase.CheckParamValue
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.CheckParamValue(System.String)
+    name: CheckParamValue
+    nameWithType: DataAccessBase.CheckParamValue
+    fullName: DataService.DataAccessBase.CheckParamValue
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.CheckParamValue(System.Guid)
+  commentId: M:DataService.DataAccessBase.CheckParamValue(System.Guid)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: CheckParamValue(Guid)
+  nameWithType: DataAccessBase.CheckParamValue(Guid)
+  fullName: DataService.DataAccessBase.CheckParamValue(System.Guid)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.CheckParamValue(System.Guid)
+    name: CheckParamValue
+    nameWithType: DataAccessBase.CheckParamValue
+    fullName: DataService.DataAccessBase.CheckParamValue
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.CheckParamValue(System.Guid)
+    name: CheckParamValue
+    nameWithType: DataAccessBase.CheckParamValue
+    fullName: DataService.DataAccessBase.CheckParamValue
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: System.Guid
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.CheckParamValue(System.DateTime)
+  commentId: M:DataService.DataAccessBase.CheckParamValue(System.DateTime)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: CheckParamValue(DateTime)
+  nameWithType: DataAccessBase.CheckParamValue(DateTime)
+  fullName: DataService.DataAccessBase.CheckParamValue(System.DateTime)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.CheckParamValue(System.DateTime)
+    name: CheckParamValue
+    nameWithType: DataAccessBase.CheckParamValue
+    fullName: DataService.DataAccessBase.CheckParamValue
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.CheckParamValue(System.DateTime)
+    name: CheckParamValue
+    nameWithType: DataAccessBase.CheckParamValue
+    fullName: DataService.DataAccessBase.CheckParamValue
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.CheckParamValue(System.Double)
+  commentId: M:DataService.DataAccessBase.CheckParamValue(System.Double)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: CheckParamValue(Double)
+  nameWithType: DataAccessBase.CheckParamValue(Double)
+  fullName: DataService.DataAccessBase.CheckParamValue(System.Double)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.CheckParamValue(System.Double)
+    name: CheckParamValue
+    nameWithType: DataAccessBase.CheckParamValue
+    fullName: DataService.DataAccessBase.CheckParamValue
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.CheckParamValue(System.Double)
+    name: CheckParamValue
+    nameWithType: DataAccessBase.CheckParamValue
+    fullName: DataService.DataAccessBase.CheckParamValue
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.CheckParamValue(System.Single)
+  commentId: M:DataService.DataAccessBase.CheckParamValue(System.Single)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: CheckParamValue(Single)
+  nameWithType: DataAccessBase.CheckParamValue(Single)
+  fullName: DataService.DataAccessBase.CheckParamValue(System.Single)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.CheckParamValue(System.Single)
+    name: CheckParamValue
+    nameWithType: DataAccessBase.CheckParamValue
+    fullName: DataService.DataAccessBase.CheckParamValue
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.CheckParamValue(System.Single)
+    name: CheckParamValue
+    nameWithType: DataAccessBase.CheckParamValue
+    fullName: DataService.DataAccessBase.CheckParamValue
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.CheckParamValue(System.Decimal)
+  commentId: M:DataService.DataAccessBase.CheckParamValue(System.Decimal)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: CheckParamValue(Decimal)
+  nameWithType: DataAccessBase.CheckParamValue(Decimal)
+  fullName: DataService.DataAccessBase.CheckParamValue(System.Decimal)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.CheckParamValue(System.Decimal)
+    name: CheckParamValue
+    nameWithType: DataAccessBase.CheckParamValue
+    fullName: DataService.DataAccessBase.CheckParamValue
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.CheckParamValue(System.Decimal)
+    name: CheckParamValue
+    nameWithType: DataAccessBase.CheckParamValue
+    fullName: DataService.DataAccessBase.CheckParamValue
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.CheckParamValue(System.Int32)
+  commentId: M:DataService.DataAccessBase.CheckParamValue(System.Int32)
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: CheckParamValue(Int32)
+  nameWithType: DataAccessBase.CheckParamValue(Int32)
+  fullName: DataService.DataAccessBase.CheckParamValue(System.Int32)
+  spec.csharp:
+  - uid: DataService.DataAccessBase.CheckParamValue(System.Int32)
+    name: CheckParamValue
+    nameWithType: DataAccessBase.CheckParamValue
+    fullName: DataService.DataAccessBase.CheckParamValue
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: DataService.DataAccessBase.CheckParamValue(System.Int32)
+    name: CheckParamValue
+    nameWithType: DataAccessBase.CheckParamValue
+    fullName: DataService.DataAccessBase.CheckParamValue
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: DataService.DataAccessBase.Txn
+  commentId: P:DataService.DataAccessBase.Txn
+  parent: DataService.DataAccessBase
+  isExternal: true
+  name: Txn
+  nameWithType: DataAccessBase.Txn
+  fullName: DataService.DataAccessBase.Txn
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: DataService
+  commentId: N:DataService
+  name: DataService
+  nameWithType: DataService
+  fullName: DataService
+- uid: MouldSpecification.CustomerProductDAL.UpdateCustomerProduct*
+  commentId: Overload:MouldSpecification.CustomerProductDAL.UpdateCustomerProduct
+  name: UpdateCustomerProduct
+  nameWithType: CustomerProductDAL.UpdateCustomerProduct
+  fullName: MouldSpecification.CustomerProductDAL.UpdateCustomerProduct
+- uid: System.Data.DataSet
+  commentId: T:System.Data.DataSet
+  parent: System.Data
+  isExternal: true
+  name: DataSet
+  nameWithType: DataSet
+  fullName: System.Data.DataSet
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Data
+  commentId: N:System.Data
+  isExternal: true
+  name: System.Data
+  nameWithType: System.Data
+  fullName: System.Data
+- uid: MouldSpecification.CustomerProductDAL.AddCustomerProduct*
+  commentId: Overload:MouldSpecification.CustomerProductDAL.AddCustomerProduct
+  name: AddCustomerProduct
+  nameWithType: CustomerProductDAL.AddCustomerProduct
+  fullName: MouldSpecification.CustomerProductDAL.AddCustomerProduct
+- uid: MouldSpecification.CustomerProductDC
+  commentId: T:MouldSpecification.CustomerProductDC
+  parent: MouldSpecification
+  name: CustomerProductDC
+  nameWithType: CustomerProductDC
+  fullName: MouldSpecification.CustomerProductDC
+- uid: MouldSpecification.CustomerProductDAL.DeleteCustomerProduct*
+  commentId: Overload:MouldSpecification.CustomerProductDAL.DeleteCustomerProduct
+  name: DeleteCustomerProduct
+  nameWithType: CustomerProductDAL.DeleteCustomerProduct
+  fullName: MouldSpecification.CustomerProductDAL.DeleteCustomerProduct

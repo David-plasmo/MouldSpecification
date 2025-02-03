@@ -1,0 +1,1298 @@
+### YamlMime:ManagedReference
+items:
+- uid: MouldSpecification.IMSpecificationDC
+  commentId: T:MouldSpecification.IMSpecificationDC
+  id: IMSpecificationDC
+  parent: MouldSpecification
+  children:
+  - MouldSpecification.IMSpecificationDC.#ctor
+  - MouldSpecification.IMSpecificationDC.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.Boolean,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.DateTime)
+  - MouldSpecification.IMSpecificationDC.AdditionalLabourReqd
+  - MouldSpecification.IMSpecificationDC.FamilyMould
+  - MouldSpecification.IMSpecificationDC.FixedHalf
+  - MouldSpecification.IMSpecificationDC.FixedHalfTemp
+  - MouldSpecification.IMSpecificationDC.ItemID
+  - MouldSpecification.IMSpecificationDC.last_updated_by
+  - MouldSpecification.IMSpecificationDC.last_updated_on
+  - MouldSpecification.IMSpecificationDC.MouldID
+  - MouldSpecification.IMSpecificationDC.MouldLocation
+  - MouldSpecification.IMSpecificationDC.MouldNumber
+  - MouldSpecification.IMSpecificationDC.MouldOwner
+  - MouldSpecification.IMSpecificationDC.MovingHalf
+  - MouldSpecification.IMSpecificationDC.MovingHalfTemp
+  - MouldSpecification.IMSpecificationDC.NoOfCavities
+  - MouldSpecification.IMSpecificationDC.NoOfPart
+  - MouldSpecification.IMSpecificationDC.Operation
+  - MouldSpecification.IMSpecificationDC.OtherFeatures
+  - MouldSpecification.IMSpecificationDC.PartSummary
+  - MouldSpecification.IMSpecificationDC.PostMouldReq
+  - MouldSpecification.IMSpecificationDC.PremouldReq
+  langs:
+  - csharp
+  - vb
+  name: IMSpecificationDC
+  nameWithType: IMSpecificationDC
+  fullName: MouldSpecification.IMSpecificationDC
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: IMSpecificationDC
+    path: IMSpecificationDC.cs
+    startLine: 4
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public class IMSpecificationDC
+    content.vb: Public Class IMSpecificationDC
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MouldSpecification.IMSpecificationDC.MouldID
+  commentId: P:MouldSpecification.IMSpecificationDC.MouldID
+  id: MouldID
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: MouldID
+  nameWithType: IMSpecificationDC.MouldID
+  fullName: MouldSpecification.IMSpecificationDC.MouldID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MouldID
+    path: IMSpecificationDC.cs
+    startLine: 6
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int MouldID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MouldID As Integer
+  overload: MouldSpecification.IMSpecificationDC.MouldID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.ItemID
+  commentId: P:MouldSpecification.IMSpecificationDC.ItemID
+  id: ItemID
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: ItemID
+  nameWithType: IMSpecificationDC.ItemID
+  fullName: MouldSpecification.IMSpecificationDC.ItemID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ItemID
+    path: IMSpecificationDC.cs
+    startLine: 7
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int ItemID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ItemID As Integer
+  overload: MouldSpecification.IMSpecificationDC.ItemID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.MouldNumber
+  commentId: P:MouldSpecification.IMSpecificationDC.MouldNumber
+  id: MouldNumber
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: MouldNumber
+  nameWithType: IMSpecificationDC.MouldNumber
+  fullName: MouldSpecification.IMSpecificationDC.MouldNumber
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MouldNumber
+    path: IMSpecificationDC.cs
+    startLine: 8
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string MouldNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MouldNumber As String
+  overload: MouldSpecification.IMSpecificationDC.MouldNumber*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.MouldLocation
+  commentId: P:MouldSpecification.IMSpecificationDC.MouldLocation
+  id: MouldLocation
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: MouldLocation
+  nameWithType: IMSpecificationDC.MouldLocation
+  fullName: MouldSpecification.IMSpecificationDC.MouldLocation
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MouldLocation
+    path: IMSpecificationDC.cs
+    startLine: 9
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string MouldLocation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MouldLocation As String
+  overload: MouldSpecification.IMSpecificationDC.MouldLocation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.MouldOwner
+  commentId: P:MouldSpecification.IMSpecificationDC.MouldOwner
+  id: MouldOwner
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: MouldOwner
+  nameWithType: IMSpecificationDC.MouldOwner
+  fullName: MouldSpecification.IMSpecificationDC.MouldOwner
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MouldOwner
+    path: IMSpecificationDC.cs
+    startLine: 10
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string MouldOwner { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MouldOwner As String
+  overload: MouldSpecification.IMSpecificationDC.MouldOwner*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.FamilyMould
+  commentId: P:MouldSpecification.IMSpecificationDC.FamilyMould
+  id: FamilyMould
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: FamilyMould
+  nameWithType: IMSpecificationDC.FamilyMould
+  fullName: MouldSpecification.IMSpecificationDC.FamilyMould
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: FamilyMould
+    path: IMSpecificationDC.cs
+    startLine: 11
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public bool FamilyMould { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property FamilyMould As Boolean
+  overload: MouldSpecification.IMSpecificationDC.FamilyMould*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.NoOfCavities
+  commentId: P:MouldSpecification.IMSpecificationDC.NoOfCavities
+  id: NoOfCavities
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: NoOfCavities
+  nameWithType: IMSpecificationDC.NoOfCavities
+  fullName: MouldSpecification.IMSpecificationDC.NoOfCavities
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: NoOfCavities
+    path: IMSpecificationDC.cs
+    startLine: 12
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int NoOfCavities { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NoOfCavities As Integer
+  overload: MouldSpecification.IMSpecificationDC.NoOfCavities*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.NoOfPart
+  commentId: P:MouldSpecification.IMSpecificationDC.NoOfPart
+  id: NoOfPart
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: NoOfPart
+  nameWithType: IMSpecificationDC.NoOfPart
+  fullName: MouldSpecification.IMSpecificationDC.NoOfPart
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: NoOfPart
+    path: IMSpecificationDC.cs
+    startLine: 13
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int NoOfPart { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property NoOfPart As Integer
+  overload: MouldSpecification.IMSpecificationDC.NoOfPart*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.PartSummary
+  commentId: P:MouldSpecification.IMSpecificationDC.PartSummary
+  id: PartSummary
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: PartSummary
+  nameWithType: IMSpecificationDC.PartSummary
+  fullName: MouldSpecification.IMSpecificationDC.PartSummary
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PartSummary
+    path: IMSpecificationDC.cs
+    startLine: 14
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string PartSummary { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PartSummary As String
+  overload: MouldSpecification.IMSpecificationDC.PartSummary*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.Operation
+  commentId: P:MouldSpecification.IMSpecificationDC.Operation
+  id: Operation
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: Operation
+  nameWithType: IMSpecificationDC.Operation
+  fullName: MouldSpecification.IMSpecificationDC.Operation
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Operation
+    path: IMSpecificationDC.cs
+    startLine: 15
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string Operation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Operation As String
+  overload: MouldSpecification.IMSpecificationDC.Operation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.OtherFeatures
+  commentId: P:MouldSpecification.IMSpecificationDC.OtherFeatures
+  id: OtherFeatures
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: OtherFeatures
+  nameWithType: IMSpecificationDC.OtherFeatures
+  fullName: MouldSpecification.IMSpecificationDC.OtherFeatures
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: OtherFeatures
+    path: IMSpecificationDC.cs
+    startLine: 16
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string OtherFeatures { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OtherFeatures As String
+  overload: MouldSpecification.IMSpecificationDC.OtherFeatures*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.FixedHalf
+  commentId: P:MouldSpecification.IMSpecificationDC.FixedHalf
+  id: FixedHalf
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: FixedHalf
+  nameWithType: IMSpecificationDC.FixedHalf
+  fullName: MouldSpecification.IMSpecificationDC.FixedHalf
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: FixedHalf
+    path: IMSpecificationDC.cs
+    startLine: 17
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string FixedHalf { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FixedHalf As String
+  overload: MouldSpecification.IMSpecificationDC.FixedHalf*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.FixedHalfTemp
+  commentId: P:MouldSpecification.IMSpecificationDC.FixedHalfTemp
+  id: FixedHalfTemp
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: FixedHalfTemp
+  nameWithType: IMSpecificationDC.FixedHalfTemp
+  fullName: MouldSpecification.IMSpecificationDC.FixedHalfTemp
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: FixedHalfTemp
+    path: IMSpecificationDC.cs
+    startLine: 18
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string FixedHalfTemp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FixedHalfTemp As String
+  overload: MouldSpecification.IMSpecificationDC.FixedHalfTemp*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.MovingHalf
+  commentId: P:MouldSpecification.IMSpecificationDC.MovingHalf
+  id: MovingHalf
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: MovingHalf
+  nameWithType: IMSpecificationDC.MovingHalf
+  fullName: MouldSpecification.IMSpecificationDC.MovingHalf
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MovingHalf
+    path: IMSpecificationDC.cs
+    startLine: 19
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string MovingHalf { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MovingHalf As String
+  overload: MouldSpecification.IMSpecificationDC.MovingHalf*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.MovingHalfTemp
+  commentId: P:MouldSpecification.IMSpecificationDC.MovingHalfTemp
+  id: MovingHalfTemp
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: MovingHalfTemp
+  nameWithType: IMSpecificationDC.MovingHalfTemp
+  fullName: MouldSpecification.IMSpecificationDC.MovingHalfTemp
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MovingHalfTemp
+    path: IMSpecificationDC.cs
+    startLine: 20
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string MovingHalfTemp { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MovingHalfTemp As String
+  overload: MouldSpecification.IMSpecificationDC.MovingHalfTemp*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.PremouldReq
+  commentId: P:MouldSpecification.IMSpecificationDC.PremouldReq
+  id: PremouldReq
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: PremouldReq
+  nameWithType: IMSpecificationDC.PremouldReq
+  fullName: MouldSpecification.IMSpecificationDC.PremouldReq
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PremouldReq
+    path: IMSpecificationDC.cs
+    startLine: 21
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string PremouldReq { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PremouldReq As String
+  overload: MouldSpecification.IMSpecificationDC.PremouldReq*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.PostMouldReq
+  commentId: P:MouldSpecification.IMSpecificationDC.PostMouldReq
+  id: PostMouldReq
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: PostMouldReq
+  nameWithType: IMSpecificationDC.PostMouldReq
+  fullName: MouldSpecification.IMSpecificationDC.PostMouldReq
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PostMouldReq
+    path: IMSpecificationDC.cs
+    startLine: 22
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string PostMouldReq { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PostMouldReq As String
+  overload: MouldSpecification.IMSpecificationDC.PostMouldReq*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.AdditionalLabourReqd
+  commentId: P:MouldSpecification.IMSpecificationDC.AdditionalLabourReqd
+  id: AdditionalLabourReqd
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: AdditionalLabourReqd
+  nameWithType: IMSpecificationDC.AdditionalLabourReqd
+  fullName: MouldSpecification.IMSpecificationDC.AdditionalLabourReqd
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: AdditionalLabourReqd
+    path: IMSpecificationDC.cs
+    startLine: 23
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public bool AdditionalLabourReqd { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AdditionalLabourReqd As Boolean
+  overload: MouldSpecification.IMSpecificationDC.AdditionalLabourReqd*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.last_updated_by
+  commentId: P:MouldSpecification.IMSpecificationDC.last_updated_by
+  id: last_updated_by
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_by
+  nameWithType: IMSpecificationDC.last_updated_by
+  fullName: MouldSpecification.IMSpecificationDC.last_updated_by
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_by
+    path: IMSpecificationDC.cs
+    startLine: 24
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string last_updated_by { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property last_updated_by As String
+  overload: MouldSpecification.IMSpecificationDC.last_updated_by*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.last_updated_on
+  commentId: P:MouldSpecification.IMSpecificationDC.last_updated_on
+  id: last_updated_on
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_on
+  nameWithType: IMSpecificationDC.last_updated_on
+  fullName: MouldSpecification.IMSpecificationDC.last_updated_on
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_on
+    path: IMSpecificationDC.cs
+    startLine: 25
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public DateTime last_updated_on { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property last_updated_on As Date
+  overload: MouldSpecification.IMSpecificationDC.last_updated_on*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.Boolean,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.DateTime)
+  commentId: M:MouldSpecification.IMSpecificationDC.#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.Boolean,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.DateTime)
+  id: '#ctor(System.Int32,System.Int32,System.String,System.String,System.String,System.Boolean,System.Int32,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.DateTime)'
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: IMSpecificationDC(Int32, Int32, String, String, String, Boolean, Int32, Int32, String, String, String, String, String, String, String, String, String, Boolean, String, DateTime)
+  nameWithType: IMSpecificationDC.IMSpecificationDC(Int32, Int32, String, String, String, Boolean, Int32, Int32, String, String, String, String, String, String, String, String, String, Boolean, String, DateTime)
+  fullName: MouldSpecification.IMSpecificationDC.IMSpecificationDC(System.Int32, System.Int32, System.String, System.String, System.String, System.Boolean, System.Int32, System.Int32, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.Boolean, System.String, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: IMSpecificationDC.cs
+    startLine: 27
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public IMSpecificationDC(int MouldID_, int ItemID_, string MouldNumber_, string MouldLocation_, string MouldOwner_, bool FamilyMould_, int NoOfCavities_, int NoOfPart_, string PartSummary_, string Operation_, string OtherFeatures_, string FixedHalf_, string FixedHalfTemp_, string MovingHalf_, string MovingHalfTemp_, string PremouldReq_, string PostMouldReq_, bool AdditionalLabourReqd_, string last_updated_by_, DateTime last_updated_on_)
+    parameters:
+    - id: MouldID_
+      type: System.Int32
+    - id: ItemID_
+      type: System.Int32
+    - id: MouldNumber_
+      type: System.String
+    - id: MouldLocation_
+      type: System.String
+    - id: MouldOwner_
+      type: System.String
+    - id: FamilyMould_
+      type: System.Boolean
+    - id: NoOfCavities_
+      type: System.Int32
+    - id: NoOfPart_
+      type: System.Int32
+    - id: PartSummary_
+      type: System.String
+    - id: Operation_
+      type: System.String
+    - id: OtherFeatures_
+      type: System.String
+    - id: FixedHalf_
+      type: System.String
+    - id: FixedHalfTemp_
+      type: System.String
+    - id: MovingHalf_
+      type: System.String
+    - id: MovingHalfTemp_
+      type: System.String
+    - id: PremouldReq_
+      type: System.String
+    - id: PostMouldReq_
+      type: System.String
+    - id: AdditionalLabourReqd_
+      type: System.Boolean
+    - id: last_updated_by_
+      type: System.String
+    - id: last_updated_on_
+      type: System.DateTime
+    content.vb: Public Sub New(MouldID_ As Integer, ItemID_ As Integer, MouldNumber_ As String, MouldLocation_ As String, MouldOwner_ As String, FamilyMould_ As Boolean, NoOfCavities_ As Integer, NoOfPart_ As Integer, PartSummary_ As String, Operation_ As String, OtherFeatures_ As String, FixedHalf_ As String, FixedHalfTemp_ As String, MovingHalf_ As String, MovingHalfTemp_ As String, PremouldReq_ As String, PostMouldReq_ As String, AdditionalLabourReqd_ As Boolean, last_updated_by_ As String, last_updated_on_ As Date)
+  overload: MouldSpecification.IMSpecificationDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.IMSpecificationDC.#ctor
+  commentId: M:MouldSpecification.IMSpecificationDC.#ctor
+  id: '#ctor'
+  parent: MouldSpecification.IMSpecificationDC
+  langs:
+  - csharp
+  - vb
+  name: IMSpecificationDC()
+  nameWithType: IMSpecificationDC.IMSpecificationDC()
+  fullName: MouldSpecification.IMSpecificationDC.IMSpecificationDC()
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/IMSpecificationDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: IMSpecificationDC.cs
+    startLine: 51
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public IMSpecificationDC()
+    content.vb: Public Sub New
+  overload: MouldSpecification.IMSpecificationDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MouldSpecification
+  commentId: N:MouldSpecification
+  name: MouldSpecification
+  nameWithType: MouldSpecification
+  fullName: MouldSpecification
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MouldSpecification.IMSpecificationDC.MouldID*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.MouldID
+  name: MouldID
+  nameWithType: IMSpecificationDC.MouldID
+  fullName: MouldSpecification.IMSpecificationDC.MouldID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MouldSpecification.IMSpecificationDC.ItemID*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.ItemID
+  name: ItemID
+  nameWithType: IMSpecificationDC.ItemID
+  fullName: MouldSpecification.IMSpecificationDC.ItemID
+- uid: MouldSpecification.IMSpecificationDC.MouldNumber*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.MouldNumber
+  name: MouldNumber
+  nameWithType: IMSpecificationDC.MouldNumber
+  fullName: MouldSpecification.IMSpecificationDC.MouldNumber
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MouldSpecification.IMSpecificationDC.MouldLocation*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.MouldLocation
+  name: MouldLocation
+  nameWithType: IMSpecificationDC.MouldLocation
+  fullName: MouldSpecification.IMSpecificationDC.MouldLocation
+- uid: MouldSpecification.IMSpecificationDC.MouldOwner*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.MouldOwner
+  name: MouldOwner
+  nameWithType: IMSpecificationDC.MouldOwner
+  fullName: MouldSpecification.IMSpecificationDC.MouldOwner
+- uid: MouldSpecification.IMSpecificationDC.FamilyMould*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.FamilyMould
+  name: FamilyMould
+  nameWithType: IMSpecificationDC.FamilyMould
+  fullName: MouldSpecification.IMSpecificationDC.FamilyMould
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: MouldSpecification.IMSpecificationDC.NoOfCavities*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.NoOfCavities
+  name: NoOfCavities
+  nameWithType: IMSpecificationDC.NoOfCavities
+  fullName: MouldSpecification.IMSpecificationDC.NoOfCavities
+- uid: MouldSpecification.IMSpecificationDC.NoOfPart*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.NoOfPart
+  name: NoOfPart
+  nameWithType: IMSpecificationDC.NoOfPart
+  fullName: MouldSpecification.IMSpecificationDC.NoOfPart
+- uid: MouldSpecification.IMSpecificationDC.PartSummary*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.PartSummary
+  name: PartSummary
+  nameWithType: IMSpecificationDC.PartSummary
+  fullName: MouldSpecification.IMSpecificationDC.PartSummary
+- uid: MouldSpecification.IMSpecificationDC.Operation*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.Operation
+  name: Operation
+  nameWithType: IMSpecificationDC.Operation
+  fullName: MouldSpecification.IMSpecificationDC.Operation
+- uid: MouldSpecification.IMSpecificationDC.OtherFeatures*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.OtherFeatures
+  name: OtherFeatures
+  nameWithType: IMSpecificationDC.OtherFeatures
+  fullName: MouldSpecification.IMSpecificationDC.OtherFeatures
+- uid: MouldSpecification.IMSpecificationDC.FixedHalf*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.FixedHalf
+  name: FixedHalf
+  nameWithType: IMSpecificationDC.FixedHalf
+  fullName: MouldSpecification.IMSpecificationDC.FixedHalf
+- uid: MouldSpecification.IMSpecificationDC.FixedHalfTemp*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.FixedHalfTemp
+  name: FixedHalfTemp
+  nameWithType: IMSpecificationDC.FixedHalfTemp
+  fullName: MouldSpecification.IMSpecificationDC.FixedHalfTemp
+- uid: MouldSpecification.IMSpecificationDC.MovingHalf*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.MovingHalf
+  name: MovingHalf
+  nameWithType: IMSpecificationDC.MovingHalf
+  fullName: MouldSpecification.IMSpecificationDC.MovingHalf
+- uid: MouldSpecification.IMSpecificationDC.MovingHalfTemp*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.MovingHalfTemp
+  name: MovingHalfTemp
+  nameWithType: IMSpecificationDC.MovingHalfTemp
+  fullName: MouldSpecification.IMSpecificationDC.MovingHalfTemp
+- uid: MouldSpecification.IMSpecificationDC.PremouldReq*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.PremouldReq
+  name: PremouldReq
+  nameWithType: IMSpecificationDC.PremouldReq
+  fullName: MouldSpecification.IMSpecificationDC.PremouldReq
+- uid: MouldSpecification.IMSpecificationDC.PostMouldReq*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.PostMouldReq
+  name: PostMouldReq
+  nameWithType: IMSpecificationDC.PostMouldReq
+  fullName: MouldSpecification.IMSpecificationDC.PostMouldReq
+- uid: MouldSpecification.IMSpecificationDC.AdditionalLabourReqd*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.AdditionalLabourReqd
+  name: AdditionalLabourReqd
+  nameWithType: IMSpecificationDC.AdditionalLabourReqd
+  fullName: MouldSpecification.IMSpecificationDC.AdditionalLabourReqd
+- uid: MouldSpecification.IMSpecificationDC.last_updated_by*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.last_updated_by
+  name: last_updated_by
+  nameWithType: IMSpecificationDC.last_updated_by
+  fullName: MouldSpecification.IMSpecificationDC.last_updated_by
+- uid: MouldSpecification.IMSpecificationDC.last_updated_on*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.last_updated_on
+  name: last_updated_on
+  nameWithType: IMSpecificationDC.last_updated_on
+  fullName: MouldSpecification.IMSpecificationDC.last_updated_on
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: MouldSpecification.IMSpecificationDC.#ctor*
+  commentId: Overload:MouldSpecification.IMSpecificationDC.#ctor
+  name: IMSpecificationDC
+  nameWithType: IMSpecificationDC.IMSpecificationDC
+  fullName: MouldSpecification.IMSpecificationDC.IMSpecificationDC

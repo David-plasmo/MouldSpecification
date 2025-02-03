@@ -1,0 +1,503 @@
+### YamlMime:ManagedReference
+items:
+- uid: MouldSpecification.CustomerProductDC
+  commentId: T:MouldSpecification.CustomerProductDC
+  id: CustomerProductDC
+  parent: MouldSpecification
+  children:
+  - MouldSpecification.CustomerProductDC.#ctor
+  - MouldSpecification.CustomerProductDC.#ctor(System.Int32,System.Int32)
+  - MouldSpecification.CustomerProductDC.CustomerID
+  - MouldSpecification.CustomerProductDC.ItemID
+  langs:
+  - csharp
+  - vb
+  name: CustomerProductDC
+  nameWithType: CustomerProductDC
+  fullName: MouldSpecification.CustomerProductDC
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/CustomerProductDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CustomerProductDC
+    path: CustomerProductDC.cs
+    startLine: 2
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public class CustomerProductDC
+    content.vb: Public Class CustomerProductDC
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MouldSpecification.CustomerProductDC.CustomerID
+  commentId: P:MouldSpecification.CustomerProductDC.CustomerID
+  id: CustomerID
+  parent: MouldSpecification.CustomerProductDC
+  langs:
+  - csharp
+  - vb
+  name: CustomerID
+  nameWithType: CustomerProductDC.CustomerID
+  fullName: MouldSpecification.CustomerProductDC.CustomerID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerProductDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CustomerID
+    path: CustomerProductDC.cs
+    startLine: 4
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int CustomerID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CustomerID As Integer
+  overload: MouldSpecification.CustomerProductDC.CustomerID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerProductDC.ItemID
+  commentId: P:MouldSpecification.CustomerProductDC.ItemID
+  id: ItemID
+  parent: MouldSpecification.CustomerProductDC
+  langs:
+  - csharp
+  - vb
+  name: ItemID
+  nameWithType: CustomerProductDC.ItemID
+  fullName: MouldSpecification.CustomerProductDC.ItemID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerProductDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ItemID
+    path: CustomerProductDC.cs
+    startLine: 5
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int ItemID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ItemID As Integer
+  overload: MouldSpecification.CustomerProductDC.ItemID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerProductDC.#ctor(System.Int32,System.Int32)
+  commentId: M:MouldSpecification.CustomerProductDC.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: MouldSpecification.CustomerProductDC
+  langs:
+  - csharp
+  - vb
+  name: CustomerProductDC(Int32, Int32)
+  nameWithType: CustomerProductDC.CustomerProductDC(Int32, Int32)
+  fullName: MouldSpecification.CustomerProductDC.CustomerProductDC(System.Int32, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/CustomerProductDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: CustomerProductDC.cs
+    startLine: 7
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public CustomerProductDC(int CustomerID_, int ItemID_)
+    parameters:
+    - id: CustomerID_
+      type: System.Int32
+    - id: ItemID_
+      type: System.Int32
+    content.vb: Public Sub New(CustomerID_ As Integer, ItemID_ As Integer)
+  overload: MouldSpecification.CustomerProductDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerProductDC.#ctor
+  commentId: M:MouldSpecification.CustomerProductDC.#ctor
+  id: '#ctor'
+  parent: MouldSpecification.CustomerProductDC
+  langs:
+  - csharp
+  - vb
+  name: CustomerProductDC()
+  nameWithType: CustomerProductDC.CustomerProductDC()
+  fullName: MouldSpecification.CustomerProductDC.CustomerProductDC()
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/CustomerProductDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: CustomerProductDC.cs
+    startLine: 13
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public CustomerProductDC()
+    content.vb: Public Sub New
+  overload: MouldSpecification.CustomerProductDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MouldSpecification
+  commentId: N:MouldSpecification
+  name: MouldSpecification
+  nameWithType: MouldSpecification
+  fullName: MouldSpecification
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MouldSpecification.CustomerProductDC.CustomerID*
+  commentId: Overload:MouldSpecification.CustomerProductDC.CustomerID
+  name: CustomerID
+  nameWithType: CustomerProductDC.CustomerID
+  fullName: MouldSpecification.CustomerProductDC.CustomerID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MouldSpecification.CustomerProductDC.ItemID*
+  commentId: Overload:MouldSpecification.CustomerProductDC.ItemID
+  name: ItemID
+  nameWithType: CustomerProductDC.ItemID
+  fullName: MouldSpecification.CustomerProductDC.ItemID
+- uid: MouldSpecification.CustomerProductDC.#ctor*
+  commentId: Overload:MouldSpecification.CustomerProductDC.#ctor
+  name: CustomerProductDC
+  nameWithType: CustomerProductDC.CustomerProductDC
+  fullName: MouldSpecification.CustomerProductDC.CustomerProductDC

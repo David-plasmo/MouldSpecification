@@ -1,0 +1,132 @@
+### YamlMime:TableOfContent
+- uid: DataService
+  name: DataService
+  items:
+  - uid: DataService.Constants
+    name: Constants
+- uid: MouldSpecification
+  name: MouldSpecification
+  items:
+  - uid: MouldSpecification.AdditiveCost
+    name: AdditiveCost
+  - uid: MouldSpecification.AdditiveCostDC
+    name: AdditiveCostDC
+  - uid: MouldSpecification.AssemblyInstructionDC
+    name: AssemblyInstructionDC
+  - uid: MouldSpecification.AttachedDocDC
+    name: AttachedDocDC
+  - uid: MouldSpecification.AttachedDocsDataEntry
+    name: AttachedDocsDataEntry
+  - uid: MouldSpecification.Customer
+    name: Customer
+  - uid: MouldSpecification.CustomerDC
+    name: CustomerDC
+  - uid: MouldSpecification.CustomerPriceQty
+    name: CustomerPriceQty
+  - uid: MouldSpecification.CustomerPriceQtyDC
+    name: CustomerPriceQtyDC
+  - uid: MouldSpecification.CustomerProductDAL
+    name: CustomerProductDAL
+  - uid: MouldSpecification.CustomerProductDC
+    name: CustomerProductDC
+  - uid: MouldSpecification.Extensions
+    name: Extensions
+  - uid: MouldSpecification.FixedCost
+    name: FixedCost
+  - uid: MouldSpecification.FixedCostDC
+    name: FixedCostDC
+  - uid: MouldSpecification.ImportAccessIM
+    name: ImportAccessIM
+  - uid: MouldSpecification.IMSpecification
+    name: IMSpecification
+  - uid: MouldSpecification.IMSpecificationDC
+    name: IMSpecificationDC
+  - uid: MouldSpecification.Machine
+    name: Machine
+  - uid: MouldSpecification.MachineDC
+    name: MachineDC
+  - uid: MouldSpecification.MachinePref
+    name: MachinePref
+  - uid: MouldSpecification.MachinePrefDAL
+    name: MachinePrefDAL
+  - uid: MouldSpecification.MachinePrefDC
+    name: MachinePrefDC
+  - uid: MouldSpecification.MainForm
+    name: MainForm
+  - uid: MouldSpecification.MainFormDAL
+    name: MainFormDAL
+  - uid: MouldSpecification.MainFormDC
+    name: MainFormDC
+  - uid: MouldSpecification.MasterBatch
+    name: MasterBatch
+  - uid: MouldSpecification.MasterBatchComp
+    name: MasterBatchComp
+  - uid: MouldSpecification.MasterBatchCompDC
+    name: MasterBatchCompDC
+  - uid: MouldSpecification.MasterBatchDC
+    name: MasterBatchDC
+  - uid: MouldSpecification.MaterialComp
+    name: MaterialComp
+  - uid: MouldSpecification.MaterialCompDC
+    name: MaterialCompDC
+  - uid: MouldSpecification.MaterialGradeCost
+    name: MaterialGradeCost
+  - uid: MouldSpecification.MaterialGradeDC
+    name: MaterialGradeDC
+  - uid: MouldSpecification.MaterialType
+    name: MaterialType
+  - uid: MouldSpecification.MaterialTypeDC
+    name: MaterialTypeDC
+  - uid: MouldSpecification.Packaging
+    name: Packaging
+  - uid: MouldSpecification.PackagingAttachment
+    name: PackagingAttachment
+  - uid: MouldSpecification.PackagingDataEntry
+    name: PackagingDataEntry
+  - uid: MouldSpecification.PackagingDC
+    name: PackagingDC
+  - uid: MouldSpecification.PackingImageDC
+    name: PackingImageDC
+  - uid: MouldSpecification.PackingInstructionDC
+    name: PackingInstructionDC
+  - uid: MouldSpecification.PicturePopup
+    name: PicturePopup
+  - uid: MouldSpecification.ProductDetails
+    name: ProductDetails
+  - uid: MouldSpecification.ProductDetailsDC
+    name: ProductDetailsDC
+  - uid: MouldSpecification.QCAttachments
+    name: QCAttachments
+  - uid: MouldSpecification.QCDataEntry
+    name: QCDataEntry
+  - uid: MouldSpecification.QCInstructionDC
+    name: QCInstructionDC
+  - uid: MouldSpecification.QualityControl
+    name: QualityControl
+  - uid: MouldSpecification.QualityControlDC
+    name: QualityControlDC
+  - uid: MouldSpecification.ReworkInstructionDC
+    name: ReworkInstructionDC
+  - uid: MouldSpecification.SpecificationDataEntry
+    name: SpecificationDataEntry
+  - uid: MouldSpecification.SpecificationDataEntryDAL
+    name: SpecificationDataEntryDAL
+- uid: ReportBuilder
+  name: ReportBuilder
+  items:
+  - uid: ReportBuilder.ReportDAL
+    name: ReportDAL
+- uid: Utils
+  name: Utils
+  items:
+  - uid: Utils.DrawingUtils
+    name: DrawingUtils
+  - uid: Utils.DrawingUtils.ButtonOp
+    name: DrawingUtils.ButtonOp
+  - uid: Utils.DrawingUtils.DeviceCap
+    name: DrawingUtils.DeviceCap
+- uid: WinformsUtils
+  name: WinformsUtils
+  items:
+  - uid: WinformsUtils.MultiColumnComboBox
+    name: MultiColumnComboBox

@@ -1,0 +1,1016 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class MainFormDAL
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class MainFormDAL
+   ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="MouldSpecification.MainFormDAL">
+  
+  
+  <h1 id="MouldSpecification_MainFormDAL" data-uid="MouldSpecification.MainFormDAL" class="text-break">Class MainFormDAL
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">DataService.DataAccessBase</span></div>
+    <div class="level2"><span class="xref">MainFormDAL</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">DataService.DataAccessBase.GetConnectionString()</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.GetConnectionString(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.BeginTransaction()</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.ExecuteDataSet(System.String, System.Data.IDataParameter[])</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.ExecuteDataSet(System.Data.SqlClient.SqlCommand, System.String, System.Data.IDataParameter[])</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.ExecuteNonQuery(System.String, System.Data.IDataParameter[])</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.ExecuteNonQuery(System.Data.SqlClient.SqlCommand, System.String, System.Data.IDataParameter[])</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.CreateParameter(System.String, System.Data.SqlDbType, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.CreateParameter(System.String, System.Data.SqlDbType, System.Data.ParameterDirection)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.CreateParameter(System.String, System.Data.SqlDbType, System.Object, System.Data.ParameterDirection)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.CreateParameter(System.String, System.Data.SqlDbType, System.Object, System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.CreateParameter(System.String, System.Data.SqlDbType, System.Object, System.Int32, System.Data.ParameterDirection)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.CreateParameter(System.String, System.Data.SqlDbType, System.Object, System.Int32, System.Byte)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.CreateParameter(System.String, System.Data.SqlDbType, System.Object, System.Int32, System.Byte, System.Data.ParameterDirection)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.GetGuid(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.CheckParamValue(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.CheckParamValue(System.Guid)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.CheckParamValue(System.DateTime)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.CheckParamValue(System.Double)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.CheckParamValue(System.Single)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.CheckParamValue(System.Decimal)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.CheckParamValue(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">DataService.DataAccessBase.Txn</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="MouldSpecification.html">MouldSpecification</a></h6>
+  <h6><strong>Assembly</strong>: MouldSpecification.dll</h6>
+  <h5 id="MouldSpecification_MainFormDAL_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class MainFormDAL : DataAccessBase</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_RowsAdded.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.RowsAdded%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L15">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_RowsAdded_" data-uid="MouldSpecification.MainFormDAL.RowsAdded*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_RowsAdded" data-uid="MouldSpecification.MainFormDAL.RowsAdded">RowsAdded</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RowsAdded { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_RowsUpdated.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.RowsUpdated%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L16">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_RowsUpdated_" data-uid="MouldSpecification.MainFormDAL.RowsUpdated*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_RowsUpdated" data-uid="MouldSpecification.MainFormDAL.RowsUpdated">RowsUpdated</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int RowsUpdated { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_GetAdditive123.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.GetAdditive123%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L546">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_GetAdditive123_" data-uid="MouldSpecification.MainFormDAL.GetAdditive123*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_GetAdditive123" data-uid="MouldSpecification.MainFormDAL.GetAdditive123">GetAdditive123()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataSet GetAdditive123()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_GetIMSpecificationCost_System_Int32_.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.GetIMSpecificationCost(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L489">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_GetIMSpecificationCost_" data-uid="MouldSpecification.MainFormDAL.GetIMSpecificationCost*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_GetIMSpecificationCost_System_Int32_" data-uid="MouldSpecification.MainFormDAL.GetIMSpecificationCost(System.Int32)">GetIMSpecificationCost(Int32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataSet GetIMSpecificationCost(int imID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">imID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_GetMB123.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.GetMB123%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L567">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_GetMB123_" data-uid="MouldSpecification.MainFormDAL.GetMB123*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_GetMB123" data-uid="MouldSpecification.MainFormDAL.GetMB123">GetMB123()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataSet GetMB123()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_ImportCustomer.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.ImportCustomer%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L304">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_ImportCustomer_" data-uid="MouldSpecification.MainFormDAL.ImportCustomer*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_ImportCustomer" data-uid="MouldSpecification.MainFormDAL.ImportCustomer">ImportCustomer()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ImportCustomer()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_ImportCustomerCosting.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.ImportCustomerCosting%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L337">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_ImportCustomerCosting_" data-uid="MouldSpecification.MainFormDAL.ImportCustomerCosting*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_ImportCustomerCosting" data-uid="MouldSpecification.MainFormDAL.ImportCustomerCosting">ImportCustomerCosting()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ImportCustomerCosting()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_ImportIMSpecification.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.ImportIMSpecification%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L370">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_ImportIMSpecification_" data-uid="MouldSpecification.MainFormDAL.ImportIMSpecification*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_ImportIMSpecification" data-uid="MouldSpecification.MainFormDAL.ImportIMSpecification">ImportIMSpecification()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ImportIMSpecification()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_ImportMachinePref.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.ImportMachinePref%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L235">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_ImportMachinePref_" data-uid="MouldSpecification.MainFormDAL.ImportMachinePref*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_ImportMachinePref" data-uid="MouldSpecification.MainFormDAL.ImportMachinePref">ImportMachinePref()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ImportMachinePref()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_ImportMasterBatchComp.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.ImportMasterBatchComp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L202">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_ImportMasterBatchComp_" data-uid="MouldSpecification.MainFormDAL.ImportMasterBatchComp*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_ImportMasterBatchComp" data-uid="MouldSpecification.MainFormDAL.ImportMasterBatchComp">ImportMasterBatchComp()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ImportMasterBatchComp()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_ImportMaterialComp.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.ImportMaterialComp%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L269">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_ImportMaterialComp_" data-uid="MouldSpecification.MainFormDAL.ImportMaterialComp*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_ImportMaterialComp" data-uid="MouldSpecification.MainFormDAL.ImportMaterialComp">ImportMaterialComp()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ImportMaterialComp()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_ImportPackaging.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.ImportPackaging%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L440">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_ImportPackaging_" data-uid="MouldSpecification.MainFormDAL.ImportPackaging*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_ImportPackaging" data-uid="MouldSpecification.MainFormDAL.ImportPackaging">ImportPackaging()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ImportPackaging()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_ImportQualityControl.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.ImportQualityControl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L406">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_ImportQualityControl_" data-uid="MouldSpecification.MainFormDAL.ImportQualityControl*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_ImportQualityControl" data-uid="MouldSpecification.MainFormDAL.ImportQualityControl">ImportQualityControl()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ImportQualityControl()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_SelectCustomerIndex.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.SelectCustomerIndex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L519">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_SelectCustomerIndex_" data-uid="MouldSpecification.MainFormDAL.SelectCustomerIndex*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_SelectCustomerIndex" data-uid="MouldSpecification.MainFormDAL.SelectCustomerIndex">SelectCustomerIndex()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataSet SelectCustomerIndex()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_SelectCustomerIndex_System_String_.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.SelectCustomerIndex(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L532">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_SelectCustomerIndex_" data-uid="MouldSpecification.MainFormDAL.SelectCustomerIndex*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_SelectCustomerIndex_System_String_" data-uid="MouldSpecification.MainFormDAL.SelectCustomerIndex(System.String)">SelectCustomerIndex(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataSet SelectCustomerIndex(string productType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">productType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_SelectItemByCustomer_System_Nullable_System_Int32__.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.SelectItemByCustomer(System.Nullable%7BSystem.Int32%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L474">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_SelectItemByCustomer_" data-uid="MouldSpecification.MainFormDAL.SelectItemByCustomer*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_SelectItemByCustomer_System_Nullable_System_Int32__" data-uid="MouldSpecification.MainFormDAL.SelectItemByCustomer(System.Nullable{System.Int32})">SelectItemByCustomer(Nullable&lt;Int32&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataSet SelectItemByCustomer(int? custID)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<span class="xref">System.Int32</span>&gt;</td>
+        <td><span class="parametername">custID</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_SelectItemClassByCompany_System_String_.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.SelectItemClassByCompany(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L601">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_SelectItemClassByCompany_" data-uid="MouldSpecification.MainFormDAL.SelectItemClassByCompany*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_SelectItemClassByCompany_System_String_" data-uid="MouldSpecification.MainFormDAL.SelectItemClassByCompany(System.String)">SelectItemClassByCompany(String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataSet SelectItemClassByCompany(string compCode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">compCode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_SelectMAN_ItemIndex.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.SelectMAN_ItemIndex%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L504">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_SelectMAN_ItemIndex_" data-uid="MouldSpecification.MainFormDAL.SelectMAN_ItemIndex*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_SelectMAN_ItemIndex" data-uid="MouldSpecification.MainFormDAL.SelectMAN_ItemIndex">SelectMAN_ItemIndex()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataSet SelectMAN_ItemIndex()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_SelectMaterial.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.SelectMaterial%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L588">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_SelectMaterial_" data-uid="MouldSpecification.MainFormDAL.SelectMaterial*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_SelectMaterial" data-uid="MouldSpecification.MainFormDAL.SelectMaterial">SelectMaterial()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DataSet SelectMaterial()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_UpdateAccessWorkTables.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.UpdateAccessWorkTables%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L18">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_UpdateAccessWorkTables_" data-uid="MouldSpecification.MainFormDAL.UpdateAccessWorkTables*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_UpdateAccessWorkTables" data-uid="MouldSpecification.MainFormDAL.UpdateAccessWorkTables">UpdateAccessWorkTables()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateAccessWorkTables()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_UpdateAdditiveComp_System_Data_DataSet_.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.UpdateAdditiveComp(System.Data.DataSet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L690">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_UpdateAdditiveComp_" data-uid="MouldSpecification.MainFormDAL.UpdateAdditiveComp*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_UpdateAdditiveComp_System_Data_DataSet_" data-uid="MouldSpecification.MainFormDAL.UpdateAdditiveComp(System.Data.DataSet)">UpdateAdditiveComp(DataSet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateAdditiveComp(DataSet ds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td><span class="parametername">ds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_UpdateAttachmentFilepaths.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.UpdateAttachmentFilepaths%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L99">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_UpdateAttachmentFilepaths_" data-uid="MouldSpecification.MainFormDAL.UpdateAttachmentFilepaths*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_UpdateAttachmentFilepaths" data-uid="MouldSpecification.MainFormDAL.UpdateAttachmentFilepaths">UpdateAttachmentFilepaths()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateAttachmentFilepaths()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_UpdateCosting_System_Data_DataSet_.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.UpdateCosting(System.Data.DataSet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L700">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_UpdateCosting_" data-uid="MouldSpecification.MainFormDAL.UpdateCosting*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_UpdateCosting_System_Data_DataSet_" data-uid="MouldSpecification.MainFormDAL.UpdateCosting(System.Data.DataSet)">UpdateCosting(DataSet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateCosting(DataSet ds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td><span class="parametername">ds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_UpdateFromAccessImport.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.UpdateFromAccessImport%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L169">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_UpdateFromAccessImport_" data-uid="MouldSpecification.MainFormDAL.UpdateFromAccessImport*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_UpdateFromAccessImport" data-uid="MouldSpecification.MainFormDAL.UpdateFromAccessImport">UpdateFromAccessImport()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateFromAccessImport()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_UpdateIMSpecification_System_Data_DataSet_.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.UpdateIMSpecification(System.Data.DataSet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L705">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_UpdateIMSpecification_" data-uid="MouldSpecification.MainFormDAL.UpdateIMSpecification*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_UpdateIMSpecification_System_Data_DataSet_" data-uid="MouldSpecification.MainFormDAL.UpdateIMSpecification(System.Data.DataSet)">UpdateIMSpecification(DataSet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateIMSpecification(DataSet ds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td><span class="parametername">ds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_UpdateMachinePref_System_Data_DataSet_.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.UpdateMachinePref(System.Data.DataSet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L695">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_UpdateMachinePref_" data-uid="MouldSpecification.MainFormDAL.UpdateMachinePref*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_UpdateMachinePref_System_Data_DataSet_" data-uid="MouldSpecification.MainFormDAL.UpdateMachinePref(System.Data.DataSet)">UpdateMachinePref(DataSet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateMachinePref(DataSet ds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td><span class="parametername">ds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_UpdateMaterialComp_System_Data_DataSet_.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.UpdateMaterialComp(System.Data.DataSet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L685">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_UpdateMaterialComp_" data-uid="MouldSpecification.MainFormDAL.UpdateMaterialComp*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_UpdateMaterialComp_System_Data_DataSet_" data-uid="MouldSpecification.MainFormDAL.UpdateMaterialComp(System.Data.DataSet)">UpdateMaterialComp(DataSet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateMaterialComp(DataSet ds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td><span class="parametername">ds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_UpdatePackaging_System_Data_DataSet_.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.UpdatePackaging(System.Data.DataSet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L715">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_UpdatePackaging_" data-uid="MouldSpecification.MainFormDAL.UpdatePackaging*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_UpdatePackaging_System_Data_DataSet_" data-uid="MouldSpecification.MainFormDAL.UpdatePackaging(System.Data.DataSet)">UpdatePackaging(DataSet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdatePackaging(DataSet ds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td><span class="parametername">ds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL_UpdateQualityControl_System_Data_DataSet_.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL.UpdateQualityControl(System.Data.DataSet)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L710">View Source</a>
+  </span>
+  <a id="MouldSpecification_MainFormDAL_UpdateQualityControl_" data-uid="MouldSpecification.MainFormDAL.UpdateQualityControl*"></a>
+  <h4 id="MouldSpecification_MainFormDAL_UpdateQualityControl_System_Data_DataSet_" data-uid="MouldSpecification.MainFormDAL.UpdateQualityControl(System.Data.DataSet)">UpdateQualityControl(DataSet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateQualityControl(DataSet ds)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Data.DataSet</span></td>
+        <td><span class="parametername">ds</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/David-plasmo/MouldSpecification/new/main/apiSpec/new?filename=MouldSpecification_MainFormDAL.md&amp;value=---%0Auid%3A%20MouldSpecification.MainFormDAL%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/David-plasmo/MouldSpecification/blob/main/MouldSpecification/MainFormDAL.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: ReportBuilder
+  commentId: N:ReportBuilder
+  id: ReportBuilder
+  children:
+  - ReportBuilder.ReportDAL
+  langs:
+  - csharp
+  - vb
+  name: ReportBuilder
+  nameWithType: ReportBuilder
+  fullName: ReportBuilder
+  type: Namespace
+  assemblies:
+  - MouldSpecification
+references:
+- uid: ReportBuilder.ReportDAL
+  commentId: T:ReportBuilder.ReportDAL
+  name: ReportDAL
+  nameWithType: ReportDAL
+  fullName: ReportBuilder.ReportDAL

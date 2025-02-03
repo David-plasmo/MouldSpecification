@@ -1,0 +1,116 @@
+### YamlMime:ManagedReference
+items:
+- uid: Utils.DrawingUtils.DeviceCap
+  commentId: T:Utils.DrawingUtils.DeviceCap
+  id: DrawingUtils.DeviceCap
+  parent: Utils
+  children:
+  - Utils.DrawingUtils.DeviceCap.LOGPIXELSX
+  - Utils.DrawingUtils.DeviceCap.LOGPIXELSY
+  langs:
+  - csharp
+  - vb
+  name: DrawingUtils.DeviceCap
+  nameWithType: DrawingUtils.DeviceCap
+  fullName: Utils.DrawingUtils.DeviceCap
+  type: Enum
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: DeviceCap
+    path: DrawingUtils.cs
+    startLine: 36
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: public enum DeviceCap
+    content.vb: Public Enum DeviceCap
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Utils.DrawingUtils.DeviceCap.LOGPIXELSX
+  commentId: F:Utils.DrawingUtils.DeviceCap.LOGPIXELSX
+  id: LOGPIXELSX
+  parent: Utils.DrawingUtils.DeviceCap
+  langs:
+  - csharp
+  - vb
+  name: LOGPIXELSX
+  nameWithType: DrawingUtils.DeviceCap.LOGPIXELSX
+  fullName: Utils.DrawingUtils.DeviceCap.LOGPIXELSX
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: LOGPIXELSX
+    path: DrawingUtils.cs
+    startLine: 41
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  summary: "\nLogical pixels inch in X\n"
+  example: []
+  syntax:
+    content: LOGPIXELSX = 88
+    return:
+      type: Utils.DrawingUtils.DeviceCap
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.DeviceCap.LOGPIXELSY
+  commentId: F:Utils.DrawingUtils.DeviceCap.LOGPIXELSY
+  id: LOGPIXELSY
+  parent: Utils.DrawingUtils.DeviceCap
+  langs:
+  - csharp
+  - vb
+  name: LOGPIXELSY
+  nameWithType: DrawingUtils.DeviceCap.LOGPIXELSY
+  fullName: Utils.DrawingUtils.DeviceCap.LOGPIXELSY
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: LOGPIXELSY
+    path: DrawingUtils.cs
+    startLine: 45
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  summary: "\nLogical pixels inch in Y\n"
+  example: []
+  syntax:
+    content: LOGPIXELSY = 90
+    return:
+      type: Utils.DrawingUtils.DeviceCap
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Utils
+  commentId: N:Utils
+  name: Utils
+  nameWithType: Utils
+  fullName: Utils
+- uid: Utils.DrawingUtils.DeviceCap
+  commentId: T:Utils.DrawingUtils.DeviceCap
+  parent: Utils
+  name: DrawingUtils.DeviceCap
+  nameWithType: DrawingUtils.DeviceCap
+  fullName: Utils.DrawingUtils.DeviceCap

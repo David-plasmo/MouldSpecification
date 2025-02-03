@@ -1,0 +1,639 @@
+### YamlMime:ManagedReference
+items:
+- uid: MouldSpecification.QCInstructionDC
+  commentId: T:MouldSpecification.QCInstructionDC
+  id: QCInstructionDC
+  parent: MouldSpecification
+  children:
+  - MouldSpecification.QCInstructionDC.#ctor
+  - MouldSpecification.QCInstructionDC.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.String)
+  - MouldSpecification.QCInstructionDC.InstructionNo
+  - MouldSpecification.QCInstructionDC.ItemID
+  - MouldSpecification.QCInstructionDC.QCImageFilepath
+  - MouldSpecification.QCInstructionDC.QCInstruction
+  - MouldSpecification.QCInstructionDC.QCInstructionID
+  langs:
+  - csharp
+  - vb
+  name: QCInstructionDC
+  nameWithType: QCInstructionDC
+  fullName: MouldSpecification.QCInstructionDC
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/QCInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: QCInstructionDC
+    path: QCInstructionDC.cs
+    startLine: 8
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public class QCInstructionDC
+    content.vb: Public Class QCInstructionDC
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MouldSpecification.QCInstructionDC.QCInstructionID
+  commentId: P:MouldSpecification.QCInstructionDC.QCInstructionID
+  id: QCInstructionID
+  parent: MouldSpecification.QCInstructionDC
+  langs:
+  - csharp
+  - vb
+  name: QCInstructionID
+  nameWithType: QCInstructionDC.QCInstructionID
+  fullName: MouldSpecification.QCInstructionDC.QCInstructionID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/QCInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: QCInstructionID
+    path: QCInstructionDC.cs
+    startLine: 10
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int QCInstructionID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property QCInstructionID As Integer
+  overload: MouldSpecification.QCInstructionDC.QCInstructionID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.QCInstructionDC.ItemID
+  commentId: P:MouldSpecification.QCInstructionDC.ItemID
+  id: ItemID
+  parent: MouldSpecification.QCInstructionDC
+  langs:
+  - csharp
+  - vb
+  name: ItemID
+  nameWithType: QCInstructionDC.ItemID
+  fullName: MouldSpecification.QCInstructionDC.ItemID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/QCInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ItemID
+    path: QCInstructionDC.cs
+    startLine: 11
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int ItemID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ItemID As Integer
+  overload: MouldSpecification.QCInstructionDC.ItemID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.QCInstructionDC.InstructionNo
+  commentId: P:MouldSpecification.QCInstructionDC.InstructionNo
+  id: InstructionNo
+  parent: MouldSpecification.QCInstructionDC
+  langs:
+  - csharp
+  - vb
+  name: InstructionNo
+  nameWithType: QCInstructionDC.InstructionNo
+  fullName: MouldSpecification.QCInstructionDC.InstructionNo
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/QCInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: InstructionNo
+    path: QCInstructionDC.cs
+    startLine: 12
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int InstructionNo { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property InstructionNo As Integer
+  overload: MouldSpecification.QCInstructionDC.InstructionNo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.QCInstructionDC.QCInstruction
+  commentId: P:MouldSpecification.QCInstructionDC.QCInstruction
+  id: QCInstruction
+  parent: MouldSpecification.QCInstructionDC
+  langs:
+  - csharp
+  - vb
+  name: QCInstruction
+  nameWithType: QCInstructionDC.QCInstruction
+  fullName: MouldSpecification.QCInstructionDC.QCInstruction
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/QCInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: QCInstruction
+    path: QCInstructionDC.cs
+    startLine: 13
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string QCInstruction { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property QCInstruction As String
+  overload: MouldSpecification.QCInstructionDC.QCInstruction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.QCInstructionDC.QCImageFilepath
+  commentId: P:MouldSpecification.QCInstructionDC.QCImageFilepath
+  id: QCImageFilepath
+  parent: MouldSpecification.QCInstructionDC
+  langs:
+  - csharp
+  - vb
+  name: QCImageFilepath
+  nameWithType: QCInstructionDC.QCImageFilepath
+  fullName: MouldSpecification.QCInstructionDC.QCImageFilepath
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/QCInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: QCImageFilepath
+    path: QCInstructionDC.cs
+    startLine: 14
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string QCImageFilepath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property QCImageFilepath As String
+  overload: MouldSpecification.QCInstructionDC.QCImageFilepath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.QCInstructionDC.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.String)
+  commentId: M:MouldSpecification.QCInstructionDC.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.String)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.String,System.String)'
+  parent: MouldSpecification.QCInstructionDC
+  langs:
+  - csharp
+  - vb
+  name: QCInstructionDC(Int32, Int32, Int32, String, String)
+  nameWithType: QCInstructionDC.QCInstructionDC(Int32, Int32, Int32, String, String)
+  fullName: MouldSpecification.QCInstructionDC.QCInstructionDC(System.Int32, System.Int32, System.Int32, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/QCInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: QCInstructionDC.cs
+    startLine: 16
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public QCInstructionDC(int QCInstructionID_, int ItemID_, int InstructionNo_, string QCInstruction_, string QCImageFilepath_)
+    parameters:
+    - id: QCInstructionID_
+      type: System.Int32
+    - id: ItemID_
+      type: System.Int32
+    - id: InstructionNo_
+      type: System.Int32
+    - id: QCInstruction_
+      type: System.String
+    - id: QCImageFilepath_
+      type: System.String
+    content.vb: Public Sub New(QCInstructionID_ As Integer, ItemID_ As Integer, InstructionNo_ As Integer, QCInstruction_ As String, QCImageFilepath_ As String)
+  overload: MouldSpecification.QCInstructionDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.QCInstructionDC.#ctor
+  commentId: M:MouldSpecification.QCInstructionDC.#ctor
+  id: '#ctor'
+  parent: MouldSpecification.QCInstructionDC
+  langs:
+  - csharp
+  - vb
+  name: QCInstructionDC()
+  nameWithType: QCInstructionDC.QCInstructionDC()
+  fullName: MouldSpecification.QCInstructionDC.QCInstructionDC()
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/QCInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: QCInstructionDC.cs
+    startLine: 25
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public QCInstructionDC()
+    content.vb: Public Sub New
+  overload: MouldSpecification.QCInstructionDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MouldSpecification
+  commentId: N:MouldSpecification
+  name: MouldSpecification
+  nameWithType: MouldSpecification
+  fullName: MouldSpecification
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MouldSpecification.QCInstructionDC.QCInstructionID*
+  commentId: Overload:MouldSpecification.QCInstructionDC.QCInstructionID
+  name: QCInstructionID
+  nameWithType: QCInstructionDC.QCInstructionID
+  fullName: MouldSpecification.QCInstructionDC.QCInstructionID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MouldSpecification.QCInstructionDC.ItemID*
+  commentId: Overload:MouldSpecification.QCInstructionDC.ItemID
+  name: ItemID
+  nameWithType: QCInstructionDC.ItemID
+  fullName: MouldSpecification.QCInstructionDC.ItemID
+- uid: MouldSpecification.QCInstructionDC.InstructionNo*
+  commentId: Overload:MouldSpecification.QCInstructionDC.InstructionNo
+  name: InstructionNo
+  nameWithType: QCInstructionDC.InstructionNo
+  fullName: MouldSpecification.QCInstructionDC.InstructionNo
+- uid: MouldSpecification.QCInstructionDC.QCInstruction*
+  commentId: Overload:MouldSpecification.QCInstructionDC.QCInstruction
+  name: QCInstruction
+  nameWithType: QCInstructionDC.QCInstruction
+  fullName: MouldSpecification.QCInstructionDC.QCInstruction
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MouldSpecification.QCInstructionDC.QCImageFilepath*
+  commentId: Overload:MouldSpecification.QCInstructionDC.QCImageFilepath
+  name: QCImageFilepath
+  nameWithType: QCInstructionDC.QCImageFilepath
+  fullName: MouldSpecification.QCInstructionDC.QCImageFilepath
+- uid: MouldSpecification.QCInstructionDC.#ctor*
+  commentId: Overload:MouldSpecification.QCInstructionDC.#ctor
+  name: QCInstructionDC
+  nameWithType: QCInstructionDC.QCInstructionDC
+  fullName: MouldSpecification.QCInstructionDC.QCInstructionDC

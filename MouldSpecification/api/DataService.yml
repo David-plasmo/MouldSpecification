@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: DataService
+  commentId: N:DataService
+  id: DataService
+  children:
+  - DataService.Constants
+  langs:
+  - csharp
+  - vb
+  name: DataService
+  nameWithType: DataService
+  fullName: DataService
+  type: Namespace
+  assemblies:
+  - MouldSpecification
+references:
+- uid: DataService.Constants
+  commentId: T:DataService.Constants
+  name: Constants
+  nameWithType: Constants
+  fullName: DataService.Constants

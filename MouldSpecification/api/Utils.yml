@@ -1,0 +1,41 @@
+### YamlMime:ManagedReference
+items:
+- uid: Utils
+  commentId: N:Utils
+  id: Utils
+  children:
+  - Utils.DrawingUtils
+  - Utils.DrawingUtils.ButtonOp
+  - Utils.DrawingUtils.DeviceCap
+  langs:
+  - csharp
+  - vb
+  name: Utils
+  nameWithType: Utils
+  fullName: Utils
+  type: Namespace
+  assemblies:
+  - MouldSpecification
+references:
+- uid: Utils.DrawingUtils
+  commentId: T:Utils.DrawingUtils
+  name: DrawingUtils
+  nameWithType: DrawingUtils
+  fullName: Utils.DrawingUtils
+- uid: Utils.DrawingUtils.ButtonOp
+  commentId: T:Utils.DrawingUtils.ButtonOp
+  parent: Utils
+  name: DrawingUtils.ButtonOp
+  nameWithType: DrawingUtils.ButtonOp
+  fullName: Utils.DrawingUtils.ButtonOp
+- uid: Utils.DrawingUtils.DeviceCap
+  commentId: T:Utils.DrawingUtils.DeviceCap
+  parent: Utils
+  name: DrawingUtils.DeviceCap
+  nameWithType: DrawingUtils.DeviceCap
+  fullName: Utils.DrawingUtils.DeviceCap
+- uid: Utils
+  commentId: N:Utils
+  name: Utils
+  nameWithType: Utils
+  fullName: Utils

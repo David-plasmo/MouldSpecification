@@ -1,0 +1,771 @@
+### YamlMime:ManagedReference
+items:
+- uid: Utils.DrawingUtils
+  commentId: T:Utils.DrawingUtils
+  id: DrawingUtils
+  parent: Utils
+  children:
+  - Utils.DrawingUtils.EmptyImage
+  - Utils.DrawingUtils.GetDeviceCaps(System.IntPtr,System.Int32)
+  - Utils.DrawingUtils.GetImage(System.String,System.Int32,System.Int32)
+  - Utils.DrawingUtils.GetImage(Utils.DrawingUtils.ButtonOp,System.Int32,System.Int32)
+  - Utils.DrawingUtils.p96H(System.Int32)
+  - Utils.DrawingUtils.p96W(System.Int32)
+  - Utils.DrawingUtils.RescaleImage(System.Drawing.Bitmap)
+  - Utils.DrawingUtils.RescaleImage(System.Drawing.Bitmap,System.Int32,System.Int32)
+  - Utils.DrawingUtils.ScreenRes
+  langs:
+  - csharp
+  - vb
+  name: DrawingUtils
+  nameWithType: DrawingUtils
+  fullName: Utils.DrawingUtils
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: DrawingUtils
+    path: DrawingUtils.cs
+    startLine: 11
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: public class DrawingUtils
+    content.vb: Public Class DrawingUtils
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Utils.DrawingUtils.GetDeviceCaps(System.IntPtr,System.Int32)
+  commentId: M:Utils.DrawingUtils.GetDeviceCaps(System.IntPtr,System.Int32)
+  id: GetDeviceCaps(System.IntPtr,System.Int32)
+  parent: Utils.DrawingUtils
+  langs:
+  - csharp
+  - vb
+  name: GetDeviceCaps(IntPtr, Int32)
+  nameWithType: DrawingUtils.GetDeviceCaps(IntPtr, Int32)
+  fullName: Utils.DrawingUtils.GetDeviceCaps(System.IntPtr, System.Int32)
+  type: Method
+  source:
+    path: MouldSpecification
+    isExternal: true
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: public static extern int GetDeviceCaps(IntPtr hDC, int nIndex)
+    parameters:
+    - id: hDC
+      type: System.IntPtr
+    - id: nIndex
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function GetDeviceCaps(hDC As IntPtr, nIndex As Integer) As Integer
+  overload: Utils.DrawingUtils.GetDeviceCaps*
+  modifiers.csharp:
+  - public
+  - static
+  - extern
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Utils.DrawingUtils.ScreenRes
+  commentId: M:Utils.DrawingUtils.ScreenRes
+  id: ScreenRes
+  parent: Utils.DrawingUtils
+  langs:
+  - csharp
+  - vb
+  name: ScreenRes()
+  nameWithType: DrawingUtils.ScreenRes()
+  fullName: Utils.DrawingUtils.ScreenRes()
+  type: Method
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ScreenRes
+    path: DrawingUtils.cs
+    startLine: 50
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: public static Size ScreenRes()
+    return:
+      type: System.Drawing.Size
+    content.vb: Public Shared Function ScreenRes As Size
+  overload: Utils.DrawingUtils.ScreenRes*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Utils.DrawingUtils.p96W(System.Int32)
+  commentId: M:Utils.DrawingUtils.p96W(System.Int32)
+  id: p96W(System.Int32)
+  parent: Utils.DrawingUtils
+  langs:
+  - csharp
+  - vb
+  name: p96W(Int32)
+  nameWithType: DrawingUtils.p96W(Int32)
+  fullName: Utils.DrawingUtils.p96W(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: p96W
+    path: DrawingUtils.cs
+    startLine: 62
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: public static int p96W(int inputW)
+    parameters:
+    - id: inputW
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function p96W(inputW As Integer) As Integer
+  overload: Utils.DrawingUtils.p96W*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Utils.DrawingUtils.p96H(System.Int32)
+  commentId: M:Utils.DrawingUtils.p96H(System.Int32)
+  id: p96H(System.Int32)
+  parent: Utils.DrawingUtils
+  langs:
+  - csharp
+  - vb
+  name: p96H(Int32)
+  nameWithType: DrawingUtils.p96H(Int32)
+  fullName: Utils.DrawingUtils.p96H(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: p96H
+    path: DrawingUtils.cs
+    startLine: 68
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: public static int p96H(int inputH)
+    parameters:
+    - id: inputH
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function p96H(inputH As Integer) As Integer
+  overload: Utils.DrawingUtils.p96H*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Utils.DrawingUtils.GetImage(Utils.DrawingUtils.ButtonOp,System.Int32,System.Int32)
+  commentId: M:Utils.DrawingUtils.GetImage(Utils.DrawingUtils.ButtonOp,System.Int32,System.Int32)
+  id: GetImage(Utils.DrawingUtils.ButtonOp,System.Int32,System.Int32)
+  parent: Utils.DrawingUtils
+  langs:
+  - csharp
+  - vb
+  name: GetImage(DrawingUtils.ButtonOp, Int32, Int32)
+  nameWithType: DrawingUtils.GetImage(DrawingUtils.ButtonOp, Int32, Int32)
+  fullName: Utils.DrawingUtils.GetImage(Utils.DrawingUtils.ButtonOp, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: GetImage
+    path: DrawingUtils.cs
+    startLine: 74
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: public static Bitmap GetImage(DrawingUtils.ButtonOp op, int picboxW, int picboxH)
+    parameters:
+    - id: op
+      type: Utils.DrawingUtils.ButtonOp
+    - id: picboxW
+      type: System.Int32
+    - id: picboxH
+      type: System.Int32
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Public Shared Function GetImage(op As DrawingUtils.ButtonOp, picboxW As Integer, picboxH As Integer) As Bitmap
+  overload: Utils.DrawingUtils.GetImage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Utils.DrawingUtils.EmptyImage
+  commentId: M:Utils.DrawingUtils.EmptyImage
+  id: EmptyImage
+  parent: Utils.DrawingUtils
+  langs:
+  - csharp
+  - vb
+  name: EmptyImage()
+  nameWithType: DrawingUtils.EmptyImage()
+  fullName: Utils.DrawingUtils.EmptyImage()
+  type: Method
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: EmptyImage
+    path: DrawingUtils.cs
+    startLine: 156
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: public static Bitmap EmptyImage()
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Public Shared Function EmptyImage As Bitmap
+  overload: Utils.DrawingUtils.EmptyImage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Utils.DrawingUtils.GetImage(System.String,System.Int32,System.Int32)
+  commentId: M:Utils.DrawingUtils.GetImage(System.String,System.Int32,System.Int32)
+  id: GetImage(System.String,System.Int32,System.Int32)
+  parent: Utils.DrawingUtils
+  langs:
+  - csharp
+  - vb
+  name: GetImage(String, Int32, Int32)
+  nameWithType: DrawingUtils.GetImage(String, Int32, Int32)
+  fullName: Utils.DrawingUtils.GetImage(System.String, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: GetImage
+    path: DrawingUtils.cs
+    startLine: 169
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: public static Bitmap GetImage(string filePath, int picboxW, int picboxH)
+    parameters:
+    - id: filePath
+      type: System.String
+    - id: picboxW
+      type: System.Int32
+    - id: picboxH
+      type: System.Int32
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Public Shared Function GetImage(filePath As String, picboxW As Integer, picboxH As Integer) As Bitmap
+  overload: Utils.DrawingUtils.GetImage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Utils.DrawingUtils.RescaleImage(System.Drawing.Bitmap)
+  commentId: M:Utils.DrawingUtils.RescaleImage(System.Drawing.Bitmap)
+  id: RescaleImage(System.Drawing.Bitmap)
+  parent: Utils.DrawingUtils
+  langs:
+  - csharp
+  - vb
+  name: RescaleImage(Bitmap)
+  nameWithType: DrawingUtils.RescaleImage(Bitmap)
+  fullName: Utils.DrawingUtils.RescaleImage(System.Drawing.Bitmap)
+  type: Method
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: RescaleImage
+    path: DrawingUtils.cs
+    startLine: 189
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: public static Bitmap RescaleImage(Bitmap image)
+    parameters:
+    - id: image
+      type: System.Drawing.Bitmap
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Public Shared Function RescaleImage(image As Bitmap) As Bitmap
+  overload: Utils.DrawingUtils.RescaleImage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Utils.DrawingUtils.RescaleImage(System.Drawing.Bitmap,System.Int32,System.Int32)
+  commentId: M:Utils.DrawingUtils.RescaleImage(System.Drawing.Bitmap,System.Int32,System.Int32)
+  id: RescaleImage(System.Drawing.Bitmap,System.Int32,System.Int32)
+  parent: Utils.DrawingUtils
+  langs:
+  - csharp
+  - vb
+  name: RescaleImage(Bitmap, Int32, Int32)
+  nameWithType: DrawingUtils.RescaleImage(Bitmap, Int32, Int32)
+  fullName: Utils.DrawingUtils.RescaleImage(System.Drawing.Bitmap, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: RescaleImage
+    path: DrawingUtils.cs
+    startLine: 217
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: public static Bitmap RescaleImage(Bitmap image, int PicBoxW, int PicBoxH)
+    parameters:
+    - id: image
+      type: System.Drawing.Bitmap
+    - id: PicBoxW
+      type: System.Int32
+    - id: PicBoxH
+      type: System.Int32
+    return:
+      type: System.Drawing.Bitmap
+    content.vb: Public Shared Function RescaleImage(image As Bitmap, PicBoxW As Integer, PicBoxH As Integer) As Bitmap
+  overload: Utils.DrawingUtils.RescaleImage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Utils
+  commentId: N:Utils
+  name: Utils
+  nameWithType: Utils
+  fullName: Utils
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Utils.DrawingUtils.GetDeviceCaps*
+  commentId: Overload:Utils.DrawingUtils.GetDeviceCaps
+  isExternal: true
+  name: GetDeviceCaps
+  nameWithType: DrawingUtils.GetDeviceCaps
+  fullName: Utils.DrawingUtils.GetDeviceCaps
+- uid: System.IntPtr
+  commentId: T:System.IntPtr
+  parent: System
+  isExternal: true
+  name: IntPtr
+  nameWithType: IntPtr
+  fullName: System.IntPtr
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Utils.DrawingUtils.ScreenRes*
+  commentId: Overload:Utils.DrawingUtils.ScreenRes
+  name: ScreenRes
+  nameWithType: DrawingUtils.ScreenRes
+  fullName: Utils.DrawingUtils.ScreenRes
+- uid: System.Drawing.Size
+  commentId: T:System.Drawing.Size
+  parent: System.Drawing
+  isExternal: true
+  name: Size
+  nameWithType: Size
+  fullName: System.Drawing.Size
+- uid: System.Drawing
+  commentId: N:System.Drawing
+  isExternal: true
+  name: System.Drawing
+  nameWithType: System.Drawing
+  fullName: System.Drawing
+- uid: Utils.DrawingUtils.p96W*
+  commentId: Overload:Utils.DrawingUtils.p96W
+  name: p96W
+  nameWithType: DrawingUtils.p96W
+  fullName: Utils.DrawingUtils.p96W
+- uid: Utils.DrawingUtils.p96H*
+  commentId: Overload:Utils.DrawingUtils.p96H
+  name: p96H
+  nameWithType: DrawingUtils.p96H
+  fullName: Utils.DrawingUtils.p96H
+- uid: Utils.DrawingUtils.GetImage*
+  commentId: Overload:Utils.DrawingUtils.GetImage
+  name: GetImage
+  nameWithType: DrawingUtils.GetImage
+  fullName: Utils.DrawingUtils.GetImage
+- uid: Utils.DrawingUtils.ButtonOp
+  commentId: T:Utils.DrawingUtils.ButtonOp
+  parent: Utils
+  name: DrawingUtils.ButtonOp
+  nameWithType: DrawingUtils.ButtonOp
+  fullName: Utils.DrawingUtils.ButtonOp
+- uid: System.Drawing.Bitmap
+  commentId: T:System.Drawing.Bitmap
+  parent: System.Drawing
+  isExternal: true
+  name: Bitmap
+  nameWithType: Bitmap
+  fullName: System.Drawing.Bitmap
+- uid: Utils.DrawingUtils.EmptyImage*
+  commentId: Overload:Utils.DrawingUtils.EmptyImage
+  name: EmptyImage
+  nameWithType: DrawingUtils.EmptyImage
+  fullName: Utils.DrawingUtils.EmptyImage
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Utils.DrawingUtils.RescaleImage*
+  commentId: Overload:Utils.DrawingUtils.RescaleImage
+  name: RescaleImage
+  nameWithType: DrawingUtils.RescaleImage
+  fullName: Utils.DrawingUtils.RescaleImage

@@ -1,0 +1,639 @@
+### YamlMime:ManagedReference
+items:
+- uid: MouldSpecification.PackingImageDC
+  commentId: T:MouldSpecification.PackingImageDC
+  id: PackingImageDC
+  parent: MouldSpecification
+  children:
+  - MouldSpecification.PackingImageDC.#ctor
+  - MouldSpecification.PackingImageDC.#ctor(System.Int32,System.Int32,System.String,System.String,System.String)
+  - MouldSpecification.PackingImageDC.ItemID
+  - MouldSpecification.PackingImageDC.PackingImageFilepath1
+  - MouldSpecification.PackingImageDC.PackingImageFilepath2
+  - MouldSpecification.PackingImageDC.PackingImageFilepath3
+  - MouldSpecification.PackingImageDC.PackingImageID
+  langs:
+  - csharp
+  - vb
+  name: PackingImageDC
+  nameWithType: PackingImageDC
+  fullName: MouldSpecification.PackingImageDC
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/PackagingImageDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PackingImageDC
+    path: PackagingImageDC.cs
+    startLine: 8
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public class PackingImageDC
+    content.vb: Public Class PackingImageDC
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MouldSpecification.PackingImageDC.PackingImageID
+  commentId: P:MouldSpecification.PackingImageDC.PackingImageID
+  id: PackingImageID
+  parent: MouldSpecification.PackingImageDC
+  langs:
+  - csharp
+  - vb
+  name: PackingImageID
+  nameWithType: PackingImageDC.PackingImageID
+  fullName: MouldSpecification.PackingImageDC.PackingImageID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingImageDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PackingImageID
+    path: PackagingImageDC.cs
+    startLine: 10
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int PackingImageID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property PackingImageID As Integer
+  overload: MouldSpecification.PackingImageDC.PackingImageID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackingImageDC.ItemID
+  commentId: P:MouldSpecification.PackingImageDC.ItemID
+  id: ItemID
+  parent: MouldSpecification.PackingImageDC
+  langs:
+  - csharp
+  - vb
+  name: ItemID
+  nameWithType: PackingImageDC.ItemID
+  fullName: MouldSpecification.PackingImageDC.ItemID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingImageDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ItemID
+    path: PackagingImageDC.cs
+    startLine: 11
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int ItemID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ItemID As Integer
+  overload: MouldSpecification.PackingImageDC.ItemID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackingImageDC.PackingImageFilepath1
+  commentId: P:MouldSpecification.PackingImageDC.PackingImageFilepath1
+  id: PackingImageFilepath1
+  parent: MouldSpecification.PackingImageDC
+  langs:
+  - csharp
+  - vb
+  name: PackingImageFilepath1
+  nameWithType: PackingImageDC.PackingImageFilepath1
+  fullName: MouldSpecification.PackingImageDC.PackingImageFilepath1
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingImageDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PackingImageFilepath1
+    path: PackagingImageDC.cs
+    startLine: 12
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string PackingImageFilepath1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PackingImageFilepath1 As String
+  overload: MouldSpecification.PackingImageDC.PackingImageFilepath1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackingImageDC.PackingImageFilepath2
+  commentId: P:MouldSpecification.PackingImageDC.PackingImageFilepath2
+  id: PackingImageFilepath2
+  parent: MouldSpecification.PackingImageDC
+  langs:
+  - csharp
+  - vb
+  name: PackingImageFilepath2
+  nameWithType: PackingImageDC.PackingImageFilepath2
+  fullName: MouldSpecification.PackingImageDC.PackingImageFilepath2
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingImageDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PackingImageFilepath2
+    path: PackagingImageDC.cs
+    startLine: 13
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string PackingImageFilepath2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PackingImageFilepath2 As String
+  overload: MouldSpecification.PackingImageDC.PackingImageFilepath2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackingImageDC.PackingImageFilepath3
+  commentId: P:MouldSpecification.PackingImageDC.PackingImageFilepath3
+  id: PackingImageFilepath3
+  parent: MouldSpecification.PackingImageDC
+  langs:
+  - csharp
+  - vb
+  name: PackingImageFilepath3
+  nameWithType: PackingImageDC.PackingImageFilepath3
+  fullName: MouldSpecification.PackingImageDC.PackingImageFilepath3
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingImageDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PackingImageFilepath3
+    path: PackagingImageDC.cs
+    startLine: 14
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string PackingImageFilepath3 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PackingImageFilepath3 As String
+  overload: MouldSpecification.PackingImageDC.PackingImageFilepath3*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackingImageDC.#ctor(System.Int32,System.Int32,System.String,System.String,System.String)
+  commentId: M:MouldSpecification.PackingImageDC.#ctor(System.Int32,System.Int32,System.String,System.String,System.String)
+  id: '#ctor(System.Int32,System.Int32,System.String,System.String,System.String)'
+  parent: MouldSpecification.PackingImageDC
+  langs:
+  - csharp
+  - vb
+  name: PackingImageDC(Int32, Int32, String, String, String)
+  nameWithType: PackingImageDC.PackingImageDC(Int32, Int32, String, String, String)
+  fullName: MouldSpecification.PackingImageDC.PackingImageDC(System.Int32, System.Int32, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/PackagingImageDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: PackagingImageDC.cs
+    startLine: 16
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public PackingImageDC(int PackingImageID_, int ItemID_, string PackingImageFilepath1_, string PackingImageFilepath2_, string PackingImageFilepath3_)
+    parameters:
+    - id: PackingImageID_
+      type: System.Int32
+    - id: ItemID_
+      type: System.Int32
+    - id: PackingImageFilepath1_
+      type: System.String
+    - id: PackingImageFilepath2_
+      type: System.String
+    - id: PackingImageFilepath3_
+      type: System.String
+    content.vb: Public Sub New(PackingImageID_ As Integer, ItemID_ As Integer, PackingImageFilepath1_ As String, PackingImageFilepath2_ As String, PackingImageFilepath3_ As String)
+  overload: MouldSpecification.PackingImageDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackingImageDC.#ctor
+  commentId: M:MouldSpecification.PackingImageDC.#ctor
+  id: '#ctor'
+  parent: MouldSpecification.PackingImageDC
+  langs:
+  - csharp
+  - vb
+  name: PackingImageDC()
+  nameWithType: PackingImageDC.PackingImageDC()
+  fullName: MouldSpecification.PackingImageDC.PackingImageDC()
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/PackagingImageDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: PackagingImageDC.cs
+    startLine: 25
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public PackingImageDC()
+    content.vb: Public Sub New
+  overload: MouldSpecification.PackingImageDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MouldSpecification
+  commentId: N:MouldSpecification
+  name: MouldSpecification
+  nameWithType: MouldSpecification
+  fullName: MouldSpecification
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MouldSpecification.PackingImageDC.PackingImageID*
+  commentId: Overload:MouldSpecification.PackingImageDC.PackingImageID
+  name: PackingImageID
+  nameWithType: PackingImageDC.PackingImageID
+  fullName: MouldSpecification.PackingImageDC.PackingImageID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MouldSpecification.PackingImageDC.ItemID*
+  commentId: Overload:MouldSpecification.PackingImageDC.ItemID
+  name: ItemID
+  nameWithType: PackingImageDC.ItemID
+  fullName: MouldSpecification.PackingImageDC.ItemID
+- uid: MouldSpecification.PackingImageDC.PackingImageFilepath1*
+  commentId: Overload:MouldSpecification.PackingImageDC.PackingImageFilepath1
+  name: PackingImageFilepath1
+  nameWithType: PackingImageDC.PackingImageFilepath1
+  fullName: MouldSpecification.PackingImageDC.PackingImageFilepath1
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MouldSpecification.PackingImageDC.PackingImageFilepath2*
+  commentId: Overload:MouldSpecification.PackingImageDC.PackingImageFilepath2
+  name: PackingImageFilepath2
+  nameWithType: PackingImageDC.PackingImageFilepath2
+  fullName: MouldSpecification.PackingImageDC.PackingImageFilepath2
+- uid: MouldSpecification.PackingImageDC.PackingImageFilepath3*
+  commentId: Overload:MouldSpecification.PackingImageDC.PackingImageFilepath3
+  name: PackingImageFilepath3
+  nameWithType: PackingImageDC.PackingImageFilepath3
+  fullName: MouldSpecification.PackingImageDC.PackingImageFilepath3
+- uid: MouldSpecification.PackingImageDC.#ctor*
+  commentId: Overload:MouldSpecification.PackingImageDC.#ctor
+  name: PackingImageDC
+  nameWithType: PackingImageDC.PackingImageDC
+  fullName: MouldSpecification.PackingImageDC.PackingImageDC

@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: WinformsUtils
+  commentId: N:WinformsUtils
+  id: WinformsUtils
+  children:
+  - WinformsUtils.MultiColumnComboBox
+  langs:
+  - csharp
+  - vb
+  name: WinformsUtils
+  nameWithType: WinformsUtils
+  fullName: WinformsUtils
+  type: Namespace
+  assemblies:
+  - MouldSpecification
+references:
+- uid: WinformsUtils.MultiColumnComboBox
+  commentId: T:WinformsUtils.MultiColumnComboBox
+  name: MultiColumnComboBox
+  nameWithType: MultiColumnComboBox
+  fullName: WinformsUtils.MultiColumnComboBox

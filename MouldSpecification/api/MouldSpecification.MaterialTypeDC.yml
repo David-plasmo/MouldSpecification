@@ -1,0 +1,689 @@
+### YamlMime:ManagedReference
+items:
+- uid: MouldSpecification.MaterialTypeDC
+  commentId: T:MouldSpecification.MaterialTypeDC
+  id: MaterialTypeDC
+  parent: MouldSpecification
+  children:
+  - MouldSpecification.MaterialTypeDC.#ctor
+  - MouldSpecification.MaterialTypeDC.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.DateTime)
+  - MouldSpecification.MaterialTypeDC.Comment
+  - MouldSpecification.MaterialTypeDC.Description
+  - MouldSpecification.MaterialTypeDC.last_updated_by
+  - MouldSpecification.MaterialTypeDC.last_updated_on
+  - MouldSpecification.MaterialTypeDC.MaterialID
+  - MouldSpecification.MaterialTypeDC.ShortDesc
+  langs:
+  - csharp
+  - vb
+  name: MaterialTypeDC
+  nameWithType: MaterialTypeDC
+  fullName: MouldSpecification.MaterialTypeDC
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/MaterialTypeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MaterialTypeDC
+    path: MaterialTypeDC.cs
+    startLine: 4
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public class MaterialTypeDC
+    content.vb: Public Class MaterialTypeDC
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MouldSpecification.MaterialTypeDC.MaterialID
+  commentId: P:MouldSpecification.MaterialTypeDC.MaterialID
+  id: MaterialID
+  parent: MouldSpecification.MaterialTypeDC
+  langs:
+  - csharp
+  - vb
+  name: MaterialID
+  nameWithType: MaterialTypeDC.MaterialID
+  fullName: MouldSpecification.MaterialTypeDC.MaterialID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialTypeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MaterialID
+    path: MaterialTypeDC.cs
+    startLine: 6
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int MaterialID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaterialID As Integer
+  overload: MouldSpecification.MaterialTypeDC.MaterialID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialTypeDC.ShortDesc
+  commentId: P:MouldSpecification.MaterialTypeDC.ShortDesc
+  id: ShortDesc
+  parent: MouldSpecification.MaterialTypeDC
+  langs:
+  - csharp
+  - vb
+  name: ShortDesc
+  nameWithType: MaterialTypeDC.ShortDesc
+  fullName: MouldSpecification.MaterialTypeDC.ShortDesc
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialTypeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ShortDesc
+    path: MaterialTypeDC.cs
+    startLine: 7
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string ShortDesc { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ShortDesc As String
+  overload: MouldSpecification.MaterialTypeDC.ShortDesc*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialTypeDC.Description
+  commentId: P:MouldSpecification.MaterialTypeDC.Description
+  id: Description
+  parent: MouldSpecification.MaterialTypeDC
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: MaterialTypeDC.Description
+  fullName: MouldSpecification.MaterialTypeDC.Description
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialTypeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Description
+    path: MaterialTypeDC.cs
+    startLine: 8
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: MouldSpecification.MaterialTypeDC.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialTypeDC.Comment
+  commentId: P:MouldSpecification.MaterialTypeDC.Comment
+  id: Comment
+  parent: MouldSpecification.MaterialTypeDC
+  langs:
+  - csharp
+  - vb
+  name: Comment
+  nameWithType: MaterialTypeDC.Comment
+  fullName: MouldSpecification.MaterialTypeDC.Comment
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialTypeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Comment
+    path: MaterialTypeDC.cs
+    startLine: 9
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string Comment { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Comment As String
+  overload: MouldSpecification.MaterialTypeDC.Comment*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialTypeDC.last_updated_by
+  commentId: P:MouldSpecification.MaterialTypeDC.last_updated_by
+  id: last_updated_by
+  parent: MouldSpecification.MaterialTypeDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_by
+  nameWithType: MaterialTypeDC.last_updated_by
+  fullName: MouldSpecification.MaterialTypeDC.last_updated_by
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialTypeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_by
+    path: MaterialTypeDC.cs
+    startLine: 10
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string last_updated_by { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property last_updated_by As String
+  overload: MouldSpecification.MaterialTypeDC.last_updated_by*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialTypeDC.last_updated_on
+  commentId: P:MouldSpecification.MaterialTypeDC.last_updated_on
+  id: last_updated_on
+  parent: MouldSpecification.MaterialTypeDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_on
+  nameWithType: MaterialTypeDC.last_updated_on
+  fullName: MouldSpecification.MaterialTypeDC.last_updated_on
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialTypeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_on
+    path: MaterialTypeDC.cs
+    startLine: 11
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public DateTime last_updated_on { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property last_updated_on As Date
+  overload: MouldSpecification.MaterialTypeDC.last_updated_on*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialTypeDC.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.DateTime)
+  commentId: M:MouldSpecification.MaterialTypeDC.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.DateTime)
+  id: '#ctor(System.Int32,System.String,System.String,System.String,System.String,System.DateTime)'
+  parent: MouldSpecification.MaterialTypeDC
+  langs:
+  - csharp
+  - vb
+  name: MaterialTypeDC(Int32, String, String, String, String, DateTime)
+  nameWithType: MaterialTypeDC.MaterialTypeDC(Int32, String, String, String, String, DateTime)
+  fullName: MouldSpecification.MaterialTypeDC.MaterialTypeDC(System.Int32, System.String, System.String, System.String, System.String, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/MaterialTypeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: MaterialTypeDC.cs
+    startLine: 13
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public MaterialTypeDC(int MaterialID_, string ShortDesc_, string Description_, string Comment_, string last_updated_by_, DateTime last_updated_on_)
+    parameters:
+    - id: MaterialID_
+      type: System.Int32
+    - id: ShortDesc_
+      type: System.String
+    - id: Description_
+      type: System.String
+    - id: Comment_
+      type: System.String
+    - id: last_updated_by_
+      type: System.String
+    - id: last_updated_on_
+      type: System.DateTime
+    content.vb: Public Sub New(MaterialID_ As Integer, ShortDesc_ As String, Description_ As String, Comment_ As String, last_updated_by_ As String, last_updated_on_ As Date)
+  overload: MouldSpecification.MaterialTypeDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialTypeDC.#ctor
+  commentId: M:MouldSpecification.MaterialTypeDC.#ctor
+  id: '#ctor'
+  parent: MouldSpecification.MaterialTypeDC
+  langs:
+  - csharp
+  - vb
+  name: MaterialTypeDC()
+  nameWithType: MaterialTypeDC.MaterialTypeDC()
+  fullName: MouldSpecification.MaterialTypeDC.MaterialTypeDC()
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/MaterialTypeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: MaterialTypeDC.cs
+    startLine: 23
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public MaterialTypeDC()
+    content.vb: Public Sub New
+  overload: MouldSpecification.MaterialTypeDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MouldSpecification
+  commentId: N:MouldSpecification
+  name: MouldSpecification
+  nameWithType: MouldSpecification
+  fullName: MouldSpecification
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MouldSpecification.MaterialTypeDC.MaterialID*
+  commentId: Overload:MouldSpecification.MaterialTypeDC.MaterialID
+  name: MaterialID
+  nameWithType: MaterialTypeDC.MaterialID
+  fullName: MouldSpecification.MaterialTypeDC.MaterialID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MouldSpecification.MaterialTypeDC.ShortDesc*
+  commentId: Overload:MouldSpecification.MaterialTypeDC.ShortDesc
+  name: ShortDesc
+  nameWithType: MaterialTypeDC.ShortDesc
+  fullName: MouldSpecification.MaterialTypeDC.ShortDesc
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MouldSpecification.MaterialTypeDC.Description*
+  commentId: Overload:MouldSpecification.MaterialTypeDC.Description
+  name: Description
+  nameWithType: MaterialTypeDC.Description
+  fullName: MouldSpecification.MaterialTypeDC.Description
+- uid: MouldSpecification.MaterialTypeDC.Comment*
+  commentId: Overload:MouldSpecification.MaterialTypeDC.Comment
+  name: Comment
+  nameWithType: MaterialTypeDC.Comment
+  fullName: MouldSpecification.MaterialTypeDC.Comment
+- uid: MouldSpecification.MaterialTypeDC.last_updated_by*
+  commentId: Overload:MouldSpecification.MaterialTypeDC.last_updated_by
+  name: last_updated_by
+  nameWithType: MaterialTypeDC.last_updated_by
+  fullName: MouldSpecification.MaterialTypeDC.last_updated_by
+- uid: MouldSpecification.MaterialTypeDC.last_updated_on*
+  commentId: Overload:MouldSpecification.MaterialTypeDC.last_updated_on
+  name: last_updated_on
+  nameWithType: MaterialTypeDC.last_updated_on
+  fullName: MouldSpecification.MaterialTypeDC.last_updated_on
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: MouldSpecification.MaterialTypeDC.#ctor*
+  commentId: Overload:MouldSpecification.MaterialTypeDC.#ctor
+  name: MaterialTypeDC
+  nameWithType: MaterialTypeDC.MaterialTypeDC
+  fullName: MouldSpecification.MaterialTypeDC.MaterialTypeDC

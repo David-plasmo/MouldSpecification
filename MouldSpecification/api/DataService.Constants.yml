@@ -1,0 +1,762 @@
+### YamlMime:ManagedReference
+items:
+- uid: DataService.Constants
+  commentId: T:DataService.Constants
+  id: Constants
+  parent: DataService
+  children:
+  - DataService.Constants.NullDateTime
+  - DataService.Constants.NullDecimal
+  - DataService.Constants.NullDouble
+  - DataService.Constants.NullFloat
+  - DataService.Constants.NullGuid
+  - DataService.Constants.NullInt
+  - DataService.Constants.NullLong
+  - DataService.Constants.NullString
+  - DataService.Constants.SqlMaxDate
+  - DataService.Constants.SqlMinDate
+  langs:
+  - csharp
+  - vb
+  name: Constants
+  nameWithType: Constants
+  fullName: DataService.Constants
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/Constants.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Constants
+    path: Constants.cs
+    startLine: 9
+  assemblies:
+  - MouldSpecification
+  namespace: DataService
+  summary: "\nContains a listing of constants used throughout the application\n"
+  example: []
+  syntax:
+    content: public sealed class Constants
+    content.vb: Public NotInheritable Class Constants
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: DataService.Constants.NullDateTime
+  commentId: F:DataService.Constants.NullDateTime
+  id: NullDateTime
+  parent: DataService.Constants
+  langs:
+  - csharp
+  - vb
+  name: NullDateTime
+  nameWithType: Constants.NullDateTime
+  fullName: DataService.Constants.NullDateTime
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/Constants.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: NullDateTime
+    path: Constants.cs
+    startLine: 14
+  assemblies:
+  - MouldSpecification
+  namespace: DataService
+  summary: "\nThe value used to represent a null DateTime value\n"
+  example: []
+  syntax:
+    content: public static DateTime NullDateTime
+    return:
+      type: System.DateTime
+    content.vb: Public Shared NullDateTime As Date
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DataService.Constants.NullDecimal
+  commentId: F:DataService.Constants.NullDecimal
+  id: NullDecimal
+  parent: DataService.Constants
+  langs:
+  - csharp
+  - vb
+  name: NullDecimal
+  nameWithType: Constants.NullDecimal
+  fullName: DataService.Constants.NullDecimal
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/Constants.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: NullDecimal
+    path: Constants.cs
+    startLine: 19
+  assemblies:
+  - MouldSpecification
+  namespace: DataService
+  summary: "\nThe value used to represent a null decimal value\n"
+  example: []
+  syntax:
+    content: public static decimal NullDecimal
+    return:
+      type: System.Decimal
+    content.vb: Public Shared NullDecimal As Decimal
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DataService.Constants.NullDouble
+  commentId: F:DataService.Constants.NullDouble
+  id: NullDouble
+  parent: DataService.Constants
+  langs:
+  - csharp
+  - vb
+  name: NullDouble
+  nameWithType: Constants.NullDouble
+  fullName: DataService.Constants.NullDouble
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/Constants.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: NullDouble
+    path: Constants.cs
+    startLine: 24
+  assemblies:
+  - MouldSpecification
+  namespace: DataService
+  summary: "\nThe value used to represent a null double value\n"
+  example: []
+  syntax:
+    content: public static double NullDouble
+    return:
+      type: System.Double
+    content.vb: Public Shared NullDouble As Double
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DataService.Constants.NullGuid
+  commentId: F:DataService.Constants.NullGuid
+  id: NullGuid
+  parent: DataService.Constants
+  langs:
+  - csharp
+  - vb
+  name: NullGuid
+  nameWithType: Constants.NullGuid
+  fullName: DataService.Constants.NullGuid
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/Constants.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: NullGuid
+    path: Constants.cs
+    startLine: 29
+  assemblies:
+  - MouldSpecification
+  namespace: DataService
+  summary: "\nThe value used to represent a null Guid value\n"
+  example: []
+  syntax:
+    content: public static Guid NullGuid
+    return:
+      type: System.Guid
+    content.vb: Public Shared NullGuid As Guid
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DataService.Constants.NullInt
+  commentId: F:DataService.Constants.NullInt
+  id: NullInt
+  parent: DataService.Constants
+  langs:
+  - csharp
+  - vb
+  name: NullInt
+  nameWithType: Constants.NullInt
+  fullName: DataService.Constants.NullInt
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/Constants.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: NullInt
+    path: Constants.cs
+    startLine: 34
+  assemblies:
+  - MouldSpecification
+  namespace: DataService
+  summary: "\nThe value used to represent a null int value\n"
+  example: []
+  syntax:
+    content: public static int NullInt
+    return:
+      type: System.Int32
+    content.vb: Public Shared NullInt As Integer
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DataService.Constants.NullLong
+  commentId: F:DataService.Constants.NullLong
+  id: NullLong
+  parent: DataService.Constants
+  langs:
+  - csharp
+  - vb
+  name: NullLong
+  nameWithType: Constants.NullLong
+  fullName: DataService.Constants.NullLong
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/Constants.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: NullLong
+    path: Constants.cs
+    startLine: 39
+  assemblies:
+  - MouldSpecification
+  namespace: DataService
+  summary: "\nThe value used to represent a null long value\n"
+  example: []
+  syntax:
+    content: public static long NullLong
+    return:
+      type: System.Int64
+    content.vb: Public Shared NullLong As Long
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DataService.Constants.NullFloat
+  commentId: F:DataService.Constants.NullFloat
+  id: NullFloat
+  parent: DataService.Constants
+  langs:
+  - csharp
+  - vb
+  name: NullFloat
+  nameWithType: Constants.NullFloat
+  fullName: DataService.Constants.NullFloat
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/Constants.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: NullFloat
+    path: Constants.cs
+    startLine: 44
+  assemblies:
+  - MouldSpecification
+  namespace: DataService
+  summary: "\nThe value used to represent a null float value\n"
+  example: []
+  syntax:
+    content: public static float NullFloat
+    return:
+      type: System.Single
+    content.vb: Public Shared NullFloat As Single
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DataService.Constants.NullString
+  commentId: F:DataService.Constants.NullString
+  id: NullString
+  parent: DataService.Constants
+  langs:
+  - csharp
+  - vb
+  name: NullString
+  nameWithType: Constants.NullString
+  fullName: DataService.Constants.NullString
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/Constants.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: NullString
+    path: Constants.cs
+    startLine: 49
+  assemblies:
+  - MouldSpecification
+  namespace: DataService
+  summary: "\nThe value used to represent a null string value\n"
+  example: []
+  syntax:
+    content: public static string NullString
+    return:
+      type: System.String
+    content.vb: Public Shared NullString As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DataService.Constants.SqlMaxDate
+  commentId: F:DataService.Constants.SqlMaxDate
+  id: SqlMaxDate
+  parent: DataService.Constants
+  langs:
+  - csharp
+  - vb
+  name: SqlMaxDate
+  nameWithType: Constants.SqlMaxDate
+  fullName: DataService.Constants.SqlMaxDate
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/Constants.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: SqlMaxDate
+    path: Constants.cs
+    startLine: 54
+  assemblies:
+  - MouldSpecification
+  namespace: DataService
+  summary: "\nMaximum DateTime value allowed by SQL Server\n"
+  example: []
+  syntax:
+    content: public static DateTime SqlMaxDate
+    return:
+      type: System.DateTime
+    content.vb: Public Shared SqlMaxDate As Date
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: DataService.Constants.SqlMinDate
+  commentId: F:DataService.Constants.SqlMinDate
+  id: SqlMinDate
+  parent: DataService.Constants
+  langs:
+  - csharp
+  - vb
+  name: SqlMinDate
+  nameWithType: Constants.SqlMinDate
+  fullName: DataService.Constants.SqlMinDate
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/Constants.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: SqlMinDate
+    path: Constants.cs
+    startLine: 59
+  assemblies:
+  - MouldSpecification
+  namespace: DataService
+  summary: "\nMinimum DateTime value allowed by SQL Server\n"
+  example: []
+  syntax:
+    content: public static DateTime SqlMinDate
+    return:
+      type: System.DateTime
+    content.vb: Public Shared SqlMinDate As Date
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: DataService
+  commentId: N:DataService
+  name: DataService
+  nameWithType: DataService
+  fullName: DataService
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

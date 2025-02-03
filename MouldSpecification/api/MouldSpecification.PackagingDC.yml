@@ -1,0 +1,1255 @@
+### YamlMime:ManagedReference
+items:
+- uid: MouldSpecification.PackagingDC
+  commentId: T:MouldSpecification.PackagingDC
+  id: PackagingDC
+  parent: MouldSpecification
+  children:
+  - MouldSpecification.PackagingDC.#ctor
+  - MouldSpecification.PackagingDC.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Int32,System.Boolean,System.Boolean,System.Int32,System.String,System.Boolean,System.Int32,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,System.DateTime)
+  - MouldSpecification.PackagingDC.BagQty
+  - MouldSpecification.PackagingDC.BarcodeLabel
+  - MouldSpecification.PackagingDC.CtnID
+  - MouldSpecification.PackagingDC.CtnQty
+  - MouldSpecification.PackagingDC.CtnsPerPallet
+  - MouldSpecification.PackagingDC.InnerBag
+  - MouldSpecification.PackagingDC.ItemID
+  - MouldSpecification.PackagingDC.LabelInnerBag
+  - MouldSpecification.PackagingDC.last_updated_by
+  - MouldSpecification.PackagingDC.last_updated_on
+  - MouldSpecification.PackagingDC.Liner
+  - MouldSpecification.PackagingDC.PackedInCtn
+  - MouldSpecification.PackagingDC.PackedOnPallet
+  - MouldSpecification.PackagingDC.PackingID
+  - MouldSpecification.PackagingDC.PackingStyle
+  - MouldSpecification.PackagingDC.PalletCover
+  - MouldSpecification.PackagingDC.PalletID
+  - MouldSpecification.PackagingDC.PalQty
+  - MouldSpecification.PackagingDC.Wrapping
+  langs:
+  - csharp
+  - vb
+  name: PackagingDC
+  nameWithType: PackagingDC
+  fullName: MouldSpecification.PackagingDC
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PackagingDC
+    path: PackagingDC.cs
+    startLine: 4
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public class PackagingDC
+    content.vb: Public Class PackagingDC
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MouldSpecification.PackagingDC.PackingID
+  commentId: P:MouldSpecification.PackagingDC.PackingID
+  id: PackingID
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: PackingID
+  nameWithType: PackagingDC.PackingID
+  fullName: MouldSpecification.PackagingDC.PackingID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PackingID
+    path: PackagingDC.cs
+    startLine: 6
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int PackingID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property PackingID As Integer
+  overload: MouldSpecification.PackagingDC.PackingID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.ItemID
+  commentId: P:MouldSpecification.PackagingDC.ItemID
+  id: ItemID
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: ItemID
+  nameWithType: PackagingDC.ItemID
+  fullName: MouldSpecification.PackagingDC.ItemID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ItemID
+    path: PackagingDC.cs
+    startLine: 7
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int ItemID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ItemID As Integer
+  overload: MouldSpecification.PackagingDC.ItemID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.CtnID
+  commentId: P:MouldSpecification.PackagingDC.CtnID
+  id: CtnID
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: CtnID
+  nameWithType: PackagingDC.CtnID
+  fullName: MouldSpecification.PackagingDC.CtnID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CtnID
+    path: PackagingDC.cs
+    startLine: 8
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int CtnID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CtnID As Integer
+  overload: MouldSpecification.PackagingDC.CtnID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.PalletID
+  commentId: P:MouldSpecification.PackagingDC.PalletID
+  id: PalletID
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: PalletID
+  nameWithType: PackagingDC.PalletID
+  fullName: MouldSpecification.PackagingDC.PalletID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PalletID
+    path: PackagingDC.cs
+    startLine: 9
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int PalletID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property PalletID As Integer
+  overload: MouldSpecification.PackagingDC.PalletID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.PackedInCtn
+  commentId: P:MouldSpecification.PackagingDC.PackedInCtn
+  id: PackedInCtn
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: PackedInCtn
+  nameWithType: PackagingDC.PackedInCtn
+  fullName: MouldSpecification.PackagingDC.PackedInCtn
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PackedInCtn
+    path: PackagingDC.cs
+    startLine: 10
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public bool PackedInCtn { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property PackedInCtn As Boolean
+  overload: MouldSpecification.PackagingDC.PackedInCtn*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.CtnQty
+  commentId: P:MouldSpecification.PackagingDC.CtnQty
+  id: CtnQty
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: CtnQty
+  nameWithType: PackagingDC.CtnQty
+  fullName: MouldSpecification.PackagingDC.CtnQty
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CtnQty
+    path: PackagingDC.cs
+    startLine: 11
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int CtnQty { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CtnQty As Integer
+  overload: MouldSpecification.PackagingDC.CtnQty*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.Liner
+  commentId: P:MouldSpecification.PackagingDC.Liner
+  id: Liner
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: Liner
+  nameWithType: PackagingDC.Liner
+  fullName: MouldSpecification.PackagingDC.Liner
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Liner
+    path: PackagingDC.cs
+    startLine: 12
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public bool Liner { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Liner As Boolean
+  overload: MouldSpecification.PackagingDC.Liner*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.InnerBag
+  commentId: P:MouldSpecification.PackagingDC.InnerBag
+  id: InnerBag
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: InnerBag
+  nameWithType: PackagingDC.InnerBag
+  fullName: MouldSpecification.PackagingDC.InnerBag
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: InnerBag
+    path: PackagingDC.cs
+    startLine: 13
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public bool InnerBag { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property InnerBag As Boolean
+  overload: MouldSpecification.PackagingDC.InnerBag*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.BagQty
+  commentId: P:MouldSpecification.PackagingDC.BagQty
+  id: BagQty
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: BagQty
+  nameWithType: PackagingDC.BagQty
+  fullName: MouldSpecification.PackagingDC.BagQty
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: BagQty
+    path: PackagingDC.cs
+    startLine: 14
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int BagQty { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property BagQty As Integer
+  overload: MouldSpecification.PackagingDC.BagQty*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.PackingStyle
+  commentId: P:MouldSpecification.PackagingDC.PackingStyle
+  id: PackingStyle
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: PackingStyle
+  nameWithType: PackagingDC.PackingStyle
+  fullName: MouldSpecification.PackagingDC.PackingStyle
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PackingStyle
+    path: PackagingDC.cs
+    startLine: 15
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string PackingStyle { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PackingStyle As String
+  overload: MouldSpecification.PackagingDC.PackingStyle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.PackedOnPallet
+  commentId: P:MouldSpecification.PackagingDC.PackedOnPallet
+  id: PackedOnPallet
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: PackedOnPallet
+  nameWithType: PackagingDC.PackedOnPallet
+  fullName: MouldSpecification.PackagingDC.PackedOnPallet
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PackedOnPallet
+    path: PackagingDC.cs
+    startLine: 16
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public bool PackedOnPallet { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property PackedOnPallet As Boolean
+  overload: MouldSpecification.PackagingDC.PackedOnPallet*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.PalQty
+  commentId: P:MouldSpecification.PackagingDC.PalQty
+  id: PalQty
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: PalQty
+  nameWithType: PackagingDC.PalQty
+  fullName: MouldSpecification.PackagingDC.PalQty
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PalQty
+    path: PackagingDC.cs
+    startLine: 17
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int PalQty { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property PalQty As Integer
+  overload: MouldSpecification.PackagingDC.PalQty*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.CtnsPerPallet
+  commentId: P:MouldSpecification.PackagingDC.CtnsPerPallet
+  id: CtnsPerPallet
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: CtnsPerPallet
+  nameWithType: PackagingDC.CtnsPerPallet
+  fullName: MouldSpecification.PackagingDC.CtnsPerPallet
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CtnsPerPallet
+    path: PackagingDC.cs
+    startLine: 18
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int CtnsPerPallet { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CtnsPerPallet As Integer
+  overload: MouldSpecification.PackagingDC.CtnsPerPallet*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.PalletCover
+  commentId: P:MouldSpecification.PackagingDC.PalletCover
+  id: PalletCover
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: PalletCover
+  nameWithType: PackagingDC.PalletCover
+  fullName: MouldSpecification.PackagingDC.PalletCover
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PalletCover
+    path: PackagingDC.cs
+    startLine: 19
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public bool PalletCover { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property PalletCover As Boolean
+  overload: MouldSpecification.PackagingDC.PalletCover*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.Wrapping
+  commentId: P:MouldSpecification.PackagingDC.Wrapping
+  id: Wrapping
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: Wrapping
+  nameWithType: PackagingDC.Wrapping
+  fullName: MouldSpecification.PackagingDC.Wrapping
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Wrapping
+    path: PackagingDC.cs
+    startLine: 20
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string Wrapping { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Wrapping As String
+  overload: MouldSpecification.PackagingDC.Wrapping*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.LabelInnerBag
+  commentId: P:MouldSpecification.PackagingDC.LabelInnerBag
+  id: LabelInnerBag
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: LabelInnerBag
+  nameWithType: PackagingDC.LabelInnerBag
+  fullName: MouldSpecification.PackagingDC.LabelInnerBag
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: LabelInnerBag
+    path: PackagingDC.cs
+    startLine: 21
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string LabelInnerBag { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LabelInnerBag As String
+  overload: MouldSpecification.PackagingDC.LabelInnerBag*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.BarcodeLabel
+  commentId: P:MouldSpecification.PackagingDC.BarcodeLabel
+  id: BarcodeLabel
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: BarcodeLabel
+  nameWithType: PackagingDC.BarcodeLabel
+  fullName: MouldSpecification.PackagingDC.BarcodeLabel
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: BarcodeLabel
+    path: PackagingDC.cs
+    startLine: 22
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string BarcodeLabel { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BarcodeLabel As String
+  overload: MouldSpecification.PackagingDC.BarcodeLabel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.last_updated_by
+  commentId: P:MouldSpecification.PackagingDC.last_updated_by
+  id: last_updated_by
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_by
+  nameWithType: PackagingDC.last_updated_by
+  fullName: MouldSpecification.PackagingDC.last_updated_by
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_by
+    path: PackagingDC.cs
+    startLine: 23
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string last_updated_by { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property last_updated_by As String
+  overload: MouldSpecification.PackagingDC.last_updated_by*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.last_updated_on
+  commentId: P:MouldSpecification.PackagingDC.last_updated_on
+  id: last_updated_on
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_on
+  nameWithType: PackagingDC.last_updated_on
+  fullName: MouldSpecification.PackagingDC.last_updated_on
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_on
+    path: PackagingDC.cs
+    startLine: 24
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public DateTime last_updated_on { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property last_updated_on As Date
+  overload: MouldSpecification.PackagingDC.last_updated_on*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Int32,System.Boolean,System.Boolean,System.Int32,System.String,System.Boolean,System.Int32,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,System.DateTime)
+  commentId: M:MouldSpecification.PackagingDC.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Int32,System.Boolean,System.Boolean,System.Int32,System.String,System.Boolean,System.Int32,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,System.DateTime)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Int32,System.Boolean,System.Boolean,System.Int32,System.String,System.Boolean,System.Int32,System.Int32,System.Boolean,System.String,System.String,System.String,System.String,System.DateTime)'
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: PackagingDC(Int32, Int32, Int32, Int32, Boolean, Int32, Boolean, Boolean, Int32, String, Boolean, Int32, Int32, Boolean, String, String, String, String, DateTime)
+  nameWithType: PackagingDC.PackagingDC(Int32, Int32, Int32, Int32, Boolean, Int32, Boolean, Boolean, Int32, String, Boolean, Int32, Int32, Boolean, String, String, String, String, DateTime)
+  fullName: MouldSpecification.PackagingDC.PackagingDC(System.Int32, System.Int32, System.Int32, System.Int32, System.Boolean, System.Int32, System.Boolean, System.Boolean, System.Int32, System.String, System.Boolean, System.Int32, System.Int32, System.Boolean, System.String, System.String, System.String, System.String, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: PackagingDC.cs
+    startLine: 26
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public PackagingDC(int PackingID_, int ItemID_, int CtnID_, int PalletID_, bool PackedInCtn_, int CtnQty_, bool Liner_, bool InnerBag_, int BagQty_, string PackingStyle_, bool PackedOnPallet_, int PalQty_, int CtnsPerPallet_, bool PalletCover_, string Wrapping_, string LabelInnerBag_, string BarcodeLabel_, string last_updated_by_, DateTime last_updated_on_)
+    parameters:
+    - id: PackingID_
+      type: System.Int32
+    - id: ItemID_
+      type: System.Int32
+    - id: CtnID_
+      type: System.Int32
+    - id: PalletID_
+      type: System.Int32
+    - id: PackedInCtn_
+      type: System.Boolean
+    - id: CtnQty_
+      type: System.Int32
+    - id: Liner_
+      type: System.Boolean
+    - id: InnerBag_
+      type: System.Boolean
+    - id: BagQty_
+      type: System.Int32
+    - id: PackingStyle_
+      type: System.String
+    - id: PackedOnPallet_
+      type: System.Boolean
+    - id: PalQty_
+      type: System.Int32
+    - id: CtnsPerPallet_
+      type: System.Int32
+    - id: PalletCover_
+      type: System.Boolean
+    - id: Wrapping_
+      type: System.String
+    - id: LabelInnerBag_
+      type: System.String
+    - id: BarcodeLabel_
+      type: System.String
+    - id: last_updated_by_
+      type: System.String
+    - id: last_updated_on_
+      type: System.DateTime
+    content.vb: Public Sub New(PackingID_ As Integer, ItemID_ As Integer, CtnID_ As Integer, PalletID_ As Integer, PackedInCtn_ As Boolean, CtnQty_ As Integer, Liner_ As Boolean, InnerBag_ As Boolean, BagQty_ As Integer, PackingStyle_ As String, PackedOnPallet_ As Boolean, PalQty_ As Integer, CtnsPerPallet_ As Integer, PalletCover_ As Boolean, Wrapping_ As String, LabelInnerBag_ As String, BarcodeLabel_ As String, last_updated_by_ As String, last_updated_on_ As Date)
+  overload: MouldSpecification.PackagingDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.PackagingDC.#ctor
+  commentId: M:MouldSpecification.PackagingDC.#ctor
+  id: '#ctor'
+  parent: MouldSpecification.PackagingDC
+  langs:
+  - csharp
+  - vb
+  name: PackagingDC()
+  nameWithType: PackagingDC.PackagingDC()
+  fullName: MouldSpecification.PackagingDC.PackagingDC()
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/PackagingDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: PackagingDC.cs
+    startLine: 49
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public PackagingDC()
+    content.vb: Public Sub New
+  overload: MouldSpecification.PackagingDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MouldSpecification
+  commentId: N:MouldSpecification
+  name: MouldSpecification
+  nameWithType: MouldSpecification
+  fullName: MouldSpecification
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MouldSpecification.PackagingDC.PackingID*
+  commentId: Overload:MouldSpecification.PackagingDC.PackingID
+  name: PackingID
+  nameWithType: PackagingDC.PackingID
+  fullName: MouldSpecification.PackagingDC.PackingID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MouldSpecification.PackagingDC.ItemID*
+  commentId: Overload:MouldSpecification.PackagingDC.ItemID
+  name: ItemID
+  nameWithType: PackagingDC.ItemID
+  fullName: MouldSpecification.PackagingDC.ItemID
+- uid: MouldSpecification.PackagingDC.CtnID*
+  commentId: Overload:MouldSpecification.PackagingDC.CtnID
+  name: CtnID
+  nameWithType: PackagingDC.CtnID
+  fullName: MouldSpecification.PackagingDC.CtnID
+- uid: MouldSpecification.PackagingDC.PalletID*
+  commentId: Overload:MouldSpecification.PackagingDC.PalletID
+  name: PalletID
+  nameWithType: PackagingDC.PalletID
+  fullName: MouldSpecification.PackagingDC.PalletID
+- uid: MouldSpecification.PackagingDC.PackedInCtn*
+  commentId: Overload:MouldSpecification.PackagingDC.PackedInCtn
+  name: PackedInCtn
+  nameWithType: PackagingDC.PackedInCtn
+  fullName: MouldSpecification.PackagingDC.PackedInCtn
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: MouldSpecification.PackagingDC.CtnQty*
+  commentId: Overload:MouldSpecification.PackagingDC.CtnQty
+  name: CtnQty
+  nameWithType: PackagingDC.CtnQty
+  fullName: MouldSpecification.PackagingDC.CtnQty
+- uid: MouldSpecification.PackagingDC.Liner*
+  commentId: Overload:MouldSpecification.PackagingDC.Liner
+  name: Liner
+  nameWithType: PackagingDC.Liner
+  fullName: MouldSpecification.PackagingDC.Liner
+- uid: MouldSpecification.PackagingDC.InnerBag*
+  commentId: Overload:MouldSpecification.PackagingDC.InnerBag
+  name: InnerBag
+  nameWithType: PackagingDC.InnerBag
+  fullName: MouldSpecification.PackagingDC.InnerBag
+- uid: MouldSpecification.PackagingDC.BagQty*
+  commentId: Overload:MouldSpecification.PackagingDC.BagQty
+  name: BagQty
+  nameWithType: PackagingDC.BagQty
+  fullName: MouldSpecification.PackagingDC.BagQty
+- uid: MouldSpecification.PackagingDC.PackingStyle*
+  commentId: Overload:MouldSpecification.PackagingDC.PackingStyle
+  name: PackingStyle
+  nameWithType: PackagingDC.PackingStyle
+  fullName: MouldSpecification.PackagingDC.PackingStyle
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MouldSpecification.PackagingDC.PackedOnPallet*
+  commentId: Overload:MouldSpecification.PackagingDC.PackedOnPallet
+  name: PackedOnPallet
+  nameWithType: PackagingDC.PackedOnPallet
+  fullName: MouldSpecification.PackagingDC.PackedOnPallet
+- uid: MouldSpecification.PackagingDC.PalQty*
+  commentId: Overload:MouldSpecification.PackagingDC.PalQty
+  name: PalQty
+  nameWithType: PackagingDC.PalQty
+  fullName: MouldSpecification.PackagingDC.PalQty
+- uid: MouldSpecification.PackagingDC.CtnsPerPallet*
+  commentId: Overload:MouldSpecification.PackagingDC.CtnsPerPallet
+  name: CtnsPerPallet
+  nameWithType: PackagingDC.CtnsPerPallet
+  fullName: MouldSpecification.PackagingDC.CtnsPerPallet
+- uid: MouldSpecification.PackagingDC.PalletCover*
+  commentId: Overload:MouldSpecification.PackagingDC.PalletCover
+  name: PalletCover
+  nameWithType: PackagingDC.PalletCover
+  fullName: MouldSpecification.PackagingDC.PalletCover
+- uid: MouldSpecification.PackagingDC.Wrapping*
+  commentId: Overload:MouldSpecification.PackagingDC.Wrapping
+  name: Wrapping
+  nameWithType: PackagingDC.Wrapping
+  fullName: MouldSpecification.PackagingDC.Wrapping
+- uid: MouldSpecification.PackagingDC.LabelInnerBag*
+  commentId: Overload:MouldSpecification.PackagingDC.LabelInnerBag
+  name: LabelInnerBag
+  nameWithType: PackagingDC.LabelInnerBag
+  fullName: MouldSpecification.PackagingDC.LabelInnerBag
+- uid: MouldSpecification.PackagingDC.BarcodeLabel*
+  commentId: Overload:MouldSpecification.PackagingDC.BarcodeLabel
+  name: BarcodeLabel
+  nameWithType: PackagingDC.BarcodeLabel
+  fullName: MouldSpecification.PackagingDC.BarcodeLabel
+- uid: MouldSpecification.PackagingDC.last_updated_by*
+  commentId: Overload:MouldSpecification.PackagingDC.last_updated_by
+  name: last_updated_by
+  nameWithType: PackagingDC.last_updated_by
+  fullName: MouldSpecification.PackagingDC.last_updated_by
+- uid: MouldSpecification.PackagingDC.last_updated_on*
+  commentId: Overload:MouldSpecification.PackagingDC.last_updated_on
+  name: last_updated_on
+  nameWithType: PackagingDC.last_updated_on
+  fullName: MouldSpecification.PackagingDC.last_updated_on
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: MouldSpecification.PackagingDC.#ctor*
+  commentId: Overload:MouldSpecification.PackagingDC.#ctor
+  name: PackagingDC
+  nameWithType: PackagingDC.PackagingDC
+  fullName: MouldSpecification.PackagingDC.PackagingDC

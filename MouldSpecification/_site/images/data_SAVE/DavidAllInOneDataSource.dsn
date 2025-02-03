@@ -1,0 +1,8 @@
+[ODBC]
+DRIVER=SQL Server Native Client 11.0
+DATABASE=AccessImport
+WSID=DAVIDALLINONE
+APP=Microsoft Office
+Trusted_Connection=Yes
+SERVER=DAVIDALLINONE\SQLEXPRESS
+Description=AccessWork2SqlServer

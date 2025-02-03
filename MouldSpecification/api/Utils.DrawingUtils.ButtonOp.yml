@@ -1,0 +1,541 @@
+### YamlMime:ManagedReference
+items:
+- uid: Utils.DrawingUtils.ButtonOp
+  commentId: T:Utils.DrawingUtils.ButtonOp
+  id: DrawingUtils.ButtonOp
+  parent: Utils
+  children:
+  - Utils.DrawingUtils.ButtonOp.Browse
+  - Utils.DrawingUtils.ButtonOp.Collapse
+  - Utils.DrawingUtils.ButtonOp.Deployment
+  - Utils.DrawingUtils.ButtonOp.Disable
+  - Utils.DrawingUtils.ButtonOp.Document
+  - Utils.DrawingUtils.ButtonOp.Expand
+  - Utils.DrawingUtils.ButtonOp.FilterOff
+  - Utils.DrawingUtils.ButtonOp.FilterOn
+  - Utils.DrawingUtils.ButtonOp.minus
+  - Utils.DrawingUtils.ButtonOp.plus
+  - Utils.DrawingUtils.ButtonOp.Refresh
+  - Utils.DrawingUtils.ButtonOp.SortAZ_Off
+  - Utils.DrawingUtils.ButtonOp.SortAZ_On
+  - Utils.DrawingUtils.ButtonOp.SortZA_Off
+  - Utils.DrawingUtils.ButtonOp.SortZA_On
+  langs:
+  - csharp
+  - vb
+  name: DrawingUtils.ButtonOp
+  nameWithType: DrawingUtils.ButtonOp
+  fullName: Utils.DrawingUtils.ButtonOp
+  type: Enum
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ButtonOp
+    path: DrawingUtils.cs
+    startLine: 13
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: public enum ButtonOp
+    content.vb: Public Enum ButtonOp
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Utils.DrawingUtils.ButtonOp.Disable
+  commentId: F:Utils.DrawingUtils.ButtonOp.Disable
+  id: Disable
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: Disable
+  nameWithType: DrawingUtils.ButtonOp.Disable
+  fullName: Utils.DrawingUtils.ButtonOp.Disable
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Disable
+    path: DrawingUtils.cs
+    startLine: 15
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: Disable = 0
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.ButtonOp.Expand
+  commentId: F:Utils.DrawingUtils.ButtonOp.Expand
+  id: Expand
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: Expand
+  nameWithType: DrawingUtils.ButtonOp.Expand
+  fullName: Utils.DrawingUtils.ButtonOp.Expand
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Expand
+    path: DrawingUtils.cs
+    startLine: 16
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: Expand = 1
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.ButtonOp.Collapse
+  commentId: F:Utils.DrawingUtils.ButtonOp.Collapse
+  id: Collapse
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: Collapse
+  nameWithType: DrawingUtils.ButtonOp.Collapse
+  fullName: Utils.DrawingUtils.ButtonOp.Collapse
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Collapse
+    path: DrawingUtils.cs
+    startLine: 17
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: Collapse = 2
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.ButtonOp.Browse
+  commentId: F:Utils.DrawingUtils.ButtonOp.Browse
+  id: Browse
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: Browse
+  nameWithType: DrawingUtils.ButtonOp.Browse
+  fullName: Utils.DrawingUtils.ButtonOp.Browse
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Browse
+    path: DrawingUtils.cs
+    startLine: 18
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: Browse = 3
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.ButtonOp.Refresh
+  commentId: F:Utils.DrawingUtils.ButtonOp.Refresh
+  id: Refresh
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: Refresh
+  nameWithType: DrawingUtils.ButtonOp.Refresh
+  fullName: Utils.DrawingUtils.ButtonOp.Refresh
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Refresh
+    path: DrawingUtils.cs
+    startLine: 19
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: Refresh = 4
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.ButtonOp.Document
+  commentId: F:Utils.DrawingUtils.ButtonOp.Document
+  id: Document
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: Document
+  nameWithType: DrawingUtils.ButtonOp.Document
+  fullName: Utils.DrawingUtils.ButtonOp.Document
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Document
+    path: DrawingUtils.cs
+    startLine: 20
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: Document = 5
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.ButtonOp.Deployment
+  commentId: F:Utils.DrawingUtils.ButtonOp.Deployment
+  id: Deployment
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: Deployment
+  nameWithType: DrawingUtils.ButtonOp.Deployment
+  fullName: Utils.DrawingUtils.ButtonOp.Deployment
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Deployment
+    path: DrawingUtils.cs
+    startLine: 21
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: Deployment = 6
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.ButtonOp.FilterOn
+  commentId: F:Utils.DrawingUtils.ButtonOp.FilterOn
+  id: FilterOn
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: FilterOn
+  nameWithType: DrawingUtils.ButtonOp.FilterOn
+  fullName: Utils.DrawingUtils.ButtonOp.FilterOn
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: FilterOn
+    path: DrawingUtils.cs
+    startLine: 22
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: FilterOn = 7
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.ButtonOp.FilterOff
+  commentId: F:Utils.DrawingUtils.ButtonOp.FilterOff
+  id: FilterOff
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: FilterOff
+  nameWithType: DrawingUtils.ButtonOp.FilterOff
+  fullName: Utils.DrawingUtils.ButtonOp.FilterOff
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: FilterOff
+    path: DrawingUtils.cs
+    startLine: 23
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: FilterOff = 8
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.ButtonOp.SortAZ_On
+  commentId: F:Utils.DrawingUtils.ButtonOp.SortAZ_On
+  id: SortAZ_On
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: SortAZ_On
+  nameWithType: DrawingUtils.ButtonOp.SortAZ_On
+  fullName: Utils.DrawingUtils.ButtonOp.SortAZ_On
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: SortAZ_On
+    path: DrawingUtils.cs
+    startLine: 24
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: SortAZ_On = 9
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.ButtonOp.SortZA_On
+  commentId: F:Utils.DrawingUtils.ButtonOp.SortZA_On
+  id: SortZA_On
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: SortZA_On
+  nameWithType: DrawingUtils.ButtonOp.SortZA_On
+  fullName: Utils.DrawingUtils.ButtonOp.SortZA_On
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: SortZA_On
+    path: DrawingUtils.cs
+    startLine: 25
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: SortZA_On = 10
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.ButtonOp.SortAZ_Off
+  commentId: F:Utils.DrawingUtils.ButtonOp.SortAZ_Off
+  id: SortAZ_Off
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: SortAZ_Off
+  nameWithType: DrawingUtils.ButtonOp.SortAZ_Off
+  fullName: Utils.DrawingUtils.ButtonOp.SortAZ_Off
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: SortAZ_Off
+    path: DrawingUtils.cs
+    startLine: 26
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: SortAZ_Off = 11
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.ButtonOp.SortZA_Off
+  commentId: F:Utils.DrawingUtils.ButtonOp.SortZA_Off
+  id: SortZA_Off
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: SortZA_Off
+  nameWithType: DrawingUtils.ButtonOp.SortZA_Off
+  fullName: Utils.DrawingUtils.ButtonOp.SortZA_Off
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: SortZA_Off
+    path: DrawingUtils.cs
+    startLine: 27
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: SortZA_Off = 12
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.ButtonOp.plus
+  commentId: F:Utils.DrawingUtils.ButtonOp.plus
+  id: plus
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: plus
+  nameWithType: DrawingUtils.ButtonOp.plus
+  fullName: Utils.DrawingUtils.ButtonOp.plus
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: plus
+    path: DrawingUtils.cs
+    startLine: 28
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: plus = 13
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Utils.DrawingUtils.ButtonOp.minus
+  commentId: F:Utils.DrawingUtils.ButtonOp.minus
+  id: minus
+  parent: Utils.DrawingUtils.ButtonOp
+  langs:
+  - csharp
+  - vb
+  name: minus
+  nameWithType: DrawingUtils.ButtonOp.minus
+  fullName: Utils.DrawingUtils.ButtonOp.minus
+  type: Field
+  source:
+    remote:
+      path: MouldSpecification/DrawingUtils.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: minus
+    path: DrawingUtils.cs
+    startLine: 29
+  assemblies:
+  - MouldSpecification
+  namespace: Utils
+  syntax:
+    content: minus = 14
+    return:
+      type: Utils.DrawingUtils.ButtonOp
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Utils
+  commentId: N:Utils
+  name: Utils
+  nameWithType: Utils
+  fullName: Utils
+- uid: Utils.DrawingUtils.ButtonOp
+  commentId: T:Utils.DrawingUtils.ButtonOp
+  parent: Utils
+  name: DrawingUtils.ButtonOp
+  nameWithType: DrawingUtils.ButtonOp
+  fullName: Utils.DrawingUtils.ButtonOp

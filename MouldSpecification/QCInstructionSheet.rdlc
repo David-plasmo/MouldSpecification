@@ -1,0 +1,1370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource1">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=Spectre;Initial Catalog=InjectionMouldMAN</ConnectString>
+        <IntegratedSecurity>true</IntegratedSecurity>
+      </ConnectionProperties>
+      <rd:DataSourceID>e63e3bf7-6c7a-4fbb-9a7b-97ed4552040c</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>DataSource1</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@ItemID">
+            <Value>=Parameters!ItemID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>SelectIMSpecificationReport</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="Company">
+          <DataField>Company</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PRCLEVEL">
+          <DataField>PRCLEVEL</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CUSTNAME">
+          <DataField>CUSTNAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ItemID">
+          <DataField>ItemID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PastelID">
+          <DataField>PastelID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PmID">
+          <DataField>PmID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MachineAID">
+          <DataField>MachineAID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MachineBID">
+          <DataField>MachineBID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MachineCID">
+          <DataField>MachineCID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Polymer1TypeID">
+          <DataField>Polymer1TypeID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Polymer1GradeID">
+          <DataField>Polymer1GradeID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Polymer2TypeID">
+          <DataField>Polymer2TypeID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Polymer2GradeID">
+          <DataField>Polymer2GradeID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MBID">
+          <DataField>MBID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AdditiveACodeID">
+          <DataField>AdditiveACodeID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AdditiveBCodeID">
+          <DataField>AdditiveBCodeID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="BarcodeLabel">
+          <DataField>BarcodeLabel</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CtnID">
+          <DataField>CtnID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MBBID">
+          <DataField>MBBID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PalletID">
+          <DataField>PalletID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Code">
+          <DataField>Code</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ImageFile">
+          <DataField>ImageFile</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SpecificationFile">
+          <DataField>SpecificationFile</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="labelIconPath">
+          <DataField>labelIconPath</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProductCategory">
+          <DataField>ProductCategory</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MachineA">
+          <DataField>MachineA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MachineAProgram">
+          <DataField>MachineAProgram</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MachineB">
+          <DataField>MachineB</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MachineBProgram">
+          <DataField>MachineBProgram</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MachineC">
+          <DataField>MachineC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MachineCProgram">
+          <DataField>MachineCProgram</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="AdditionalLabour">
+          <DataField>AdditionalLabour</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="Polymer1Type">
+          <DataField>Polymer1Type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Polymer1Grade">
+          <DataField>Polymer1Grade</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Polymer1PC">
+          <DataField>Polymer1PC</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="Polymer2Type">
+          <DataField>Polymer2Type</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Polymer2Grade">
+          <DataField>Polymer2Grade</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Polymer2PC">
+          <DataField>Polymer2PC</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="AdditionalNotes">
+          <DataField>AdditionalNotes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MBColourA">
+          <DataField>MBColourA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MBCodeA">
+          <DataField>MBCodeA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MBpcA">
+          <DataField>MBpcA</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="MBColourB">
+          <DataField>MBColourB</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MBCodeB">
+          <DataField>MBCodeB</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MBpcB">
+          <DataField>MBpcB</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="Additive">
+          <DataField>Additive</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AdditiveCode">
+          <DataField>AdditiveCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AdditiveAPC">
+          <DataField>AdditiveAPC</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="AdditiveB">
+          <DataField>AdditiveB</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AdditiveBCode">
+          <DataField>AdditiveBCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AdditiveBPC">
+          <DataField>AdditiveBPC</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="RegrindMaxPC">
+          <DataField>RegrindMaxPC</DataField>
+          <rd:TypeName>System.Single</rd:TypeName>
+        </Field>
+        <Field Name="MouldNumber">
+          <DataField>MouldNumber</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MouldLocation">
+          <DataField>MouldLocation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MouldOwner">
+          <DataField>MouldOwner</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FamilyMould">
+          <DataField>FamilyMould</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="NoOfCavities">
+          <DataField>NoOfCavities</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="NoOfPart">
+          <DataField>NoOfPart</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PartSummary">
+          <DataField>PartSummary</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Operation">
+          <DataField>Operation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OtherFeatures">
+          <DataField>OtherFeatures</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FixedHalf">
+          <DataField>FixedHalf</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FixedHalfDegC">
+          <DataField>FixedHalfDegC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MovingHalf">
+          <DataField>MovingHalf</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MovingHalfDegC">
+          <DataField>MovingHalfDegC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ComponentWeightTotalFamily">
+          <DataField>ComponentWeightTotalFamily</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="SpruePlusRunner">
+          <DataField>SpruePlusRunner</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TotalShotWeight">
+          <DataField>TotalShotWeight</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="CycleTimeA">
+          <DataField>CycleTimeA</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="NoPartsPerHrA">
+          <DataField>NoPartsPerHrA</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CycleTimeB">
+          <DataField>CycleTimeB</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="NoPartsPerHrB">
+          <DataField>NoPartsPerHrB</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CycleTimeC">
+          <DataField>CycleTimeC</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="NoPartsPerHrC">
+          <DataField>NoPartsPerHrC</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PremouldReq">
+          <DataField>PremouldReq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PostMouldReq">
+          <DataField>PostMouldReq</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FinishedPTandQC">
+          <DataField>FinishedPTandQC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ProductSample">
+          <DataField>ProductSample</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CertificateOfConformance">
+          <DataField>CertificateOfConformance</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PackedInCtn">
+          <DataField>PackedInCtn</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="CartonType">
+          <DataField>CartonType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CtnQty">
+          <DataField>CtnQty</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Liner">
+          <DataField>Liner</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="InnerBag">
+          <DataField>InnerBag</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="BagQty">
+          <DataField>BagQty</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PackingStyle">
+          <DataField>PackingStyle</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PackedOnPallet">
+          <DataField>PackedOnPallet</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PalletType">
+          <DataField>PalletType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CtnsPerPallet">
+          <DataField>CtnsPerPallet</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PalQty">
+          <DataField>PalQty</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PalletCover">
+          <DataField>PalletCover</DataField>
+          <rd:TypeName>System.Boolean</rd:TypeName>
+        </Field>
+        <Field Name="PalletDays">
+          <DataField>PalletDays</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Wrapping">
+          <DataField>Wrapping</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LabelInnerBag">
+          <DataField>LabelInnerBag</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LabelNo">
+          <DataField>LabelNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PackerQCInstructions">
+          <DataField>PackerQCInstructions</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PackerQCInstruction2">
+          <DataField>PackerQCInstruction2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PackerQCInstruction3">
+          <DataField>PackerQCInstruction3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PackerQCInstruction4">
+          <DataField>PackerQCInstruction4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PackerQCInstruction5">
+          <DataField>PackerQCInstruction5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PackingImage1">
+          <DataField>PackingImage1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PackingImage2">
+          <DataField>PackingImage2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PackingImage3">
+          <DataField>PackingImage3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReworkInstructions1">
+          <DataField>ReworkInstructions1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReworkInstructions2">
+          <DataField>ReworkInstructions2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssemblyInstructions">
+          <DataField>AssemblyInstructions</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssemblyImage1">
+          <DataField>AssemblyImage1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssemblyImage2">
+          <DataField>AssemblyImage2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssemblyImage3">
+          <DataField>AssemblyImage3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssemblyImage4">
+          <DataField>AssemblyImage4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssemblyImage5">
+          <DataField>AssemblyImage5</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="AssemblyImage6">
+          <DataField>AssemblyImage6</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Notes">
+          <DataField>Notes</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="QCInstruction1">
+          <DataField>QCInstruction1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="QCImage1">
+          <DataField>QCImage1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="QCInstruction2">
+          <DataField>QCInstruction2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="QCIMage2">
+          <DataField>QCIMage2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="QCInstruction3">
+          <DataField>QCInstruction3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="QCImage3">
+          <DataField>QCImage3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="QCInstruction4">
+          <DataField>QCInstruction4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="QCImage4">
+          <DataField>QCImage4</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Field1">
+          <DataField>Field1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Costing">
+          <DataField>Costing</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Field2">
+          <DataField>Field2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="last_updated_on">
+          <DataField>last_updated_on</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="last_updated_by">
+          <DataField>last_updated_by</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CompanyCode">
+          <DataField>CompanyCode</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="GradeID">
+          <DataField>GradeID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="MaterialID">
+          <DataField>MaterialID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Rectangle Name="ReportHeader">
+            <ReportItems>
+              <Textbox Name="Label26">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>QC INSTRUCTIONS - INJECTION MOULDING</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>20pt</FontSize>
+                          <FontWeight>Bold</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>26pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.105cm</Top>
+                <Left>0.105cm</Left>
+                <Height>0.952cm</Height>
+                <Width>12.804cm</Width>
+                <Style>
+                  <Border>
+                    <Color>#7f7f7f</Color>
+                  </Border>
+                  <PaddingLeft>0cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <DataElementOutput>ContentsOnly</DataElementOutput>
+            <Height>1.398cm</Height>
+            <Width>19.724cm</Width>
+            <Style>
+              <BackgroundColor>#d6dce5</BackgroundColor>
+            </Style>
+          </Rectangle>
+          <Rectangle Name="Detail">
+            <ReportItems>
+              <Textbox Name="Product_Description_Label">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Product Description</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>16pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.603cm</Top>
+                <Left>0.603cm</Left>
+                <Height>0.582cm</Height>
+                <Width>4.338cm</Width>
+                <Style>
+                  <Border>
+                    <Color>#7f7f7f</Color>
+                  </Border>
+                  <PaddingLeft>0cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+              <Textbox Name="Product_Description">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!Description.Value, "DataSet1")</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#404040</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>16pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>0.603cm</Top>
+                <Left>5.1cm</Left>
+                <Height>0.582cm</Height>
+                <Width>12.804cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#a6a6a6</Color>
+                    <Style>Solid</Style>
+                  </Border>
+                  <BackgroundColor>#ffffff</BackgroundColor>
+                  <PaddingLeft>0.1cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+              <Textbox Name="Product_Code_Label">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Product Code</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>16pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>1.306cm</Top>
+                <Left>0.603cm</Left>
+                <Height>0.582cm</Height>
+                <Width>4.338cm</Width>
+                <ZIndex>2</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#7f7f7f</Color>
+                  </Border>
+                  <PaddingLeft>0cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+              <Textbox Name="Product_Code">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!Code.Value, "DataSet1")</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#404040</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>16pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>1.306cm</Top>
+                <Left>5.1cm</Left>
+                <Height>0.582cm</Height>
+                <Width>12.804cm</Width>
+                <ZIndex>3</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#a6a6a6</Color>
+                    <Style>Solid</Style>
+                  </Border>
+                  <BackgroundColor>#ffffff</BackgroundColor>
+                  <PaddingLeft>0.1cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+              <Textbox Name="Customer_Label">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Customer</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>16pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.01cm</Top>
+                <Left>0.603cm</Left>
+                <Height>0.582cm</Height>
+                <Width>4.338cm</Width>
+                <ZIndex>4</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#7f7f7f</Color>
+                  </Border>
+                  <PaddingLeft>0cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+              <Textbox Name="Customer">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!CUSTNAME.Value, "DataSet1")</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#404040</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>16pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.01cm</Top>
+                <Left>5.1cm</Left>
+                <Height>0.582cm</Height>
+                <Width>12.804cm</Width>
+                <ZIndex>5</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#a6a6a6</Color>
+                    <Style>Solid</Style>
+                  </Border>
+                  <BackgroundColor>#ffffff</BackgroundColor>
+                  <PaddingLeft>0.1cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+              <Textbox Name="QC_Instruction_1_Label">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value> 1.</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>16pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.989cm</Top>
+                <Left>0.608cm</Left>
+                <Height>0.582cm</Height>
+                <Width>0.502cm</Width>
+                <ZIndex>6</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#7f7f7f</Color>
+                  </Border>
+                  <PaddingLeft>0cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+              <Textbox Name="QC_Instruction_1">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!QCInstruction1.Value, "DataSet1")</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#404040</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>16pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.998cm</Top>
+                <Left>1.102cm</Left>
+                <Height>2.407cm</Height>
+                <Width>6.904cm</Width>
+                <ZIndex>7</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#a6a6a6</Color>
+                  </Border>
+                  <BackgroundColor>#ffffff</BackgroundColor>
+                  <PaddingLeft>0cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+              <Textbox Name="QC_Instruction_2_Label">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value> 2.</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>16pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.998cm</Top>
+                <Left>9.497cm</Left>
+                <Height>0.582cm</Height>
+                <Width>0.529cm</Width>
+                <ZIndex>8</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#7f7f7f</Color>
+                  </Border>
+                  <PaddingLeft>0cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+              <Textbox Name="QC_Instruction_2">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!QCInstruction2.Value, "DataSet1")</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#404040</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>16pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>2.998cm</Top>
+                <Left>10.185cm</Left>
+                <Height>2.513cm</Height>
+                <Width>7.01cm</Width>
+                <ZIndex>9</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#a6a6a6</Color>
+                  </Border>
+                  <BackgroundColor>#ffffff</BackgroundColor>
+                  <PaddingLeft>0cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+              <Textbox Name="QC_Instruction_3_Label">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value> 3.</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>16pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>12.597cm</Top>
+                <Left>0.398cm</Left>
+                <Height>0.582cm</Height>
+                <Width>0.555cm</Width>
+                <ZIndex>10</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#7f7f7f</Color>
+                  </Border>
+                  <PaddingLeft>0cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+              <Textbox Name="QC_Instruction_3">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!QCImage3.Value, "DataSet1")</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#404040</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>16pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>12.597cm</Top>
+                <Left>1.112cm</Left>
+                <Height>2.91cm</Height>
+                <Width>7.01cm</Width>
+                <ZIndex>11</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#a6a6a6</Color>
+                  </Border>
+                  <BackgroundColor>#ffffff</BackgroundColor>
+                  <PaddingLeft>0cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+              <Textbox Name="QC_Instruction_4_Label">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value> 4.</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>16pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>12.698cm</Top>
+                <Left>9.597cm</Left>
+                <Height>0.582cm</Height>
+                <Width>0.555cm</Width>
+                <ZIndex>12</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#7f7f7f</Color>
+                  </Border>
+                  <PaddingLeft>0cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+              <Textbox Name="QC_Instruction_4">
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=First(Fields!QCInstruction4.Value, "DataSet1")</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontSize>11pt</FontSize>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#404040</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>General</TextAlign>
+                      <LineHeight>16pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <Top>12.698cm</Top>
+                <Left>10.285cm</Left>
+                <Height>2.804cm</Height>
+                <Width>7.037cm</Width>
+                <ZIndex>13</ZIndex>
+                <Style>
+                  <Border>
+                    <Color>#a6a6a6</Color>
+                  </Border>
+                  <BackgroundColor>#ffffff</BackgroundColor>
+                  <PaddingLeft>0cm</PaddingLeft>
+                  <PaddingRight>0cm</PaddingRight>
+                  <PaddingTop>0cm</PaddingTop>
+                  <PaddingBottom>0cm</PaddingBottom>
+                  <Direction>LTR</Direction>
+                </Style>
+              </Textbox>
+              <Image Name="QCImage1">
+                <Source>External</Source>
+                <Value>=iif(IsNothing(First(Fields!QCImage1.Value, "DataSet1")), "file:\\" + "S:\ProgramFiles\Plasmo Pty Ltd\BarTender\Image\Blank.png", "file:\\" + First(Fields!AssemblyImage1.Value, "DataSet1"))</Value>
+                <MIMEType>image/jpeg</MIMEType>
+                <Sizing>FitProportional</Sizing>
+                <Top>2.39975in</Top>
+                <Left>0.60052in</Left>
+                <Height>6.016cm</Height>
+                <Width>6.016cm</Width>
+                <ZIndex>14</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Image>
+              <Image Name="QCImage2">
+                <Source>External</Source>
+                <Value>=First(Fields!QCIMage2.Value, "DataSet1")</Value>
+                <MIMEType>image/jpeg</MIMEType>
+                <Sizing>FitProportional</Sizing>
+                <Top>2.39975in</Top>
+                <Left>4.22638in</Left>
+                <Height>6.016cm</Height>
+                <Width>6.016cm</Width>
+                <ZIndex>15</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Image>
+              <Image Name="QCImage3">
+                <Source>External</Source>
+                <Value>=iif(IsNothing(First(Fields!QCImage3.Value, "DataSet1")), "file:\\" + "S:\ProgramFiles\Plasmo Pty Ltd\BarTender\Image\Blank.png", "file:\\" + First(Fields!AssemblyImage1.Value, "DataSet1"))</Value>
+                <MIMEType>image/jpeg</MIMEType>
+                <Sizing>FitProportional</Sizing>
+                <Top>6.49883in</Top>
+                <Left>0.60052in</Left>
+                <Height>6.016cm</Height>
+                <Width>6.016cm</Width>
+                <ZIndex>16</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Image>
+              <Image Name="QCImage4">
+                <Source>External</Source>
+                <Value>=iif(IsNothing(First(Fields!QCImage4.Value, "DataSet1")), "file:\\" + "S:\ProgramFiles\Plasmo Pty Ltd\BarTender\Image\Blank.png", "file:\\" + First(Fields!AssemblyImage1.Value, "DataSet1"))</Value>
+                <MIMEType>image/jpeg</MIMEType>
+                <Sizing>FitProportional</Sizing>
+                <Top>6.49883in</Top>
+                <Left>4.22638in</Left>
+                <Height>6.016cm</Height>
+                <Width>6.016cm</Width>
+                <ZIndex>17</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Image>
+            </ReportItems>
+            <DataElementOutput>ContentsOnly</DataElementOutput>
+            <Top>1.398cm</Top>
+            <Height>23.696cm</Height>
+            <Width>19.724cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <BackgroundColor>#ffffff</BackgroundColor>
+            </Style>
+          </Rectangle>
+        </ReportItems>
+        <Height>25.094cm</Height>
+        <Style />
+      </Body>
+      <Width>19.724cm</Width>
+      <Page>
+        <PageHeader>
+          <Height>0cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <Style>
+            <BackgroundColor>#ffffff</BackgroundColor>
+          </Style>
+        </PageHeader>
+        <PageFooter>
+          <Height>0.984cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="Text27">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=Now()</Value>
+                      <Style>
+                        <FontStyle>Normal</FontStyle>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>11pt</FontSize>
+                        <FontWeight>Normal</FontWeight>
+                        <Format>D</Format>
+                        <TextDecoration>None</TextDecoration>
+                        <Color>#404040</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Left</TextAlign>
+                    <LineHeight>16pt</LineHeight>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.402cm</Top>
+              <Left>0.1cm</Left>
+              <Height>0.582cm</Height>
+              <Width>8.888cm</Width>
+              <Style>
+                <Border>
+                  <Color>#a6a6a6</Color>
+                </Border>
+                <BackgroundColor>#ffffff</BackgroundColor>
+                <PaddingLeft>0cm</PaddingLeft>
+                <PaddingRight>0cm</PaddingRight>
+                <PaddingTop>0cm</PaddingTop>
+                <PaddingBottom>0cm</PaddingBottom>
+                <Direction>LTR</Direction>
+              </Style>
+            </Textbox>
+            <Textbox Name="Text28">
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>="Page " &amp; Globals.PageNumber &amp; " of " &amp; Globals.TotalPages</Value>
+                      <Style>
+                        <FontStyle>Normal</FontStyle>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>11pt</FontSize>
+                        <FontWeight>Normal</FontWeight>
+                        <TextDecoration>None</TextDecoration>
+                        <Color>#404040</Color>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                    <LineHeight>16pt</LineHeight>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.402cm</Top>
+              <Left>10.735cm</Left>
+              <Height>0.582cm</Height>
+              <Width>8.888cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Color>#a6a6a6</Color>
+                </Border>
+                <BackgroundColor>#ffffff</BackgroundColor>
+                <PaddingLeft>0cm</PaddingLeft>
+                <PaddingRight>0cm</PaddingRight>
+                <PaddingTop>0cm</PaddingTop>
+                <PaddingBottom>0cm</PaddingBottom>
+                <Direction>LTR</Direction>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <BackgroundColor>#ffffff</BackgroundColor>
+          </Style>
+        </PageFooter>
+        <LeftMargin>5mm</LeftMargin>
+        <TopMargin>5mm</TopMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="ItemID">
+      <DataType>Integer</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>210</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Item ID</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>2</NumberOfColumns>
+      <NumberOfRows>6</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>5</RowIndex>
+          <ParameterName>ItemID</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>b67add79-4165-4ec7-97dc-16e0069d3d28</rd:ReportID>
+</Report>

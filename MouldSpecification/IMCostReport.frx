@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="08/25/2023 12:18:39" ReportInfo.Modified="08/25/2023 12:19:11" ReportInfo.CreatorVersion="2023.2.29.0">
+  <Dictionary/>
+  <ReportPage Name="Page1" PaperWidth="209.55" PaperHeight="298.45" LeftMargin="8.889999" TopMargin="6.35" Watermark.Font="Arial, 60pt">
+    <DataBand Name="Data1" Width="720.69" Height="1025.61">
+      <TableObject Name="Tablix1" Top="144" Width="360.28" Height="872.12">
+        <TableColumn Name="Column1" Width="246.23"/>
+        <TableColumn Name="Column2" Width="114.05"/>
+        <TableRow Name="Row1" Height="24">
+          <TableCell Name="Cell1" CanGrow="true" Text="MACHINE" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell2" CanGrow="true" Text="=First(Fields!Machine.Value, &quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row2" Height="24.29">
+          <TableCell Name="Cell3" CanGrow="true" Text="No. of Cavities" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell4" CanGrow="true" Text="=Max(Fields!NoOfCavities.Value, &quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row3" Height="24.29">
+          <TableCell Name="Cell5" CanGrow="true" Text="Cavities for this part" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell6" CanGrow="true" Text="=Max(Fields!NoOfPart.Value, &quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row4" Height="24.29">
+          <TableCell Name="Cell7" CanGrow="true" Text="Machine Cost " Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell8" CanGrow="true" Text="=Max(Fields!CostPerHour.Value, &quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row5" Height="24.29">
+          <TableCell Name="Cell9" CanGrow="true" Text="Cycle Time (secs)" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell10" CanGrow="true" Text="=Max(Fields!CycleTime.Value, &quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row6" Height="24.29">
+          <TableCell Name="Cell11" CanGrow="true" Text="No. of Parts per Hr" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell12" CanGrow="true" Text="=Max(Fields!NoPartsPerHr.Value, &quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row7" Height="24.29">
+          <TableCell Name="Cell13" CanGrow="true" Text="Cost per Cycle" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell14" CanGrow="true" Text="=Max(Fields!CostPerCycle.Value, &quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row8" Height="24.29">
+          <TableCell Name="Cell15" CanGrow="true" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell16" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row9" Height="24.29">
+          <TableCell Name="Cell17" CanGrow="true" Text="MATERIAL" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell18" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row10" Height="24.29">
+          <TableCell Name="Cell19" CanGrow="true" Text="Weight Component (g)" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell20" CanGrow="true" Text="=Max(Fields!ComponentWeight.Value, &quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row11" Height="24.29">
+          <TableCell Name="Cell21" CanGrow="true" Text="Weight of Sprue (g)" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell22" CanGrow="true" Text="=Max(Fields!SprueWeight.Value, &quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row12" Height="24.29">
+          <TableCell Name="Cell23" CanGrow="true" Text="Total Weight Component &amp; Part Sprue" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell24" CanGrow="true" Text="=Max(Fields!WeightComponentPartSprue.Value, &quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row13" Height="24.29">
+          <TableCell Name="Cell25" CanGrow="true" Text="Cost of Polymer ($/kg)" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell26" CanGrow="true" Text="=Max(Fields!PolymerCost.Value, &quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row14" Height="24">
+          <TableCell Name="Cell27" CanGrow="true" Text="Cost of Polymer per Component" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell28" CanGrow="true" Text="=Max(Fields!CompCostPolymer.Value)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row15" Height="24">
+          <TableCell Name="Cell29" CanGrow="true" Text="Masterbatch Code" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell30" CanGrow="true" Text="=Max(Fields!MBCode.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row16" Height="24.29">
+          <TableCell Name="Cell31" CanGrow="true" Text="% Masterbatch" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell32" CanGrow="true" Text="=Max(Fields!MBPC.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row17" Height="24.29">
+          <TableCell Name="Cell33" CanGrow="true" Text="Cost of Masterbatch ($/kg)" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell34" CanGrow="true" Text="=Max(Fields!MBCostPerkG.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row18" Height="24">
+          <TableCell Name="Cell35" CanGrow="true" Text="Cost of Masterbatch per Component" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell36" CanGrow="true" Text="=Max(Fields!CompCostMB.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row19" Height="24.29">
+          <TableCell Name="Cell37" CanGrow="true" Text="% Additive" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell38" CanGrow="true" Text="=Max(Fields!AdditivePC.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row20" Height="24.29">
+          <TableCell Name="Cell39" CanGrow="true" Text="Cost of Additive ($/kg)" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell40" CanGrow="true" Text="=Max(Fields!AdditiveCost.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row21" Height="24">
+          <TableCell Name="Cell41" CanGrow="true" Text="Cost of Additive per Component" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell42" CanGrow="true" Text="=Max(Fields!CompCostAdditive.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row22" Height="24.29">
+          <TableCell Name="Cell43" CanGrow="true" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell44" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row23" Height="24.29">
+          <TableCell Name="Cell45" CanGrow="true" Text="SETUP COST" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell46" CanGrow="true" Text="=Max(Fields!SetupCost.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row24" Height="24.29">
+          <TableCell Name="Cell47" CanGrow="true" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell48" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row25" Height="24.29">
+          <TableCell Name="Cell49" CanGrow="true" Text="ADDITIONAL LABOUR" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell50" CanGrow="true" Text="=Max(Fields!AdditionalLabourCheckBox.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row26" Height="24.29">
+          <TableCell Name="Cell51" CanGrow="true" Text="Cost /  Hour" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell52" CanGrow="true" Text="=Max(Fields!CostAddLabour.Value)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row27" Height="24.29">
+          <TableCell Name="Cell53" CanGrow="true" Text="Cost / Hour / Part" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell54" CanGrow="true" Text="=Max(Fields!CompCostAddLabour.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row28" Height="24">
+          <TableCell Name="Cell55" CanGrow="true" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell56" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row29" Height="24.29">
+          <TableCell Name="Cell57" CanGrow="true" Text="PACKAGING" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell58" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row30" Height="24.29">
+          <TableCell Name="Cell59" CanGrow="true" Text="Carton Size" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell60" CanGrow="true" Text="=Max(Fields!CartonType.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row31" Height="24.29">
+          <TableCell Name="Cell61" CanGrow="true" Text="Liner Cost" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell62" CanGrow="true" Text="=Max(Fields!LinerCost.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row32" Height="24">
+          <TableCell Name="Cell63" CanGrow="true" Text="Liner Cost per Component" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell64" CanGrow="true" Text="=Max(Fields!CompLinerCost.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row33" Height="24.29">
+          <TableCell Name="Cell65" CanGrow="true" Text="Inner Bag per Carton" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell66" CanGrow="true" Text="=Max(Fields!InnerBagCost.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row34" Height="24">
+          <TableCell Name="Cell67" CanGrow="true" Text="Inner Bag per Component" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell68" CanGrow="true" Text="=Max(Fields!CompInnerBagCost.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row35" Height="24.29">
+          <TableCell Name="Cell69" CanGrow="true" Text="No. Components per Carton" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell70" CanGrow="true" Text="=Max(Fields!CtnQty.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row36" Height="24.29">
+          <TableCell Name="Cell71" CanGrow="true" Text="Carton Cost per Component" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell72" CanGrow="true" Text="=Max(Fields!CompPackagingCost.Value,&quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+      </TableObject>
+      <PictureObject Name="Image1" Width="246.23" Height="30.33" Padding="2, 0, 2, 0"/>
+      <TextObject Name="ReportName" Left="256.56" Top="6.33" Width="398.37" Height="24" CanGrow="true" Text="INJECTION MOULDING COST " Padding="2, 2, 2, 2" Font="Arial, 14pt, style=Bold"/>
+      <TableObject Name="Tablix3" Top="48" Width="743.81" Height="72">
+        <TableColumn Name="Column3" Width="246.23"/>
+        <TableColumn Name="Column4" Width="497.58"/>
+        <TableRow Name="Row37" Height="24">
+          <TableCell Name="Cell73" CanGrow="true" Text="PRODUCT CODE" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell74" CanGrow="true" Text="=RTrim(First(Fields!Code.Value, &quot;DataSet1&quot;))" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row38" Height="24">
+          <TableCell Name="Cell75" CanGrow="true" Text="PRODUCT DESCRIPTION" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell76" CanGrow="true" Text="=RTrim(First(Fields!Description.Value, &quot;DataSet1&quot;))" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row39" Height="24">
+          <TableCell Name="Cell77" CanGrow="true" Text="CUSTOMER" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell78" CanGrow="true" Text="=RTrim(First(Fields!CUSTNAME.Value, &quot;DataSet1&quot;))" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+      </TableObject>
+      <TableObject Name="Tablix6" Left="379.07" Top="144" Width="364.74" Height="264">
+        <TableColumn Name="Column5" Width="111.92"/>
+        <TableColumn Name="Column6" Width="252.82"/>
+        <TableRow Name="Row40" Height="24">
+          <TableCell Name="Cell79" CanGrow="true" Text="MATERIAL" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell80" CanGrow="true" Text="=RTrim(First(Fields!Polymer.Value, &quot;DataSet1&quot;))" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row41" Height="24">
+          <TableCell Name="Cell81" CanGrow="true" Text="MASTERBATCH" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell82" CanGrow="true" Text="=First(Fields!MBColour.Value, &quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row42" Height="24">
+          <TableCell Name="Cell83" CanGrow="true" Text="ADDITIVE" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell84" CanGrow="true" Text="=RTrim(First(Fields!Additive.Value, &quot;DataSet1&quot;))" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row43" Height="24">
+          <TableCell Name="Cell85" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell86" CanGrow="true" Padding="2, 2, 150, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row44" Height="24">
+          <TableCell Name="Cell87" CanGrow="true" Text="PALLETS" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell88" CanGrow="true" Text="=Max(Fields!Pallet.Value, &quot;DataSet1&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row45" Height="24">
+          <TableCell Name="Cell89" CanGrow="true" Text="Pallet Days" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell90" CanGrow="true" Text="=Max(Fields!PalletDays.Value, &quot;DataSet1&quot;)" Padding="2, 2, 150, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row46" Height="24">
+          <TableCell Name="Cell91" CanGrow="true" Text="Charge per Day" Padding="10, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell92" CanGrow="true" Text="=Max(Fields!ChargePerDay.Value, &quot;DataSet1&quot;)" Padding="2, 2, 150, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row47" Height="24">
+          <TableCell Name="Cell93" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell94" CanGrow="true" Padding="2, 2, 150, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row48" Height="24">
+          <TableCell Name="Cell95" CanGrow="true" Text="PROFIT" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell96" CanGrow="true" Text="=Max(Fields!Profit.Value)" Padding="2, 2, 150, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row49" Height="24">
+          <TableCell Name="Cell97" CanGrow="true" Text="GST" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell98" CanGrow="true" Text="=Max(Fields!GST.Value)" Padding="2, 2, 150, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row50" Height="24">
+          <TableCell Name="Cell99" CanGrow="true" Text="LAST CHANGED" Padding="2, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell100" CanGrow="true" Text="=Max(format(Fields!DateChanged.Value,&quot;dd-MMM-yyyy&quot;))" Padding="2, 2, 75, 2" Font="Arial, 10pt"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="Textbox354" Left="379.07" Top="519.88" Width="172" Height="23.84" CanGrow="true" Text="NOTES" Padding="2, 2, 2, 2" Font="Arial, 10pt, style=Bold" TextFill.Color="DimGray"/>
+      <TextObject Name="Textbox355" Left="379.07" Top="547.72" Width="365.01" Height="171" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+      <TableObject Name="Tablix2" Left="379.07" Top="425.83" Width="365.01" Height="72">
+        <TableColumn Name="Column7" Width="56.36"/>
+        <TableColumn Name="Column8" Width="59.95"/>
+        <TableColumn Name="Column9" Width="70.37"/>
+        <TableColumn Name="Column10" Width="56.82"/>
+        <TableColumn Name="Column11" Width="64.03"/>
+        <TableColumn Name="Column12" Width="57.48"/>
+        <TableRow Name="Row51" Height="48">
+          <TableCell Name="Cell101" CanGrow="true" Text="No of Parts" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell102" CanGrow="true" Text="Setup Cost" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell103" CanGrow="true" Text=" Pallet Charge" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell104" CanGrow="true" Text="Cost Each" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell105" CanGrow="true" Text="Price ex GST" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell106" CanGrow="true" Text="Current Price" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row52" Height="24">
+          <TableCell Name="Cell107" CanGrow="true" Text="[DataSet1.Qty]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell108" CanGrow="true" Text="[DataSet1.CompSetupCost]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell109" CanGrow="true" Text="[DataSet1.CompPalletCharge]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell110" CanGrow="true" Text="=   Fields!CostPerCycle.Value&#13;&#10;    + Fields!CompCostPolymer.Value&#13;&#10;	+ Fields!CompCostMB.Value&#13;&#10;	+ Fields!CompCostAdditive.Value&#13;&#10;	+ Fields!CompSetupCost.Value&#13;&#10;	+ Fields!CompCostAddLabour.Value&#13;&#10;	+ Fields!CompPackagingCost.Value&#13;&#10;	+ Fields!CompLinerCost.Value&#13;&#10;	+ Fields!CompInnerBagCost.Value&#13;&#10;	+ Fields!CompPalletCharge.Value" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell111" CanGrow="true" Text="=  ( Fields!CostPerCycle.Value&#13;&#10;    + Fields!CompCostPolymer.Value&#13;&#10;	+ Fields!CompCostMB.Value&#13;&#10;	+ Fields!CompCostAdditive.Value&#13;&#10;	+ Fields!CompSetupCost.Value&#13;&#10;	+ Fields!CompCostAddLabour.Value&#13;&#10;	+ Fields!CompPackagingCost.Value&#13;&#10;	+ Fields!CompLinerCost.Value&#13;&#10;	+ Fields!CompInnerBagCost.Value&#13;&#10;	+ Fields!CompPalletCharge.Value )&#13;&#10;	&#13;&#10;	+&#13;&#10;&#13;&#10;   ( Fields!CostPerCycle.Value&#13;&#10;    + Fields!CompCostPolymer.Value&#13;&#10;	+ Fields!CompCostMB.Value&#13;&#10;	+ Fields!CompCostAdditive.Value&#13;&#10;	+ Fields!CompSetupCost.Value&#13;&#10;	+ Fields!CompCostAddLabour.Value&#13;&#10;	+ Fields!CompPackagingCost.Value&#13;&#10;	+ Fields!CompLinerCost.Value&#13;&#10;	+ Fields!CompInnerBagCost.Value&#13;&#10;	+ Fields!CompPalletCharge.Value &#13;&#10;	) * Fields!Profit.Value" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell112" CanGrow="true" Text="[DataSet1.Price]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="ExecutionTime" Left="657.6" Top="5.88" Width="86.48" Height="24" CanGrow="true" Text="=Globals!ExecutionTime" Font="Arial, 10pt"/>
+    </DataBand>
+  </ReportPage>
+</Report>

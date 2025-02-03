@@ -1,0 +1,1520 @@
+### YamlMime:ManagedReference
+items:
+- uid: MouldSpecification.ProductDetailsDC
+  commentId: T:MouldSpecification.ProductDetailsDC
+  id: ProductDetailsDC
+  parent: MouldSpecification
+  children:
+  - MouldSpecification.ProductDetailsDC.#ctor
+  - MouldSpecification.ProductDetailsDC.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.DateTime,System.String)
+  - MouldSpecification.ProductDetailsDC.AltCode
+  - MouldSpecification.ProductDetailsDC.BottleSize
+  - MouldSpecification.ProductDetailsDC.CartonID
+  - MouldSpecification.ProductDetailsDC.Colour
+  - MouldSpecification.ProductDetailsDC.Comments
+  - MouldSpecification.ProductDetailsDC.CompDB
+  - MouldSpecification.ProductDetailsDC.ComponentWeight
+  - MouldSpecification.ProductDetailsDC.CtnQty
+  - MouldSpecification.ProductDetailsDC.DangerousGood
+  - MouldSpecification.ProductDetailsDC.GradeID
+  - MouldSpecification.ProductDetailsDC.ImageFile
+  - MouldSpecification.ProductDetailsDC.ITEMDESC
+  - MouldSpecification.ProductDetailsDC.ItemID
+  - MouldSpecification.ProductDetailsDC.ITEMNMBR
+  - MouldSpecification.ProductDetailsDC.ITMCLSCD
+  - MouldSpecification.ProductDetailsDC.LabelTypeID
+  - MouldSpecification.ProductDetailsDC.last_updated_by
+  - MouldSpecification.ProductDetailsDC.last_updated_on
+  - MouldSpecification.ProductDetailsDC.NeckSize
+  - MouldSpecification.ProductDetailsDC.ProductType
+  - MouldSpecification.ProductDetailsDC.SpecificationFile
+  - MouldSpecification.ProductDetailsDC.SprueRunnerTotal
+  - MouldSpecification.ProductDetailsDC.StockLine
+  - MouldSpecification.ProductDetailsDC.Style
+  - MouldSpecification.ProductDetailsDC.TotalShotWeight
+  langs:
+  - csharp
+  - vb
+  name: ProductDetailsDC
+  nameWithType: ProductDetailsDC
+  fullName: MouldSpecification.ProductDetailsDC
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ProductDetailsDC
+    path: ProductDetailsDC.cs
+    startLine: 4
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public class ProductDetailsDC
+    content.vb: Public Class ProductDetailsDC
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MouldSpecification.ProductDetailsDC.ItemID
+  commentId: P:MouldSpecification.ProductDetailsDC.ItemID
+  id: ItemID
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: ItemID
+  nameWithType: ProductDetailsDC.ItemID
+  fullName: MouldSpecification.ProductDetailsDC.ItemID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ItemID
+    path: ProductDetailsDC.cs
+    startLine: 6
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int ItemID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ItemID As Integer
+  overload: MouldSpecification.ProductDetailsDC.ItemID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.ITEMNMBR
+  commentId: P:MouldSpecification.ProductDetailsDC.ITEMNMBR
+  id: ITEMNMBR
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: ITEMNMBR
+  nameWithType: ProductDetailsDC.ITEMNMBR
+  fullName: MouldSpecification.ProductDetailsDC.ITEMNMBR
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ITEMNMBR
+    path: ProductDetailsDC.cs
+    startLine: 7
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string ITEMNMBR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ITEMNMBR As String
+  overload: MouldSpecification.ProductDetailsDC.ITEMNMBR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.ITEMDESC
+  commentId: P:MouldSpecification.ProductDetailsDC.ITEMDESC
+  id: ITEMDESC
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: ITEMDESC
+  nameWithType: ProductDetailsDC.ITEMDESC
+  fullName: MouldSpecification.ProductDetailsDC.ITEMDESC
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ITEMDESC
+    path: ProductDetailsDC.cs
+    startLine: 8
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string ITEMDESC { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ITEMDESC As String
+  overload: MouldSpecification.ProductDetailsDC.ITEMDESC*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.AltCode
+  commentId: P:MouldSpecification.ProductDetailsDC.AltCode
+  id: AltCode
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: AltCode
+  nameWithType: ProductDetailsDC.AltCode
+  fullName: MouldSpecification.ProductDetailsDC.AltCode
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: AltCode
+    path: ProductDetailsDC.cs
+    startLine: 9
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string AltCode { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AltCode As String
+  overload: MouldSpecification.ProductDetailsDC.AltCode*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.ProductType
+  commentId: P:MouldSpecification.ProductDetailsDC.ProductType
+  id: ProductType
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: ProductType
+  nameWithType: ProductDetailsDC.ProductType
+  fullName: MouldSpecification.ProductDetailsDC.ProductType
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ProductType
+    path: ProductDetailsDC.cs
+    startLine: 10
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string ProductType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ProductType As String
+  overload: MouldSpecification.ProductDetailsDC.ProductType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.GradeID
+  commentId: P:MouldSpecification.ProductDetailsDC.GradeID
+  id: GradeID
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: GradeID
+  nameWithType: ProductDetailsDC.GradeID
+  fullName: MouldSpecification.ProductDetailsDC.GradeID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: GradeID
+    path: ProductDetailsDC.cs
+    startLine: 11
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int GradeID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property GradeID As Integer
+  overload: MouldSpecification.ProductDetailsDC.GradeID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.ImageFile
+  commentId: P:MouldSpecification.ProductDetailsDC.ImageFile
+  id: ImageFile
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: ImageFile
+  nameWithType: ProductDetailsDC.ImageFile
+  fullName: MouldSpecification.ProductDetailsDC.ImageFile
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ImageFile
+    path: ProductDetailsDC.cs
+    startLine: 12
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string ImageFile { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImageFile As String
+  overload: MouldSpecification.ProductDetailsDC.ImageFile*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.ComponentWeight
+  commentId: P:MouldSpecification.ProductDetailsDC.ComponentWeight
+  id: ComponentWeight
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: ComponentWeight
+  nameWithType: ProductDetailsDC.ComponentWeight
+  fullName: MouldSpecification.ProductDetailsDC.ComponentWeight
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ComponentWeight
+    path: ProductDetailsDC.cs
+    startLine: 13
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public decimal ComponentWeight { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property ComponentWeight As Decimal
+  overload: MouldSpecification.ProductDetailsDC.ComponentWeight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.SprueRunnerTotal
+  commentId: P:MouldSpecification.ProductDetailsDC.SprueRunnerTotal
+  id: SprueRunnerTotal
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: SprueRunnerTotal
+  nameWithType: ProductDetailsDC.SprueRunnerTotal
+  fullName: MouldSpecification.ProductDetailsDC.SprueRunnerTotal
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: SprueRunnerTotal
+    path: ProductDetailsDC.cs
+    startLine: 14
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public decimal SprueRunnerTotal { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property SprueRunnerTotal As Decimal
+  overload: MouldSpecification.ProductDetailsDC.SprueRunnerTotal*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.TotalShotWeight
+  commentId: P:MouldSpecification.ProductDetailsDC.TotalShotWeight
+  id: TotalShotWeight
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: TotalShotWeight
+  nameWithType: ProductDetailsDC.TotalShotWeight
+  fullName: MouldSpecification.ProductDetailsDC.TotalShotWeight
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: TotalShotWeight
+    path: ProductDetailsDC.cs
+    startLine: 15
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public decimal TotalShotWeight { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property TotalShotWeight As Decimal
+  overload: MouldSpecification.ProductDetailsDC.TotalShotWeight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.CompDB
+  commentId: P:MouldSpecification.ProductDetailsDC.CompDB
+  id: CompDB
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: CompDB
+  nameWithType: ProductDetailsDC.CompDB
+  fullName: MouldSpecification.ProductDetailsDC.CompDB
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CompDB
+    path: ProductDetailsDC.cs
+    startLine: 16
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string CompDB { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CompDB As String
+  overload: MouldSpecification.ProductDetailsDC.CompDB*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.ITMCLSCD
+  commentId: P:MouldSpecification.ProductDetailsDC.ITMCLSCD
+  id: ITMCLSCD
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: ITMCLSCD
+  nameWithType: ProductDetailsDC.ITMCLSCD
+  fullName: MouldSpecification.ProductDetailsDC.ITMCLSCD
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ITMCLSCD
+    path: ProductDetailsDC.cs
+    startLine: 17
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string ITMCLSCD { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ITMCLSCD As String
+  overload: MouldSpecification.ProductDetailsDC.ITMCLSCD*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.CtnQty
+  commentId: P:MouldSpecification.ProductDetailsDC.CtnQty
+  id: CtnQty
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: CtnQty
+  nameWithType: ProductDetailsDC.CtnQty
+  fullName: MouldSpecification.ProductDetailsDC.CtnQty
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CtnQty
+    path: ProductDetailsDC.cs
+    startLine: 18
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int CtnQty { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CtnQty As Integer
+  overload: MouldSpecification.ProductDetailsDC.CtnQty*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.CartonID
+  commentId: P:MouldSpecification.ProductDetailsDC.CartonID
+  id: CartonID
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: CartonID
+  nameWithType: ProductDetailsDC.CartonID
+  fullName: MouldSpecification.ProductDetailsDC.CartonID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CartonID
+    path: ProductDetailsDC.cs
+    startLine: 19
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int CartonID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CartonID As Integer
+  overload: MouldSpecification.ProductDetailsDC.CartonID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.Comments
+  commentId: P:MouldSpecification.ProductDetailsDC.Comments
+  id: Comments
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: Comments
+  nameWithType: ProductDetailsDC.Comments
+  fullName: MouldSpecification.ProductDetailsDC.Comments
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Comments
+    path: ProductDetailsDC.cs
+    startLine: 20
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string Comments { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Comments As String
+  overload: MouldSpecification.ProductDetailsDC.Comments*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.SpecificationFile
+  commentId: P:MouldSpecification.ProductDetailsDC.SpecificationFile
+  id: SpecificationFile
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: SpecificationFile
+  nameWithType: ProductDetailsDC.SpecificationFile
+  fullName: MouldSpecification.ProductDetailsDC.SpecificationFile
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: SpecificationFile
+    path: ProductDetailsDC.cs
+    startLine: 21
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string SpecificationFile { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SpecificationFile As String
+  overload: MouldSpecification.ProductDetailsDC.SpecificationFile*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.LabelTypeID
+  commentId: P:MouldSpecification.ProductDetailsDC.LabelTypeID
+  id: LabelTypeID
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: LabelTypeID
+  nameWithType: ProductDetailsDC.LabelTypeID
+  fullName: MouldSpecification.ProductDetailsDC.LabelTypeID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: LabelTypeID
+    path: ProductDetailsDC.cs
+    startLine: 22
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int LabelTypeID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property LabelTypeID As Integer
+  overload: MouldSpecification.ProductDetailsDC.LabelTypeID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.BottleSize
+  commentId: P:MouldSpecification.ProductDetailsDC.BottleSize
+  id: BottleSize
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: BottleSize
+  nameWithType: ProductDetailsDC.BottleSize
+  fullName: MouldSpecification.ProductDetailsDC.BottleSize
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: BottleSize
+    path: ProductDetailsDC.cs
+    startLine: 23
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string BottleSize { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BottleSize As String
+  overload: MouldSpecification.ProductDetailsDC.BottleSize*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.Style
+  commentId: P:MouldSpecification.ProductDetailsDC.Style
+  id: Style
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: Style
+  nameWithType: ProductDetailsDC.Style
+  fullName: MouldSpecification.ProductDetailsDC.Style
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Style
+    path: ProductDetailsDC.cs
+    startLine: 24
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string Style { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Style As String
+  overload: MouldSpecification.ProductDetailsDC.Style*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.NeckSize
+  commentId: P:MouldSpecification.ProductDetailsDC.NeckSize
+  id: NeckSize
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: NeckSize
+  nameWithType: ProductDetailsDC.NeckSize
+  fullName: MouldSpecification.ProductDetailsDC.NeckSize
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: NeckSize
+    path: ProductDetailsDC.cs
+    startLine: 25
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string NeckSize { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NeckSize As String
+  overload: MouldSpecification.ProductDetailsDC.NeckSize*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.Colour
+  commentId: P:MouldSpecification.ProductDetailsDC.Colour
+  id: Colour
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: Colour
+  nameWithType: ProductDetailsDC.Colour
+  fullName: MouldSpecification.ProductDetailsDC.Colour
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Colour
+    path: ProductDetailsDC.cs
+    startLine: 26
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string Colour { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Colour As String
+  overload: MouldSpecification.ProductDetailsDC.Colour*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.DangerousGood
+  commentId: P:MouldSpecification.ProductDetailsDC.DangerousGood
+  id: DangerousGood
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: DangerousGood
+  nameWithType: ProductDetailsDC.DangerousGood
+  fullName: MouldSpecification.ProductDetailsDC.DangerousGood
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: DangerousGood
+    path: ProductDetailsDC.cs
+    startLine: 27
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public bool DangerousGood { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DangerousGood As Boolean
+  overload: MouldSpecification.ProductDetailsDC.DangerousGood*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.StockLine
+  commentId: P:MouldSpecification.ProductDetailsDC.StockLine
+  id: StockLine
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: StockLine
+  nameWithType: ProductDetailsDC.StockLine
+  fullName: MouldSpecification.ProductDetailsDC.StockLine
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: StockLine
+    path: ProductDetailsDC.cs
+    startLine: 28
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public bool StockLine { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property StockLine As Boolean
+  overload: MouldSpecification.ProductDetailsDC.StockLine*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.last_updated_on
+  commentId: P:MouldSpecification.ProductDetailsDC.last_updated_on
+  id: last_updated_on
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_on
+  nameWithType: ProductDetailsDC.last_updated_on
+  fullName: MouldSpecification.ProductDetailsDC.last_updated_on
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_on
+    path: ProductDetailsDC.cs
+    startLine: 29
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public DateTime last_updated_on { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property last_updated_on As Date
+  overload: MouldSpecification.ProductDetailsDC.last_updated_on*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.last_updated_by
+  commentId: P:MouldSpecification.ProductDetailsDC.last_updated_by
+  id: last_updated_by
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_by
+  nameWithType: ProductDetailsDC.last_updated_by
+  fullName: MouldSpecification.ProductDetailsDC.last_updated_by
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_by
+    path: ProductDetailsDC.cs
+    startLine: 30
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string last_updated_by { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property last_updated_by As String
+  overload: MouldSpecification.ProductDetailsDC.last_updated_by*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.DateTime,System.String)
+  commentId: M:MouldSpecification.ProductDetailsDC.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.DateTime,System.String)
+  id: '#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String,System.Decimal,System.Decimal,System.Decimal,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.DateTime,System.String)'
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: ProductDetailsDC(Int32, String, String, String, String, Int32, String, Decimal, Decimal, Decimal, String, String, Int32, Int32, String, String, Int32, String, String, String, String, Boolean, Boolean, DateTime, String)
+  nameWithType: ProductDetailsDC.ProductDetailsDC(Int32, String, String, String, String, Int32, String, Decimal, Decimal, Decimal, String, String, Int32, Int32, String, String, Int32, String, String, String, String, Boolean, Boolean, DateTime, String)
+  fullName: MouldSpecification.ProductDetailsDC.ProductDetailsDC(System.Int32, System.String, System.String, System.String, System.String, System.Int32, System.String, System.Decimal, System.Decimal, System.Decimal, System.String, System.String, System.Int32, System.Int32, System.String, System.String, System.Int32, System.String, System.String, System.String, System.String, System.Boolean, System.Boolean, System.DateTime, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: ProductDetailsDC.cs
+    startLine: 32
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public ProductDetailsDC(int ItemID_, string ITEMNMBR_, string ITEMDESC_, string AltCode_, string ProductType_, int GradeID_, string ImageFile_, decimal ComponentWeight_, decimal SprueRunnerTotal_, decimal TotalShotWeight_, string CompDB_, string ITMCLSCD_, int CtnQty_, int CartonID_, string Comments_, string SpecificationFile_, int LabelTypeID_, string BottleSize_, string Style_, string NeckSize_, string Colour_, bool DangerousGood_, bool StockLine_, DateTime last_updated_on_, string last_updated_by_)
+    parameters:
+    - id: ItemID_
+      type: System.Int32
+    - id: ITEMNMBR_
+      type: System.String
+    - id: ITEMDESC_
+      type: System.String
+    - id: AltCode_
+      type: System.String
+    - id: ProductType_
+      type: System.String
+    - id: GradeID_
+      type: System.Int32
+    - id: ImageFile_
+      type: System.String
+    - id: ComponentWeight_
+      type: System.Decimal
+    - id: SprueRunnerTotal_
+      type: System.Decimal
+    - id: TotalShotWeight_
+      type: System.Decimal
+    - id: CompDB_
+      type: System.String
+    - id: ITMCLSCD_
+      type: System.String
+    - id: CtnQty_
+      type: System.Int32
+    - id: CartonID_
+      type: System.Int32
+    - id: Comments_
+      type: System.String
+    - id: SpecificationFile_
+      type: System.String
+    - id: LabelTypeID_
+      type: System.Int32
+    - id: BottleSize_
+      type: System.String
+    - id: Style_
+      type: System.String
+    - id: NeckSize_
+      type: System.String
+    - id: Colour_
+      type: System.String
+    - id: DangerousGood_
+      type: System.Boolean
+    - id: StockLine_
+      type: System.Boolean
+    - id: last_updated_on_
+      type: System.DateTime
+    - id: last_updated_by_
+      type: System.String
+    content.vb: Public Sub New(ItemID_ As Integer, ITEMNMBR_ As String, ITEMDESC_ As String, AltCode_ As String, ProductType_ As String, GradeID_ As Integer, ImageFile_ As String, ComponentWeight_ As Decimal, SprueRunnerTotal_ As Decimal, TotalShotWeight_ As Decimal, CompDB_ As String, ITMCLSCD_ As String, CtnQty_ As Integer, CartonID_ As Integer, Comments_ As String, SpecificationFile_ As String, LabelTypeID_ As Integer, BottleSize_ As String, Style_ As String, NeckSize_ As String, Colour_ As String, DangerousGood_ As Boolean, StockLine_ As Boolean, last_updated_on_ As Date, last_updated_by_ As String)
+  overload: MouldSpecification.ProductDetailsDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ProductDetailsDC.#ctor
+  commentId: M:MouldSpecification.ProductDetailsDC.#ctor
+  id: '#ctor'
+  parent: MouldSpecification.ProductDetailsDC
+  langs:
+  - csharp
+  - vb
+  name: ProductDetailsDC()
+  nameWithType: ProductDetailsDC.ProductDetailsDC()
+  fullName: MouldSpecification.ProductDetailsDC.ProductDetailsDC()
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/ProductDetailsDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: ProductDetailsDC.cs
+    startLine: 65
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public ProductDetailsDC()
+    content.vb: Public Sub New
+  overload: MouldSpecification.ProductDetailsDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MouldSpecification
+  commentId: N:MouldSpecification
+  name: MouldSpecification
+  nameWithType: MouldSpecification
+  fullName: MouldSpecification
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MouldSpecification.ProductDetailsDC.ItemID*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.ItemID
+  name: ItemID
+  nameWithType: ProductDetailsDC.ItemID
+  fullName: MouldSpecification.ProductDetailsDC.ItemID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MouldSpecification.ProductDetailsDC.ITEMNMBR*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.ITEMNMBR
+  name: ITEMNMBR
+  nameWithType: ProductDetailsDC.ITEMNMBR
+  fullName: MouldSpecification.ProductDetailsDC.ITEMNMBR
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MouldSpecification.ProductDetailsDC.ITEMDESC*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.ITEMDESC
+  name: ITEMDESC
+  nameWithType: ProductDetailsDC.ITEMDESC
+  fullName: MouldSpecification.ProductDetailsDC.ITEMDESC
+- uid: MouldSpecification.ProductDetailsDC.AltCode*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.AltCode
+  name: AltCode
+  nameWithType: ProductDetailsDC.AltCode
+  fullName: MouldSpecification.ProductDetailsDC.AltCode
+- uid: MouldSpecification.ProductDetailsDC.ProductType*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.ProductType
+  name: ProductType
+  nameWithType: ProductDetailsDC.ProductType
+  fullName: MouldSpecification.ProductDetailsDC.ProductType
+- uid: MouldSpecification.ProductDetailsDC.GradeID*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.GradeID
+  name: GradeID
+  nameWithType: ProductDetailsDC.GradeID
+  fullName: MouldSpecification.ProductDetailsDC.GradeID
+- uid: MouldSpecification.ProductDetailsDC.ImageFile*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.ImageFile
+  name: ImageFile
+  nameWithType: ProductDetailsDC.ImageFile
+  fullName: MouldSpecification.ProductDetailsDC.ImageFile
+- uid: MouldSpecification.ProductDetailsDC.ComponentWeight*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.ComponentWeight
+  name: ComponentWeight
+  nameWithType: ProductDetailsDC.ComponentWeight
+  fullName: MouldSpecification.ProductDetailsDC.ComponentWeight
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: MouldSpecification.ProductDetailsDC.SprueRunnerTotal*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.SprueRunnerTotal
+  name: SprueRunnerTotal
+  nameWithType: ProductDetailsDC.SprueRunnerTotal
+  fullName: MouldSpecification.ProductDetailsDC.SprueRunnerTotal
+- uid: MouldSpecification.ProductDetailsDC.TotalShotWeight*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.TotalShotWeight
+  name: TotalShotWeight
+  nameWithType: ProductDetailsDC.TotalShotWeight
+  fullName: MouldSpecification.ProductDetailsDC.TotalShotWeight
+- uid: MouldSpecification.ProductDetailsDC.CompDB*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.CompDB
+  name: CompDB
+  nameWithType: ProductDetailsDC.CompDB
+  fullName: MouldSpecification.ProductDetailsDC.CompDB
+- uid: MouldSpecification.ProductDetailsDC.ITMCLSCD*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.ITMCLSCD
+  name: ITMCLSCD
+  nameWithType: ProductDetailsDC.ITMCLSCD
+  fullName: MouldSpecification.ProductDetailsDC.ITMCLSCD
+- uid: MouldSpecification.ProductDetailsDC.CtnQty*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.CtnQty
+  name: CtnQty
+  nameWithType: ProductDetailsDC.CtnQty
+  fullName: MouldSpecification.ProductDetailsDC.CtnQty
+- uid: MouldSpecification.ProductDetailsDC.CartonID*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.CartonID
+  name: CartonID
+  nameWithType: ProductDetailsDC.CartonID
+  fullName: MouldSpecification.ProductDetailsDC.CartonID
+- uid: MouldSpecification.ProductDetailsDC.Comments*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.Comments
+  name: Comments
+  nameWithType: ProductDetailsDC.Comments
+  fullName: MouldSpecification.ProductDetailsDC.Comments
+- uid: MouldSpecification.ProductDetailsDC.SpecificationFile*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.SpecificationFile
+  name: SpecificationFile
+  nameWithType: ProductDetailsDC.SpecificationFile
+  fullName: MouldSpecification.ProductDetailsDC.SpecificationFile
+- uid: MouldSpecification.ProductDetailsDC.LabelTypeID*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.LabelTypeID
+  name: LabelTypeID
+  nameWithType: ProductDetailsDC.LabelTypeID
+  fullName: MouldSpecification.ProductDetailsDC.LabelTypeID
+- uid: MouldSpecification.ProductDetailsDC.BottleSize*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.BottleSize
+  name: BottleSize
+  nameWithType: ProductDetailsDC.BottleSize
+  fullName: MouldSpecification.ProductDetailsDC.BottleSize
+- uid: MouldSpecification.ProductDetailsDC.Style*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.Style
+  name: Style
+  nameWithType: ProductDetailsDC.Style
+  fullName: MouldSpecification.ProductDetailsDC.Style
+- uid: MouldSpecification.ProductDetailsDC.NeckSize*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.NeckSize
+  name: NeckSize
+  nameWithType: ProductDetailsDC.NeckSize
+  fullName: MouldSpecification.ProductDetailsDC.NeckSize
+- uid: MouldSpecification.ProductDetailsDC.Colour*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.Colour
+  name: Colour
+  nameWithType: ProductDetailsDC.Colour
+  fullName: MouldSpecification.ProductDetailsDC.Colour
+- uid: MouldSpecification.ProductDetailsDC.DangerousGood*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.DangerousGood
+  name: DangerousGood
+  nameWithType: ProductDetailsDC.DangerousGood
+  fullName: MouldSpecification.ProductDetailsDC.DangerousGood
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: MouldSpecification.ProductDetailsDC.StockLine*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.StockLine
+  name: StockLine
+  nameWithType: ProductDetailsDC.StockLine
+  fullName: MouldSpecification.ProductDetailsDC.StockLine
+- uid: MouldSpecification.ProductDetailsDC.last_updated_on*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.last_updated_on
+  name: last_updated_on
+  nameWithType: ProductDetailsDC.last_updated_on
+  fullName: MouldSpecification.ProductDetailsDC.last_updated_on
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: MouldSpecification.ProductDetailsDC.last_updated_by*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.last_updated_by
+  name: last_updated_by
+  nameWithType: ProductDetailsDC.last_updated_by
+  fullName: MouldSpecification.ProductDetailsDC.last_updated_by
+- uid: MouldSpecification.ProductDetailsDC.#ctor*
+  commentId: Overload:MouldSpecification.ProductDetailsDC.#ctor
+  name: ProductDetailsDC
+  nameWithType: ProductDetailsDC.ProductDetailsDC
+  fullName: MouldSpecification.ProductDetailsDC.ProductDetailsDC

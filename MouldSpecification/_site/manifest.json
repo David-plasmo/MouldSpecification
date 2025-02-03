@@ -1,0 +1,872 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/Supun/source/repos/David-plasmo/MouldSpecification/MouldSpecification",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DataService.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DataService.Constants.html",
+          "hash": "t8G1H6t4TVphVZsJqIE3c/ik9yuCMWVhKhUSf0dKf1s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/DataService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/DataService.html",
+          "hash": "sXF0SkmopBcuXX42Y6S78gpIXQbpSJNeFokeB+lW1mk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.AdditiveCost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.AdditiveCost.html",
+          "hash": "P09asLCiCDbec8ANMvuIgfD7xksvfj3mHb5JH2JMjWU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.AdditiveCostDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.AdditiveCostDC.html",
+          "hash": "skM8hBMk0pAzqY9syKXBxUQPhheJZNYL/4YQayB9jWU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.AssemblyInstructionDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.AssemblyInstructionDC.html",
+          "hash": "jzvXpuXpQ2c8efaRyF4ehHRh5iPt1hGbgQrfIqc1IAM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.AttachedDocDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.AttachedDocDC.html",
+          "hash": "HMFnFisJf8v3lR/89+TAbBS7nKjL3IECL9MlWLZE7T8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.AttachedDocsDataEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.AttachedDocsDataEntry.html",
+          "hash": "QD9/ltusVF0DYEDPhfGvSceE2Ujg+Gb+WwPae3jBjv8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.Customer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.Customer.html",
+          "hash": "466vfZ1LP4NVddlQnYKasYX8wf9Eqb1x1Hor+26C0lw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.CustomerDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.CustomerDC.html",
+          "hash": "jPDKY5U5vLV6BT0NsuWok5EWhpsIK1qNBaIv7xBPl90="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.CustomerPriceQty.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.CustomerPriceQty.html",
+          "hash": "NyEtp9AOfUwhrleypuSV87fhaEdBf0RkliIHYXgh2K8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.CustomerPriceQtyDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.CustomerPriceQtyDC.html",
+          "hash": "tg8KMTs8IN1xQs9g7lZasYvDA8+vlGaleT3ZfIejg0I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.CustomerProductDAL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.CustomerProductDAL.html",
+          "hash": "I9y0B/46aLajfXVfVuL94gmdl79MNLBC3RXmjA2RsrE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.CustomerProductDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.CustomerProductDC.html",
+          "hash": "hKJ8JV5a+bOWif+BQ/YHZbGH3dDZ59HVxJgOI9MiRVE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.Extensions.html",
+          "hash": "ybiTG82cJz3NYa3SwXcTPoYjFqXQoCon7xqV6hIu034="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.FixedCost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.FixedCost.html",
+          "hash": "ASmF6o23imacRje7n4kdlcuA+GjrsNj3fdxY5yl3JDU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.FixedCostDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.FixedCostDC.html",
+          "hash": "IqfFIpT6IpYxSVpCtY0CXVr3rXNm2ZbTj+JrhJP2AW8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.IMSpecification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.IMSpecification.html",
+          "hash": "2xVx38mQOt1zJuhqzz82uXCyexJaZenJcaxjhNLG8ME="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.IMSpecificationDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.IMSpecificationDC.html",
+          "hash": "BUnYv0e8r2nw/OFqiJhbVwvWq2NL1B0qhkdPyLjIe9U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.ImportAccessIM.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.ImportAccessIM.html",
+          "hash": "4BKydRhVXmBetFraFomx7GzRxLE4V3mKzmzy17Fley8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.Machine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.Machine.html",
+          "hash": "mcIrVtTKISyQwtjb58wG5AKec3bccmA0APbQS9RUpMI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MachineDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MachineDC.html",
+          "hash": "0WAXpEzokGOcBdVAYgbCx82eD9LhES8S8e22d9KfoRc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MachinePref.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MachinePref.html",
+          "hash": "McWq3obmNLvWpQ0X0Moca3zDt1lMeY2N6jF489oBDpA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MachinePrefDAL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MachinePrefDAL.html",
+          "hash": "LHwv3mBNDUy9fapexq2ICUVSRA0335YWAssFuqosbcE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MachinePrefDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MachinePrefDC.html",
+          "hash": "Um7IYdJzkXi4n6rMPNJ+6aqVc4rsUUuLmd7nbRiZiEM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MainForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MainForm.html",
+          "hash": "FsYXN/dq+MfOIp96oORWibryapj6pLRgmtu8wZNgMUo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MainFormDAL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MainFormDAL.html",
+          "hash": "FnxSY7X+xeNaWEsq76OOTIKvs5ZaAE8T/5L2SMcNb+M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MainFormDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MainFormDC.html",
+          "hash": "/Rel3Ripva0s8uyjb+Re26Auf0Rw/Lf0tU6SRyGNRkI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MasterBatch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MasterBatch.html",
+          "hash": "nkfFR5ek6v6IqzD4uWVzH/+N7NCuyTrTFx1DneSKkEs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MasterBatchComp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MasterBatchComp.html",
+          "hash": "nEfKgPOJ68/85lyhfIkQrF/BPalxgjvITs9Cyu1j7Nk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MasterBatchCompDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MasterBatchCompDC.html",
+          "hash": "HeFE9Bh6rnujhMwUjy8qG2Wpe9ll2sMVhsIzZcJB36k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MasterBatchDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MasterBatchDC.html",
+          "hash": "m1wQRZVu4OV+hWX0x9yBA/GYYLxDZob+3pQ7eqVcPQE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MaterialComp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MaterialComp.html",
+          "hash": "VKhvdf/gVGBmlgsbw/VB8whFDe8mgEEb6rUWwd6lEWw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MaterialCompDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MaterialCompDC.html",
+          "hash": "rz3k8mJMZuFnzBrOFAWt6skJ7GmCzX8i7Lr0dmoqzWk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MaterialGradeCost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MaterialGradeCost.html",
+          "hash": "mSsvyrXljPvn+KAqCnp0Zz/rcSMP977FDrtPN37vRwY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MaterialGradeDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MaterialGradeDC.html",
+          "hash": "e5hpNrWw4K0VD1uAqCe9NYJH129H8ctpt+Hp81wFrsI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MaterialType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MaterialType.html",
+          "hash": "vvN8IaPm6hDjws+8qY7xB6C0cH91DJeVZ8WpEMzdWEc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.MaterialTypeDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.MaterialTypeDC.html",
+          "hash": "XYPz4gpgSRVfHvdV9qBvYlOGGOgQMadkX6RMi/XIm4I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.Packaging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.Packaging.html",
+          "hash": "LFdG0lfXKbFhObNVxmr8RFk/G2rhzVpLxHmis8+H1ZM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.PackagingAttachment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.PackagingAttachment.html",
+          "hash": "KFtwNziaVT2jqKMZ0e1LeFRqpc/9yJ6VC6Jp+NDh5pI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.PackagingDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.PackagingDC.html",
+          "hash": "oLCuMt+tjLvo3Z5AKak1l7sPfW2j9PJ0oCUddqLEwqg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.PackagingDataEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.PackagingDataEntry.html",
+          "hash": "eXEgkRxSw/oi50STfS6i2Eg5qfR15jXYtzy/U3ib2uw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.PackingImageDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.PackingImageDC.html",
+          "hash": "QJNHEDZA6zT98VV2pwutOoMcMkJFK1+aCel5+zlQO+U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.PackingInstructionDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.PackingInstructionDC.html",
+          "hash": "Yu47UwKjfAp1VSYJBN38HdDPMCRrwgcAL5KO92ubqvw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.PicturePopup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.PicturePopup.html",
+          "hash": "x56xhCdUsw5F/JCX0Vqm+W6KD3zUd7zZalOT5/VcfDI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.ProductDetails.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.ProductDetails.html",
+          "hash": "jOevHuLLOITtoPpkGqtaRu67rhGKYvUgcyMNMAO5nI0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.ProductDetailsDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.ProductDetailsDC.html",
+          "hash": "iKMRFoapLaGidH6wZ3cV6DDW5JXBiYLvvCS/eD6sJvI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.QCAttachments.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.QCAttachments.html",
+          "hash": "rPz5l8288L7//6+iQYsuNC+OMQQUjxqz0kDeuyCD4zE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.QCDataEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.QCDataEntry.html",
+          "hash": "U8oQh2zMVr5lndgaSp3fOT+qbjDYxtHLOsJ109R1wXU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.QCInstructionDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.QCInstructionDC.html",
+          "hash": "FHqLuS1Iq5oXX6nsshX+z25uME6IsIMU2IH7nmcRZAc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.QualityControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.QualityControl.html",
+          "hash": "+wI69lGV+Z8TbpD6FZde1jwM5OU3CUNQ9krigwMGCcw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.QualityControlDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.QualityControlDC.html",
+          "hash": "gxYH+ddu/UO9UTG00OKnqdXtGOGTuyuZDlJULuZuu8A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.ReworkInstructionDC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.ReworkInstructionDC.html",
+          "hash": "sKRmie2EWBChRk/fveBTBHuS/QauzHTtYwZZYzGbOsU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.SpecificationDataEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.SpecificationDataEntry.html",
+          "hash": "XoaA93T8/Pf98CKjRtT5zbKmA93Ga2DOBu6zDjO8LUY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.SpecificationDataEntryDAL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.SpecificationDataEntryDAL.html",
+          "hash": "6Afu7IoZwBPFyrf86FMOpKWGU+49hFgEl68pzwmSOqk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MouldSpecification.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MouldSpecification.html",
+          "hash": "PMT1Ud/4tjm1SXhzfWljKprCtugO3QhyvSUrv67bHvE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ReportBuilder.ReportDAL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ReportBuilder.ReportDAL.html",
+          "hash": "yJyV/4+kNz4CzIM9viea0MpKkMvgtzvQjPIP+CDK8Rc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ReportBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ReportBuilder.html",
+          "hash": "MKUmMgRx6R+re0CwX0pcp2Zpr2AGR6EMO1ino79sneU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.DrawingUtils.ButtonOp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.DrawingUtils.ButtonOp.html",
+          "hash": "S0Lu3AYc3uVYMjPZABAJEvSMx8th4a4j3NpG66HIE2k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.DrawingUtils.DeviceCap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.DrawingUtils.DeviceCap.html",
+          "hash": "FFm7nRRSQLeld5lKN5iP7kEzcUYB4+6LbyGh3BAUbWk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.DrawingUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.DrawingUtils.html",
+          "hash": "ypon58OKFxiBF/sfLFTsz07iPrQ+J00Y1kOMw6J02Hc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Utils.html",
+          "hash": "8ME5dxqKTD89H9MZVHBw4m3RkAbMGfSi3a19akULNBE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WinformsUtils.MultiColumnComboBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WinformsUtils.MultiColumnComboBox.html",
+          "hash": "C+R/XwzZfXYxzTFSxMLx/XGXF+8NTCAI4AnDZKG1ppg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/WinformsUtils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/WinformsUtils.html",
+          "hash": "U27nzxFIBLYy0NsXQihlnjZcGw38DO6eTHmVKkAyZ94="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "CycvTeZAatw8w8/7eUZtiKBCxIIWhaFIx1nneqz8Y6M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "jDfCVL8dSGYtbuk7l8+Yt35Pxu7uIZ789ANRUl5ajbI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "5lFdEx08GJ0Nlwd3KhrOOfGmTtbiS7E3XMqSnXHaWeA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "unsvnrcaxkg8yadGNgvhcJRgUIfOeVPrjt1fDvKW17M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 63,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

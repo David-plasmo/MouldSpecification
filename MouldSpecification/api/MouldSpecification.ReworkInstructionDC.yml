@@ -1,0 +1,596 @@
+### YamlMime:ManagedReference
+items:
+- uid: MouldSpecification.ReworkInstructionDC
+  commentId: T:MouldSpecification.ReworkInstructionDC
+  id: ReworkInstructionDC
+  parent: MouldSpecification
+  children:
+  - MouldSpecification.ReworkInstructionDC.#ctor
+  - MouldSpecification.ReworkInstructionDC.#ctor(System.Int32,System.Int32,System.Int32,System.String)
+  - MouldSpecification.ReworkInstructionDC.InstructionNo
+  - MouldSpecification.ReworkInstructionDC.ItemID
+  - MouldSpecification.ReworkInstructionDC.ReworkInstruction
+  - MouldSpecification.ReworkInstructionDC.ReworkInstructionID
+  langs:
+  - csharp
+  - vb
+  name: ReworkInstructionDC
+  nameWithType: ReworkInstructionDC
+  fullName: MouldSpecification.ReworkInstructionDC
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/ReworkInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ReworkInstructionDC
+    path: ReworkInstructionDC.cs
+    startLine: 8
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public class ReworkInstructionDC
+    content.vb: Public Class ReworkInstructionDC
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MouldSpecification.ReworkInstructionDC.ReworkInstructionID
+  commentId: P:MouldSpecification.ReworkInstructionDC.ReworkInstructionID
+  id: ReworkInstructionID
+  parent: MouldSpecification.ReworkInstructionDC
+  langs:
+  - csharp
+  - vb
+  name: ReworkInstructionID
+  nameWithType: ReworkInstructionDC.ReworkInstructionID
+  fullName: MouldSpecification.ReworkInstructionDC.ReworkInstructionID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ReworkInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ReworkInstructionID
+    path: ReworkInstructionDC.cs
+    startLine: 10
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int ReworkInstructionID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ReworkInstructionID As Integer
+  overload: MouldSpecification.ReworkInstructionDC.ReworkInstructionID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ReworkInstructionDC.ItemID
+  commentId: P:MouldSpecification.ReworkInstructionDC.ItemID
+  id: ItemID
+  parent: MouldSpecification.ReworkInstructionDC
+  langs:
+  - csharp
+  - vb
+  name: ItemID
+  nameWithType: ReworkInstructionDC.ItemID
+  fullName: MouldSpecification.ReworkInstructionDC.ItemID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ReworkInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ItemID
+    path: ReworkInstructionDC.cs
+    startLine: 11
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int ItemID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ItemID As Integer
+  overload: MouldSpecification.ReworkInstructionDC.ItemID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ReworkInstructionDC.InstructionNo
+  commentId: P:MouldSpecification.ReworkInstructionDC.InstructionNo
+  id: InstructionNo
+  parent: MouldSpecification.ReworkInstructionDC
+  langs:
+  - csharp
+  - vb
+  name: InstructionNo
+  nameWithType: ReworkInstructionDC.InstructionNo
+  fullName: MouldSpecification.ReworkInstructionDC.InstructionNo
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ReworkInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: InstructionNo
+    path: ReworkInstructionDC.cs
+    startLine: 12
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int InstructionNo { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property InstructionNo As Integer
+  overload: MouldSpecification.ReworkInstructionDC.InstructionNo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ReworkInstructionDC.ReworkInstruction
+  commentId: P:MouldSpecification.ReworkInstructionDC.ReworkInstruction
+  id: ReworkInstruction
+  parent: MouldSpecification.ReworkInstructionDC
+  langs:
+  - csharp
+  - vb
+  name: ReworkInstruction
+  nameWithType: ReworkInstructionDC.ReworkInstruction
+  fullName: MouldSpecification.ReworkInstructionDC.ReworkInstruction
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/ReworkInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ReworkInstruction
+    path: ReworkInstructionDC.cs
+    startLine: 13
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string ReworkInstruction { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ReworkInstruction As String
+  overload: MouldSpecification.ReworkInstructionDC.ReworkInstruction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ReworkInstructionDC.#ctor(System.Int32,System.Int32,System.Int32,System.String)
+  commentId: M:MouldSpecification.ReworkInstructionDC.#ctor(System.Int32,System.Int32,System.Int32,System.String)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.String)'
+  parent: MouldSpecification.ReworkInstructionDC
+  langs:
+  - csharp
+  - vb
+  name: ReworkInstructionDC(Int32, Int32, Int32, String)
+  nameWithType: ReworkInstructionDC.ReworkInstructionDC(Int32, Int32, Int32, String)
+  fullName: MouldSpecification.ReworkInstructionDC.ReworkInstructionDC(System.Int32, System.Int32, System.Int32, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/ReworkInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: ReworkInstructionDC.cs
+    startLine: 15
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public ReworkInstructionDC(int ReworkInstructionID_, int ItemID_, int InstructionNo_, string ReworkInstruction_)
+    parameters:
+    - id: ReworkInstructionID_
+      type: System.Int32
+    - id: ItemID_
+      type: System.Int32
+    - id: InstructionNo_
+      type: System.Int32
+    - id: ReworkInstruction_
+      type: System.String
+    content.vb: Public Sub New(ReworkInstructionID_ As Integer, ItemID_ As Integer, InstructionNo_ As Integer, ReworkInstruction_ As String)
+  overload: MouldSpecification.ReworkInstructionDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.ReworkInstructionDC.#ctor
+  commentId: M:MouldSpecification.ReworkInstructionDC.#ctor
+  id: '#ctor'
+  parent: MouldSpecification.ReworkInstructionDC
+  langs:
+  - csharp
+  - vb
+  name: ReworkInstructionDC()
+  nameWithType: ReworkInstructionDC.ReworkInstructionDC()
+  fullName: MouldSpecification.ReworkInstructionDC.ReworkInstructionDC()
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/ReworkInstructionDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: ReworkInstructionDC.cs
+    startLine: 23
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public ReworkInstructionDC()
+    content.vb: Public Sub New
+  overload: MouldSpecification.ReworkInstructionDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MouldSpecification
+  commentId: N:MouldSpecification
+  name: MouldSpecification
+  nameWithType: MouldSpecification
+  fullName: MouldSpecification
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MouldSpecification.ReworkInstructionDC.ReworkInstructionID*
+  commentId: Overload:MouldSpecification.ReworkInstructionDC.ReworkInstructionID
+  name: ReworkInstructionID
+  nameWithType: ReworkInstructionDC.ReworkInstructionID
+  fullName: MouldSpecification.ReworkInstructionDC.ReworkInstructionID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MouldSpecification.ReworkInstructionDC.ItemID*
+  commentId: Overload:MouldSpecification.ReworkInstructionDC.ItemID
+  name: ItemID
+  nameWithType: ReworkInstructionDC.ItemID
+  fullName: MouldSpecification.ReworkInstructionDC.ItemID
+- uid: MouldSpecification.ReworkInstructionDC.InstructionNo*
+  commentId: Overload:MouldSpecification.ReworkInstructionDC.InstructionNo
+  name: InstructionNo
+  nameWithType: ReworkInstructionDC.InstructionNo
+  fullName: MouldSpecification.ReworkInstructionDC.InstructionNo
+- uid: MouldSpecification.ReworkInstructionDC.ReworkInstruction*
+  commentId: Overload:MouldSpecification.ReworkInstructionDC.ReworkInstruction
+  name: ReworkInstruction
+  nameWithType: ReworkInstructionDC.ReworkInstruction
+  fullName: MouldSpecification.ReworkInstructionDC.ReworkInstruction
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MouldSpecification.ReworkInstructionDC.#ctor*
+  commentId: Overload:MouldSpecification.ReworkInstructionDC.#ctor
+  name: ReworkInstructionDC
+  nameWithType: ReworkInstructionDC.ReworkInstructionDC
+  fullName: MouldSpecification.ReworkInstructionDC.ReworkInstructionDC

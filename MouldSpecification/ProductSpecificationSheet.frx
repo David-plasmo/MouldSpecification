@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="08/25/2023 12:16:51" ReportInfo.Modified="08/25/2023 12:17:41" ReportInfo.CreatorVersion="2023.2.29.0">
+  <Dictionary>
+    <Parameter Name="ImagePar" DataType="System.String" AsString="" Description="ReportParameter1"/>
+    <Parameter Name="Field1Par" DataType="System.String" AsString="" Description="ReportParameter1"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="209.55" PaperHeight="298.45" LeftMargin="12.7" TopMargin="12.7" Watermark.Font="Arial, 60pt">
+    <DataBand Name="Data1" Width="706.29" Height="1003.14">
+      <TextObject Name="Textbox1" Left="0.5" Width="732.08" Height="36" CanGrow="true" Text="PRODUCT SPECIFICATION SHEET  ̶  INJECTION MOULDING" Padding="2, 2, 2, 2" Font="Calibri, 20pt, style=Bold"/>
+      <TableObject Name="Tablix1" Left="0.5" Top="43.88" Width="595.2" Height="192">
+        <TableColumn Name="Column1" Width="174.2"/>
+        <TableColumn Name="Column2" Width="229"/>
+        <TableColumn Name="Column3" Width="96"/>
+        <TableColumn Name="Column4" Width="96"/>
+        <TableRow Name="Row1" Height="24">
+          <TableCell Name="Cell1" CanGrow="true" Text="GENERAL" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell3" Font="Arial, 10pt"/>
+          <TableCell Name="Cell4" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row2" Height="24">
+          <TableCell Name="Cell5" CanGrow="true" Text="Product Code" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell6" CanGrow="true" Text="[DataSet1.Code]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell7" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell8" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row3" Height="24">
+          <TableCell Name="Cell9" CanGrow="true" Text="Product Description" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell10" CanGrow="true" Text="[DataSet1.Description]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell11" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell12" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row4" Height="24">
+          <TableCell Name="Cell13" CanGrow="true" Text="Customer" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell14" CanGrow="true" Text="[DataSet1.CUSTNAME]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell15" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell16" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row5" Height="24">
+          <TableCell Name="Cell17" CanGrow="true" Text="Product Category" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell18" CanGrow="true" Text="[DataSet1.ProductCategory]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell19" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell20" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row6" Height="24">
+          <TableCell Name="Cell21" CanGrow="true" Text="Machine A" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell22" CanGrow="true" Text="[DataSet1.MachineA]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell23" CanGrow="true" Text="Program" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell24" CanGrow="true" Text="[DataSet1.MachineAProgram]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row7" Height="24">
+          <TableCell Name="Cell25" CanGrow="true" Text="Machine B" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell26" CanGrow="true" Text="[DataSet1.MachineB]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell27" CanGrow="true" Text="Program" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell28" CanGrow="true" Text="[DataSet1.MachineBProgram]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row8" Height="24">
+          <TableCell Name="Cell29" CanGrow="true" Text="Machine C" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell30" CanGrow="true" Text="[DataSet1.MachineC]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell31" CanGrow="true" Text="Program" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell32" Border.Lines="Bottom" CanGrow="true" Text="[DataSet1.MachineCProgram]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+      </TableObject>
+      <PictureObject Name="Image1" Left="616.98" Top="42.67" Width="105.6" Height="115.21" Padding="2, 0, 2, 0"/>
+      <PictureObject Name="Image2" Left="616.98" Top="164.55" Width="105.6" Height="84" Padding="2, 0, 2, 0"/>
+      <TextObject Name="Textbox2" Left="481.87" Top="974.01" Width="240.71" Height="24" CanGrow="true" Text="=Globals!ExecutionTime" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+      <TableObject Name="Tablix2" Left="0.5" Top="253.88" Width="722.1" Height="672">
+        <TableColumn Name="Column5" Width="174.2"/>
+        <TableColumn Name="Column6" Width="103.33"/>
+        <TableColumn Name="Column7" Width="115.58"/>
+        <TableColumn Name="Column8" Width="122.33"/>
+        <TableColumn Name="Column9" Width="103.33"/>
+        <TableColumn Name="Column10" Width="103.33"/>
+        <TableRow Name="Row9" Height="24">
+          <TableCell Name="Cell33" CanGrow="true" Text="MATERIAL" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell34" Font="Arial, 10pt"/>
+          <TableCell Name="Cell35" Font="Arial, 10pt"/>
+          <TableCell Name="Cell36" Font="Arial, 10pt"/>
+          <TableCell Name="Cell37" Font="Arial, 10pt"/>
+          <TableCell Name="Cell38" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row10" Height="24">
+          <TableCell Name="Cell39" CanGrow="true" Text="Polymer 1 Type" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell40" CanGrow="true" Text="[DataSet1.Polymer1Type]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell41" CanGrow="true" Text="Grade" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell42" CanGrow="true" Text="[DataSet1.Polymer1Grade]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell43" Font="Arial, 10pt"/>
+          <TableCell Name="Cell44" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row11" Height="24">
+          <TableCell Name="Cell45" CanGrow="true" Text="Polymer 2 Type" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell46" CanGrow="true" Text="[DataSet1.Polymer2Type]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell47" CanGrow="true" Text="Grade" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell48" CanGrow="true" Text="[DataSet1.Polymer2Grade]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell49" Font="Arial, 10pt"/>
+          <TableCell Name="Cell50" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row12" Height="24">
+          <TableCell Name="Cell51" CanGrow="true" Text="MB Colour 1" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell52" CanGrow="true" Text="[DataSet1.MBColourA]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell53" CanGrow="true" Text="Code" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell54" CanGrow="true" Text="[DataSet1.MBCodeA]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell55" Font="Arial, 10pt"/>
+          <TableCell Name="Cell56" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row13" Height="24">
+          <TableCell Name="Cell57" CanGrow="true" Text="MB Colour 2" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell58" CanGrow="true" Text="[DataSet1.MBColourB]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell59" CanGrow="true" Text="Code" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell60" CanGrow="true" Text="[DataSet1.MBCodeB]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell61" Font="Arial, 10pt"/>
+          <TableCell Name="Cell62" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row14" Height="24">
+          <TableCell Name="Cell63" CanGrow="true" Text="Additive 1" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell64" CanGrow="true" Text="[DataSet1.Additive]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell65" Font="Arial, 10pt"/>
+          <TableCell Name="Cell66" CanGrow="true" Text="Code" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell67" CanGrow="true" Text="[DataSet1.AdditiveCode]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell68" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row15" Height="24">
+          <TableCell Name="Cell69" CanGrow="true" Text="Additive 2" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell70" CanGrow="true" Text="[DataSet1.AdditiveB]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell71" Font="Arial, 10pt"/>
+          <TableCell Name="Cell72" CanGrow="true" Text="Code" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell73" CanGrow="true" Text="[DataSet1.AdditiveBCode]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell74" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row16" Height="24">
+          <TableCell Name="Cell75" CanGrow="true" Text="Regrind Max %" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell76" CanGrow="true" Text="[DataSet1.RegrindMaxPC]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell77" CanGrow="true" Text="Additional Notes" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell78" CanGrow="true" Text="[DataSet1.AdditionalNotes]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell79" Font="Arial, 10pt"/>
+          <TableCell Name="Cell80" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row17" Height="24">
+          <TableCell Name="Cell81" CanGrow="true" Text="MOULD" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell82" Font="Arial, 10pt"/>
+          <TableCell Name="Cell83" Font="Arial, 10pt"/>
+          <TableCell Name="Cell84" Font="Arial, 10pt"/>
+          <TableCell Name="Cell85" Font="Arial, 10pt"/>
+          <TableCell Name="Cell86" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row18" Height="24">
+          <TableCell Name="Cell87" CanGrow="true" Text="Mould Number" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell88" CanGrow="true" Text="[DataSet1.MouldNumber]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell89" CanGrow="true" Text="Mould Location" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell90" CanGrow="true" Text="[DataSet1.MouldLocation]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell91" Font="Arial, 10pt"/>
+          <TableCell Name="Cell92" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row19" Height="24">
+          <TableCell Name="Cell93" CanGrow="true" Text="Owner" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell94" CanGrow="true" Text="[DataSet1.MouldOwner]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell95" Font="Arial, 10pt"/>
+          <TableCell Name="Cell96" Font="Arial, 10pt"/>
+          <TableCell Name="Cell97" Font="Arial, 10pt"/>
+          <TableCell Name="Cell98" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row20" Height="24">
+          <TableCell Name="Cell99" CanGrow="true" Text="Family Mould" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell100" CanGrow="true" Text="=Iif(Fields!FamilyMould.Value, &quot;Yes&quot;, &quot;No&quot;)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell101" CanGrow="true" Text="No of Cavities" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell102" CanGrow="true" Text="[DataSet1.NoOfCavities]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell103" CanGrow="true" Text="No of Parts" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell104" CanGrow="true" Text="[DataSet1.NoOfPart]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row21" Height="24">
+          <TableCell Name="Cell105" CanGrow="true" Text="Part Summary" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell106" CanGrow="true" Text="[DataSet1.PartSummary]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell107" Font="Arial, 10pt"/>
+          <TableCell Name="Cell108" Font="Arial, 10pt"/>
+          <TableCell Name="Cell109" Font="Arial, 10pt"/>
+          <TableCell Name="Cell110" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row22" Height="24">
+          <TableCell Name="Cell111" CanGrow="true" Text="Operation" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell112" CanGrow="true" Text="[DataSet1.Operation]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell113" Font="Arial, 10pt"/>
+          <TableCell Name="Cell114" Font="Arial, 10pt"/>
+          <TableCell Name="Cell115" Font="Arial, 10pt"/>
+          <TableCell Name="Cell116" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row23" Height="24">
+          <TableCell Name="Cell117" CanGrow="true" Text="Other Features" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell118" CanGrow="true" Text="[DataSet1.OtherFeatures]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell119" Font="Arial, 10pt"/>
+          <TableCell Name="Cell120" Font="Arial, 10pt"/>
+          <TableCell Name="Cell121" Font="Arial, 10pt"/>
+          <TableCell Name="Cell122" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row24" Height="24">
+          <TableCell Name="Cell123" CanGrow="true" Text="COOLING" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell124" Font="Arial, 10pt"/>
+          <TableCell Name="Cell125" Font="Arial, 10pt"/>
+          <TableCell Name="Cell126" Font="Arial, 10pt"/>
+          <TableCell Name="Cell127" Font="Arial, 10pt"/>
+          <TableCell Name="Cell128" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row25" Height="24">
+          <TableCell Name="Cell129" CanGrow="true" Text="Fixed Half" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell130" CanGrow="true" Text="[DataSet1.FixedHalf]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell131" Font="Arial, 10pt"/>
+          <TableCell Name="Cell132" Font="Arial, 10pt"/>
+          <TableCell Name="Cell133" Font="Arial, 10pt"/>
+          <TableCell Name="Cell134" CanGrow="true" Text="=IIf(Fields!FixedHalfDegC.Value Is Nothing,&quot;&quot;,  Fields!FixedHalfDegC.Value &amp;  &quot; °C&quot;)" Padding="6, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row26" Height="24">
+          <TableCell Name="Cell135" CanGrow="true" Text="Moving Half" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell136" CanGrow="true" Text="[DataSet1.MovingHalf]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell137" Font="Arial, 10pt"/>
+          <TableCell Name="Cell138" Font="Arial, 10pt"/>
+          <TableCell Name="Cell139" Font="Arial, 10pt"/>
+          <TableCell Name="Cell140" CanGrow="true" Text="=Iif(Fields!MovingHalfDegC.Value Is Nothing, &quot;&quot;, Fields!MovingHalfDegC.Value + &quot; °C&quot;)" Padding="6, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row27" Height="24">
+          <TableCell Name="Cell141" CanGrow="true" Text="WEIGHT (g)" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell142" Font="Arial, 10pt"/>
+          <TableCell Name="Cell143" CanGrow="true" Text="CYCLE TIME" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell144" Font="Arial, 10pt"/>
+          <TableCell Name="Cell145" Font="Arial, 10pt"/>
+          <TableCell Name="Cell146" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row28" Height="24">
+          <TableCell Name="Cell147" CanGrow="true" Text="Component Total Family" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell148" CanGrow="true" Text="[DataSet1.ComponentWeightTotalFamily]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell149" CanGrow="true" Text="Machine (A)" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell150" CanGrow="true" Text="[DataSet1.CycleTimeA]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell151" CanGrow="true" Text="Parts per hr A" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell152" CanGrow="true" Text="[DataSet1.NoPartsPerHrA]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row29" Height="24">
+          <TableCell Name="Cell153" CanGrow="true" Text="Sprue + Runner Total" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell154" CanGrow="true" Text="[DataSet1.SpruePlusRunner]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell155" CanGrow="true" Text="Machine (B)" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell156" CanGrow="true" Text="[DataSet1.CycleTimeB]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell157" CanGrow="true" Text="Parts per hr B" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell158" CanGrow="true" Text="[DataSet1.NoPartsPerHrB]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row30" Height="24">
+          <TableCell Name="Cell159" CanGrow="true" Text="Total Shot Weight" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell160" CanGrow="true" Text="[DataSet1.TotalShotWeight]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell161" CanGrow="true" Text="Machine (C)" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell162" CanGrow="true" Text="[DataSet1.CycleTimeC]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell163" CanGrow="true" Text="Parts per hr C" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell164" CanGrow="true" Text="[DataSet1.NoPartsPerHrC]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row31" Height="24">
+          <TableCell Name="Cell165" CanGrow="true" Text="MOULD REQUIREMENTS" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell166" Font="Arial, 10pt"/>
+          <TableCell Name="Cell167" Font="Arial, 10pt"/>
+          <TableCell Name="Cell168" Font="Arial, 10pt"/>
+          <TableCell Name="Cell169" Font="Arial, 10pt"/>
+          <TableCell Name="Cell170" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row32" Height="24">
+          <TableCell Name="Cell171" CanGrow="true" Text="Premould Req" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell172" CanGrow="true" Text="[DataSet1.PremouldReq]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell173" Font="Arial, 10pt"/>
+          <TableCell Name="Cell174" Font="Arial, 10pt"/>
+          <TableCell Name="Cell175" Font="Arial, 10pt"/>
+          <TableCell Name="Cell176" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row33" Height="24">
+          <TableCell Name="Cell177" CanGrow="true" Text="Post Mould Req" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell178" CanGrow="true" Text="[DataSet1.PostMouldReq]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell179" Font="Arial, 10pt"/>
+          <TableCell Name="Cell180" Font="Arial, 10pt"/>
+          <TableCell Name="Cell181" Font="Arial, 10pt"/>
+          <TableCell Name="Cell182" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row34" Height="24">
+          <TableCell Name="Cell183" CanGrow="true" Text="FINISHED PRODUCT TOLERANCES &amp; QUALITY CHECKS" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell184" Font="Arial, 10pt"/>
+          <TableCell Name="Cell185" Font="Arial, 10pt"/>
+          <TableCell Name="Cell186" Font="Arial, 10pt"/>
+          <TableCell Name="Cell187" Font="Arial, 10pt"/>
+          <TableCell Name="Cell188" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row35" Height="24">
+          <TableCell Name="Cell189" CanGrow="true" Text="[DataSet1.FinishedPTandQC]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell190" Font="Arial, 10pt"/>
+          <TableCell Name="Cell191" Font="Arial, 10pt"/>
+          <TableCell Name="Cell192" Font="Arial, 10pt"/>
+          <TableCell Name="Cell193" Font="Arial, 10pt"/>
+          <TableCell Name="Cell194" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row36" Height="24">
+          <TableCell Name="Cell195" CanGrow="true" Text="Product Sample" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell196" CanGrow="true" Text="=IIf(Fields!ProductSample.Value, Chr(252), Chr(251))" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell197" CanGrow="true" Text="Certificate of Conformance" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell198" Font="Arial, 10pt"/>
+          <TableCell Name="Cell199" CanGrow="true" Text="=IIf(Fields!CertificateOfConformance.Value, Chr(252),Chr(251))" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell200" Font="Arial, 10pt"/>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+  </ReportPage>
+</Report>

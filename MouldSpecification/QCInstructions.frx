@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="08/25/2023 12:22:06" ReportInfo.Modified="08/25/2023 12:22:31" ReportInfo.CreatorVersion="2023.2.29.0">
+  <Dictionary>
+    <Parameter Name="QCImage1Par" DataType="System.String" AsString="" Description="ReportParameter1"/>
+    <Parameter Name="dc.QCImage2 = linkQCImage2.Text;Par" DataType="System.String" AsString="" Description="ReportParameter1"/>
+    <Parameter Name="QCImage3Par" DataType="System.String" AsString="" Description="ReportParameter1"/>
+    <Parameter Name="QCImage4Par" DataType="System.String" AsString="" Description="ReportParameter1"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="216.5284" LeftMargin="12.7" TopMargin="12.7" Watermark.Font="Arial, 60pt">
+    <DataBand Name="Data1" Width="732.67" Height="1003.14">
+      <TextObject Name="Textbox1" Left="0.5" Width="688.08" Height="36" CanGrow="true" Text="QC INSTRUCTIONS  ̶  INJECTION MOULDING" Padding="2, 2, 2, 2" Font="Calibri, 20pt, style=Bold"/>
+      <TableObject Name="Tablix1" Top="37.33" Width="689.09" Height="72">
+        <TableColumn Name="Column1" Width="147.22"/>
+        <TableColumn Name="Column2" Width="283.83"/>
+        <TableColumn Name="Column3" Width="83.52"/>
+        <TableColumn Name="Column4" Width="174.52"/>
+        <TableRow Name="Row1" Height="24">
+          <TableCell Name="Cell1" CanGrow="true" Text="Product Code" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell2" CanGrow="true" Text="[DataSet1.Code]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell3" Font="Arial, 10pt"/>
+          <TableCell Name="Cell4" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row2" Height="24">
+          <TableCell Name="Cell5" CanGrow="true" Text="Product Description" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell6" CanGrow="true" Text="[DataSet1.Description]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell7" Font="Arial, 10pt"/>
+          <TableCell Name="Cell8" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row3" Height="24">
+          <TableCell Name="Cell9" CanGrow="true" Text="Customer" Padding="6, 2, 2, 2" Font="Arial, 10pt" TextFill.Color="DimGray"/>
+          <TableCell Name="Cell10" CanGrow="true" Text="[DataSet1.CUSTNAME]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell11" Font="Arial, 10pt"/>
+          <TableCell Name="Cell12" Font="Arial, 10pt"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="Textbox2" Left="580.87" Top="974.01" Width="141.71" Height="24" CanGrow="true" Text="=Globals!ExecutionTime" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+      <TableObject Name="Tablix2" Top="108.88" Width="688.58" Height="580.8">
+        <TableColumn Name="Column5" Width="33.5"/>
+        <TableColumn Name="Column6" Width="319.08"/>
+        <TableColumn Name="Column7" Width="48"/>
+        <TableColumn Name="Column8" Width="288"/>
+        <TableRow Name="Row4" Height="24">
+          <TableCell Name="Cell13" CanGrow="true" Text="1." Padding="6, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell14" CanGrow="true" Text="[DataSet1.QCInstruction1]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell15" CanGrow="true" Text="2." Padding="6, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell16" CanGrow="true" Text="[DataSet1.QCInstruction2]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row5" Height="24">
+          <TableCell Name="Cell17" Border.Lines="Top" CanGrow="true" Padding="6, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell18" Font="Arial, 10pt"/>
+          <TableCell Name="Cell19" Font="Arial, 10pt"/>
+          <TableCell Name="Cell20" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row6" Height="230.4">
+          <TableCell Name="Cell21" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell22" Font="Arial, 10pt">
+            <PictureObject Name="Image1" Width="319.08" Height="230.4" Padding="2, 0, 2, 0"/>
+          </TableCell>
+          <TableCell Name="Cell23" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell24" Font="Arial, 10pt">
+            <PictureObject Name="Image2" Width="288" Height="230.4" Padding="2, 0, 2, 0"/>
+          </TableCell>
+        </TableRow>
+        <TableRow Name="Row7" Height="24">
+          <TableCell Name="Cell25" CanGrow="true" Padding="6, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell26" Font="Arial, 10pt"/>
+          <TableCell Name="Cell27" Font="Arial, 10pt"/>
+          <TableCell Name="Cell28" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row8" Height="24">
+          <TableCell Name="Cell29" CanGrow="true" Text="3." Padding="6, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell30" CanGrow="true" Text="[DataSet1.QCInstruction3]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell31" CanGrow="true" Text="4." Padding="6, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell32" CanGrow="true" Text="[DataSet1.QCInstruction4]" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row9" Height="24">
+          <TableCell Name="Cell33" CanGrow="true" Padding="6, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell34" Font="Arial, 10pt"/>
+          <TableCell Name="Cell35" Font="Arial, 10pt"/>
+          <TableCell Name="Cell36" Font="Arial, 10pt"/>
+        </TableRow>
+        <TableRow Name="Row10" Height="230.4">
+          <TableCell Name="Cell37" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell38" Font="Arial, 10pt">
+            <PictureObject Name="Image3" Width="319.08" Height="230.4" Padding="2, 0, 2, 0"/>
+          </TableCell>
+          <TableCell Name="Cell39" CanGrow="true" Padding="2, 2, 2, 2" Font="Arial, 10pt"/>
+          <TableCell Name="Cell40" Font="Arial, 10pt">
+            <PictureObject Name="Image4" Width="288" Height="230.4" Padding="2, 0, 2, 0"/>
+          </TableCell>
+        </TableRow>
+      </TableObject>
+    </DataBand>
+  </ReportPage>
+</Report>

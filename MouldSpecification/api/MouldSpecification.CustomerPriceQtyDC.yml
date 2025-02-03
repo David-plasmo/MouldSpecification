@@ -1,0 +1,996 @@
+### YamlMime:ManagedReference
+items:
+- uid: MouldSpecification.CustomerPriceQtyDC
+  commentId: T:MouldSpecification.CustomerPriceQtyDC
+  id: CustomerPriceQtyDC
+  parent: MouldSpecification
+  children:
+  - MouldSpecification.CustomerPriceQtyDC.#ctor
+  - MouldSpecification.CustomerPriceQtyDC.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Decimal,System.Decimal,System.DateTime,System.String,System.DateTime)
+  - MouldSpecification.CustomerPriceQtyDC.CalculatedPrice
+  - MouldSpecification.CustomerPriceQtyDC.CostID
+  - MouldSpecification.CustomerPriceQtyDC.CurrentPrice
+  - MouldSpecification.CustomerPriceQtyDC.CustomerID
+  - MouldSpecification.CustomerPriceQtyDC.DateChanged
+  - MouldSpecification.CustomerPriceQtyDC.ItemID
+  - MouldSpecification.CustomerPriceQtyDC.last_updated_by
+  - MouldSpecification.CustomerPriceQtyDC.last_updated_on
+  - MouldSpecification.CustomerPriceQtyDC.PricingQty
+  langs:
+  - csharp
+  - vb
+  name: CustomerPriceQtyDC
+  nameWithType: CustomerPriceQtyDC
+  fullName: MouldSpecification.CustomerPriceQtyDC
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/CustomerPriceQtyDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CustomerPriceQtyDC
+    path: CustomerPriceQtyDC.cs
+    startLine: 4
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public class CustomerPriceQtyDC
+    content.vb: Public Class CustomerPriceQtyDC
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MouldSpecification.CustomerPriceQtyDC.CostID
+  commentId: P:MouldSpecification.CustomerPriceQtyDC.CostID
+  id: CostID
+  parent: MouldSpecification.CustomerPriceQtyDC
+  langs:
+  - csharp
+  - vb
+  name: CostID
+  nameWithType: CustomerPriceQtyDC.CostID
+  fullName: MouldSpecification.CustomerPriceQtyDC.CostID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerPriceQtyDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CostID
+    path: CustomerPriceQtyDC.cs
+    startLine: 6
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int CostID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CostID As Integer
+  overload: MouldSpecification.CustomerPriceQtyDC.CostID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerPriceQtyDC.ItemID
+  commentId: P:MouldSpecification.CustomerPriceQtyDC.ItemID
+  id: ItemID
+  parent: MouldSpecification.CustomerPriceQtyDC
+  langs:
+  - csharp
+  - vb
+  name: ItemID
+  nameWithType: CustomerPriceQtyDC.ItemID
+  fullName: MouldSpecification.CustomerPriceQtyDC.ItemID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerPriceQtyDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ItemID
+    path: CustomerPriceQtyDC.cs
+    startLine: 7
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int ItemID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ItemID As Integer
+  overload: MouldSpecification.CustomerPriceQtyDC.ItemID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerPriceQtyDC.CustomerID
+  commentId: P:MouldSpecification.CustomerPriceQtyDC.CustomerID
+  id: CustomerID
+  parent: MouldSpecification.CustomerPriceQtyDC
+  langs:
+  - csharp
+  - vb
+  name: CustomerID
+  nameWithType: CustomerPriceQtyDC.CustomerID
+  fullName: MouldSpecification.CustomerPriceQtyDC.CustomerID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerPriceQtyDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CustomerID
+    path: CustomerPriceQtyDC.cs
+    startLine: 8
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int CustomerID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CustomerID As Integer
+  overload: MouldSpecification.CustomerPriceQtyDC.CustomerID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerPriceQtyDC.PricingQty
+  commentId: P:MouldSpecification.CustomerPriceQtyDC.PricingQty
+  id: PricingQty
+  parent: MouldSpecification.CustomerPriceQtyDC
+  langs:
+  - csharp
+  - vb
+  name: PricingQty
+  nameWithType: CustomerPriceQtyDC.PricingQty
+  fullName: MouldSpecification.CustomerPriceQtyDC.PricingQty
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerPriceQtyDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PricingQty
+    path: CustomerPriceQtyDC.cs
+    startLine: 9
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int? PricingQty { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property PricingQty As Integer?
+  overload: MouldSpecification.CustomerPriceQtyDC.PricingQty*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerPriceQtyDC.CalculatedPrice
+  commentId: P:MouldSpecification.CustomerPriceQtyDC.CalculatedPrice
+  id: CalculatedPrice
+  parent: MouldSpecification.CustomerPriceQtyDC
+  langs:
+  - csharp
+  - vb
+  name: CalculatedPrice
+  nameWithType: CustomerPriceQtyDC.CalculatedPrice
+  fullName: MouldSpecification.CustomerPriceQtyDC.CalculatedPrice
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerPriceQtyDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CalculatedPrice
+    path: CustomerPriceQtyDC.cs
+    startLine: 10
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public decimal? CalculatedPrice { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Decimal}
+    content.vb: Public Property CalculatedPrice As Decimal?
+  overload: MouldSpecification.CustomerPriceQtyDC.CalculatedPrice*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerPriceQtyDC.CurrentPrice
+  commentId: P:MouldSpecification.CustomerPriceQtyDC.CurrentPrice
+  id: CurrentPrice
+  parent: MouldSpecification.CustomerPriceQtyDC
+  langs:
+  - csharp
+  - vb
+  name: CurrentPrice
+  nameWithType: CustomerPriceQtyDC.CurrentPrice
+  fullName: MouldSpecification.CustomerPriceQtyDC.CurrentPrice
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerPriceQtyDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CurrentPrice
+    path: CustomerPriceQtyDC.cs
+    startLine: 11
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public decimal? CurrentPrice { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Decimal}
+    content.vb: Public Property CurrentPrice As Decimal?
+  overload: MouldSpecification.CustomerPriceQtyDC.CurrentPrice*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerPriceQtyDC.DateChanged
+  commentId: P:MouldSpecification.CustomerPriceQtyDC.DateChanged
+  id: DateChanged
+  parent: MouldSpecification.CustomerPriceQtyDC
+  langs:
+  - csharp
+  - vb
+  name: DateChanged
+  nameWithType: CustomerPriceQtyDC.DateChanged
+  fullName: MouldSpecification.CustomerPriceQtyDC.DateChanged
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerPriceQtyDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: DateChanged
+    path: CustomerPriceQtyDC.cs
+    startLine: 12
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public DateTime? DateChanged { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property DateChanged As Date?
+  overload: MouldSpecification.CustomerPriceQtyDC.DateChanged*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerPriceQtyDC.last_updated_by
+  commentId: P:MouldSpecification.CustomerPriceQtyDC.last_updated_by
+  id: last_updated_by
+  parent: MouldSpecification.CustomerPriceQtyDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_by
+  nameWithType: CustomerPriceQtyDC.last_updated_by
+  fullName: MouldSpecification.CustomerPriceQtyDC.last_updated_by
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerPriceQtyDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_by
+    path: CustomerPriceQtyDC.cs
+    startLine: 13
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string last_updated_by { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property last_updated_by As String
+  overload: MouldSpecification.CustomerPriceQtyDC.last_updated_by*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerPriceQtyDC.last_updated_on
+  commentId: P:MouldSpecification.CustomerPriceQtyDC.last_updated_on
+  id: last_updated_on
+  parent: MouldSpecification.CustomerPriceQtyDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_on
+  nameWithType: CustomerPriceQtyDC.last_updated_on
+  fullName: MouldSpecification.CustomerPriceQtyDC.last_updated_on
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerPriceQtyDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_on
+    path: CustomerPriceQtyDC.cs
+    startLine: 14
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public DateTime last_updated_on { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property last_updated_on As Date
+  overload: MouldSpecification.CustomerPriceQtyDC.last_updated_on*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerPriceQtyDC.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Decimal,System.Decimal,System.DateTime,System.String,System.DateTime)
+  commentId: M:MouldSpecification.CustomerPriceQtyDC.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Decimal,System.Decimal,System.DateTime,System.String,System.DateTime)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Decimal,System.Decimal,System.DateTime,System.String,System.DateTime)'
+  parent: MouldSpecification.CustomerPriceQtyDC
+  langs:
+  - csharp
+  - vb
+  name: CustomerPriceQtyDC(Int32, Int32, Int32, Int32, Decimal, Decimal, DateTime, String, DateTime)
+  nameWithType: CustomerPriceQtyDC.CustomerPriceQtyDC(Int32, Int32, Int32, Int32, Decimal, Decimal, DateTime, String, DateTime)
+  fullName: MouldSpecification.CustomerPriceQtyDC.CustomerPriceQtyDC(System.Int32, System.Int32, System.Int32, System.Int32, System.Decimal, System.Decimal, System.DateTime, System.String, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/CustomerPriceQtyDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: CustomerPriceQtyDC.cs
+    startLine: 16
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public CustomerPriceQtyDC(int CostID_, int ItemID_, int CustomerID_, int PricingQty_, decimal CalculatedPrice_, decimal CurrentPrice_, DateTime DateChanged_, string last_updated_by_, DateTime last_updated_on_)
+    parameters:
+    - id: CostID_
+      type: System.Int32
+    - id: ItemID_
+      type: System.Int32
+    - id: CustomerID_
+      type: System.Int32
+    - id: PricingQty_
+      type: System.Int32
+    - id: CalculatedPrice_
+      type: System.Decimal
+    - id: CurrentPrice_
+      type: System.Decimal
+    - id: DateChanged_
+      type: System.DateTime
+    - id: last_updated_by_
+      type: System.String
+    - id: last_updated_on_
+      type: System.DateTime
+    content.vb: Public Sub New(CostID_ As Integer, ItemID_ As Integer, CustomerID_ As Integer, PricingQty_ As Integer, CalculatedPrice_ As Decimal, CurrentPrice_ As Decimal, DateChanged_ As Date, last_updated_by_ As String, last_updated_on_ As Date)
+  overload: MouldSpecification.CustomerPriceQtyDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerPriceQtyDC.#ctor
+  commentId: M:MouldSpecification.CustomerPriceQtyDC.#ctor
+  id: '#ctor'
+  parent: MouldSpecification.CustomerPriceQtyDC
+  langs:
+  - csharp
+  - vb
+  name: CustomerPriceQtyDC()
+  nameWithType: CustomerPriceQtyDC.CustomerPriceQtyDC()
+  fullName: MouldSpecification.CustomerPriceQtyDC.CustomerPriceQtyDC()
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/CustomerPriceQtyDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: CustomerPriceQtyDC.cs
+    startLine: 29
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public CustomerPriceQtyDC()
+    content.vb: Public Sub New
+  overload: MouldSpecification.CustomerPriceQtyDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MouldSpecification
+  commentId: N:MouldSpecification
+  name: MouldSpecification
+  nameWithType: MouldSpecification
+  fullName: MouldSpecification
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MouldSpecification.CustomerPriceQtyDC.CostID*
+  commentId: Overload:MouldSpecification.CustomerPriceQtyDC.CostID
+  name: CostID
+  nameWithType: CustomerPriceQtyDC.CostID
+  fullName: MouldSpecification.CustomerPriceQtyDC.CostID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MouldSpecification.CustomerPriceQtyDC.ItemID*
+  commentId: Overload:MouldSpecification.CustomerPriceQtyDC.ItemID
+  name: ItemID
+  nameWithType: CustomerPriceQtyDC.ItemID
+  fullName: MouldSpecification.CustomerPriceQtyDC.ItemID
+- uid: MouldSpecification.CustomerPriceQtyDC.CustomerID*
+  commentId: Overload:MouldSpecification.CustomerPriceQtyDC.CustomerID
+  name: CustomerID
+  nameWithType: CustomerPriceQtyDC.CustomerID
+  fullName: MouldSpecification.CustomerPriceQtyDC.CustomerID
+- uid: MouldSpecification.CustomerPriceQtyDC.PricingQty*
+  commentId: Overload:MouldSpecification.CustomerPriceQtyDC.PricingQty
+  name: PricingQty
+  nameWithType: CustomerPriceQtyDC.PricingQty
+  fullName: MouldSpecification.CustomerPriceQtyDC.PricingQty
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MouldSpecification.CustomerPriceQtyDC.CalculatedPrice*
+  commentId: Overload:MouldSpecification.CustomerPriceQtyDC.CalculatedPrice
+  name: CalculatedPrice
+  nameWithType: CustomerPriceQtyDC.CalculatedPrice
+  fullName: MouldSpecification.CustomerPriceQtyDC.CalculatedPrice
+- uid: System.Nullable{System.Decimal}
+  commentId: T:System.Nullable{System.Decimal}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Decimal>
+  nameWithType: Nullable<Decimal>
+  fullName: System.Nullable<System.Decimal>
+  nameWithType.vb: Nullable(Of Decimal)
+  fullName.vb: System.Nullable(Of System.Decimal)
+  name.vb: Nullable(Of Decimal)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Decimal
+    name: Decimal
+    nameWithType: Decimal
+    fullName: System.Decimal
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MouldSpecification.CustomerPriceQtyDC.CurrentPrice*
+  commentId: Overload:MouldSpecification.CustomerPriceQtyDC.CurrentPrice
+  name: CurrentPrice
+  nameWithType: CustomerPriceQtyDC.CurrentPrice
+  fullName: MouldSpecification.CustomerPriceQtyDC.CurrentPrice
+- uid: MouldSpecification.CustomerPriceQtyDC.DateChanged*
+  commentId: Overload:MouldSpecification.CustomerPriceQtyDC.DateChanged
+  name: DateChanged
+  nameWithType: CustomerPriceQtyDC.DateChanged
+  fullName: MouldSpecification.CustomerPriceQtyDC.DateChanged
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MouldSpecification.CustomerPriceQtyDC.last_updated_by*
+  commentId: Overload:MouldSpecification.CustomerPriceQtyDC.last_updated_by
+  name: last_updated_by
+  nameWithType: CustomerPriceQtyDC.last_updated_by
+  fullName: MouldSpecification.CustomerPriceQtyDC.last_updated_by
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MouldSpecification.CustomerPriceQtyDC.last_updated_on*
+  commentId: Overload:MouldSpecification.CustomerPriceQtyDC.last_updated_on
+  name: last_updated_on
+  nameWithType: CustomerPriceQtyDC.last_updated_on
+  fullName: MouldSpecification.CustomerPriceQtyDC.last_updated_on
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: MouldSpecification.CustomerPriceQtyDC.#ctor*
+  commentId: Overload:MouldSpecification.CustomerPriceQtyDC.#ctor
+  name: CustomerPriceQtyDC
+  nameWithType: CustomerPriceQtyDC.CustomerPriceQtyDC
+  fullName: MouldSpecification.CustomerPriceQtyDC.CustomerPriceQtyDC
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal

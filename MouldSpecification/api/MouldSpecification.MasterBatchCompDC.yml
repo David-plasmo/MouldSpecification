@@ -1,0 +1,961 @@
+### YamlMime:ManagedReference
+items:
+- uid: MouldSpecification.MasterBatchCompDC
+  commentId: T:MouldSpecification.MasterBatchCompDC
+  id: MasterBatchCompDC
+  parent: MouldSpecification
+  children:
+  - MouldSpecification.MasterBatchCompDC.#ctor
+  - MouldSpecification.MasterBatchCompDC.#ctor(System.Int32,System.Nullable{System.Int32},System.Int32,System.Int32,System.Single,System.Boolean,System.Nullable{System.Int32},System.Single,System.String,System.DateTime)
+  - MouldSpecification.MasterBatchCompDC.AdditiveID
+  - MouldSpecification.MasterBatchCompDC.AdditivePC
+  - MouldSpecification.MasterBatchCompDC.IsPreferred
+  - MouldSpecification.MasterBatchCompDC.ItemID
+  - MouldSpecification.MasterBatchCompDC.last_updated_by
+  - MouldSpecification.MasterBatchCompDC.last_updated_on
+  - MouldSpecification.MasterBatchCompDC.MB123
+  - MouldSpecification.MasterBatchCompDC.MBCompID
+  - MouldSpecification.MasterBatchCompDC.MBID
+  - MouldSpecification.MasterBatchCompDC.MBPercent
+  langs:
+  - csharp
+  - vb
+  name: MasterBatchCompDC
+  nameWithType: MasterBatchCompDC
+  fullName: MouldSpecification.MasterBatchCompDC
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/MasterBatchCompDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MasterBatchCompDC
+    path: MasterBatchCompDC.cs
+    startLine: 4
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public class MasterBatchCompDC
+    content.vb: Public Class MasterBatchCompDC
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MouldSpecification.MasterBatchCompDC.MBCompID
+  commentId: P:MouldSpecification.MasterBatchCompDC.MBCompID
+  id: MBCompID
+  parent: MouldSpecification.MasterBatchCompDC
+  langs:
+  - csharp
+  - vb
+  name: MBCompID
+  nameWithType: MasterBatchCompDC.MBCompID
+  fullName: MouldSpecification.MasterBatchCompDC.MBCompID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MasterBatchCompDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MBCompID
+    path: MasterBatchCompDC.cs
+    startLine: 6
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int MBCompID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MBCompID As Integer
+  overload: MouldSpecification.MasterBatchCompDC.MBCompID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MasterBatchCompDC.MBID
+  commentId: P:MouldSpecification.MasterBatchCompDC.MBID
+  id: MBID
+  parent: MouldSpecification.MasterBatchCompDC
+  langs:
+  - csharp
+  - vb
+  name: MBID
+  nameWithType: MasterBatchCompDC.MBID
+  fullName: MouldSpecification.MasterBatchCompDC.MBID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MasterBatchCompDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MBID
+    path: MasterBatchCompDC.cs
+    startLine: 7
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int? MBID { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property MBID As Integer?
+  overload: MouldSpecification.MasterBatchCompDC.MBID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MasterBatchCompDC.ItemID
+  commentId: P:MouldSpecification.MasterBatchCompDC.ItemID
+  id: ItemID
+  parent: MouldSpecification.MasterBatchCompDC
+  langs:
+  - csharp
+  - vb
+  name: ItemID
+  nameWithType: MasterBatchCompDC.ItemID
+  fullName: MouldSpecification.MasterBatchCompDC.ItemID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MasterBatchCompDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ItemID
+    path: MasterBatchCompDC.cs
+    startLine: 8
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int ItemID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ItemID As Integer
+  overload: MouldSpecification.MasterBatchCompDC.ItemID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MasterBatchCompDC.MB123
+  commentId: P:MouldSpecification.MasterBatchCompDC.MB123
+  id: MB123
+  parent: MouldSpecification.MasterBatchCompDC
+  langs:
+  - csharp
+  - vb
+  name: MB123
+  nameWithType: MasterBatchCompDC.MB123
+  fullName: MouldSpecification.MasterBatchCompDC.MB123
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MasterBatchCompDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MB123
+    path: MasterBatchCompDC.cs
+    startLine: 9
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int MB123 { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MB123 As Integer
+  overload: MouldSpecification.MasterBatchCompDC.MB123*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MasterBatchCompDC.MBPercent
+  commentId: P:MouldSpecification.MasterBatchCompDC.MBPercent
+  id: MBPercent
+  parent: MouldSpecification.MasterBatchCompDC
+  langs:
+  - csharp
+  - vb
+  name: MBPercent
+  nameWithType: MasterBatchCompDC.MBPercent
+  fullName: MouldSpecification.MasterBatchCompDC.MBPercent
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MasterBatchCompDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MBPercent
+    path: MasterBatchCompDC.cs
+    startLine: 10
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public float MBPercent { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property MBPercent As Single
+  overload: MouldSpecification.MasterBatchCompDC.MBPercent*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MasterBatchCompDC.IsPreferred
+  commentId: P:MouldSpecification.MasterBatchCompDC.IsPreferred
+  id: IsPreferred
+  parent: MouldSpecification.MasterBatchCompDC
+  langs:
+  - csharp
+  - vb
+  name: IsPreferred
+  nameWithType: MasterBatchCompDC.IsPreferred
+  fullName: MouldSpecification.MasterBatchCompDC.IsPreferred
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MasterBatchCompDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: IsPreferred
+    path: MasterBatchCompDC.cs
+    startLine: 11
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public bool IsPreferred { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsPreferred As Boolean
+  overload: MouldSpecification.MasterBatchCompDC.IsPreferred*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MasterBatchCompDC.AdditiveID
+  commentId: P:MouldSpecification.MasterBatchCompDC.AdditiveID
+  id: AdditiveID
+  parent: MouldSpecification.MasterBatchCompDC
+  langs:
+  - csharp
+  - vb
+  name: AdditiveID
+  nameWithType: MasterBatchCompDC.AdditiveID
+  fullName: MouldSpecification.MasterBatchCompDC.AdditiveID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MasterBatchCompDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: AdditiveID
+    path: MasterBatchCompDC.cs
+    startLine: 12
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int? AdditiveID { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property AdditiveID As Integer?
+  overload: MouldSpecification.MasterBatchCompDC.AdditiveID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MasterBatchCompDC.AdditivePC
+  commentId: P:MouldSpecification.MasterBatchCompDC.AdditivePC
+  id: AdditivePC
+  parent: MouldSpecification.MasterBatchCompDC
+  langs:
+  - csharp
+  - vb
+  name: AdditivePC
+  nameWithType: MasterBatchCompDC.AdditivePC
+  fullName: MouldSpecification.MasterBatchCompDC.AdditivePC
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MasterBatchCompDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: AdditivePC
+    path: MasterBatchCompDC.cs
+    startLine: 13
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public float AdditivePC { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property AdditivePC As Single
+  overload: MouldSpecification.MasterBatchCompDC.AdditivePC*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MasterBatchCompDC.last_updated_by
+  commentId: P:MouldSpecification.MasterBatchCompDC.last_updated_by
+  id: last_updated_by
+  parent: MouldSpecification.MasterBatchCompDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_by
+  nameWithType: MasterBatchCompDC.last_updated_by
+  fullName: MouldSpecification.MasterBatchCompDC.last_updated_by
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MasterBatchCompDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_by
+    path: MasterBatchCompDC.cs
+    startLine: 14
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string last_updated_by { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property last_updated_by As String
+  overload: MouldSpecification.MasterBatchCompDC.last_updated_by*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MasterBatchCompDC.last_updated_on
+  commentId: P:MouldSpecification.MasterBatchCompDC.last_updated_on
+  id: last_updated_on
+  parent: MouldSpecification.MasterBatchCompDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_on
+  nameWithType: MasterBatchCompDC.last_updated_on
+  fullName: MouldSpecification.MasterBatchCompDC.last_updated_on
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MasterBatchCompDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_on
+    path: MasterBatchCompDC.cs
+    startLine: 15
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public DateTime last_updated_on { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property last_updated_on As Date
+  overload: MouldSpecification.MasterBatchCompDC.last_updated_on*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MasterBatchCompDC.#ctor(System.Int32,System.Nullable{System.Int32},System.Int32,System.Int32,System.Single,System.Boolean,System.Nullable{System.Int32},System.Single,System.String,System.DateTime)
+  commentId: M:MouldSpecification.MasterBatchCompDC.#ctor(System.Int32,System.Nullable{System.Int32},System.Int32,System.Int32,System.Single,System.Boolean,System.Nullable{System.Int32},System.Single,System.String,System.DateTime)
+  id: '#ctor(System.Int32,System.Nullable{System.Int32},System.Int32,System.Int32,System.Single,System.Boolean,System.Nullable{System.Int32},System.Single,System.String,System.DateTime)'
+  parent: MouldSpecification.MasterBatchCompDC
+  langs:
+  - csharp
+  - vb
+  name: MasterBatchCompDC(Int32, Nullable<Int32>, Int32, Int32, Single, Boolean, Nullable<Int32>, Single, String, DateTime)
+  nameWithType: MasterBatchCompDC.MasterBatchCompDC(Int32, Nullable<Int32>, Int32, Int32, Single, Boolean, Nullable<Int32>, Single, String, DateTime)
+  fullName: MouldSpecification.MasterBatchCompDC.MasterBatchCompDC(System.Int32, System.Nullable<System.Int32>, System.Int32, System.Int32, System.Single, System.Boolean, System.Nullable<System.Int32>, System.Single, System.String, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/MasterBatchCompDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: MasterBatchCompDC.cs
+    startLine: 17
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public MasterBatchCompDC(int MBCompID_, int? MBID_, int ItemID_, int MB123_, float MBPercent_, bool IsPreferred_, int? AdditiveID_, float AdditivePC_, string last_updated_by_, DateTime last_updated_on_)
+    parameters:
+    - id: MBCompID_
+      type: System.Int32
+    - id: MBID_
+      type: System.Nullable{System.Int32}
+    - id: ItemID_
+      type: System.Int32
+    - id: MB123_
+      type: System.Int32
+    - id: MBPercent_
+      type: System.Single
+    - id: IsPreferred_
+      type: System.Boolean
+    - id: AdditiveID_
+      type: System.Nullable{System.Int32}
+    - id: AdditivePC_
+      type: System.Single
+    - id: last_updated_by_
+      type: System.String
+    - id: last_updated_on_
+      type: System.DateTime
+    content.vb: Public Sub New(MBCompID_ As Integer, MBID_ As Integer?, ItemID_ As Integer, MB123_ As Integer, MBPercent_ As Single, IsPreferred_ As Boolean, AdditiveID_ As Integer?, AdditivePC_ As Single, last_updated_by_ As String, last_updated_on_ As Date)
+  overload: MouldSpecification.MasterBatchCompDC.#ctor*
+  nameWithType.vb: MasterBatchCompDC.MasterBatchCompDC(Int32, Nullable(Of Int32), Int32, Int32, Single, Boolean, Nullable(Of Int32), Single, String, DateTime)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MouldSpecification.MasterBatchCompDC.MasterBatchCompDC(System.Int32, System.Nullable(Of System.Int32), System.Int32, System.Int32, System.Single, System.Boolean, System.Nullable(Of System.Int32), System.Single, System.String, System.DateTime)
+  name.vb: MasterBatchCompDC(Int32, Nullable(Of Int32), Int32, Int32, Single, Boolean, Nullable(Of Int32), Single, String, DateTime)
+- uid: MouldSpecification.MasterBatchCompDC.#ctor
+  commentId: M:MouldSpecification.MasterBatchCompDC.#ctor
+  id: '#ctor'
+  parent: MouldSpecification.MasterBatchCompDC
+  langs:
+  - csharp
+  - vb
+  name: MasterBatchCompDC()
+  nameWithType: MasterBatchCompDC.MasterBatchCompDC()
+  fullName: MouldSpecification.MasterBatchCompDC.MasterBatchCompDC()
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/MasterBatchCompDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: MasterBatchCompDC.cs
+    startLine: 32
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public MasterBatchCompDC()
+    content.vb: Public Sub New
+  overload: MouldSpecification.MasterBatchCompDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MouldSpecification
+  commentId: N:MouldSpecification
+  name: MouldSpecification
+  nameWithType: MouldSpecification
+  fullName: MouldSpecification
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MouldSpecification.MasterBatchCompDC.MBCompID*
+  commentId: Overload:MouldSpecification.MasterBatchCompDC.MBCompID
+  name: MBCompID
+  nameWithType: MasterBatchCompDC.MBCompID
+  fullName: MouldSpecification.MasterBatchCompDC.MBCompID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MouldSpecification.MasterBatchCompDC.MBID*
+  commentId: Overload:MouldSpecification.MasterBatchCompDC.MBID
+  name: MBID
+  nameWithType: MasterBatchCompDC.MBID
+  fullName: MouldSpecification.MasterBatchCompDC.MBID
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MouldSpecification.MasterBatchCompDC.ItemID*
+  commentId: Overload:MouldSpecification.MasterBatchCompDC.ItemID
+  name: ItemID
+  nameWithType: MasterBatchCompDC.ItemID
+  fullName: MouldSpecification.MasterBatchCompDC.ItemID
+- uid: MouldSpecification.MasterBatchCompDC.MB123*
+  commentId: Overload:MouldSpecification.MasterBatchCompDC.MB123
+  name: MB123
+  nameWithType: MasterBatchCompDC.MB123
+  fullName: MouldSpecification.MasterBatchCompDC.MB123
+- uid: MouldSpecification.MasterBatchCompDC.MBPercent*
+  commentId: Overload:MouldSpecification.MasterBatchCompDC.MBPercent
+  name: MBPercent
+  nameWithType: MasterBatchCompDC.MBPercent
+  fullName: MouldSpecification.MasterBatchCompDC.MBPercent
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: MouldSpecification.MasterBatchCompDC.IsPreferred*
+  commentId: Overload:MouldSpecification.MasterBatchCompDC.IsPreferred
+  name: IsPreferred
+  nameWithType: MasterBatchCompDC.IsPreferred
+  fullName: MouldSpecification.MasterBatchCompDC.IsPreferred
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: MouldSpecification.MasterBatchCompDC.AdditiveID*
+  commentId: Overload:MouldSpecification.MasterBatchCompDC.AdditiveID
+  name: AdditiveID
+  nameWithType: MasterBatchCompDC.AdditiveID
+  fullName: MouldSpecification.MasterBatchCompDC.AdditiveID
+- uid: MouldSpecification.MasterBatchCompDC.AdditivePC*
+  commentId: Overload:MouldSpecification.MasterBatchCompDC.AdditivePC
+  name: AdditivePC
+  nameWithType: MasterBatchCompDC.AdditivePC
+  fullName: MouldSpecification.MasterBatchCompDC.AdditivePC
+- uid: MouldSpecification.MasterBatchCompDC.last_updated_by*
+  commentId: Overload:MouldSpecification.MasterBatchCompDC.last_updated_by
+  name: last_updated_by
+  nameWithType: MasterBatchCompDC.last_updated_by
+  fullName: MouldSpecification.MasterBatchCompDC.last_updated_by
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MouldSpecification.MasterBatchCompDC.last_updated_on*
+  commentId: Overload:MouldSpecification.MasterBatchCompDC.last_updated_on
+  name: last_updated_on
+  nameWithType: MasterBatchCompDC.last_updated_on
+  fullName: MouldSpecification.MasterBatchCompDC.last_updated_on
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: MouldSpecification.MasterBatchCompDC.#ctor*
+  commentId: Overload:MouldSpecification.MasterBatchCompDC.#ctor
+  name: MasterBatchCompDC
+  nameWithType: MasterBatchCompDC.MasterBatchCompDC
+  fullName: MouldSpecification.MasterBatchCompDC.MasterBatchCompDC

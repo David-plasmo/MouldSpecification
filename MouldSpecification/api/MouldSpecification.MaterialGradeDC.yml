@@ -1,0 +1,868 @@
+### YamlMime:ManagedReference
+items:
+- uid: MouldSpecification.MaterialGradeDC
+  commentId: T:MouldSpecification.MaterialGradeDC
+  id: MaterialGradeDC
+  parent: MouldSpecification
+  children:
+  - MouldSpecification.MaterialGradeDC.#ctor
+  - MouldSpecification.MaterialGradeDC.#ctor(System.Int32,System.Int32,System.String,System.Decimal,System.String,System.String,System.String,System.String,System.String,System.DateTime)
+  - MouldSpecification.MaterialGradeDC.AdditionalNotes
+  - MouldSpecification.MaterialGradeDC.Comment
+  - MouldSpecification.MaterialGradeDC.CostPerKg
+  - MouldSpecification.MaterialGradeDC.last_updated_by
+  - MouldSpecification.MaterialGradeDC.last_updated_on
+  - MouldSpecification.MaterialGradeDC.MachineType
+  - MouldSpecification.MaterialGradeDC.MaterialGrade
+  - MouldSpecification.MaterialGradeDC.MaterialGradeID
+  - MouldSpecification.MaterialGradeDC.MaterialID
+  - MouldSpecification.MaterialGradeDC.Supplier
+  langs:
+  - csharp
+  - vb
+  name: MaterialGradeDC
+  nameWithType: MaterialGradeDC
+  fullName: MouldSpecification.MaterialGradeDC
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/MaterialGradeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MaterialGradeDC
+    path: MaterialGradeDC.cs
+    startLine: 4
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public class MaterialGradeDC
+    content.vb: Public Class MaterialGradeDC
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MouldSpecification.MaterialGradeDC.MaterialGradeID
+  commentId: P:MouldSpecification.MaterialGradeDC.MaterialGradeID
+  id: MaterialGradeID
+  parent: MouldSpecification.MaterialGradeDC
+  langs:
+  - csharp
+  - vb
+  name: MaterialGradeID
+  nameWithType: MaterialGradeDC.MaterialGradeID
+  fullName: MouldSpecification.MaterialGradeDC.MaterialGradeID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialGradeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MaterialGradeID
+    path: MaterialGradeDC.cs
+    startLine: 6
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int MaterialGradeID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaterialGradeID As Integer
+  overload: MouldSpecification.MaterialGradeDC.MaterialGradeID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialGradeDC.MaterialID
+  commentId: P:MouldSpecification.MaterialGradeDC.MaterialID
+  id: MaterialID
+  parent: MouldSpecification.MaterialGradeDC
+  langs:
+  - csharp
+  - vb
+  name: MaterialID
+  nameWithType: MaterialGradeDC.MaterialID
+  fullName: MouldSpecification.MaterialGradeDC.MaterialID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialGradeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MaterialID
+    path: MaterialGradeDC.cs
+    startLine: 7
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int MaterialID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaterialID As Integer
+  overload: MouldSpecification.MaterialGradeDC.MaterialID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialGradeDC.MaterialGrade
+  commentId: P:MouldSpecification.MaterialGradeDC.MaterialGrade
+  id: MaterialGrade
+  parent: MouldSpecification.MaterialGradeDC
+  langs:
+  - csharp
+  - vb
+  name: MaterialGrade
+  nameWithType: MaterialGradeDC.MaterialGrade
+  fullName: MouldSpecification.MaterialGradeDC.MaterialGrade
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialGradeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MaterialGrade
+    path: MaterialGradeDC.cs
+    startLine: 8
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string MaterialGrade { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MaterialGrade As String
+  overload: MouldSpecification.MaterialGradeDC.MaterialGrade*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialGradeDC.CostPerKg
+  commentId: P:MouldSpecification.MaterialGradeDC.CostPerKg
+  id: CostPerKg
+  parent: MouldSpecification.MaterialGradeDC
+  langs:
+  - csharp
+  - vb
+  name: CostPerKg
+  nameWithType: MaterialGradeDC.CostPerKg
+  fullName: MouldSpecification.MaterialGradeDC.CostPerKg
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialGradeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CostPerKg
+    path: MaterialGradeDC.cs
+    startLine: 9
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public decimal CostPerKg { get; set; }
+    parameters: []
+    return:
+      type: System.Decimal
+    content.vb: Public Property CostPerKg As Decimal
+  overload: MouldSpecification.MaterialGradeDC.CostPerKg*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialGradeDC.Supplier
+  commentId: P:MouldSpecification.MaterialGradeDC.Supplier
+  id: Supplier
+  parent: MouldSpecification.MaterialGradeDC
+  langs:
+  - csharp
+  - vb
+  name: Supplier
+  nameWithType: MaterialGradeDC.Supplier
+  fullName: MouldSpecification.MaterialGradeDC.Supplier
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialGradeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Supplier
+    path: MaterialGradeDC.cs
+    startLine: 10
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string Supplier { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Supplier As String
+  overload: MouldSpecification.MaterialGradeDC.Supplier*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialGradeDC.Comment
+  commentId: P:MouldSpecification.MaterialGradeDC.Comment
+  id: Comment
+  parent: MouldSpecification.MaterialGradeDC
+  langs:
+  - csharp
+  - vb
+  name: Comment
+  nameWithType: MaterialGradeDC.Comment
+  fullName: MouldSpecification.MaterialGradeDC.Comment
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialGradeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: Comment
+    path: MaterialGradeDC.cs
+    startLine: 11
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string Comment { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Comment As String
+  overload: MouldSpecification.MaterialGradeDC.Comment*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialGradeDC.AdditionalNotes
+  commentId: P:MouldSpecification.MaterialGradeDC.AdditionalNotes
+  id: AdditionalNotes
+  parent: MouldSpecification.MaterialGradeDC
+  langs:
+  - csharp
+  - vb
+  name: AdditionalNotes
+  nameWithType: MaterialGradeDC.AdditionalNotes
+  fullName: MouldSpecification.MaterialGradeDC.AdditionalNotes
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialGradeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: AdditionalNotes
+    path: MaterialGradeDC.cs
+    startLine: 12
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string AdditionalNotes { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AdditionalNotes As String
+  overload: MouldSpecification.MaterialGradeDC.AdditionalNotes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialGradeDC.MachineType
+  commentId: P:MouldSpecification.MaterialGradeDC.MachineType
+  id: MachineType
+  parent: MouldSpecification.MaterialGradeDC
+  langs:
+  - csharp
+  - vb
+  name: MachineType
+  nameWithType: MaterialGradeDC.MachineType
+  fullName: MouldSpecification.MaterialGradeDC.MachineType
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialGradeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: MachineType
+    path: MaterialGradeDC.cs
+    startLine: 13
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string MachineType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MachineType As String
+  overload: MouldSpecification.MaterialGradeDC.MachineType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialGradeDC.last_updated_by
+  commentId: P:MouldSpecification.MaterialGradeDC.last_updated_by
+  id: last_updated_by
+  parent: MouldSpecification.MaterialGradeDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_by
+  nameWithType: MaterialGradeDC.last_updated_by
+  fullName: MouldSpecification.MaterialGradeDC.last_updated_by
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialGradeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_by
+    path: MaterialGradeDC.cs
+    startLine: 14
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string last_updated_by { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property last_updated_by As String
+  overload: MouldSpecification.MaterialGradeDC.last_updated_by*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialGradeDC.last_updated_on
+  commentId: P:MouldSpecification.MaterialGradeDC.last_updated_on
+  id: last_updated_on
+  parent: MouldSpecification.MaterialGradeDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_on
+  nameWithType: MaterialGradeDC.last_updated_on
+  fullName: MouldSpecification.MaterialGradeDC.last_updated_on
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/MaterialGradeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_on
+    path: MaterialGradeDC.cs
+    startLine: 15
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public DateTime last_updated_on { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property last_updated_on As Date
+  overload: MouldSpecification.MaterialGradeDC.last_updated_on*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialGradeDC.#ctor(System.Int32,System.Int32,System.String,System.Decimal,System.String,System.String,System.String,System.String,System.String,System.DateTime)
+  commentId: M:MouldSpecification.MaterialGradeDC.#ctor(System.Int32,System.Int32,System.String,System.Decimal,System.String,System.String,System.String,System.String,System.String,System.DateTime)
+  id: '#ctor(System.Int32,System.Int32,System.String,System.Decimal,System.String,System.String,System.String,System.String,System.String,System.DateTime)'
+  parent: MouldSpecification.MaterialGradeDC
+  langs:
+  - csharp
+  - vb
+  name: MaterialGradeDC(Int32, Int32, String, Decimal, String, String, String, String, String, DateTime)
+  nameWithType: MaterialGradeDC.MaterialGradeDC(Int32, Int32, String, Decimal, String, String, String, String, String, DateTime)
+  fullName: MouldSpecification.MaterialGradeDC.MaterialGradeDC(System.Int32, System.Int32, System.String, System.Decimal, System.String, System.String, System.String, System.String, System.String, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/MaterialGradeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: MaterialGradeDC.cs
+    startLine: 17
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public MaterialGradeDC(int MaterialGradeID_, int MaterialID_, string MaterialGrade_, decimal CostPerKg_, string Supplier_, string Comment_, string AdditionalNotes_, string MachineType_, string last_updated_by_, DateTime last_updated_on_)
+    parameters:
+    - id: MaterialGradeID_
+      type: System.Int32
+    - id: MaterialID_
+      type: System.Int32
+    - id: MaterialGrade_
+      type: System.String
+    - id: CostPerKg_
+      type: System.Decimal
+    - id: Supplier_
+      type: System.String
+    - id: Comment_
+      type: System.String
+    - id: AdditionalNotes_
+      type: System.String
+    - id: MachineType_
+      type: System.String
+    - id: last_updated_by_
+      type: System.String
+    - id: last_updated_on_
+      type: System.DateTime
+    content.vb: Public Sub New(MaterialGradeID_ As Integer, MaterialID_ As Integer, MaterialGrade_ As String, CostPerKg_ As Decimal, Supplier_ As String, Comment_ As String, AdditionalNotes_ As String, MachineType_ As String, last_updated_by_ As String, last_updated_on_ As Date)
+  overload: MouldSpecification.MaterialGradeDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.MaterialGradeDC.#ctor
+  commentId: M:MouldSpecification.MaterialGradeDC.#ctor
+  id: '#ctor'
+  parent: MouldSpecification.MaterialGradeDC
+  langs:
+  - csharp
+  - vb
+  name: MaterialGradeDC()
+  nameWithType: MaterialGradeDC.MaterialGradeDC()
+  fullName: MouldSpecification.MaterialGradeDC.MaterialGradeDC()
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/MaterialGradeDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: MaterialGradeDC.cs
+    startLine: 32
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public MaterialGradeDC()
+    content.vb: Public Sub New
+  overload: MouldSpecification.MaterialGradeDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MouldSpecification
+  commentId: N:MouldSpecification
+  name: MouldSpecification
+  nameWithType: MouldSpecification
+  fullName: MouldSpecification
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MouldSpecification.MaterialGradeDC.MaterialGradeID*
+  commentId: Overload:MouldSpecification.MaterialGradeDC.MaterialGradeID
+  name: MaterialGradeID
+  nameWithType: MaterialGradeDC.MaterialGradeID
+  fullName: MouldSpecification.MaterialGradeDC.MaterialGradeID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MouldSpecification.MaterialGradeDC.MaterialID*
+  commentId: Overload:MouldSpecification.MaterialGradeDC.MaterialID
+  name: MaterialID
+  nameWithType: MaterialGradeDC.MaterialID
+  fullName: MouldSpecification.MaterialGradeDC.MaterialID
+- uid: MouldSpecification.MaterialGradeDC.MaterialGrade*
+  commentId: Overload:MouldSpecification.MaterialGradeDC.MaterialGrade
+  name: MaterialGrade
+  nameWithType: MaterialGradeDC.MaterialGrade
+  fullName: MouldSpecification.MaterialGradeDC.MaterialGrade
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MouldSpecification.MaterialGradeDC.CostPerKg*
+  commentId: Overload:MouldSpecification.MaterialGradeDC.CostPerKg
+  name: CostPerKg
+  nameWithType: MaterialGradeDC.CostPerKg
+  fullName: MouldSpecification.MaterialGradeDC.CostPerKg
+- uid: System.Decimal
+  commentId: T:System.Decimal
+  parent: System
+  isExternal: true
+  name: Decimal
+  nameWithType: Decimal
+  fullName: System.Decimal
+- uid: MouldSpecification.MaterialGradeDC.Supplier*
+  commentId: Overload:MouldSpecification.MaterialGradeDC.Supplier
+  name: Supplier
+  nameWithType: MaterialGradeDC.Supplier
+  fullName: MouldSpecification.MaterialGradeDC.Supplier
+- uid: MouldSpecification.MaterialGradeDC.Comment*
+  commentId: Overload:MouldSpecification.MaterialGradeDC.Comment
+  name: Comment
+  nameWithType: MaterialGradeDC.Comment
+  fullName: MouldSpecification.MaterialGradeDC.Comment
+- uid: MouldSpecification.MaterialGradeDC.AdditionalNotes*
+  commentId: Overload:MouldSpecification.MaterialGradeDC.AdditionalNotes
+  name: AdditionalNotes
+  nameWithType: MaterialGradeDC.AdditionalNotes
+  fullName: MouldSpecification.MaterialGradeDC.AdditionalNotes
+- uid: MouldSpecification.MaterialGradeDC.MachineType*
+  commentId: Overload:MouldSpecification.MaterialGradeDC.MachineType
+  name: MachineType
+  nameWithType: MaterialGradeDC.MachineType
+  fullName: MouldSpecification.MaterialGradeDC.MachineType
+- uid: MouldSpecification.MaterialGradeDC.last_updated_by*
+  commentId: Overload:MouldSpecification.MaterialGradeDC.last_updated_by
+  name: last_updated_by
+  nameWithType: MaterialGradeDC.last_updated_by
+  fullName: MouldSpecification.MaterialGradeDC.last_updated_by
+- uid: MouldSpecification.MaterialGradeDC.last_updated_on*
+  commentId: Overload:MouldSpecification.MaterialGradeDC.last_updated_on
+  name: last_updated_on
+  nameWithType: MaterialGradeDC.last_updated_on
+  fullName: MouldSpecification.MaterialGradeDC.last_updated_on
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: MouldSpecification.MaterialGradeDC.#ctor*
+  commentId: Overload:MouldSpecification.MaterialGradeDC.#ctor
+  name: MaterialGradeDC
+  nameWithType: MaterialGradeDC.MaterialGradeDC
+  fullName: MouldSpecification.MaterialGradeDC.MaterialGradeDC

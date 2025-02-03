@@ -1,0 +1,1605 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MouldSpecification</name>
+    </assembly>
+    <members>
+        <member name="F:MouldSpecification.AddCustomerProduct.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AddCustomerProduct.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.AddCustomerProduct.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MouldSpecification.AdditiveCostDAL">
+            <summary>
+            Data Access Layer (DAL) class for managing additive cost operations.
+            Inherits from <see cref="T:DataService.DataAccessBase"/>
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCostDAL.SelectAdditiveCost">
+            <summary>
+            Retrieves additive cost data from the database.
+            Executes the stored procedure "SelectAdditive" and returns the result as a <see cref="T:System.Data.DataSet"/>.
+            </summary>
+            <returns>
+            A <see cref="T:System.Data.DataSet"/> containing the additive cost data, or <c> null </c> if an exception occurs.
+            </returns>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCostDAL.UpdateAdditive(System.Data.DataSet)">
+            <summary>
+            Updates the additive cost data in the database based on the changes in the provided <see cref="T:System.Data.DataSet"/>.
+            Handles added, modified, and deleted rows in the dataset.
+            </summary>
+            <param name="ds"> The <see cref="T:System.Data.DataSet"/> containing changes to the additive cost data. </param>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCostDAL.AddAdditive(MouldSpecification.AdditiveCostDC)">
+            <summary>
+            Adds a new additive record to the database by executing the "AddAdditive" stored procedure.
+            Updates the AdditiveID, last_updated_by, and last_updated_on fields of the provided <see cref="T:MouldSpecification.AdditiveCostDC"/> object.
+            </summary>
+            <param name="dc">
+            An instance of <see cref="T:MouldSpecification.AdditiveCostDC"/> containing the additive details to be inserted into the database.
+            </param>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCostDAL.UpdateAdditive(MouldSpecification.AdditiveCostDC)">
+            <summary>
+            
+            </summary>
+            <param name="dc"></param>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCostDAL.DeleteAdditive(MouldSpecification.AdditiveCostDC)">
+            <summary>
+            Deletes an additive record from the database by executing the "DeleteAdditive" stored procedure.
+            </summary>
+            <param name="dc">
+            An instance of <see cref="T:MouldSpecification.AdditiveCostDC"/> containing the ID of the additive to delete.
+            The <c>AdditiveID</c> property must be set before calling this method.
+            </param>
+        </member>
+        <member name="T:MouldSpecification.AdditiveCost">
+            <summary>
+            Represents the form for managing and displaying additive cost information.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.AdditiveCost.bIsLoading">
+            <summary>
+            Indicates whether the form is currently in a loading state.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.AdditiveCost.nonNumberEntered">
+            <summary>
+            Indicates whether the form is currently ina loading state.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.AdditiveCost.dsAdditive">
+            <summary>
+            Holds the data set containing additive cost information.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.AdditiveCost.screenRes">
+            <summary>
+            Stores the screen resolution size for dynamic UI adjusments.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCost.#ctor">
+            <summary>
+            Intializes a new instance of the <see cref="T:MouldSpecification.AdditiveCost"/> form.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCost.AdditiveForm_Load(System.Object,System.EventArgs)">
+            <summary>
+            Event handler for the form's Load event.
+            Initializes data and componenets when the form loads.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> An object that contains event data. </param>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCost.LoadGrid">
+            <summary>
+            Loads data into the grid view and applies formatting to its columns and headers.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCost.dgvEdit_UserDeletingRow(System.Object,System.Windows.Forms.DataGridViewRowCancelEventArgs)">
+            <summary>
+            Handles the event when a user attempts to delete a row in the DataGridView.
+            Displays a confirmation dialog before allowing the deletion.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> Provides data for the <see cref="T:System.Windows.Forms.DataGridViewRowCancelEventArgs"/> event. </param>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCost.AdditiveCost_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+            <summary>
+            Handles the event triggered when the form is closed.
+            Ensures data integrity by validating and saving changes made in the DataGridView.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> Provides data for the <see cref="T:System.Windows.Forms.FormClosedEventArgs"/> event. </param>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCost.dgvEdit_CellValidating(System.Object,System.Windows.Forms.DataGridViewCellValidatingEventArgs)">
+            <summary>
+            Validates cell values in the DataGridView during editing to prevent duplicate entries.
+            Ensures the uniqueness of values in the "Additive" and "AdditiveCode" columns.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> Provides data for the <see cref="T:System.Windows.Forms.DataGridViewCellValidatingEventArgs"/> event. </param>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCost.AdditiveCost_Shown(System.Object,System.EventArgs)">
+            <summary>
+            Event handler for the form's Shown event.
+            Sets the form's size and loads the grid with data when the form is displayed.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> An object that contains event data. </param>
+        </member>
+        <member name="F:MouldSpecification.AdditiveCost.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCost.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCost.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MouldSpecification.AdditiveCostDC">
+            <summary>
+            Represents the data structure for an additive cost, including all relevant details.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AdditiveCostDC.AdditiveID">
+            <summary>
+            Gets or sets the unique identifier for the additive.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AdditiveCostDC.Additive">
+            <summary>
+            Gets or sets the name of the additive.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AdditiveCostDC.AdditiveCode">
+            <summary>
+            Gets or sets the code associated with the additive.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AdditiveCostDC.Type">
+            <summary>
+            Gets or sets the type of the additive.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AdditiveCostDC.Description">
+            <summary>
+            Gets or sets the description of the additive.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AdditiveCostDC.CostPerKg">
+            <summary>
+            Gets or sets the cost per kilogram of the additive.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AdditiveCostDC.Comment">
+            <summary>
+            Gets or sets additional comments or notes about the additive.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AdditiveCostDC.Supplier">
+            <summary>
+            Gets or sets the supplier of the additive.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AdditiveCostDC.last_updated_by">
+            <summary>
+            Gets or sets the name of the user who last updated the additive record.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AdditiveCostDC.last_updated_on">
+            <summary>
+            Gets or sets the timestamp of the last update made to the additive record.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCostDC.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Decimal,System.String,System.String,System.String,System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MouldSpecification.AdditiveCostDC"/> class with specified parameters.
+            </summary>
+            <param name="AdditiveID_"> The unique identifier for the additive. </param>
+            <param name="Additive_"> The name of the additive. </param>
+            <param name="AdditiveCode_"> The code associated with the additive. </param>
+            <param name="Type_"> The type of the additive. </param>
+            <param name="Description_"> The description of the additive. </param>
+            <param name="CostPerKg_"> The cost per kilogram of the additive. </param>
+            <param name="Comment_"> Additional comments or notes about the additive. </param>
+            <param name="Supplier_"> The supplier of the additive. </param>
+            <param name="last_updated_by_"> The user who last updated the additive record. </param>
+            <param name="last_updated_on_"> The timestamp of the last update made to the additive record. </param>
+        </member>
+        <member name="M:MouldSpecification.AdditiveCostDC.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MouldSpecification.AdditiveCostDC"/> class.
+            </summary>
+        </member>
+        <member name="T:MouldSpecification.AssemblyInstructionDAL">
+            <summary>
+            Data Acess Layer class for handling Assembly Instructions.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AssemblyInstructionDAL.UpdateFromPivotTable(System.Data.DataSet,System.String)">
+            <summary>
+            Updates the Assembly Instructions in the database based on the changes in a DataSet's pivot table.
+            Handles added, modified, and deleted rows.
+            </summary>
+            <param name="ds"> The DataSet containing the pivot table. </param>
+            <param name="tableName"> The name of the table within the DataSet to process. </param>
+        </member>
+        <member name="M:MouldSpecification.AssemblyInstructionDAL.UpdateAssemblyInstruction(System.Data.DataSet,System.String)">
+            <summary>
+            Updates the Assembly Instructions in the database based on changes in a DataSet.
+            Handles added, modified, and deleted rows.
+            </summary>
+            <param name="ds"> The Dataset containing the table with assembly instructions. </param>
+            <param name="tableName"> The name of the table within the DataSet to process. </param>
+        </member>
+        <member name="M:MouldSpecification.AssemblyInstructionDAL.AddAssemblyInstruction(MouldSpecification.AssemblyInstructionDC)">
+            <summary>
+            Adds a new assembly instruction to the database.
+            </summary>
+            <param name="dc"> The <see cref="T:MouldSpecification.AssemblyInstructionDC"/> object containing the details of the assembly instruction to add. </param>
+        </member>
+        <member name="M:MouldSpecification.AssemblyInstructionDAL.UpdateAssemblyInstruction(MouldSpecification.AssemblyInstructionDC)">
+            <summary>
+            Updates an existing assembly instruction in the database
+            </summary>
+            <param name="dc"> The <see cref="T:MouldSpecification.AssemblyInstructionDC"/> object containing the updated details of the assembly instruction. </param>
+        </member>
+        <member name="M:MouldSpecification.AssemblyInstructionDAL.DeleteAssemblyInstruction(MouldSpecification.AssemblyInstructionDC)">
+            <summary>
+            Delete an existing assembly instruction from the database.
+            </summary>
+            <param name="dc"> The <see cref="T:MouldSpecification.AssemblyInstructionDC"/> object containing the details of the assembly instruction to delete. </param>
+        </member>
+        <member name="T:MouldSpecification.AssemblyInstructionDC">
+            <summary>
+            Represents an assembly instruction in the system.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AssemblyInstructionDC.AssemblyInstructionID">
+            <summary>
+            Gets or sets the unique identifier for the assembly instruction.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AssemblyInstructionDC.ItemID">
+            <summary>
+            Gets or sets the identifier for the item associated with the assembly instruction.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AssemblyInstructionDC.InstructionNo">
+            <summary>
+            Gets or sets the instruction number for the assembly instruction.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AssemblyInstructionDC.AssemblyInstruction">
+            <summary>
+            Gets or sets the textual description of the assembly instruction.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AssemblyInstructionDC.AssemblyImageFilePath">
+            <summary>
+            Gets or sets the file path to the image associated with the assembly instruction.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AssemblyInstructionDC.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MouldSpecification.AssemblyInstructionDC"/> class with the specified values.
+            </summary>
+            <param name="AssemblyInstructionID_"> The unique identifier for the assembly instruction. </param>
+            <param name="ItemID_"> The identifier for the item associated with the instruction. </param>
+            <param name="InstructionNo_"> The instruction number. </param>
+            <param name="AssemblyInstruction_"> The textual description of the instruction. </param>
+            <param name="assemblyImageFilePath"> The file path to the image associated with the instruction. </param>
+        </member>
+        <member name="M:MouldSpecification.AssemblyInstructionDC.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MouldSpecification.AssemblyInstructionDC"/> class with default values.
+            </summary>
+        </member>
+        <member name="T:MouldSpecification.AttachedDocDAL">
+            <summary>
+            Handles the update operations for attached documents in a dataset.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocDAL.UpdateAttachedDoc(System.Data.DataSet,System.String)">
+            <summary>
+            Updates the attached documents by processing added, modified, and deleted rows.
+            </summary>
+            <param name="ds"> The dataset containing the data to be updated. </param>
+            <param name="tableName"> The name of the table within the dataset to be processed. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocDAL.AddAttachedDoc(MouldSpecification.AttachedDocDC)">
+            <summary>
+            Adds a new attached document record to the database.
+            </summary>
+            <param name="dc"> An instance of <see cref="T:MouldSpecification.AttachedDocDC"/> containing the data for the new document. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocDAL.UpdateAttachedDoc(MouldSpecification.AttachedDocDC)">
+            <summary>
+            Updates an existing attached document record in the database.
+            </summary>
+            <param name="dc"> An instance of <see cref="T:MouldSpecification.AttachedDocDC"/> containing the updated data for the document. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocDAL.DeleteAttachedDoc(MouldSpecification.AttachedDocDC)">
+            <summary>
+            Deleted an attached document record from the database.
+            </summary>
+            <param name="dc"> An instance of <see cref="T:MouldSpecification.AttachedDocDC"/> containing the ID of the document to be deleted. </param>
+        </member>
+        <member name="T:MouldSpecification.AttachedDocDC">
+            <summary>
+            Represents an attached document data container (DC) that holds the details
+            of a document related to an item, including its ID, file path, and update information.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AttachedDocDC.AttachedDocID">
+            <summary>
+            Gets or sets the unique identifier for the attached document.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AttachedDocDC.ItemID">
+            <summary>
+            Gets or sets the unique identifier for the item associated with the attached document.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AttachedDocDC.DocFilepath">
+            <summary>
+            Gets or sets the file path where the document is stored.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AttachedDocDC.last_updated_by">
+            <summary>
+            Gets or sets the username of the person who last updated the document.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AttachedDocDC.last_updated_on">
+            <summary>
+            Gets or sets the date and time when the document was last updated.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocDC.#ctor(System.Int32,System.Int32,System.String,System.String,System.DateTime)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MouldSpecification.AttachedDocDC"/> class with specific values.
+            </summary>
+            <param name="AttachedDocID_"> The unique identifier of the attached document. </param>
+            <param name="ItemID_"> The unique identifier of the associated item. </param>
+            <param name="DocFilepath_"> The file path of the document. </param>
+            <param name="last_updated_by_"> The username of the person who last updated the document. </param>
+            <param name="last_updated_on_"> The date and time when the document was last updated. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocDC.#ctor">
+            <summary>
+            Initializes a new instace of the <see cref="T:MouldSpecification.AttachedDocDC"/> class with default values.
+            </summary>
+        </member>
+        <member name="T:MouldSpecification.Customer">
+            <summary>
+            A form to manage customer information for Injection Moulded products.
+            </summary>    
+        </member>
+        <member name="M:MouldSpecification.Customer.tsbtnDelete_Click(System.Object,System.EventArgs)">
+            <remarks>
+            Prompts the user for confirmation before deleting the currently selected customer.
+            If the customer has associated products, an additional confirmation prompt is shown.
+            If confirmed, the current record is removed from the binding source.
+            </remarks>
+        </member>
+        <member name="F:MouldSpecification.Customer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.Customer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.Customer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.CustomerDAL.UpsertCustomer(MouldSpecification.CustomerDC)">
+            <summary>
+            Insert or updates a customer record in the database.
+            </summary>
+            <param name="dc"> The CustomerDC object containing customer data. </param>
+        </member>
+        <member name="M:MouldSpecification.CustomerDAL.CustomerHasProducts(System.Int32)">
+            <summary>
+            Checks if a customer has associated products in the database.
+            </summary>
+            <param name="customerID"> The ID of the customer to check. </param>
+            <returns> True if the customer has associated products; otherwise, false. </returns>
+            <exception cref="T:System.Exception"></exception>
+        </member>
+        <member name="T:MouldSpecification.CustomerPriceQty">
+            <summary>
+            Represents the Customer Price and Quantity form.
+            This form allows the user to manage price and quantity details for customers.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.CustomerPriceQty.dsCustomerPriceQty">
+            <summary>
+            Dataset to hold customer price and quantit data.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.CustomerPriceQty.nonNumberEntered">
+            <summary>
+            Indicates whether a non-numeric key was entered.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.CustomerPriceQty.curItemID">
+            <summary>
+            Holds the current item ID.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.CustomerPriceQty.curCustID">
+            <summary>
+            Holds the current customer ID.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.CustomerPriceQty.screenRes">
+            <summary>
+            Stores the screen resolution.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Initializes a new instance of the <see cref="T:MouldSpecification.CustomerPriceQty"/> class with specified item and customer IDs.
+            </summary>
+            <param name="itemID"> The item ID to initialize with. </param>
+            <param name="custID"> The customer ID to initialize with. </param>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:MouldSpecification.CustomerPriceQty"/> class.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.dgvEdit_PreviewKeyDown(System.Object,System.Windows.Forms.PreviewKeyDownEventArgs)">
+            <summary>
+            Handles the PreviewKeyDown event of the dgvEdit DataGridView.
+            Allows for specific handling of key events on the "DateChanged" column.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> The <see cref="T:System.Windows.Forms.PreviewKeyDownEventArgs"/> instance containing the event data. </param>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.dgvEdit_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Handles the KeyDown event for the DataGridView control 'dgvEdit'. 
+            Allows clearing the values of the currently selected cell when the Delete key is pressed.
+            </summary>
+            <param name="sender"> The source of the event (the DataGridView). </param>
+            <param name="e"> Provides data for the KeyDown event. </param>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.CustomerPriceQty_Load(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Load event for the 'CustomerPriceQty' form.
+            Initializes the form when it is loaded.
+            </summary>
+            <param name="sender"> The source of the event (the form). </param>
+            <param name="e"> Provides data for the Load event. </param>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.RefreshGrid">
+            <summary>
+            Refreshes and configures the 'dgvEdit' DataGridView with updated data,
+            including formatting, adding custom columns, and setting default values.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.dgvEdit_EditingControlShowing(System.Object,System.Windows.Forms.DataGridViewEditingControlShowingEventArgs)">
+            <summary>
+            Handles the EditingControlShowing event of the 'dgvEdit' DataGridView.
+            Dynamically attaches key event handlers to the editing control based on the column being edited.
+            </summary>
+            <param name="sender"> The source of the event (the DataGridView). </param>
+            <param name="e"> Provides data for the EditingControlShowing event. </param>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.cec_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Handles the KeyDown event for the calendar editing control.
+            Allows deleting the value in the cell by pressing the Delete key.
+            </summary>
+            <param name="sender"> The source of the event (the calendar editing control). </param>
+            <param name="e"> Provides data for the KeyDown event. </param>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.ec_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Handles the KeyPress event for the text box editing control.
+            Prevents the input of invalid characters based on the 'nonNumberEntered' flag.
+            </summary>
+            <param name="sender"> The source of the event (the box editing control). </param>
+            <param name="e"> Provides data for the KeyPress event. </param>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.ec_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Handles the KeyDown event for the text box editing control.
+            Detects if a non-numeric key was pressed and sets the 'nonNumberentered' flag accordingly.
+            </summary>
+            <param name="sender"> the source of the event (the text box editing control). </param>
+            <param name="e"> Provides data for the KeyDown event. </param>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.SaveGrid">
+            <summary>
+            Saves changes made in the DataGridView to the database.
+            Ensures any pending changes are validated and updated in the dataset before calling the update method.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.CustomerPriceQty_Shown(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Sown event of the form.
+            Refreshes the DataGridView by reloading data from the database when the form is diplayed.
+            </summary>
+            <param name="sender"> The source of the event (the form). </param>
+            <param name="e"> Provides data for the Shown event. </param>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.CustomerPriceQty_FormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+            <summary>
+            Handles the FormClosed event of the form.
+            Ensures that changes in the grid are saved when te form is closed.
+            </summary>
+            <param name="sender"> The source of the event (the form). </param>
+            <param name="e"> Provides data for the FormClosed event. </param>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.dgvEdit_UserDeletingRow(System.Object,System.Windows.Forms.DataGridViewRowCancelEventArgs)">
+            <summary>
+            Handles the event triggered when a user attempts to delete a row in the DataGridView.
+            Prompts the user with a confirmation dialog before allowing the deletion.
+            </summary>
+            <param name="sender"> The source of the event, typically the DataGridView. </param>
+            <param name="e"> Provides data for the RowDeleting event. </param>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.dgvEdit_DataError(System.Object,System.Windows.Forms.DataGridViewDataErrorEventArgs)">
+            <summary>
+            Handles the DataError event for the DataGridView.
+            Prevents unhandled exceptions from crashing the application during data-binding errors.
+            </summary>
+            <param name="sender"> The source of the event, typically the DataGridView. </param>
+            <param name="e"> Provides data for the DataError event. </param>
+        </member>
+        <member name="F:MouldSpecification.CustomerPriceQty.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.CustomerPriceQty.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.ProductCustomerDataEntry.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.ProductCustomerDataEntry.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.ProductCustomerDataEntry.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.CustomerProductDataEntry.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.CustomerProductDataEntry.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.CustomerProductDataEntry.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.FixedCost.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.FixedCost.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.FixedCost.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.ImportAccessIM.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.ImportAccessIM.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.ImportAccessIM.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.IMSpecification.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.IMSpecification.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.IMSpecification.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.Machine.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.Machine.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.Machine.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.MachinePref.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.MachinePref.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.MachinePref.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.MainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.MasterBatch.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.MasterBatch.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.MasterBatch.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.MaterialComp.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.MaterialComp.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.MaterialComp.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.MaterialGradeCost.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.MaterialGradeCost.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.MaterialGradeCost.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.MaterialType.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.MaterialType.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.MaterialType.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.Packaging.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.Packaging.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.Packaging.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.PackagingAttachment.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.PackagingAttachment.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.PackagingAttachment.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MouldSpecification.AttachedDocsDataEntry">
+            <summary>
+            Represents the data entry form for managing attached documents related to items and customers.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AttachedDocsDataEntry.LastItemID">
+            <summary>
+            Gets or sets the identifier for the last edited item.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AttachedDocsDataEntry.LastCustomerID">
+            <summary>
+            Gets or sets the identifier for the last edited customer.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AttachedDocsDataEntry.CustomerFilterOn">
+            <summary>
+            Gets or sets a value indicating whether the customer filter is applied.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.AttachedDocsDataEntry.NextForm">
+            <summary>
+            Specifies the name of the next form for navigation via the menu strip.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:MouldSpecification.AttachedDocsDataEntry"/> class with specified item and customer IDs.
+            </summary>
+            <param name="lastItemID"> The identifier of the last edited item. </param>
+            <param name="lastCustomerID"> The identifier of the last edited customer. </param>
+            <param name="customerFilterOn"> Specifies whether the customer filter is applied. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.tsbtnAccept_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the accept button (tsbtnAccept).
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> An EventArgs that contains the event data. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.tsbtnCancel_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the cancel button (tsbtnCancel).
+            Cancels the current edit operation on the binding source.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> An EventArgs that contains event data. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.DoSave">
+            <summary>
+            Save the changes made to the attached documents data by ending the edit mode,
+            updating the dataset, and synchronizing it with the database.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.productSpecificationToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the Product specification menu item.
+            Navigates to the "SpecificationDataEntry" form after saving changes.
+            </summary>
+            <param name="sender"> The source of the event data. </param>
+            <param name="e"> An EventArgs that contains the event data. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.productAssemblyToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the Product Assembly menu item.
+            Navigates to the "AssemblyDataEntry" form after saving changes.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> An EventArgs that contains the event data. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.qCInstructionsToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the QC Instructions menu item.
+            Navigates to the "QCDataEntry" form after saving changes.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> An EventArgs that contains the event data. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.productPackagingToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event of the Product Packaging menu item.
+            Navigates to the "PackagingDataEntry" form after saving changes.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> An EventArgs that contains the event data. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.AttachedDocsDataEntry_Load(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Load event for the AttachedDocsDataEntry form.
+            Initializes the UI componenets, sets up event handlers, and binds data.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> An EventArgs that contains the event data. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.AttachedDocsDataEntry_Shown(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Shown event of the AttachedDocsDataEntry form.
+            Sets the initial size, layout, and state of the form when it is displayed.
+            </summary>
+            <param name="sender"> The source of the event. </param>
+            <param name="e"> An EvenArgs object that contains the event data. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.SetFormState">
+            <summary>
+            Configure s the state of the form, including customer and product filters,
+            based on the provided filters and previous user interactions.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.GetDataSets">
+            <summary>
+            Retrieves and initializes the datasets required for the form.
+            This method fetches the attached document dataset from the data access layer.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.BindControls">
+            <summary>
+            Binds data sources to various controls on the form,
+            including binding navigators, combo boxes, text boxes, and the data grid view.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.tscboProduct_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the SelectedIndexChanged event for the Product ComboBox in the ToolStrip.
+            This method updates the current position of the MAN_Items BindingSource based on
+            the selected product and enables the report button.
+            </summary>
+            <param name="sender"> The source of the event, typically the ComboBox. </param>
+            <param name="e"> The event arguments.  </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.bsManItems_CurrentChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the event when the current item in the MAN_Items BindingSource changes.
+            This method refreshes the currently selected data in the form.
+            </summary>
+            <param name="sender"> The source  </param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.bsAttachedDoc_AddingNew(System.Object,System.ComponentModel.AddingNewEventArgs)">
+            <summary>
+            Handles the event when a new record is being added to the AttachedDoc BindingsSource.
+            This method ensures that the "ItemID" field is automatically populated with the
+            "ItemID" of the currently selected MAN_Items row.
+            </summary>
+            <param name="sender"> The source of the event, typically the BindingSource. </param>
+            <param name="e"> The event arguments that allow overriding the new item. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.FormatAttachedDocGrid">
+            <summary>
+            Formats the attached document document DataGridView (dgvAttachedDocs) by adjusting
+            various properties such as row selection mode, column visibility, and header styles.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.dgvAttachedDocs_CellFormatting(System.Object,System.Windows.Forms.DataGridViewCellFormattingEventArgs)">
+            <summary>
+            Handles the CellFormatting event of the DataGridView to customize the appearance of specific cells.
+            Specifically, this method formats the "Browse" column by adding a tooltip and image.
+            </summary>
+            <param name="sender"> The source of the event, typically the DataGridView. </param>
+            <param name="e"> Provides data for the CellFormatting event, including row and column indices. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.dgvAttachedDocs_CellMouseDown(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+            <summary>
+            Handles the CellMouseDown event of the DataGridView to provide a context menu
+            when the user right-clicks on a cell.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.Open_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the "Open" menu item click event to open a file associated with the selected row in the DataGridView.
+            </summary>
+            <param name="sender"> The source of the event, typically the menu item. </param>
+            <param name="e"> Provides data for the event. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.Browse_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the "Browse" menu item click event, allowing the user to select a file and update the "DocFilePath" column for the selected row in the DataGridView.
+            </summary>
+            <param name="sender"> The source of the event, typically the menu item. </param>
+            <param name="e"> Provides data for the event. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.Delete_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the "Delete Row" context menu item click event.
+            Deletes the currently selected row from the DataGridView and its associated data source after user confirmation.
+            </summary>
+            <param name="sender"> The source of the event, typically the menu item. </param>
+            <param name="e"> Provides data for the event. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.dgvPackingImage_DataBindingComplete(System.Object,System.Windows.Forms.DataGridViewBindingCompleteEventArgs)">
+            <summary>
+            Handles the DataBindingComplete event for the DataGridView.
+            Clears the current selection to ensure no rows are pre-selected after data binding is complete.
+            </summary>
+            <param name="sender"> The source of the event, typically the DataGridView. </param>
+            <param name="e"> Provides data for the event. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.dgvAttachedDocs_CellClick(System.Object,System.Windows.Forms.DataGridViewCellEventArgs)">
+            <summary>
+            Handles the CellClick event for the DataGridView.
+            Provides functionality for browsing and selecting a file when the "Browse" button cell is clicked.
+            </summary>
+            <param name="sender"> The source of the event, typically the DataGridView. </param>
+            <param name="e"> Provides data for the event, including the clicked cell's row and column indicates. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.dgvAttachedDocs_DataBindingComplete(System.Object,System.Windows.Forms.DataGridViewBindingCompleteEventArgs)">
+            <summary>
+            Handles the DataBindingComplete event of the DataGridView.
+            Clears the current selection after data binding is complete to ensure no rows are pre-selected.
+            </summary>
+            <param name="sender"> The source of the event, typically the DataGridView. </param>
+            <param name="e"> Provides data for the event, such as the state of the DataGridView after binding is complete. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.btnNewRow_Click(System.Object,System.EventArgs)">
+            <summary>
+            Handles the Click event for the "New Row" button.
+            Inserts a new row into the attached document's data  source, ends the edit, and sets the position to the new row.
+            </summary>
+            <param name="sender"> The source of the event, typically a button. </param>
+            <param name="e"> Provides data for the event. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.dgvAttachedDocs_DataError(System.Object,System.Windows.Forms.DataGridViewDataErrorEventArgs)">
+            <summary>
+            Handles the DataError event for the DataGridView.
+            Catches and suppresses any data errors that occur during the display or interaction with DataGridView.
+            </summary>
+            <param name="sender"> The source of the event, typically the DataGridView. </param>
+            <param name="e"> Provides data for event, such as the error context and exception. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.RefreshCurrent">
+            <summary>
+            Refreshes the current data and updates the UI based on the selected item.
+            It retrieves and updates the item, customer product grade, and attached document details.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.tscboCompany_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Handles the event when the selected index of the company combo box changes.
+            It updates the product filter based on the selected company.
+            </summary>
+            <param name="sender"> The object that raised the event. </param>
+            <param name="e"> The event arguments. </param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.SetProductFilter(System.Int32,System.Int32)">
+            <summary>
+            Sets the product filter based on the selected customer and optionally an item ID.
+            Filters the products to show only those related to the selected customer.
+            </summary>
+            <param name="custID"> The ID of the selected customer. </param>
+            <param name="itemID"> The ID of the selected item (optional, default is 0). </param>
+        </member>
+        <member name="F:MouldSpecification.AttachedDocsDataEntry.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.AttachedDocsDataEntry.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.PicturePopup.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.PicturePopup.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.PicturePopup.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:MouldSpecification.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.Accept">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.add">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.browse">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.browser">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.Cancel">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.delete">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.filter_green">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.filter_orange">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.minus">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.NewRow">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.PlasmoLogo">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.plus">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.Reload">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.remove">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.show">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.sortAZ_green">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.sortAZ_Off">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.sortAZ_On">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.sortAZ_orange">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.sortZA_green">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.sortZA_Off">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.sortZA_On">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.sortZA_Orange">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.UpArrow">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:MouldSpecification.Properties.Resources.zoom">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.QCDataEntry.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.QCDataEntry.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.QCDataEntry.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.PackagingDataEntry.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.PackagingDataEntry.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.PackagingDataEntry.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.ProductDetails.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.ProductDetails.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.ProductDetails.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.QCAttachments.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.QCAttachments.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.QCAttachments.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.Program.Main(System.String[])">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.QualityControl.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.QualityControl.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.QualityControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:MouldSpecification.SpecificationDataEntry.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:MouldSpecification.SpecificationDataEntry.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:MouldSpecification.SpecificationDataEntry.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:CalendarColumn">
+            <summary>
+            Represents a custom for a DataGridView that uses a CalendraCell for displaying and editing date values.
+            </summary>
+        </member>
+        <member name="M:CalendarColumn.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalendarColumn"/> class with a default <see cref="T:CalendarCell"/>.
+            </summary>
+        </member>
+        <member name="P:CalendarColumn.CellTemplate">
+            <summary>
+            Gets or sets the template for the cell used in this column.
+            Ensures that the cell used for the template is off type <see cref="T:CalendarCell"/>.
+            </summary>
+            <exception cref="T:System.InvalidCastException">
+            Thrown when the value assigned is not of type <see cref="T:CalendarCell"/>.
+            </exception>
+        </member>
+        <member name="T:CalendarCell">
+            <summary>
+            Represents a custom cell in a DataGridView that displays and allows editing of date values using a calendar control.
+            Inherits from <see cref="T:System.Windows.Forms.DataGridViewTextBoxCell"/>.
+            </summary>
+        </member>
+        <member name="M:CalendarCell.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalendarCell"/> class.
+            Sets the default date format to short date (dd-MM-yyyy).
+            </summary>
+        </member>
+        <member name="M:CalendarCell.InitializeEditingControl(System.Int32,System.Object,System.Windows.Forms.DataGridViewCellStyle)">
+            <summary>
+            Intializes the editing control for the calendar cell.
+            Sets the value of the editing control to the current value or to the default new row value if the value is null.
+            </summary>
+            <param name="rowIndex"> The index of the row containing the cell. </param>
+            <param name="initialFormattedValue"> The initial formatted value to display in the editing control. </param>
+            <param name="dataGridViewCellStyle"> The style applied to the cell during editing. </param>
+        </member>
+        <member name="P:CalendarCell.EditType">
+            <summary>
+            Gets the type of the editing control used by the <see cref="T:CalendarCell"/>
+            </summary>
+        </member>
+        <member name="P:CalendarCell.ValueType">
+            <summary>
+            Gets the type of the value that the <see cref="T:CalendarCell"/> contains.
+            </summary>
+        </member>
+        <member name="P:CalendarCell.DefaultNewRowValue">
+            <summary>
+            Gets the default value to use when a new row is added and no value is specified.
+            </summary>
+        </member>
+        <member name="T:CalendarEditingControl">
+            <summary>
+            Represents a custom calendar editing control used in a DataGridView.
+            It is based on the <see cref="T:System.Windows.Forms.DateTimePicker"/> control and implements.
+            the <see cref="T:System.Windows.Forms.IDataGridViewEditingControl"/> interface for editing date values in a DataGridView.
+            </summary>
+        </member>
+        <member name="M:CalendarEditingControl.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:CalendarEditingControl"/> class.
+            Sets the format of the DateTimePicker control to short date.
+            </summary>
+        </member>
+        <member name="P:CalendarEditingControl.EditingControlFormattedValue">
+            <summary>
+            Gets or sets the formatted value of the editing control.
+            The formatted value is represented as a short date string.
+            </summary>
+        </member>
+        <member name="M:CalendarEditingControl.GetEditingControlFormattedValue(System.Windows.Forms.DataGridViewDataErrorContexts)">
+            <summary>
+            Gets the formatted value of the editing control for a specified error context.
+            </summary>
+            <param name="context"> The context in which the error occured (not used in this case). </param>
+            <returns></returns>
+        </member>
+        <member name="M:CalendarEditingControl.ApplyCellStyleToEditingControl(System.Windows.Forms.DataGridViewCellStyle)">
+            <summary>
+            Applies the cell style to the editing control, including font and color settings.
+            </summary>
+            <param name="dataGridViewCellStyle"> The style to apply to the editing control. </param>
+        </member>
+        <member name="P:CalendarEditingControl.EditingControlRowIndex">
+            <summary>
+            Gets or sets the row index the editing control.
+            </summary>
+        </member>
+        <member name="M:CalendarEditingControl.EditingControlWantsInputKey(System.Windows.Forms.Keys,System.Boolean)">
+            <summary>
+            Datermines whether the editing control wants to process a particular input key.
+            </summary>
+            <param name="key"> The key to process. </param>
+            <param name="dataGridViewWantsInputKey"> Indicates whether the DataGridView wants to process the key. </param>
+            <returns> True if the editing control wants to process the key; otherwise, false. </returns>
+        </member>
+        <member name="M:CalendarEditingControl.PrepareEditingControlForEdit(System.Boolean)">
+            <summary>
+            Prepares the editing control for editing. In this case, no preparation is needed.
+            </summary>
+            <param name="selectAll"> Indicates whether all text should be selected. </param>
+        </member>
+        <member name="P:CalendarEditingControl.RepositionEditingControlOnValueChange">
+            <summary>
+            Gets a value indicating whether the editing control should reposition its cursor when the value changes.
+            </summary>
+        </member>
+        <member name="P:CalendarEditingControl.EditingControlDataGridView">
+            <summary>
+            Gets or sets the DateGridView associated with the editing control.
+            </summary>
+        </member>
+        <member name="P:CalendarEditingControl.EditingControlValueChanged">
+            <summary>
+            Gets or sets a value indicating wheher the value of the editing control has changed.
+            </summary>
+        </member>
+        <member name="P:CalendarEditingControl.EditingPanelCursor">
+            <summary>
+            Gets the cursor used by the editing panel of the control.
+            </summary>
+        </member>
+        <member name="M:CalendarEditingControl.OnValueChanged(System.EventArgs)">
+            <summary>
+            Handles the <see cref="!:ValueChanged"/> event of the DateTimePicker control.
+            Notifies the DataGridView that the value of the cell has changed.
+            </summary>
+            <param name="eventargs"> The event arguments for the value change event. </param>
+        </member>
+        <member name="T:DataService.Constants">
+            <summary>
+              Contains a listing of constants used throughout the application
+            </summary>
+        </member>
+        <member name="F:DataService.Constants.NullDateTime">
+            <summary>
+            The value used to represent a null DateTime value
+            </summary>
+        </member>
+        <member name="F:DataService.Constants.NullDecimal">
+            <summary>
+            The value used to represent a null decimal value
+            </summary>
+        </member>
+        <member name="F:DataService.Constants.NullDouble">
+            <summary>
+            The value used to represent a null double value
+            </summary>
+        </member>
+        <member name="F:DataService.Constants.NullGuid">
+            <summary>
+            The value used to represent a null Guid value
+            </summary>
+        </member>
+        <member name="F:DataService.Constants.NullInt">
+            <summary>
+            The value used to represent a null int value
+            </summary>
+        </member>
+        <member name="F:DataService.Constants.NullInt16">
+            <summary>
+            The value used to represent a null int16 value (smallint)
+            </summary>
+        </member>
+        <member name="F:DataService.Constants.NullByte">
+            <summary>
+            The value used to represent a null byte value (
+            </summary>
+        </member>
+        <member name="F:DataService.Constants.NullLong">
+            <summary>
+            The value used to represent a null long value (int64) 
+            </summary>
+        </member>
+        <member name="F:DataService.Constants.NullFloat">
+            <summary>
+            The value used to represent a null float value
+            </summary>
+        </member>
+        <member name="F:DataService.Constants.NullString">
+            <summary>
+            The value used to represent a null string value
+            </summary>
+        </member>
+        <member name="F:DataService.Constants.SqlMaxDate">
+            <summary>
+            Maximum DateTime value allowed by SQL Server
+            </summary>
+        </member>
+        <member name="F:DataService.Constants.SqlMinDate">
+            <summary>
+            Minimum DateTime value allowed by SQL Server
+            </summary>
+        </member>
+        <member name="T:DataService.DataAccessBase">
+            <summary>
+              Defines common DataService routines for transaction management, 
+              stored procedure execution, parameter creation, and null value 
+              checking
+            </summary>	
+        </member>
+        <member name="F:Utils.DrawingUtils.DeviceCap.LOGPIXELSX">
+            <summary>
+            Logical pixels inch in X
+            </summary>
+        </member>
+        <member name="F:Utils.DrawingUtils.DeviceCap.LOGPIXELSY">
+            <summary>
+            Logical pixels inch in Y
+            </summary>
+        </member>
+        <member name="F:WinformsUtils.MultiColumnComboBox.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:WinformsUtils.MultiColumnComboBox.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:WinformsUtils.MultiColumnComboBox.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

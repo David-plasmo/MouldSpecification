@@ -1,0 +1,1377 @@
+### YamlMime:ManagedReference
+items:
+- uid: MouldSpecification.CustomerDC
+  commentId: T:MouldSpecification.CustomerDC
+  id: CustomerDC
+  parent: MouldSpecification
+  children:
+  - MouldSpecification.CustomerDC.#ctor
+  - MouldSpecification.CustomerDC.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime)
+  - MouldSpecification.CustomerDC.ADDRESS1
+  - MouldSpecification.CustomerDC.ADDRESS2
+  - MouldSpecification.CustomerDC.ADDRESS3
+  - MouldSpecification.CustomerDC.ADRSCODE
+  - MouldSpecification.CustomerDC.CITY
+  - MouldSpecification.CustomerDC.CNTCPRSN
+  - MouldSpecification.CustomerDC.CompDB
+  - MouldSpecification.CustomerDC.COUNTRY
+  - MouldSpecification.CustomerDC.CUSTCLAS
+  - MouldSpecification.CustomerDC.CUSTNAME
+  - MouldSpecification.CustomerDC.CUSTNMBR
+  - MouldSpecification.CustomerDC.CustomerID
+  - MouldSpecification.CustomerDC.FAX
+  - MouldSpecification.CustomerDC.last_updated_by
+  - MouldSpecification.CustomerDC.last_updated_on
+  - MouldSpecification.CustomerDC.PHONE1
+  - MouldSpecification.CustomerDC.PHONE2
+  - MouldSpecification.CustomerDC.PHONE3
+  - MouldSpecification.CustomerDC.PYMTRMID
+  - MouldSpecification.CustomerDC.SHIPMTHD
+  - MouldSpecification.CustomerDC.STATE
+  - MouldSpecification.CustomerDC.ZIP
+  langs:
+  - csharp
+  - vb
+  name: CustomerDC
+  nameWithType: CustomerDC
+  fullName: MouldSpecification.CustomerDC
+  type: Class
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CustomerDC
+    path: CustomerDC.cs
+    startLine: 8
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public class CustomerDC
+    content.vb: Public Class CustomerDC
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MouldSpecification.CustomerDC.CustomerID
+  commentId: P:MouldSpecification.CustomerDC.CustomerID
+  id: CustomerID
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: CustomerID
+  nameWithType: CustomerDC.CustomerID
+  fullName: MouldSpecification.CustomerDC.CustomerID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CustomerID
+    path: CustomerDC.cs
+    startLine: 10
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public int CustomerID { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property CustomerID As Integer
+  overload: MouldSpecification.CustomerDC.CustomerID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.CompDB
+  commentId: P:MouldSpecification.CustomerDC.CompDB
+  id: CompDB
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: CompDB
+  nameWithType: CustomerDC.CompDB
+  fullName: MouldSpecification.CustomerDC.CompDB
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CompDB
+    path: CustomerDC.cs
+    startLine: 11
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string CompDB { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CompDB As String
+  overload: MouldSpecification.CustomerDC.CompDB*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.CUSTNMBR
+  commentId: P:MouldSpecification.CustomerDC.CUSTNMBR
+  id: CUSTNMBR
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: CUSTNMBR
+  nameWithType: CustomerDC.CUSTNMBR
+  fullName: MouldSpecification.CustomerDC.CUSTNMBR
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CUSTNMBR
+    path: CustomerDC.cs
+    startLine: 12
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string CUSTNMBR { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CUSTNMBR As String
+  overload: MouldSpecification.CustomerDC.CUSTNMBR*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.CUSTNAME
+  commentId: P:MouldSpecification.CustomerDC.CUSTNAME
+  id: CUSTNAME
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: CUSTNAME
+  nameWithType: CustomerDC.CUSTNAME
+  fullName: MouldSpecification.CustomerDC.CUSTNAME
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CUSTNAME
+    path: CustomerDC.cs
+    startLine: 13
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string CUSTNAME { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CUSTNAME As String
+  overload: MouldSpecification.CustomerDC.CUSTNAME*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.CUSTCLAS
+  commentId: P:MouldSpecification.CustomerDC.CUSTCLAS
+  id: CUSTCLAS
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: CUSTCLAS
+  nameWithType: CustomerDC.CUSTCLAS
+  fullName: MouldSpecification.CustomerDC.CUSTCLAS
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CUSTCLAS
+    path: CustomerDC.cs
+    startLine: 14
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string CUSTCLAS { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CUSTCLAS As String
+  overload: MouldSpecification.CustomerDC.CUSTCLAS*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.CNTCPRSN
+  commentId: P:MouldSpecification.CustomerDC.CNTCPRSN
+  id: CNTCPRSN
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: CNTCPRSN
+  nameWithType: CustomerDC.CNTCPRSN
+  fullName: MouldSpecification.CustomerDC.CNTCPRSN
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CNTCPRSN
+    path: CustomerDC.cs
+    startLine: 15
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string CNTCPRSN { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CNTCPRSN As String
+  overload: MouldSpecification.CustomerDC.CNTCPRSN*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.ADRSCODE
+  commentId: P:MouldSpecification.CustomerDC.ADRSCODE
+  id: ADRSCODE
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: ADRSCODE
+  nameWithType: CustomerDC.ADRSCODE
+  fullName: MouldSpecification.CustomerDC.ADRSCODE
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ADRSCODE
+    path: CustomerDC.cs
+    startLine: 16
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string ADRSCODE { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ADRSCODE As String
+  overload: MouldSpecification.CustomerDC.ADRSCODE*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.SHIPMTHD
+  commentId: P:MouldSpecification.CustomerDC.SHIPMTHD
+  id: SHIPMTHD
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: SHIPMTHD
+  nameWithType: CustomerDC.SHIPMTHD
+  fullName: MouldSpecification.CustomerDC.SHIPMTHD
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: SHIPMTHD
+    path: CustomerDC.cs
+    startLine: 17
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string SHIPMTHD { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SHIPMTHD As String
+  overload: MouldSpecification.CustomerDC.SHIPMTHD*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.ADDRESS1
+  commentId: P:MouldSpecification.CustomerDC.ADDRESS1
+  id: ADDRESS1
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: ADDRESS1
+  nameWithType: CustomerDC.ADDRESS1
+  fullName: MouldSpecification.CustomerDC.ADDRESS1
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ADDRESS1
+    path: CustomerDC.cs
+    startLine: 18
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string ADDRESS1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ADDRESS1 As String
+  overload: MouldSpecification.CustomerDC.ADDRESS1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.ADDRESS2
+  commentId: P:MouldSpecification.CustomerDC.ADDRESS2
+  id: ADDRESS2
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: ADDRESS2
+  nameWithType: CustomerDC.ADDRESS2
+  fullName: MouldSpecification.CustomerDC.ADDRESS2
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ADDRESS2
+    path: CustomerDC.cs
+    startLine: 19
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string ADDRESS2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ADDRESS2 As String
+  overload: MouldSpecification.CustomerDC.ADDRESS2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.ADDRESS3
+  commentId: P:MouldSpecification.CustomerDC.ADDRESS3
+  id: ADDRESS3
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: ADDRESS3
+  nameWithType: CustomerDC.ADDRESS3
+  fullName: MouldSpecification.CustomerDC.ADDRESS3
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ADDRESS3
+    path: CustomerDC.cs
+    startLine: 20
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string ADDRESS3 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ADDRESS3 As String
+  overload: MouldSpecification.CustomerDC.ADDRESS3*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.COUNTRY
+  commentId: P:MouldSpecification.CustomerDC.COUNTRY
+  id: COUNTRY
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: COUNTRY
+  nameWithType: CustomerDC.COUNTRY
+  fullName: MouldSpecification.CustomerDC.COUNTRY
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: COUNTRY
+    path: CustomerDC.cs
+    startLine: 21
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string COUNTRY { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property COUNTRY As String
+  overload: MouldSpecification.CustomerDC.COUNTRY*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.CITY
+  commentId: P:MouldSpecification.CustomerDC.CITY
+  id: CITY
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: CITY
+  nameWithType: CustomerDC.CITY
+  fullName: MouldSpecification.CustomerDC.CITY
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: CITY
+    path: CustomerDC.cs
+    startLine: 22
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string CITY { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CITY As String
+  overload: MouldSpecification.CustomerDC.CITY*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.STATE
+  commentId: P:MouldSpecification.CustomerDC.STATE
+  id: STATE
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: STATE
+  nameWithType: CustomerDC.STATE
+  fullName: MouldSpecification.CustomerDC.STATE
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: STATE
+    path: CustomerDC.cs
+    startLine: 23
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string STATE { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property STATE As String
+  overload: MouldSpecification.CustomerDC.STATE*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.ZIP
+  commentId: P:MouldSpecification.CustomerDC.ZIP
+  id: ZIP
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: ZIP
+  nameWithType: CustomerDC.ZIP
+  fullName: MouldSpecification.CustomerDC.ZIP
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: ZIP
+    path: CustomerDC.cs
+    startLine: 24
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string ZIP { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ZIP As String
+  overload: MouldSpecification.CustomerDC.ZIP*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.PHONE1
+  commentId: P:MouldSpecification.CustomerDC.PHONE1
+  id: PHONE1
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: PHONE1
+  nameWithType: CustomerDC.PHONE1
+  fullName: MouldSpecification.CustomerDC.PHONE1
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PHONE1
+    path: CustomerDC.cs
+    startLine: 25
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string PHONE1 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PHONE1 As String
+  overload: MouldSpecification.CustomerDC.PHONE1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.PHONE2
+  commentId: P:MouldSpecification.CustomerDC.PHONE2
+  id: PHONE2
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: PHONE2
+  nameWithType: CustomerDC.PHONE2
+  fullName: MouldSpecification.CustomerDC.PHONE2
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PHONE2
+    path: CustomerDC.cs
+    startLine: 26
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string PHONE2 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PHONE2 As String
+  overload: MouldSpecification.CustomerDC.PHONE2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.PHONE3
+  commentId: P:MouldSpecification.CustomerDC.PHONE3
+  id: PHONE3
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: PHONE3
+  nameWithType: CustomerDC.PHONE3
+  fullName: MouldSpecification.CustomerDC.PHONE3
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PHONE3
+    path: CustomerDC.cs
+    startLine: 27
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string PHONE3 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PHONE3 As String
+  overload: MouldSpecification.CustomerDC.PHONE3*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.FAX
+  commentId: P:MouldSpecification.CustomerDC.FAX
+  id: FAX
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: FAX
+  nameWithType: CustomerDC.FAX
+  fullName: MouldSpecification.CustomerDC.FAX
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: FAX
+    path: CustomerDC.cs
+    startLine: 28
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string FAX { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FAX As String
+  overload: MouldSpecification.CustomerDC.FAX*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.PYMTRMID
+  commentId: P:MouldSpecification.CustomerDC.PYMTRMID
+  id: PYMTRMID
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: PYMTRMID
+  nameWithType: CustomerDC.PYMTRMID
+  fullName: MouldSpecification.CustomerDC.PYMTRMID
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: PYMTRMID
+    path: CustomerDC.cs
+    startLine: 29
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string PYMTRMID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PYMTRMID As String
+  overload: MouldSpecification.CustomerDC.PYMTRMID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.last_updated_by
+  commentId: P:MouldSpecification.CustomerDC.last_updated_by
+  id: last_updated_by
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_by
+  nameWithType: CustomerDC.last_updated_by
+  fullName: MouldSpecification.CustomerDC.last_updated_by
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_by
+    path: CustomerDC.cs
+    startLine: 30
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public string last_updated_by { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property last_updated_by As String
+  overload: MouldSpecification.CustomerDC.last_updated_by*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.last_updated_on
+  commentId: P:MouldSpecification.CustomerDC.last_updated_on
+  id: last_updated_on
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: last_updated_on
+  nameWithType: CustomerDC.last_updated_on
+  fullName: MouldSpecification.CustomerDC.last_updated_on
+  type: Property
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: last_updated_on
+    path: CustomerDC.cs
+    startLine: 31
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public DateTime last_updated_on { get; set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property last_updated_on As Date
+  overload: MouldSpecification.CustomerDC.last_updated_on*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime)
+  commentId: M:MouldSpecification.CustomerDC.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime)
+  id: '#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.DateTime)'
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: CustomerDC(Int32, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, DateTime)
+  nameWithType: CustomerDC.CustomerDC(Int32, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, String, DateTime)
+  fullName: MouldSpecification.CustomerDC.CustomerDC(System.Int32, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.String, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: CustomerDC.cs
+    startLine: 33
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public CustomerDC(int CustomerID_, string CompDB_, string CUSTNMBR_, string CUSTNAME_, string CUSTCLAS_, string CNTCPRSN_, string ADRSCODE_, string SHIPMTHD_, string ADDRESS1_, string ADDRESS2_, string ADDRESS3_, string COUNTRY_, string CITY_, string STATE_, string ZIP_, string PHONE1_, string PHONE2_, string PHONE3_, string FAX_, string PYMTRMID_, string last_updated_by_, DateTime last_updated_on_)
+    parameters:
+    - id: CustomerID_
+      type: System.Int32
+    - id: CompDB_
+      type: System.String
+    - id: CUSTNMBR_
+      type: System.String
+    - id: CUSTNAME_
+      type: System.String
+    - id: CUSTCLAS_
+      type: System.String
+    - id: CNTCPRSN_
+      type: System.String
+    - id: ADRSCODE_
+      type: System.String
+    - id: SHIPMTHD_
+      type: System.String
+    - id: ADDRESS1_
+      type: System.String
+    - id: ADDRESS2_
+      type: System.String
+    - id: ADDRESS3_
+      type: System.String
+    - id: COUNTRY_
+      type: System.String
+    - id: CITY_
+      type: System.String
+    - id: STATE_
+      type: System.String
+    - id: ZIP_
+      type: System.String
+    - id: PHONE1_
+      type: System.String
+    - id: PHONE2_
+      type: System.String
+    - id: PHONE3_
+      type: System.String
+    - id: FAX_
+      type: System.String
+    - id: PYMTRMID_
+      type: System.String
+    - id: last_updated_by_
+      type: System.String
+    - id: last_updated_on_
+      type: System.DateTime
+    content.vb: Public Sub New(CustomerID_ As Integer, CompDB_ As String, CUSTNMBR_ As String, CUSTNAME_ As String, CUSTCLAS_ As String, CNTCPRSN_ As String, ADRSCODE_ As String, SHIPMTHD_ As String, ADDRESS1_ As String, ADDRESS2_ As String, ADDRESS3_ As String, COUNTRY_ As String, CITY_ As String, STATE_ As String, ZIP_ As String, PHONE1_ As String, PHONE2_ As String, PHONE3_ As String, FAX_ As String, PYMTRMID_ As String, last_updated_by_ As String, last_updated_on_ As Date)
+  overload: MouldSpecification.CustomerDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MouldSpecification.CustomerDC.#ctor
+  commentId: M:MouldSpecification.CustomerDC.#ctor
+  id: '#ctor'
+  parent: MouldSpecification.CustomerDC
+  langs:
+  - csharp
+  - vb
+  name: CustomerDC()
+  nameWithType: CustomerDC.CustomerDC()
+  fullName: MouldSpecification.CustomerDC.CustomerDC()
+  type: Constructor
+  source:
+    remote:
+      path: MouldSpecification/CustomerDC.cs
+      branch: main
+      repo: https://github.com/David-plasmo/MouldSpecification.git
+    id: .ctor
+    path: CustomerDC.cs
+    startLine: 63
+  assemblies:
+  - MouldSpecification
+  namespace: MouldSpecification
+  syntax:
+    content: public CustomerDC()
+    content.vb: Public Sub New
+  overload: MouldSpecification.CustomerDC.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: MouldSpecification
+  commentId: N:MouldSpecification
+  name: MouldSpecification
+  nameWithType: MouldSpecification
+  fullName: MouldSpecification
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MouldSpecification.CustomerDC.CustomerID*
+  commentId: Overload:MouldSpecification.CustomerDC.CustomerID
+  name: CustomerID
+  nameWithType: CustomerDC.CustomerID
+  fullName: MouldSpecification.CustomerDC.CustomerID
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MouldSpecification.CustomerDC.CompDB*
+  commentId: Overload:MouldSpecification.CustomerDC.CompDB
+  name: CompDB
+  nameWithType: CustomerDC.CompDB
+  fullName: MouldSpecification.CustomerDC.CompDB
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MouldSpecification.CustomerDC.CUSTNMBR*
+  commentId: Overload:MouldSpecification.CustomerDC.CUSTNMBR
+  name: CUSTNMBR
+  nameWithType: CustomerDC.CUSTNMBR
+  fullName: MouldSpecification.CustomerDC.CUSTNMBR
+- uid: MouldSpecification.CustomerDC.CUSTNAME*
+  commentId: Overload:MouldSpecification.CustomerDC.CUSTNAME
+  name: CUSTNAME
+  nameWithType: CustomerDC.CUSTNAME
+  fullName: MouldSpecification.CustomerDC.CUSTNAME
+- uid: MouldSpecification.CustomerDC.CUSTCLAS*
+  commentId: Overload:MouldSpecification.CustomerDC.CUSTCLAS
+  name: CUSTCLAS
+  nameWithType: CustomerDC.CUSTCLAS
+  fullName: MouldSpecification.CustomerDC.CUSTCLAS
+- uid: MouldSpecification.CustomerDC.CNTCPRSN*
+  commentId: Overload:MouldSpecification.CustomerDC.CNTCPRSN
+  name: CNTCPRSN
+  nameWithType: CustomerDC.CNTCPRSN
+  fullName: MouldSpecification.CustomerDC.CNTCPRSN
+- uid: MouldSpecification.CustomerDC.ADRSCODE*
+  commentId: Overload:MouldSpecification.CustomerDC.ADRSCODE
+  name: ADRSCODE
+  nameWithType: CustomerDC.ADRSCODE
+  fullName: MouldSpecification.CustomerDC.ADRSCODE
+- uid: MouldSpecification.CustomerDC.SHIPMTHD*
+  commentId: Overload:MouldSpecification.CustomerDC.SHIPMTHD
+  name: SHIPMTHD
+  nameWithType: CustomerDC.SHIPMTHD
+  fullName: MouldSpecification.CustomerDC.SHIPMTHD
+- uid: MouldSpecification.CustomerDC.ADDRESS1*
+  commentId: Overload:MouldSpecification.CustomerDC.ADDRESS1
+  name: ADDRESS1
+  nameWithType: CustomerDC.ADDRESS1
+  fullName: MouldSpecification.CustomerDC.ADDRESS1
+- uid: MouldSpecification.CustomerDC.ADDRESS2*
+  commentId: Overload:MouldSpecification.CustomerDC.ADDRESS2
+  name: ADDRESS2
+  nameWithType: CustomerDC.ADDRESS2
+  fullName: MouldSpecification.CustomerDC.ADDRESS2
+- uid: MouldSpecification.CustomerDC.ADDRESS3*
+  commentId: Overload:MouldSpecification.CustomerDC.ADDRESS3
+  name: ADDRESS3
+  nameWithType: CustomerDC.ADDRESS3
+  fullName: MouldSpecification.CustomerDC.ADDRESS3
+- uid: MouldSpecification.CustomerDC.COUNTRY*
+  commentId: Overload:MouldSpecification.CustomerDC.COUNTRY
+  name: COUNTRY
+  nameWithType: CustomerDC.COUNTRY
+  fullName: MouldSpecification.CustomerDC.COUNTRY
+- uid: MouldSpecification.CustomerDC.CITY*
+  commentId: Overload:MouldSpecification.CustomerDC.CITY
+  name: CITY
+  nameWithType: CustomerDC.CITY
+  fullName: MouldSpecification.CustomerDC.CITY
+- uid: MouldSpecification.CustomerDC.STATE*
+  commentId: Overload:MouldSpecification.CustomerDC.STATE
+  name: STATE
+  nameWithType: CustomerDC.STATE
+  fullName: MouldSpecification.CustomerDC.STATE
+- uid: MouldSpecification.CustomerDC.ZIP*
+  commentId: Overload:MouldSpecification.CustomerDC.ZIP
+  name: ZIP
+  nameWithType: CustomerDC.ZIP
+  fullName: MouldSpecification.CustomerDC.ZIP
+- uid: MouldSpecification.CustomerDC.PHONE1*
+  commentId: Overload:MouldSpecification.CustomerDC.PHONE1
+  name: PHONE1
+  nameWithType: CustomerDC.PHONE1
+  fullName: MouldSpecification.CustomerDC.PHONE1
+- uid: MouldSpecification.CustomerDC.PHONE2*
+  commentId: Overload:MouldSpecification.CustomerDC.PHONE2
+  name: PHONE2
+  nameWithType: CustomerDC.PHONE2
+  fullName: MouldSpecification.CustomerDC.PHONE2
+- uid: MouldSpecification.CustomerDC.PHONE3*
+  commentId: Overload:MouldSpecification.CustomerDC.PHONE3
+  name: PHONE3
+  nameWithType: CustomerDC.PHONE3
+  fullName: MouldSpecification.CustomerDC.PHONE3
+- uid: MouldSpecification.CustomerDC.FAX*
+  commentId: Overload:MouldSpecification.CustomerDC.FAX
+  name: FAX
+  nameWithType: CustomerDC.FAX
+  fullName: MouldSpecification.CustomerDC.FAX
+- uid: MouldSpecification.CustomerDC.PYMTRMID*
+  commentId: Overload:MouldSpecification.CustomerDC.PYMTRMID
+  name: PYMTRMID
+  nameWithType: CustomerDC.PYMTRMID
+  fullName: MouldSpecification.CustomerDC.PYMTRMID
+- uid: MouldSpecification.CustomerDC.last_updated_by*
+  commentId: Overload:MouldSpecification.CustomerDC.last_updated_by
+  name: last_updated_by
+  nameWithType: CustomerDC.last_updated_by
+  fullName: MouldSpecification.CustomerDC.last_updated_by
+- uid: MouldSpecification.CustomerDC.last_updated_on*
+  commentId: Overload:MouldSpecification.CustomerDC.last_updated_on
+  name: last_updated_on
+  nameWithType: CustomerDC.last_updated_on
+  fullName: MouldSpecification.CustomerDC.last_updated_on
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: MouldSpecification.CustomerDC.#ctor*
+  commentId: Overload:MouldSpecification.CustomerDC.#ctor
+  name: CustomerDC
+  nameWithType: CustomerDC.CustomerDC
+  fullName: MouldSpecification.CustomerDC.CustomerDC

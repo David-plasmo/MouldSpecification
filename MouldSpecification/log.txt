@@ -1,0 +1,8 @@
+[23-09-21 12:57:38.976]Info:Config file docfx.json found, start generating metadata...
+[23-09-21 12:57:39.056]Error:wkhtmltopdf is a prerequisite when generating PDF. Please install it from https://wkhtmltopdf.org/downloads.html and save the executable folder to %PATH% first or set the 'filePath' property. Alternatively you can install it from https://chocolatey.org with `choco install wkhtmltopdf`.
+
+
+Build failed.
+[23-09-21 12:57:39.072]Error:wkhtmltopdf is a prerequisite when generating PDF. Please install it from https://wkhtmltopdf.org/downloads.html and save the executable folder to %PATH% first or set the 'filePath' property. Alternatively you can install it from https://chocolatey.org with `choco install wkhtmltopdf`.
+	0 Warning(s)
+	1 Error(s)
