@@ -8,6 +8,28 @@ namespace MouldSpecification
 {
     class MasterBatchCompDAL : DataAccessBase
     {
+        public DataSet GetMB123()
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                DataTable dt = new DataTable();
+                DataColumn dc = new DataColumn("MB123");
+                dt.Columns.Add(dc);
+                dt.Rows.Add("1");
+                dt.Rows.Add("2");
+                dt.Rows.Add("3");
+                ds.Tables.Add(dt);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+
         public DataSet SelectMasterBatchComp(int? itemID, int? custID)
         {
             try

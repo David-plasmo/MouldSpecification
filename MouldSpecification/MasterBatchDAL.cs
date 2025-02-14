@@ -7,7 +7,7 @@ using System.Windows.Forms;
 namespace MouldSpecification
 {
     class MasterBatchDAL : DataAccessBase
-    {
+    {       
         public DataSet SelectMasterBatch()
         {
             try

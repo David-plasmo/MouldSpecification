@@ -139,11 +139,12 @@ namespace MouldSpecification
                 dsOut.Relations.Add(new DataRelation("ItemMould", manItems.Columns["ItemID"], mouldSpec.Columns["ItemID"], false));
                 //dsOut.Relations.Add(new DataRelation("CustProducts", custProduct.Columns["ItemID"], manItems.Columns["ItemID"], false));
                 dsOut.Relations.Add(new DataRelation("ItemMaterialComp", manItems.Columns["ItemID"], materialComp.Columns["ItemID"], false));
+                dsOut.Relations.Add(new DataRelation("ItemMasterBatchComp", manItems.Columns["ItemID"], mbComp.Columns["ItemID"], false));
                 dsOut.Relations.Add(new DataRelation("MaterialGradeComp", materialGrade.Columns["MaterialGradeID"], materialComp.Columns["MaterialGradeID"], false));
                 //dsOut.Relations.Add(new DataRelation("MaterialMaterialGrade", material.Columns["MaterialID"], materialGrade.Columns["MaterialID"], false));
                 //dsOut.Relations.Add(new DataRelation("MaterialGradeMaterial",materialGrade.Columns["MaterialID"], material.Columns["MaterialID"], false));
                 dsOut.Relations.Add(new DataRelation("MachinePref", manItems.Columns["ItemID"], machPref.Columns["ItemID"], false));
-                dsOut.Relations.Add(new DataRelation("ItemMB", manItems.Columns["ItemID"], mbComp.Columns["ItemID"], false));
+                //dsOut.Relations.Add(new DataRelation("ItemMB", manItems.Columns["ItemID"], mbComp.Columns["ItemID"], false));
                 dsOut.Relations.Add(new DataRelation("MBMBcomp", masterbatch.Columns["MBID"], mbComp.Columns["MBID"], false));
                 dsOut.Relations.Add(new DataRelation("AddMBComp", additive.Columns["AdditiveID"], mbComp.Columns["AdditiveID"], false));
                 dsOut.Relations.Add(new DataRelation("ItemQC", manItems.Columns["ItemID"], qc.Columns["ItemID"], false));

@@ -88,9 +88,9 @@ namespace MouldSpecification
                        
                         // Populate a CustomerDC object from the DataRow.
                         CustomerDC dc = DAL.CreateItemFromRow<CustomerDC>(dr);
-                        
+
                         // Insert or update the customer in the database.
-                        UpsertCustomer(dc);
+                        Customer_ups(dc);
 
                         // Update the CustomerID in the DataRow after insertion.
                         dr["CustomerID"] = dc.CustomerID;
@@ -107,10 +107,10 @@ namespace MouldSpecification
                         DataRow dr = rows[i];
                         
                         // Populate a CustomerDC object from the DataRow.
-                        CustomerDC dc = DAL.CreateItemFromRow<CustomerDC>(dr); 
+                        CustomerDC dc = DAL.CreateItemFromRow<CustomerDC>(dr);
 
                         // Update the customer in the database.
-                        UpsertCustomer(dc);
+                        Customer_ups(dc);
                     }
 
                     // Process deleted rows.
@@ -151,16 +151,16 @@ namespace MouldSpecification
         /// Insert or updates a customer record in the database.
         /// </summary>
         /// <param name="dc"> The CustomerDC object containing customer data. </param>
-        public void UpsertCustomer(CustomerDC dc)
+        public void Customer_ups(CustomerDC dc)
         {
             try
             {
                 SqlCommand cmd = null;
-                ExecuteNonQuery(ref cmd, "UpsertCustomer",
+                ExecuteNonQuery(ref cmd, "Customer_ups",
+                   CreateParameter("@CUSTNAME", SqlDbType.Char, dc.CUSTNAME),
                    CreateParameter("@CustomerID", SqlDbType.Int, dc.CustomerID, ParameterDirection.InputOutput),
                    CreateParameter("@CompDB", SqlDbType.Char, dc.CompDB),
                    CreateParameter("@CUSTNMBR", SqlDbType.Char, dc.CUSTNMBR),
-                   CreateParameter("@CUSTNAME", SqlDbType.Char, dc.CUSTNAME),
                    CreateParameter("@CUSTCLAS", SqlDbType.Char, dc.CUSTCLAS),
                    CreateParameter("@CNTCPRSN", SqlDbType.Char, dc.CNTCPRSN),
                    CreateParameter("@ADRSCODE", SqlDbType.Char, dc.ADRSCODE),
@@ -177,10 +177,11 @@ namespace MouldSpecification
                    CreateParameter("@PHONE3", SqlDbType.Char, dc.PHONE3),
                    CreateParameter("@FAX", SqlDbType.Char, dc.FAX),
                    CreateParameter("@PYMTRMID", SqlDbType.Char, dc.PYMTRMID),
+                   CreateParameter("@LOCNCODE", SqlDbType.Char, dc.LOCNCODE),
                    CreateParameter("@last_updated_by", SqlDbType.VarChar, dc.last_updated_by, ParameterDirection.InputOutput),
                    CreateParameter("@last_updated_on", SqlDbType.DateTime2, dc.last_updated_on, ParameterDirection.InputOutput));
 
-                // Retrieve and update CustomerID, last_updated_by, and last_updated_on from SQL command parameters.
+
                 dc.CustomerID = (int)cmd.Parameters["@CustomerID"].Value;
                 dc.last_updated_by = cmd.Parameters["@last_updated_by"].Value.ToString();
                 dc.last_updated_on = (DateTime)cmd.Parameters["@last_updated_on"].Value;

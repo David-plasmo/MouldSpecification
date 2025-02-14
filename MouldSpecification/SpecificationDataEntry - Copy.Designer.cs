@@ -33,11 +33,19 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnAddNew = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnCancel = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnAccept = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.productSpecificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productPackagingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,10 +57,12 @@
             this.addEditCustomersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gpImage = new System.Windows.Forms.GroupBox();
             this.btnCopyToNew = new System.Windows.Forms.Button();
+            this.picImageFile = new System.Windows.Forms.PictureBox();
             this.lblErrorMsg = new System.Windows.Forms.Label();
             this.lblItemID = new System.Windows.Forms.Label();
             this.btnBrowseImage = new System.Windows.Forms.Button();
             this.txtImageFile = new System.Windows.Forms.TextBox();
+            this.picLabelIcon = new System.Windows.Forms.PictureBox();
             this.lblProductImage = new System.Windows.Forms.Label();
             this.gpMould = new System.Windows.Forms.GroupBox();
             this.btnAddNewMachine = new System.Windows.Forms.Button();
@@ -112,6 +122,23 @@
             this.gpMaterial = new System.Windows.Forms.GroupBox();
             this.dgvPolymer = new System.Windows.Forms.DataGridView();
             this.btnAddNewMaterial = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblAdditiveCode = new System.Windows.Forms.Label();
+            this.lblDeleteAdditiveTooltip = new System.Windows.Forms.Label();
+            this.txtAdditive = new System.Windows.Forms.TextBox();
+            this.txtAdditivePC = new System.Windows.Forms.TextBox();
+            this.lblAdditivePC = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtMBPercent = new System.Windows.Forms.TextBox();
+            this.lbMBCode = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbMBPercent = new System.Windows.Forms.Label();
+            this.lblMBCode = new System.Windows.Forms.Label();
+            this.txtMBColour = new System.Windows.Forms.TextBox();
+            this.btnDeleteMB = new System.Windows.Forms.Button();
+            this.btnDeleteAdditive = new System.Windows.Forms.Button();
+            this.lblDeleteMBtooltip = new System.Windows.Forms.Label();
+            this.lblMBComp = new System.Windows.Forms.Label();
             this.gpGeneral = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblAltCode = new System.Windows.Forms.Label();
@@ -134,19 +161,6 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnAddNew = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnDelete = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnCancel = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnAccept = new System.Windows.Forms.ToolStripButton();
-            this.picImageFile = new System.Windows.Forms.PictureBox();
-            this.picLabelIcon = new System.Windows.Forms.PictureBox();
-            this.gpMasterBatch = new System.Windows.Forms.GroupBox();
-            this.dgvMasterBatchComp = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -155,6 +169,8 @@
             this.bindingNavigator1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.gpImage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImageFile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLabelIcon)).BeginInit();
             this.gpMould.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -169,12 +185,9 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.gpMaterial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolymer)).BeginInit();
+            this.tableLayoutPanel5.SuspendLayout();
             this.gpGeneral.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImageFile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLabelIcon)).BeginInit();
-            this.gpMasterBatch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMasterBatchComp)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -196,7 +209,6 @@
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.AutoScrollMinSize = new System.Drawing.Size(25, 25);
-            this.splitContainer1.Panel2.Controls.Add(this.gpMasterBatch);
             this.splitContainer1.Panel2.Controls.Add(this.gpImage);
             this.splitContainer1.Panel2.Controls.Add(this.gpMould);
             this.splitContainer1.Panel2.Controls.Add(this.gpWeight);
@@ -250,6 +262,27 @@
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.AutoSize = false;
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 32);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.AutoSize = false;
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 32);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
+            // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
@@ -270,15 +303,78 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 29);
             // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.AutoSize = false;
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 32);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.AutoSize = false;
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 32);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 29);
             // 
+            // tsbtnAddNew
+            // 
+            this.tsbtnAddNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAddNew.Image")));
+            this.tsbtnAddNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnAddNew.Name = "tsbtnAddNew";
+            this.tsbtnAddNew.Size = new System.Drawing.Size(24, 26);
+            this.tsbtnAddNew.Text = "Add";
+            this.tsbtnAddNew.ToolTipText = "Add New";
+            this.tsbtnAddNew.Click += new System.EventHandler(this.tsbtnAddNew_Click_1);
+            // 
+            // tsbtnDelete
+            // 
+            this.tsbtnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnDelete.Image")));
+            this.tsbtnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnDelete.Name = "tsbtnDelete";
+            this.tsbtnDelete.Size = new System.Drawing.Size(24, 26);
+            this.tsbtnDelete.Text = "Delete";
+            this.tsbtnDelete.ToolTipText = "Delete";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 29);
+            // 
+            // tsbtnCancel
+            // 
+            this.tsbtnCancel.AutoSize = false;
+            this.tsbtnCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnCancel.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnCancel.Image")));
+            this.tsbtnCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnCancel.Name = "tsbtnCancel";
+            this.tsbtnCancel.Size = new System.Drawing.Size(32, 32);
+            this.tsbtnCancel.Text = "Cancel";
+            this.tsbtnCancel.Click += new System.EventHandler(this.tsbtnCancel_Click);
+            // 
+            // tsbtnAccept
+            // 
+            this.tsbtnAccept.AutoSize = false;
+            this.tsbtnAccept.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnAccept.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAccept.Image")));
+            this.tsbtnAccept.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnAccept.Name = "tsbtnAccept";
+            this.tsbtnAccept.Size = new System.Drawing.Size(32, 32);
+            this.tsbtnAccept.Text = "Accept";
+            this.tsbtnAccept.Click += new System.EventHandler(this.tsbtnAccept_Click);
             // 
             // menuStrip1
             // 
@@ -384,6 +480,16 @@
             this.btnCopyToNew.Text = "Copy to new";
             this.btnCopyToNew.UseVisualStyleBackColor = true;
             // 
+            // picImageFile
+            // 
+            this.picImageFile.Location = new System.Drawing.Point(273, 12);
+            this.picImageFile.Margin = new System.Windows.Forms.Padding(1);
+            this.picImageFile.Name = "picImageFile";
+            this.picImageFile.Size = new System.Drawing.Size(171, 132);
+            this.picImageFile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picImageFile.TabIndex = 8;
+            this.picImageFile.TabStop = false;
+            // 
             // lblErrorMsg
             // 
             this.lblErrorMsg.AutoSize = true;
@@ -425,6 +531,15 @@
             this.txtImageFile.Size = new System.Drawing.Size(406, 20);
             this.txtImageFile.TabIndex = 7;
             // 
+            // picLabelIcon
+            // 
+            this.picLabelIcon.Location = new System.Drawing.Point(128, 12);
+            this.picLabelIcon.Name = "picLabelIcon";
+            this.picLabelIcon.Size = new System.Drawing.Size(141, 132);
+            this.picLabelIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLabelIcon.TabIndex = 16;
+            this.picLabelIcon.TabStop = false;
+            // 
             // lblProductImage
             // 
             this.lblProductImage.AutoSize = true;
@@ -445,7 +560,7 @@
             this.gpMould.Controls.Add(this.gpMouldRequirements);
             this.gpMould.Controls.Add(this.gpFinishedProduct);
             this.gpMould.Enabled = false;
-            this.gpMould.Location = new System.Drawing.Point(6, 428);
+            this.gpMould.Location = new System.Drawing.Point(6, 412);
             this.gpMould.Margin = new System.Windows.Forms.Padding(0);
             this.gpMould.Name = "gpMould";
             this.gpMould.Padding = new System.Windows.Forms.Padding(0);
@@ -1118,11 +1233,12 @@
             // 
             this.gpMaterial.Controls.Add(this.dgvPolymer);
             this.gpMaterial.Controls.Add(this.btnAddNewMaterial);
+            this.gpMaterial.Controls.Add(this.tableLayoutPanel5);
             this.gpMaterial.Enabled = false;
             this.gpMaterial.Location = new System.Drawing.Point(6, 224);
             this.gpMaterial.Margin = new System.Windows.Forms.Padding(0);
             this.gpMaterial.Name = "gpMaterial";
-            this.gpMaterial.Size = new System.Drawing.Size(900, 100);
+            this.gpMaterial.Size = new System.Drawing.Size(900, 178);
             this.gpMaterial.TabIndex = 10;
             this.gpMaterial.TabStop = false;
             this.gpMaterial.Text = "MATERIAL";
@@ -1151,6 +1267,236 @@
             this.btnAddNewMaterial.Size = new System.Drawing.Size(20, 20);
             this.btnAddNewMaterial.TabIndex = 34;
             this.btnAddNewMaterial.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 8;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 105F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 299F));
+            this.tableLayoutPanel5.Controls.Add(this.lblAdditiveCode, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.lblDeleteAdditiveTooltip, 7, 1);
+            this.tableLayoutPanel5.Controls.Add(this.txtAdditive, 3, 1);
+            this.tableLayoutPanel5.Controls.Add(this.txtAdditivePC, 5, 1);
+            this.tableLayoutPanel5.Controls.Add(this.lblAdditivePC, 4, 1);
+            this.tableLayoutPanel5.Controls.Add(this.label1, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.txtMBPercent, 5, 0);
+            this.tableLayoutPanel5.Controls.Add(this.lbMBCode, 2, 0);
+            this.tableLayoutPanel5.Controls.Add(this.label2, 2, 1);
+            this.tableLayoutPanel5.Controls.Add(this.lbMBPercent, 4, 0);
+            this.tableLayoutPanel5.Controls.Add(this.lblMBCode, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.txtMBColour, 3, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnDeleteMB, 6, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnDeleteAdditive, 6, 1);
+            this.tableLayoutPanel5.Controls.Add(this.lblDeleteMBtooltip, 7, 0);
+            this.tableLayoutPanel5.Controls.Add(this.lblMBComp, 0, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 105);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(1);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(881, 70);
+            this.tableLayoutPanel5.TabIndex = 29;
+            // 
+            // lblAdditiveCode
+            // 
+            this.lblAdditiveCode.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblAdditiveCode.AutoSize = true;
+            this.lblAdditiveCode.BackColor = System.Drawing.SystemColors.Window;
+            this.lblAdditiveCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblAdditiveCode.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblAdditiveCode.Location = new System.Drawing.Point(106, 38);
+            this.lblAdditiveCode.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblAdditiveCode.MinimumSize = new System.Drawing.Size(159, 2);
+            this.lblAdditiveCode.Name = "lblAdditiveCode";
+            this.lblAdditiveCode.Size = new System.Drawing.Size(159, 15);
+            this.lblAdditiveCode.TabIndex = 30;
+            this.lblAdditiveCode.Click += new System.EventHandler(this.lblAdditiveCode_Click);
+            // 
+            // lblDeleteAdditiveTooltip
+            // 
+            this.lblDeleteAdditiveTooltip.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblDeleteAdditiveTooltip.AutoSize = true;
+            this.lblDeleteAdditiveTooltip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDeleteAdditiveTooltip.Location = new System.Drawing.Point(585, 38);
+            this.lblDeleteAdditiveTooltip.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDeleteAdditiveTooltip.Name = "lblDeleteAdditiveTooltip";
+            this.lblDeleteAdditiveTooltip.Size = new System.Drawing.Size(90, 15);
+            this.lblDeleteAdditiveTooltip.TabIndex = 36;
+            this.lblDeleteAdditiveTooltip.Text = "Remove Additive";
+            this.lblDeleteAdditiveTooltip.Visible = false;
+            // 
+            // txtAdditive
+            // 
+            this.txtAdditive.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAdditive.Location = new System.Drawing.Point(353, 36);
+            this.txtAdditive.Margin = new System.Windows.Forms.Padding(1);
+            this.txtAdditive.Name = "txtAdditive";
+            this.txtAdditive.ReadOnly = true;
+            this.txtAdditive.Size = new System.Drawing.Size(144, 20);
+            this.txtAdditive.TabIndex = 32;
+            // 
+            // txtAdditivePC
+            // 
+            this.txtAdditivePC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtAdditivePC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAdditivePC.Location = new System.Drawing.Point(524, 36);
+            this.txtAdditivePC.Margin = new System.Windows.Forms.Padding(0);
+            this.txtAdditivePC.MaxLength = 3;
+            this.txtAdditivePC.Name = "txtAdditivePC";
+            this.txtAdditivePC.Size = new System.Drawing.Size(28, 20);
+            this.txtAdditivePC.TabIndex = 28;
+            this.txtAdditivePC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lblAdditivePC
+            // 
+            this.lblAdditivePC.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblAdditivePC.AutoSize = true;
+            this.lblAdditivePC.Location = new System.Drawing.Point(498, 39);
+            this.lblAdditivePC.Margin = new System.Windows.Forms.Padding(0);
+            this.lblAdditivePC.Name = "lblAdditivePC";
+            this.lblAdditivePC.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lblAdditivePC.Size = new System.Drawing.Size(18, 13);
+            this.lblAdditivePC.TabIndex = 27;
+            this.lblAdditivePC.Text = "%";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(0, 39);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Additive Code";
+            // 
+            // txtMBPercent
+            // 
+            this.txtMBPercent.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMBPercent.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMBPercent.Location = new System.Drawing.Point(524, 1);
+            this.txtMBPercent.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.txtMBPercent.MaxLength = 3;
+            this.txtMBPercent.Name = "txtMBPercent";
+            this.txtMBPercent.Size = new System.Drawing.Size(28, 20);
+            this.txtMBPercent.TabIndex = 23;
+            this.txtMBPercent.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lbMBCode
+            // 
+            this.lbMBCode.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbMBCode.AutoSize = true;
+            this.lbMBCode.Location = new System.Drawing.Point(262, 4);
+            this.lbMBCode.Margin = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.lbMBCode.Name = "lbMBCode";
+            this.lbMBCode.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbMBCode.Size = new System.Drawing.Size(59, 13);
+            this.lbMBCode.TabIndex = 25;
+            this.lbMBCode.Text = "MB Colour";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(262, 39);
+            this.label2.Margin = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.label2.Size = new System.Drawing.Size(48, 13);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Additive";
+            // 
+            // lbMBPercent
+            // 
+            this.lbMBPercent.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbMBPercent.AutoSize = true;
+            this.lbMBPercent.Location = new System.Drawing.Point(498, 4);
+            this.lbMBPercent.Margin = new System.Windows.Forms.Padding(0);
+            this.lbMBPercent.Name = "lbMBPercent";
+            this.lbMBPercent.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lbMBPercent.Size = new System.Drawing.Size(18, 13);
+            this.lbMBPercent.TabIndex = 22;
+            this.lbMBPercent.Text = "%";
+            // 
+            // lblMBCode
+            // 
+            this.lblMBCode.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblMBCode.AutoSize = true;
+            this.lblMBCode.BackColor = System.Drawing.SystemColors.Window;
+            this.lblMBCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMBCode.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblMBCode.Location = new System.Drawing.Point(106, 3);
+            this.lblMBCode.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.lblMBCode.MinimumSize = new System.Drawing.Size(159, 2);
+            this.lblMBCode.Name = "lblMBCode";
+            this.lblMBCode.Size = new System.Drawing.Size(159, 15);
+            this.lblMBCode.TabIndex = 29;
+            this.lblMBCode.Click += new System.EventHandler(this.lblMBCode_Click);
+            // 
+            // txtMBColour
+            // 
+            this.txtMBColour.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtMBColour.Location = new System.Drawing.Point(353, 1);
+            this.txtMBColour.Margin = new System.Windows.Forms.Padding(1);
+            this.txtMBColour.Name = "txtMBColour";
+            this.txtMBColour.ReadOnly = true;
+            this.txtMBColour.Size = new System.Drawing.Size(144, 20);
+            this.txtMBColour.TabIndex = 31;
+            // 
+            // btnDeleteMB
+            // 
+            this.btnDeleteMB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDeleteMB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDeleteMB.Location = new System.Drawing.Point(556, 0);
+            this.btnDeleteMB.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDeleteMB.Name = "btnDeleteMB";
+            this.btnDeleteMB.Size = new System.Drawing.Size(23, 22);
+            this.btnDeleteMB.TabIndex = 33;
+            this.btnDeleteMB.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteAdditive
+            // 
+            this.btnDeleteAdditive.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDeleteAdditive.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnDeleteAdditive.Location = new System.Drawing.Point(556, 35);
+            this.btnDeleteAdditive.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDeleteAdditive.Name = "btnDeleteAdditive";
+            this.btnDeleteAdditive.Size = new System.Drawing.Size(23, 22);
+            this.btnDeleteAdditive.TabIndex = 34;
+            this.btnDeleteAdditive.UseVisualStyleBackColor = true;
+            // 
+            // lblDeleteMBtooltip
+            // 
+            this.lblDeleteMBtooltip.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblDeleteMBtooltip.AutoSize = true;
+            this.lblDeleteMBtooltip.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblDeleteMBtooltip.Location = new System.Drawing.Point(585, 3);
+            this.lblDeleteMBtooltip.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDeleteMBtooltip.Name = "lblDeleteMBtooltip";
+            this.lblDeleteMBtooltip.Size = new System.Drawing.Size(112, 15);
+            this.lblDeleteMBtooltip.TabIndex = 35;
+            this.lblDeleteMBtooltip.Text = "Remove MasterBatch";
+            this.lblDeleteMBtooltip.Visible = false;
+            // 
+            // lblMBComp
+            // 
+            this.lblMBComp.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lblMBComp.AutoSize = true;
+            this.lblMBComp.Location = new System.Drawing.Point(0, 4);
+            this.lblMBComp.Margin = new System.Windows.Forms.Padding(0);
+            this.lblMBComp.Name = "lblMBComp";
+            this.lblMBComp.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
+            this.lblMBComp.Size = new System.Drawing.Size(54, 13);
+            this.lblMBComp.TabIndex = 21;
+            this.lblMBComp.Text = "MB Code";
             // 
             // gpGeneral
             // 
@@ -1404,147 +1750,6 @@
             this.dataGridViewTextBoxColumn9.Visible = false;
             this.dataGridViewTextBoxColumn9.Width = 80;
             // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.AutoSize = false;
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 32);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.AutoSize = false;
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 32);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.AutoSize = false;
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 32);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.AutoSize = false;
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 32);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // tsbtnAddNew
-            // 
-            this.tsbtnAddNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAddNew.Image")));
-            this.tsbtnAddNew.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnAddNew.Name = "tsbtnAddNew";
-            this.tsbtnAddNew.Size = new System.Drawing.Size(24, 26);
-            this.tsbtnAddNew.Text = "Add";
-            this.tsbtnAddNew.ToolTipText = "Add New";
-            this.tsbtnAddNew.Click += new System.EventHandler(this.tsbtnAddNew_Click_1);
-            // 
-            // tsbtnDelete
-            // 
-            this.tsbtnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnDelete.Image")));
-            this.tsbtnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnDelete.Name = "tsbtnDelete";
-            this.tsbtnDelete.Size = new System.Drawing.Size(24, 26);
-            this.tsbtnDelete.Text = "Delete";
-            this.tsbtnDelete.ToolTipText = "Delete";
-            // 
-            // tsbtnCancel
-            // 
-            this.tsbtnCancel.AutoSize = false;
-            this.tsbtnCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnCancel.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnCancel.Image")));
-            this.tsbtnCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnCancel.Name = "tsbtnCancel";
-            this.tsbtnCancel.Size = new System.Drawing.Size(32, 32);
-            this.tsbtnCancel.Text = "Cancel";
-            this.tsbtnCancel.Click += new System.EventHandler(this.tsbtnCancel_Click);
-            // 
-            // tsbtnAccept
-            // 
-            this.tsbtnAccept.AutoSize = false;
-            this.tsbtnAccept.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnAccept.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAccept.Image")));
-            this.tsbtnAccept.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnAccept.Name = "tsbtnAccept";
-            this.tsbtnAccept.Size = new System.Drawing.Size(32, 32);
-            this.tsbtnAccept.Text = "Accept";
-            this.tsbtnAccept.Click += new System.EventHandler(this.tsbtnAccept_Click);
-            // 
-            // picImageFile
-            // 
-            this.picImageFile.Location = new System.Drawing.Point(273, 12);
-            this.picImageFile.Margin = new System.Windows.Forms.Padding(1);
-            this.picImageFile.Name = "picImageFile";
-            this.picImageFile.Size = new System.Drawing.Size(171, 132);
-            this.picImageFile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picImageFile.TabIndex = 8;
-            this.picImageFile.TabStop = false;
-            // 
-            // picLabelIcon
-            // 
-            this.picLabelIcon.Location = new System.Drawing.Point(128, 12);
-            this.picLabelIcon.Name = "picLabelIcon";
-            this.picLabelIcon.Size = new System.Drawing.Size(141, 132);
-            this.picLabelIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLabelIcon.TabIndex = 16;
-            this.picLabelIcon.TabStop = false;
-            // 
-            // gpMasterBatch
-            // 
-            this.gpMasterBatch.Controls.Add(this.dgvMasterBatchComp);
-            this.gpMasterBatch.Controls.Add(this.button1);
-            this.gpMasterBatch.Enabled = false;
-            this.gpMasterBatch.Location = new System.Drawing.Point(6, 331);
-            this.gpMasterBatch.Margin = new System.Windows.Forms.Padding(0);
-            this.gpMasterBatch.Name = "gpMasterBatch";
-            this.gpMasterBatch.Size = new System.Drawing.Size(900, 86);
-            this.gpMasterBatch.TabIndex = 37;
-            this.gpMasterBatch.TabStop = false;
-            this.gpMasterBatch.Text = "MASTERBATCH";
-            // 
-            // dgvMasterBatchComp
-            // 
-            this.dgvMasterBatchComp.ColumnHeadersHeight = 19;
-            this.dgvMasterBatchComp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvMasterBatchComp.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dgvMasterBatchComp.Location = new System.Drawing.Point(3, 16);
-            this.dgvMasterBatchComp.Margin = new System.Windows.Forms.Padding(1);
-            this.dgvMasterBatchComp.Name = "dgvMasterBatchComp";
-            this.dgvMasterBatchComp.RowHeadersWidth = 92;
-            this.dgvMasterBatchComp.RowTemplate.Height = 19;
-            this.dgvMasterBatchComp.Size = new System.Drawing.Size(894, 80);
-            this.dgvMasterBatchComp.TabIndex = 30;
-            // 
-            // button1
-            // 
-            this.button1.AutoSize = true;
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(867, 23);
-            this.button1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(20, 20);
-            this.button1.TabIndex = 34;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // SpecificationDataEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1571,6 +1776,8 @@
             this.menuStrip1.PerformLayout();
             this.gpImage.ResumeLayout(false);
             this.gpImage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImageFile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLabelIcon)).EndInit();
             this.gpMould.ResumeLayout(false);
             this.gpMould.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -1593,14 +1800,11 @@
             this.gpMaterial.ResumeLayout(false);
             this.gpMaterial.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolymer)).EndInit();
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.gpGeneral.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImageFile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLabelIcon)).EndInit();
-            this.gpMasterBatch.ResumeLayout(false);
-            this.gpMasterBatch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMasterBatchComp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1636,6 +1840,12 @@
         private System.Windows.Forms.TextBox txtNoOfCavities;
         private System.Windows.Forms.Label lblNoOfCavities;
         private System.Windows.Forms.GroupBox gpCooling;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbMBCode;
+        private System.Windows.Forms.TextBox txtMBPercent;
+        private System.Windows.Forms.Label lbMBPercent;
+        private System.Windows.Forms.Label lblMBComp;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label lblFixedHalf;
         private System.Windows.Forms.Label lblMovingHalf;
@@ -1668,7 +1878,14 @@
         private System.Windows.Forms.Label lblMovDegC;
         private System.Windows.Forms.CheckBox chkFamilyMould;
         private System.Windows.Forms.Label lblFamilyMould;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TextBox txtAdditivePC;
+        private System.Windows.Forms.Label lblAdditivePC;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Label lblMBCode;
+        private System.Windows.Forms.Label lblAdditiveCode;
+        private System.Windows.Forms.TextBox txtAdditive;
+        private System.Windows.Forms.TextBox txtMBColour;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox chkAdditionalLabourReqd;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
@@ -1695,6 +1912,10 @@
         private System.Windows.Forms.ToolStripMenuItem productPackagingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem qCIToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem documentsToolStripMenuItem;
+        private System.Windows.Forms.Button btnDeleteMB;
+        private System.Windows.Forms.Button btnDeleteAdditive;
+        private System.Windows.Forms.Label lblDeleteMBtooltip;
+        private System.Windows.Forms.Label lblDeleteAdditiveTooltip;
         private System.Windows.Forms.Button btnAddNewMachine;
         private System.Windows.Forms.Button btnAddNewMaterial;
         private System.Windows.Forms.ToolStripMenuItem customersToolStripMenuItem;
@@ -1721,8 +1942,5 @@
         private System.Windows.Forms.ComboBox cboGradeID;
         private System.Windows.Forms.TextBox txtITEMDESC;
         private System.Windows.Forms.TextBox txtAltCode;
-        private System.Windows.Forms.GroupBox gpMasterBatch;
-        private System.Windows.Forms.DataGridView dgvMasterBatchComp;
-        private System.Windows.Forms.Button button1;
     }
 }

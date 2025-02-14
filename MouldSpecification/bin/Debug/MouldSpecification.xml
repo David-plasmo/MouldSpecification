@@ -423,7 +423,7 @@
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="M:MouldSpecification.CustomerDAL.UpsertCustomer(MouldSpecification.CustomerDC)">
+        <member name="M:MouldSpecification.CustomerDAL.Customer_ups(MouldSpecification.CustomerDC)">
             <summary>
             Insert or updates a customer record in the database.
             </summary>

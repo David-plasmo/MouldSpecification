@@ -353,6 +353,8 @@
     <Compile Include="CustomerProductDAL.cs" />
     <Compile Include="DataAccessBase.cs" />
     <Compile Include="DataClassHelper.cs" />
+    <Compile Include="MAN_ItemDAL.cs" />
+    <Compile Include="MAN_ItemDC.cs" />
     <Compile Include="ProductCustomerDataEntry.cs">
       <SubType>Form</SubType>
     </Compile>
