@@ -28,7 +28,7 @@ namespace MouldSpecification
         //When a toolstrip combo datasource changes, its SelectionIndexChanged event always fires
         //with index=0, even if the event is unsubscribed;  set this boolean to make this event exit
         //straight away.  Applies to tscboCompany
-        bool ignoreZero = false;  
+        bool ignoreZero = false;
 
         //private BindingSource bindingIMSpecification;
         DataSet dsCompany, dsProduct, dsGradeID, dsIMSpecificationForm,
@@ -61,6 +61,7 @@ namespace MouldSpecification
         private int curPolymerNo = 0, curMaterialGradeID;
         private int maxRowsMaterial = 3;
         private int maxRowsMachine = 3;
+        private int maxRowsMB = 2;
 
         //primary key identifier for table MAN_Items
         //negatively incremented for new records being added
@@ -71,7 +72,7 @@ namespace MouldSpecification
         public SpecificationDataEntry(int? lastItemID, int? lastCustomerID, bool customerFilterOn = true)
         {
             InitializeComponent();
-            
+
             //identifiers for last edited product and customer
             LastItemID = lastItemID;
             LastCustomerID = lastCustomerID;
@@ -137,23 +138,23 @@ namespace MouldSpecification
             {
                 if (style.SizeType == SizeType.Absolute)
                     style.Height = p96H(19);
-            }   
-            
+            }
+
             this.ResumeLayout();
         }
-              
+
         public SpecificationDataEntry()
         {
-            
+
         }
-       
+
         private void tsbtnReport_Click(object sender, EventArgs e)
         {
             try
             {
-                
+
                 InjectionMouldReports.Reports.ViewReport(LastItemID.Value, "ProductSpecification.rdlc");
-                                
+
                 /*
                 // load as exe
                 var appSettings = ConfigurationManager.AppSettings;
@@ -245,11 +246,13 @@ namespace MouldSpecification
                 //btnDeleteAdditive.Image = RescaleImage((Bitmap)image, btnDeleteAdditive.Width, btnDeleteAdditive.Height);
                 //btnDeleteMB.Image = RescaleImage((Bitmap)image, btnDeleteMB.Width, btnDeleteMB.Height);
 
-                //set up buttons for adding new rows to polymer and machine datagrids
+                //set up buttons for adding new rows to polymer, masterbatch and machine datagrids
                 image = Properties.Resources.NewRow;
                 btnAddNewMaterial.Image = RescaleImage((Bitmap)image, btnAddNewMaterial.Width, btnAddNewMaterial.Height);
                 btnAddNewMachine.Image = RescaleImage((Bitmap)image, btnAddNewMachine.Width, btnAddNewMachine.Height);
+                btnAddNewMB.Image = RescaleImage((Bitmap)image, btnAddNewMB.Width, btnAddNewMB.Height);
                 btnAddNewMaterial.Click += btnAddNewMaterial_Click;
+                btnAddNewMB.Click += btnAddNewMB_Click;
                 btnAddNewMachine.Click += btnAddNewMachine_Click;
 
                 // Create ToolTips for AddNewMachine and AddNewMaterial buttons
@@ -277,15 +280,27 @@ namespace MouldSpecification
             {
                 bsMaterialComp.AddNew();
                 bsMaterialComp.EndEdit();
-                bsMaterialComp.Position = bsMaterialComp.Count - 1;                
+                bsMaterialComp.Position = bsMaterialComp.Count - 1;
                 btnAddNewMaterial.Enabled = (dgvPolymer.Rows.Count < maxRowsMaterial);
-                
+
 
                 //btnAddNewMaterial.Enabled = dgvPolymer.Rows.Count < maxRowsMaterial;
             }
-            catch(Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
+        private void btnAddNewMB_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bsMBComp.AddNew();
+                bsMBComp.EndEdit();
+                bsMBComp.Position = bsMBComp.Count - 1;
+                btnAddNewMB.Enabled = (dgvMasterBatchComp.Rows.Count < maxRowsMB);                
             }
-            
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+        }
+
 
         private void btnAddNewMachine_Click(object sender, EventArgs e)
         {
@@ -399,39 +414,39 @@ namespace MouldSpecification
             { MessageBox.Show(ex.Message); }
         }
 
-        private void lblMBCode_Click(object sender, EventArgs e)
-        {
-            if (!dgvMBCode.Visible)
-            {
-                //MessageBox.Show("todo:  Show MBGrid");
-                //lblMBCode.Image = DrawingUtils.GetImage(ButtonOp.Collapse, p96W(15), p96H(15));
+        //private void lblMBCode_Click(object sender, EventArgs e)
+        //{
+        //    if (!dgvMBCode.Visible)
+        //    {
+        //        //MessageBox.Show("todo:  Show MBGrid");
+        //        //lblMBCode.Image = DrawingUtils.GetImage(ButtonOp.Collapse, p96W(15), p96H(15));
 
-                //position grid below label cell row
-                //int leftg = gpMaterial.Location.X + tableLayoutPanel5.Location.X + lblMBCode.Location.X;
-                //Point cScreen = lblMBCode.PointToScreen(lblMBCode.Location);
-                //Point fScreen = this.Location;
-                //Point cFormRel = new Point(cScreen.X - fScreen.X, cScreen.Y - fScreen.Y - p96H(30));
+        //        //position grid below label cell row
+        //        //int leftg = gpMaterial.Location.X + tableLayoutPanel5.Location.X + lblMBCode.Location.X;
+        //        //Point cScreen = lblMBCode.PointToScreen(lblMBCode.Location);
+        //        //Point fScreen = this.Location;
+        //        //Point cFormRel = new Point(cScreen.X - fScreen.X, cScreen.Y - fScreen.Y - p96H(30));
 
-                //int topg = cFormRel.Y + p96H(19);
+        //        //int topg = cFormRel.Y + p96H(19);
 
-                int leftg = 0, topg = 0;
-                dgvMBCode.Location = new Point(leftg, topg);
-                dgvMBCode.Visible = true;
-                dgvMBCode.BringToFront();
-                dgvMBCode.Focus();
+        //        int leftg = 0, topg = 0;
+        //        dgvMBCode.Location = new Point(leftg, topg);
+        //        dgvMBCode.Visible = true;
+        //        dgvMBCode.BringToFront();
+        //        dgvMBCode.Focus();
 
-                dgvMBCode.Location = new Point(leftg, topg);
-                dgvMBCode.Visible = true;
-                dgvMBCode.BringToFront();
-                dgvMBCode.Focus();
-            }
-            else
-            {
-                MessageBox.Show("todo:  Collapse MBGrid");
-                //lblMBCode.Image = DrawingUtils.GetImage(ButtonOp.Expand, p96W(15), p96H(15));
-                dgvMBCode.Visible = false;
-            }
-        }
+        //        dgvMBCode.Location = new Point(leftg, topg);
+        //        dgvMBCode.Visible = true;
+        //        dgvMBCode.BringToFront();
+        //        dgvMBCode.Focus();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("todo:  Collapse MBGrid");
+        //        //lblMBCode.Image = DrawingUtils.GetImage(ButtonOp.Expand, p96W(15), p96H(15));
+        //        dgvMBCode.Visible = false;
+        //    }
+        //}
 
         private void lblAdditiveCode_Click(object sender, EventArgs e)
         {
@@ -565,9 +580,7 @@ namespace MouldSpecification
                 //masterbatch composition
                 bsMBComp = new BindingSource();
                 bsMBComp.DataSource = dsIMSpecificationForm.Tables["MasterBatchComp"];
-                //txtAdditivePC.DataBindings.Add(new Binding("Text", bsMBComp, "AdditivePC", false, DataSourceUpdateMode.OnPropertyChanged, null));
-                //txtMBPercent.DataBindings.Add(new Binding("Text", bsMBComp, "MBPercent", false, DataSourceUpdateMode.OnPropertyChanged, null));
-                //bsMBComp.AddingNew += MBComp_AddingNew;
+                bsMBComp.AddingNew += bsMBComp_AddingNew;
 
                 //lookup for Masterbatch code and Colour
                 bsMBMBComp = new BindingSource();
@@ -693,8 +706,10 @@ namespace MouldSpecification
         private void dgvMasterBatchComp_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
         {
             int rowIndex = e.Row.Index;
-            dgvPolymer.Rows[rowIndex].Cells["MB123"].Value = rowIndex + 1;
+            //dgvMasterBatchComp[rowIndex].Cells["MB123"].Value = rowIndex + 1;
+            dgvMasterBatchComp.Rows[rowIndex].Cells["MB123"].Value = rowIndex + 1;
         }
+        
 
         private void dgvMasterBatchComp_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
@@ -738,6 +753,24 @@ namespace MouldSpecification
             //btnAddNewMaterial.Enabled = (count < maxRowsMaterial);
         }
 
+        private void bsMBComp_AddingNew(object sender, AddingNewEventArgs e)
+        {
+            DataRowView rowView = (DataRowView)this.bsManItems.Current;
+            DataRow row = rowView.Row;
+            //MessageBox.Show(row["ItemID"].ToString());
+            int itemID = (int)row["ItemID"];
+            DataTable dt = (DataTable)bsMBComp.DataSource;
+            dt.Columns["ItemID"].DefaultValue = itemID;
+            dt.Columns["MB123"].DefaultValue = dgvMasterBatchComp.Rows.Count + 1;
+
+
+            //DataTable ct = dsIMSpecificationForm.Relations["ItemMaterialComp"].ChildTable;
+            //DataRow[] foundRows = ct.Select("ItemID = " + itemID.ToString());
+            //int count = foundRows.Length;
+
+            //btnAddNewMaterial.Enabled = (count < maxRowsMaterial);
+        }
+
         private void bsMachPref_AddingNew(object sender, AddingNewEventArgs e)
         {
             DataRowView rowView = (DataRowView)this.bsManItems.Current;
@@ -746,7 +779,7 @@ namespace MouldSpecification
             int itemID = (int)row["ItemID"];
             DataTable dt = (DataTable)bsMachPref.DataSource;
             dt.Columns["ItemID"].DefaultValue = itemID;
-
+            
             //DataTable ct = dsIMSpecificationForm.Relations["MachinePref"].ChildTable;
             //DataRow[] foundRows = ct.Select("ItemID = " + itemID.ToString());
             //int count = foundRows.Length;
@@ -1167,6 +1200,12 @@ namespace MouldSpecification
                 ? true
                 : false;
 
+                //set MasterBatchComp row limit
+                dv = drv.CreateChildView("ItemMasterBatchComp", true);
+                btnAddNewMB.Enabled = (dv.ToTable().Rows.Count < maxRowsMB)
+               ? true
+               : false;
+
                 //Set machine datagridview row limit
                 //maxRows = 3;
                 //dgvMachine.AllowUserToAddRows = (dv.ToTable().Rows.Count < maxRows)
@@ -1474,10 +1513,12 @@ namespace MouldSpecification
 
                 dgvPolymer.Columns["PolymerPercent"].HeaderText = "Polymer %";
                 dgvPolymer.Columns["PolymerPercent"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                dgvPolymer.Columns["PolymerPercent"].DefaultCellStyle.Format = "N3";
                 dgvPolymer.Columns["PolymerPercent"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
                 dgvPolymer.Columns["RegrindMaxPC"].HeaderText = "Regrind %";
                 dgvPolymer.Columns["RegrindMaxPC"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                dgvPolymer.Columns["RegrindMaxPC"].DefaultCellStyle.Format = "N3";
                 dgvPolymer.Columns["RegrindMaxPC"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
                 dgvPolymer.Columns["Polymer123"].HeaderText = "#";
@@ -1514,7 +1555,7 @@ namespace MouldSpecification
                 dgvMasterBatchComp.EditingControlShowing += dgvMasterBatchComp_EditingControlShowing;
                 dgvMasterBatchComp.CellEndEdit += dgvMasterBatchComp_CellEndEdit;
                 dgvMasterBatchComp.CellStateChanged += dgvMasterBatchComp_CellStateChanged;
-                dgvMasterBatchComp.AllowUserToAddRows = true; //current maximum 2
+                dgvMasterBatchComp.AllowUserToAddRows = false; //current maximum 2                
                 //this.dgvMasterBatchComp.RowPostPaint += dgvMasterBatchComp_RowPostPaint;
                 dgvMasterBatchComp.AllowUserToDeleteRows = true;
                 dgvMasterBatchComp.UserDeletingRow += dgvMasterBatchComp_UserDeletingRow;
@@ -1613,9 +1654,11 @@ namespace MouldSpecification
                 dgvMasterBatchComp.Columns["MBPercent"].HeaderText = "MB %";
                 dgvMasterBatchComp.Columns["MBPercent"].Width = p96W(50);
                 dgvMasterBatchComp.Columns["MBPercent"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                dgvMasterBatchComp.Columns["MBPercent"].DefaultCellStyle.Format = "N2";
                 dgvMasterBatchComp.Columns["AdditivePC"].HeaderText = "Add %";
                 dgvMasterBatchComp.Columns["AdditivePC"].Width = p96W(50);
                 dgvMasterBatchComp.Columns["AdditivePC"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                dgvMasterBatchComp.Columns["AdditivePC"].DefaultCellStyle.Format = "N2";
 
                 dgvMasterBatchComp.Columns["MBCode"].Width = p96W(250);
                 dgvMasterBatchComp.Columns["Additive"].Width = p96W(220);
@@ -1630,7 +1673,7 @@ namespace MouldSpecification
                 //dgvMasterBatchComp.Columns["last_updated_by"].Visible = false;
                 //dgvMasterBatchComp.Columns["last_updated_on"].Visible = false;
                 dgvMasterBatchComp.ReadOnly = false;
-                dgvMasterBatchComp.AllowUserToAddRows = true;
+                
                 
 
 
@@ -1685,32 +1728,35 @@ namespace MouldSpecification
 
         private void dgvMasterBatchComp_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
-            if (dgvMasterBatchComp.CurrentCell.ColumnIndex == dgvMasterBatchComp.Columns["MBPercent"].Index
+            try
+            {
+                if (dgvMasterBatchComp.CurrentCell.ColumnIndex == dgvMasterBatchComp.Columns["MBPercent"].Index
                 || dgvMasterBatchComp.CurrentCell.ColumnIndex == dgvMasterBatchComp.Columns["AdditivePC"].Index) //Desired Column
-            {
-                System.Windows.Forms.TextBox tb = e.Control as System.Windows.Forms.TextBox;
-                if (tb != null)
                 {
-                    // Remove an existing event-handler, if present, to avoid 
-                    // adding multiple handlers when the editing control is reused.
-                    tb.KeyPress -= new KeyPressEventHandler(NumControl_KeyPress);
+                    System.Windows.Forms.TextBox tb = e.Control as System.Windows.Forms.TextBox;
+                    if (tb != null)
+                    {
+                        // Remove an existing event-handler, if present, to avoid 
+                        // adding multiple handlers when the editing control is reused.
+                        tb.KeyPress -= new KeyPressEventHandler(FloatControl_KeyPress);
 
-                    // Add the event handler
-                    tb.KeyPress += new KeyPressEventHandler(NumControl_KeyPress);
+                        // Add the event handler
+                        tb.KeyPress += new KeyPressEventHandler(FloatControl_KeyPress);
+                    }
+                }
+                else if (dgvMasterBatchComp.CurrentCell.ColumnIndex == dgvMasterBatchComp.Columns["MBCode"].Index
+                    || dgvMasterBatchComp.CurrentCell.ColumnIndex == dgvMasterBatchComp.Columns["Additive"].Index)
+                {
+                    if (e.Control is DataGridViewComboBoxEditingControl)
+                    {
+                        cbec = new DataGridViewComboBoxEditingControl();
+                        cbec = e.Control as DataGridViewComboBoxEditingControl;
+                        cbec.SelectedIndexChanged -= Cbec_SelectedIndexChanged;
+                        cbec.SelectedIndexChanged += Cbec_SelectedIndexChanged;
+                    }
                 }
             }
-            else if (dgvMasterBatchComp.CurrentCell.ColumnIndex == dgvMasterBatchComp.Columns["MBCode"].Index
-                || dgvMasterBatchComp.CurrentCell.ColumnIndex == dgvMasterBatchComp.Columns["AdditivePC"].Index)
-            {
-                if (e.Control is DataGridViewComboBoxEditingControl)
-                {
-                    cbec = e.Control as DataGridViewComboBoxEditingControl;
-                    cbec.SelectedIndexChanged -= Cbec_SelectedIndexChanged;
-                    cbec.SelectedIndexChanged += Cbec_SelectedIndexChanged;
-                }
-
-                     
-            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
     
         void NumControl_KeyPress(object sender, KeyPressEventArgs e)
@@ -1723,6 +1769,31 @@ namespace MouldSpecification
             }            
         }
 
+        private void ValidateFloat(object sender, KeyPressEventArgs e)
+        {
+            int b;
+
+            if (e.KeyChar == (char)Keys.Back ||
+                e.KeyChar == (char)Keys.Delete ||
+                e.KeyChar == (char)Keys.Left ||
+                e.KeyChar == (char)Keys.Right ||
+                int.TryParse(e.KeyChar.ToString(), out b))
+            {
+                TextBox obj = sender as TextBox;
+                //if (e.KeyChar == '.' && obj.Text.IndexOf('.') > 0)
+                if (e.KeyChar == '.' && (obj.Text.IndexOf('.') > 0 || obj.Text.Length == 0))
+                    e.Handled = true;
+                else
+                    e.Handled = false;
+            }
+            else
+                e.Handled = true;
+        }
+
+        private void FloatControl_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            this.ValidateFloat(sender, e);
+        }
 
         private void dDgvMasterBatchComp_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
         {
@@ -1850,65 +1921,72 @@ namespace MouldSpecification
 
         private void Cbec_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbec != null)
+            try
             {
-                BeginInvoke(new MethodInvoker(EndEdit));
-                //DataRowView drv = cbec.SelectedItem as DataRowView;
-                //if (drv != null)
-                //{
-                //    //this.dataGridView1[currentCell.ColumnIndex + 1, currentCell.RowIndex].Value = drv[2].ToString();
-                //    //this.dataGridView1.EndEdit();
-                //    int materialGradeID = (int)cbec.SelectedValue;
-                //    dgvPolymer.CurrentRow.Cells["MaterialGradeID"].Value = (int)drv["MaterialGradeID"];
-                //    dgvPolymer.CurrentRow.Cells["MaterialID"].Value = (int)drv["MaterialID"];
-                //    dgvPolymer.CurrentRow.Cells["Polymer123"].Value = dgvPolymer.CurrentRow.Index + 1;
-                //    BeginInvoke(new MethodInvoker(EndEdit));
-                //}
+                if (cbec != null)
+                {
+                    BeginInvoke(new MethodInvoker(EndEdit));
+                    //DataRowView drv = cbec.SelectedItem as DataRowView;
+                    //if (drv != null)
+                    //{
+                    //    //this.dataGridView1[currentCell.ColumnIndex + 1, currentCell.RowIndex].Value = drv[2].ToString();
+                    //    //this.dataGridView1.EndEdit();
+                    //    int materialGradeID = (int)cbec.SelectedValue;
+                    //    dgvPolymer.CurrentRow.Cells["MaterialGradeID"].Value = (int)drv["MaterialGradeID"];
+                    //    dgvPolymer.CurrentRow.Cells["MaterialID"].Value = (int)drv["MaterialID"];
+                    //    dgvPolymer.CurrentRow.Cells["Polymer123"].Value = dgvPolymer.CurrentRow.Index + 1;
+                    //    BeginInvoke(new MethodInvoker(EndEdit));
+                    //}
+                }
             }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }            
         }
-
-
 
         private void EndEdit()
         {
-            // Change the content of appropriate cell when selected index changes
-            // Unsubscribe from  SelectedIndexChanged event
-            cbec.SelectedIndexChanged -= Cbec_SelectedIndexChanged;
-            if (cbec != null && cbec.SelectedIndex != -1 && cbec.SelectedValue != null)
+            try
             {
-                DataRowView drv = cbec.SelectedItem as DataRowView;
-                if(drv != null && drv.DataView.Table.TableName == "LookupMaterialGrade")                
+                // Change the content of appropriate cell when selected index changes
+                // Unsubscribe from  SelectedIndexChanged event
+                cbec.SelectedIndexChanged -= Cbec_SelectedIndexChanged;
+                if (cbec != null && cbec.SelectedIndex != -1 && cbec.SelectedValue != null)
                 {
-                    //DataRowView rowView = (DataRowView)this.bsMaterialComp.Current;
-                    //DataRow row = rowView.Row;
-                    //int materialGradeID = (int)cbec.SelectedValue;
-                    //row["MaterialGradeID"] = materialGradeID;
-                    //row["Polymer123"] = dgvPolymer.CurrentRow.Index + 1;
-                    //row.EndEdit();
-
-                    dgvPolymer.CurrentRow.Cells["MaterialGradeID"].Value = (int)drv["MaterialGradeID"];
-                    dgvPolymer.CurrentRow.Cells["Polymer123"].Value = dgvPolymer.CurrentRow.Index + 1;
-                    dgvPolymer.CurrentRow.Cells["Material"].Selected = true;
-                    dgvPolymer.CurrentRow.Cells["AdditionalNotes"].Selected = true;
-                    dgvPolymer.CurrentRow.Cells["Material"].Selected = false;
-                    dgvPolymer.CurrentRow.Cells["AdditionalNotes"].Selected = false;
-                    dgvPolymer.CurrentRow.Cells["Grade"].Selected = true;
-                    dgvPolymer.EndEdit();
-                }
-                else if (drv != null && drv.DataView.Table.TableName == "MasterBatch")
-                {
-                    if(dgvMasterBatchComp.CurrentCell.ColumnIndex == dgvMasterBatchComp.Columns["MBCode"].Index)
+                    DataRowView drv = cbec.SelectedItem as DataRowView;
+                    if (drv != null && drv.DataView.Table.TableName == "LookupMaterialGrade")
                     {
-                        dgvMasterBatchComp.CurrentRow.Cells["MBColour"].Value = (int)drv["MBID"];
-                    }
-                    else if (dgvMasterBatchComp.CurrentCell.ColumnIndex == dgvMasterBatchComp.Columns["Additive"].Index)
-                    {
-                        dgvMasterBatchComp.CurrentRow.Cells["AdditveCode"].Value = (int)drv["AdditiveID"];
-                    }
+                        //DataRowView rowView = (DataRowView)this.bsMaterialComp.Current;
+                        //DataRow row = rowView.Row;
+                        //int materialGradeID = (int)cbec.SelectedValue;
+                        //row["MaterialGradeID"] = materialGradeID;
+                        //row["Polymer123"] = dgvPolymer.CurrentRow.Index + 1;
+                        //row.EndEdit();
 
-                    //dgvMasterBatchComp.EndEdit();
+                        dgvPolymer.CurrentRow.Cells["MaterialGradeID"].Value = (int)drv["MaterialGradeID"];
+                        dgvPolymer.CurrentRow.Cells["Polymer123"].Value = dgvPolymer.CurrentRow.Index + 1;
+                        dgvPolymer.CurrentRow.Cells["Material"].Selected = true;
+                        dgvPolymer.CurrentRow.Cells["AdditionalNotes"].Selected = true;
+                        dgvPolymer.CurrentRow.Cells["Material"].Selected = false;
+                        dgvPolymer.CurrentRow.Cells["AdditionalNotes"].Selected = false;
+                        dgvPolymer.CurrentRow.Cells["Grade"].Selected = true;
+                        dgvPolymer.EndEdit();
+                    }
+                    else if (drv != null && drv.DataView.Table.TableName == "MasterBatch")
+                    {
+                        if (dgvMasterBatchComp.CurrentCell.ColumnIndex == dgvMasterBatchComp.Columns["MBCode"].Index)
+                        {
+                            dgvMasterBatchComp.CurrentRow.Cells["MBColour"].Value = (int)drv["MBID"];
+                        }
+                    }
+                    else if (drv != null && drv.DataView.Table.TableName == "Additive")
+                    {
+                        if (dgvMasterBatchComp.CurrentCell.ColumnIndex == dgvMasterBatchComp.Columns["Additive"].Index)
+                        {
+                            dgvMasterBatchComp.CurrentRow.Cells["AdditiveCode"].Value = (int)drv["AdditiveID"];
+                        }
+                    }
                 }
             }
+            catch(Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         string GetMaterial(int materialGradeID)
@@ -2803,8 +2881,6 @@ namespace MouldSpecification
             {
                 e.Cancel = true;
             }
-
-
         }
 
         private void dgvMachine_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
