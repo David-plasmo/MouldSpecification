@@ -16,6 +16,10 @@ namespace MouldSpecification
         {
             try
             {
+                //convert any zeros to null, for foreign keys
+                dc.LabelTypeID = (dc.LabelTypeID.HasValue ? (dc.LabelTypeID.Value > 0 ? dc.LabelTypeID :null) : null);
+                dc.CartonID = (dc.CartonID.HasValue ? (dc.CartonID.Value > 0 ? dc.CartonID : null) : null);
+
                 SqlCommand cmd = null;
                 ExecuteNonQuery(ref cmd, "MAN_Item_ups",
                    CreateParameter("@ITEMNMBR", SqlDbType.Char, dc.ITEMNMBR),
@@ -49,7 +53,7 @@ namespace MouldSpecification
             }
             catch (Exception excp)
             {
-                MessageBox.Show(excp.Message);
+                MessageBox.Show("MAN_ItemDAL: " + excp.Message, "MAN_Item_ups",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

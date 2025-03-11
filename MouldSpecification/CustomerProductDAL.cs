@@ -32,7 +32,6 @@ namespace MouldSpecification
                     DataRow dr = rows[i];
                     CustomerProductDC dc = DAL.CreateItemFromRow<CustomerProductDC>(dr);  //populate  dataclass                   
                     CustomerProduct_Ups(dc);
-
                 }
 
                 //Process modified rows: -

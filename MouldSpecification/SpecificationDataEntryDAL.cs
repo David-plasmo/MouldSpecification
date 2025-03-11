@@ -137,7 +137,9 @@ namespace MouldSpecification
                 ///https://learn.microsoft.com/en-us/dotnet/framework/data/adonet/dataset-datatable-dataview/navigating-datarelations
                 ///
                 dsOut.Relations.Add(new DataRelation("ItemMould", manItems.Columns["ItemID"], mouldSpec.Columns["ItemID"], false));
-                //dsOut.Relations.Add(new DataRelation("CustProducts", custProduct.Columns["ItemID"], manItems.Columns["ItemID"], false));
+                dsOut.Relations.Add(new DataRelation("ItemCustProduct", manItems.Columns["ItemID"], custProduct.Columns["ItemID"],  false));
+                dsOut.Relations.Add(new DataRelation("CustomerCustProduct", customer.Columns["CustomerID"], custProduct.Columns["CustomerID"], false));
+                dsOut.Relations.Add(new DataRelation("CustProductItem", custProduct.Columns["ItemID"], manItems.Columns["ItemID"], false));
                 dsOut.Relations.Add(new DataRelation("ItemMaterialComp", manItems.Columns["ItemID"], materialComp.Columns["ItemID"], false));
                 dsOut.Relations.Add(new DataRelation("ItemMasterBatchComp", manItems.Columns["ItemID"], mbComp.Columns["ItemID"], false));
                 dsOut.Relations.Add(new DataRelation("MaterialGradeComp", materialGrade.Columns["MaterialGradeID"], materialComp.Columns["MaterialGradeID"], false));
@@ -149,6 +151,8 @@ namespace MouldSpecification
                 dsOut.Relations.Add(new DataRelation("AddMBComp", additive.Columns["AdditiveID"], mbComp.Columns["AdditiveID"], false));
                 dsOut.Relations.Add(new DataRelation("ItemQC", manItems.Columns["ItemID"], qc.Columns["ItemID"], false));
                 dsOut.Relations.Add(new DataRelation("ProductGradeItem", productGrade.Columns["GradeID"], manItems.Columns["GradeID"], false));
+
+                dsOut.AcceptChanges();  
                 
                 return dsOut;
             }

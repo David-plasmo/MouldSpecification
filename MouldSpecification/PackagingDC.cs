@@ -6,7 +6,7 @@ namespace MouldSpecification
     {
         public int PackingID { get; set; }
         public int ItemID { get; set; }
-        public int CtnID { get; set; }
+        public int? CtnID { get; set; }
         public int PalletID { get; set; }
         public bool PackedInCtn { get; set; }
         public int CtnQty { get; set; }
@@ -24,7 +24,7 @@ namespace MouldSpecification
         public string last_updated_by { get; set; }
         public DateTime last_updated_on { get; set; }
 
-        public PackagingDC(int PackingID_, int ItemID_, int CtnID_, int PalletID_, bool PackedInCtn_, int CtnQty_, bool Liner_, bool InnerBag_, int BagQty_, string PackingStyle_, bool PackedOnPallet_, int PalQty_, int CtnsPerPallet_, bool PalletCover_, string Wrapping_, string LabelInnerBag_, string BarcodeLabel_, string last_updated_by_, DateTime last_updated_on_)
+        public PackagingDC(int PackingID_, int ItemID_, int? CtnID_, int PalletID_, bool PackedInCtn_, int CtnQty_, bool Liner_, bool InnerBag_, int BagQty_, string PackingStyle_, bool PackedOnPallet_, int PalQty_, int CtnsPerPallet_, bool PalletCover_, string Wrapping_, string LabelInnerBag_, string BarcodeLabel_, string last_updated_by_, DateTime last_updated_on_)
         {
             this.PackingID = PackingID_;
             this.ItemID = ItemID_;

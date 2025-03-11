@@ -38,7 +38,7 @@ namespace MouldSpecification
             bsMachPref, bsCustomer, bsCustomerProducts,
             bsMaterialGrade, bsMaterialGradeComp, bsMaterial,
             bsMasterBatch, bsMBMBComp, bsAdditive, bsAddMBComp,
-            bsProductGrade, bsProductGradeItem;
+            bsProductGrade, bsProductGradeItem; //, bsNavigator;
 
         DataViewManager viewManager;
         DataView custView, prodView;
@@ -258,6 +258,7 @@ namespace MouldSpecification
                 // Create ToolTips for AddNewMachine and AddNewMaterial buttons
                 ToolTip toolTip1 = new ToolTip();
                 toolTip1.SetToolTip(this.btnAddNewMaterial, "Add new polymer");
+                toolTip1.SetToolTip(this.btnAddNewMB, "Add new MasterBatch");
                 toolTip1.SetToolTip(this.btnAddNewMachine, "Add new machine");
 
                 dgvMBCode = new DataGridView();
@@ -613,13 +614,23 @@ namespace MouldSpecification
                 bsCustomer.DataSource = dsIMSpecificationForm.Tables["Customer"];
                 bsCustomerProducts = new BindingSource();
                 bsCustomerProducts.DataSource = dsIMSpecificationForm.Tables["CustomerProduct"];
+                bsCustomerProducts.Sort = "CustomerID ASC, ItemID ASC";
                 cboCUSTNAME.DataBindings.Add(new Binding("SelectedValue", bsCustomerProducts, "CustomerID"));
                 cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
-                //bsCustomerProducts.CurrentChanged += bsCustomerProducts_CurrentChanged;
+                bsCustomerProducts.CurrentChanged += bsCustomerProducts_CurrentChanged;
+                bsCustomerProducts.ListChanged += bsCustomerProducts_ListChanged;
+                bsCustomerProducts.PositionChanged += bsCustomerProducts_PositionChanged; ;
 
                 //Navigation toolbar
                 bindingNavigator1.BindingSource = new BindingSource();
                 bindingNavigator1.BindingSource = bsManItems;
+                
+                //bsNavigator = new BindingSource();                                           
+                //bsNavigator.DataMember = dsIMSpecificationForm.Relations["CustProductItem"].RelationName;
+                //bsNavigator.DataSource = bsCustomerProducts;
+                //bindingNavigator1.BindingSource = bsNavigator;
+
+
                 bsManItems.CurrentChanged += bsManItems_CurrentChanged;
 
                 txtITEMNMBR.DataBindings.Add(new Binding("Text", bsManItems, "ITEMNMBR", false,
@@ -700,7 +711,30 @@ namespace MouldSpecification
             }
             catch (Exception ex)
             {
+                MessageBox.Show(ex.Message, "BindControls", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        
+        private void bsCustomerProducts_ListChanged(object sender, ListChangedEventArgs e)
+        {
+            DataRowView rowView = (DataRowView)this.bsCustomerProducts.Current;
+            DataRow row = rowView.Row;
+        }
+
+        private void bsCustomerProducts_CurrentChanged(object sender, EventArgs e)
+        {
+            DataRowView rowView = (DataRowView)this.bsCustomerProducts.Current;
+            DataRow row = rowView.Row;
+        }
+
+        private void bsCustomerProducts_PositionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DataRowView rowView = (DataRowView)this.bsCustomerProducts.Current;
+                DataRow row = rowView.Row;
+            }
+            catch { }            
         }
 
         private void dgvMasterBatchComp_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
@@ -727,7 +761,7 @@ namespace MouldSpecification
             System.Drawing.Font rowFont = new System.Drawing.Font("Tahoma", 8.0f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (byte)0);
 
             StringFormat centerFormat = new StringFormat();
-            centerFormat.Alignment = StringAlignment.Far;
+            centerFormat.Alignment = StringAlignment.Center;
             centerFormat.LineAlignment = StringAlignment.Center;
 
             Rectangle headerBounds = new Rectangle(
@@ -993,6 +1027,10 @@ namespace MouldSpecification
                 dt = dsIMSpecificationForm.Tables["MaterialComp"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
                 dt.Columns["MaterialGradeID"].DefaultValue = newItemID;
+                //Customer Products
+                dt = dsIMSpecificationForm.Tables["CustomerProduct"];
+                dt.Columns["ItemID"].DefaultValue = newItemID;
+                dt.Columns["CustomerID"].DefaultValue = LastCustomerID;
                 //Machine preference
                 dt = dsIMSpecificationForm.Tables["MachinePref"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
@@ -1308,6 +1346,7 @@ namespace MouldSpecification
         {
             try
             {
+                LastCustomerID = custID;
                 CustomerFilterOn = true;
                 DataTable dt = dsIMSpecificationForm.Tables["CustomerProduct"].Copy();
                 DataView dv = new DataView(dt, "CustomerID = " + custID.ToString(), "CustomerID", DataViewRowState.CurrentRows);
@@ -1419,8 +1458,10 @@ namespace MouldSpecification
 
                 dgvPolymer.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
                 dgvPolymer.Height = p96H(70);
-                dgvPolymer.RowHeadersWidth = p96W(70);
-                dgvPolymer.RowTemplate.Height = p96H(19);
+                dgvPolymer.RowHeadersWidth = p96W(77);
+                //dgvPolymer.RowTemplate.Height = p96H(19);
+                //Padding newPadding = new Padding(0, 0, 5, 0);
+                //dgvPolymer.RowHeadersDefaultCellStyle.Padding = newPadding;
                 //dgvPolymer.Rows[dgvPolymer.NewRowIndex].MinimumHeight = p96H(19);
 
 
@@ -1597,6 +1638,7 @@ namespace MouldSpecification
                 dgvMasterBatchComp.Columns["MBCode"].HeaderText = "MBCode";
                 cbcMBCode.DisplayStyleForCurrentCellOnly = true;
                 cbcMBCode.DisplayStyle = DataGridViewComboBoxDisplayStyle.Nothing;
+               
 
                 //Create a dynamic combobox column for MBColour
                 DataGridViewComboBoxColumn cbcMBColour = new DataGridViewComboBoxColumn();
@@ -1695,7 +1737,11 @@ namespace MouldSpecification
 
         private void dgvMasterBatchComp_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            throw new NotImplementedException();
+            DialogResult dr = MessageBox.Show("Are you sure?", "Confirm Delete Polymer", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (dr != DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
         }
 
         private void dgvMasterBatchComp_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
@@ -1715,6 +1761,22 @@ namespace MouldSpecification
                 // Here we will remove the subscription for selected index changed
                 cbec.SelectedIndexChanged -= new EventHandler(Cbec_SelectedIndexChanged);
 
+                //allow an empty cell selection
+                if (cbec.Text.Length == 0)
+                {
+                    if (dgvMasterBatchComp.CurrentCell.ColumnIndex == dgvMasterBatchComp.Columns["MBCode"].Index)
+                    {
+                        dgvMasterBatchComp.CurrentRow.Cells["MBColour"].Value = DBNull.Value;
+                        dgvMasterBatchComp.CurrentRow.Cells["MBID"].Value = DBNull.Value;
+                    }
+                    else if (dgvMasterBatchComp.CurrentCell.ColumnIndex == dgvMasterBatchComp.Columns["Additive"].Index)
+                    {
+                        dgvMasterBatchComp.CurrentRow.Cells["AdditiveID"].Value = DBNull.Value;
+                        dgvMasterBatchComp.CurrentRow.Cells["AdditiveCode"].Value = DBNull.Value;
+                    }
+                }
+                
+
                 //show selected value right away, without needing to change grid row
                 //Doesnt work for new row!
                 //dgvPolymer.BindingContext[dgvPolymer.DataSource].EndCurrentEdit();
@@ -1723,7 +1785,7 @@ namespace MouldSpecification
 
         private void dgvMasterBatchComp_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
         {
-            throw new NotImplementedException();
+            btnAddNewMB.Enabled = dgvMasterBatchComp.Rows.Count < maxRowsMB;
         }
 
         private void dgvMasterBatchComp_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
@@ -1751,6 +1813,7 @@ namespace MouldSpecification
                     {
                         cbec = new DataGridViewComboBoxEditingControl();
                         cbec = e.Control as DataGridViewComboBoxEditingControl;
+                        cbec.DropDownStyle = ComboBoxStyle.DropDown;
                         cbec.SelectedIndexChanged -= Cbec_SelectedIndexChanged;
                         cbec.SelectedIndexChanged += Cbec_SelectedIndexChanged;
                     }
@@ -1824,15 +1887,11 @@ namespace MouldSpecification
 
         private void dgvPolymer_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Are you sure?", "Confirm Delete Polymer", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult dr = MessageBox.Show("Are you sure?", "Confirm Delete MasterBatch", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (dr != DialogResult.OK)
             {
                 e.Cancel = true;
             }
-
-
-
-
         }
 
         // Disable cell selection
@@ -2104,6 +2163,7 @@ namespace MouldSpecification
 
         private void btnCopyToNew_Click(object sender, EventArgs e)
         {
+            SaveEdits();
             CopyToNew();
         }
 
@@ -2193,16 +2253,14 @@ namespace MouldSpecification
                 }
 
                 //add customer for new product
-                drv = (DataRowView)bsCustomerProducts.Current;
-                int custID = (int)drv.Row["CustomerID"];
+                //drv = (DataRowView)bsCustomerProducts.Current;
+                //int custID = (int)drv.Row["CustomerID"];
                 bsCustomerProducts.SuspendBinding();
-                dt = dsIMSpecificationForm.Tables["CustomerProduct"];
-                newRow = dt.NewRow();
-                newRow["ItemID"] = newItemID;
-                newRow["CustomerID"] = custID;
-                dt.Rows.Add(newRow);
+                dt = dsIMSpecificationForm.Tables["CustomerProduct"];                        
+                dt.Rows.Add(-1,LastCustomerID.Value, newItemID);
+                bsCustomerProducts.EndEdit();
                 bsCustomerProducts.ResumeBinding();
-                cboCUSTNAME.SelectedValue = custID;
+                cboCUSTNAME.SelectedValue = LastCustomerID;
                 cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
 
                 //copy Mould Specification
@@ -2257,6 +2315,7 @@ namespace MouldSpecification
                 dt = dsIMSpecificationForm.Tables["MasterBatchComp"];
                 dv = (DataView)dsIMSpecificationForm.Tables["MasterBatchComp"].DefaultView;
                 dv.RowFilter = "ItemID = " + curItemID.ToString();
+                int nextMB = 0;
                 foreach (DataRowView drvm in dv)
                 {
                     //rowIndexToCopy = drvm.Row.RowId();
@@ -2264,7 +2323,8 @@ namespace MouldSpecification
                     newRow = dt.NewRow();
                     newRow.ItemArray = existingRow.ItemArray.Clone() as object[];
                     newRow["ItemID"] = newItemID;
-                    newRow["MB123"] = 1;
+                    nextMB ++;  
+                    newRow["MB123"] = nextMB;
                     newRow["IsPreferred"] = true;
                     dt.Rows.Add(newRow);
                 }
@@ -2279,7 +2339,6 @@ namespace MouldSpecification
                     bsMBMBComp.ResumeBinding();  //Masterbatch colour
                     bsAddMBComp.ResumeBinding(); //Masterbatch additive
                 }
-
 
                 //copy Machine preference              
                 bsMachPref.SuspendBinding();
@@ -2300,12 +2359,14 @@ namespace MouldSpecification
                 bsManItems.CurrentChanged += bsManItems_CurrentChanged;
                 bsManItems.AddingNew += bsManItems_AddingNew;
                 cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
+
+                SaveEdits();
                 RefreshCurrent();
             }
 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "CopyToNew",MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         
@@ -2569,42 +2630,48 @@ namespace MouldSpecification
                         tscboProduct.ComboBox.SelectedValue = itemID;
                         tscboProduct.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
                     }
-
-                    //MessageBox.Show(bsManItems.Position.ToString());
-
-                    //locate customer for this product                
-                    int cpIndex = bsCustomerProducts.Find("ItemID", itemID);
-                    if (cpIndex != -1)
+                    
+                    //locate customer for this product
+                    bsCustomerProducts.Filter = "CustomerID = " + LastCustomerID.Value.ToString() + " AND ItemID = " + itemID.ToString();
+                    if (bsCustomerProducts.Current != null)
                     {
-                        //bsCustomerProducts.ResumeBinding();
-                        cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
-                        bsCustomerProducts.Position = cpIndex;
-                        cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
-                        DataRowView drv = (DataRowView)this.bsCustomerProducts.Current;
-                        DataRow dr = drv.Row;
-                        LastCustomerID = (int)dr["CustomerID"];
-
-                        //Enable Alternative code input for Angel or Consolidated Plastics
-                        int custIndex = bsCustomer.Find("CustomerID", LastCustomerID);
-                        if (custIndex != -1)
+                        DataRowView dv = (DataRowView)bsCustomerProducts.Current;
+                        DataRow dr = dv.Row;
+                        int custProdID = (int)dr["CustomerProductID"];
+                        int cpIndex = bsCustomerProducts.Find("CustomerProductID", custProdID);
+                        if (cpIndex != -1)
                         {
-                            bsCustomer.Position = custIndex;
-                            drv = (DataRowView)this.bsCustomer.Current;
+                            //bsCustomerProducts.ResumeBinding();
+                            cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
+                            bsCustomerProducts.Position = cpIndex;
+                            cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
+                            DataRowView drv = (DataRowView)this.bsCustomerProducts.Current;
                             dr = drv.Row;
-                            string testMatching = "Angel Products | Consolidated Plastics";
-                            string testCompany = dr["CUSTNAME"].ToString().Trim();
-                            if (testMatching.Contains(testCompany))
+                            LastCustomerID = (int)dr["CustomerID"];
+
+                            //Enable Alternative code input for Angel or Consolidated Plastics
+                            int custIndex = bsCustomer.Find("CustomerID", LastCustomerID);
+                            if (custIndex != -1)
                             {
-                                txtAltCode.Enabled = true;
-                                lblAltCode.Enabled = true;
-                            }
-                            else
-                            {
-                                txtAltCode.Enabled = false;
-                                lblAltCode.Enabled = false;
+                                bsCustomer.Position = custIndex;
+                                drv = (DataRowView)this.bsCustomer.Current;
+                                dr = drv.Row;
+                                string testMatching = "Angel Products | Consolidated Plastics";
+                                string testCompany = dr["CUSTNAME"].ToString().Trim();
+                                if (testMatching.Contains(testCompany))
+                                {
+                                    txtAltCode.Enabled = true;
+                                    lblAltCode.Enabled = true;
+                                }
+                                else
+                                {
+                                    txtAltCode.Enabled = false;
+                                    lblAltCode.Enabled = false;
+                                }
                             }
                         }
                     }
+                    bsCustomerProducts.Filter = null;
 
                     //locate ProductGrade aka ProductCategory                   
                     bsProductGradeItem.SuspendBinding();
@@ -2797,7 +2864,7 @@ namespace MouldSpecification
 
                 dgvMachine.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
                 dgvMachine.Height = p96H(100);
-                dgvMachine.RowHeadersWidth = p96W(70);
+                dgvMachine.RowHeadersWidth = p96W(75);
                 dgvMachine.RowTemplate.MinimumHeight = p96H(19);
                 dgvMachine.RowTemplate.Height = p96H(19);
                 dgvMachine.Rows[dgvMachine.NewRowIndex].MinimumHeight = p96H(19);
@@ -2865,7 +2932,7 @@ namespace MouldSpecification
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "SaveEdits", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -2896,7 +2963,7 @@ namespace MouldSpecification
             System.Drawing.Font rowFont = new System.Drawing.Font("Tahoma", 8.0f, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, (byte)0);
 
             StringFormat centerFormat = new StringFormat();
-            centerFormat.Alignment = StringAlignment.Far;
+            centerFormat.Alignment = StringAlignment.Center;
             centerFormat.LineAlignment = StringAlignment.Center;
 
             Rectangle headerBounds = new Rectangle(
@@ -2955,8 +3022,9 @@ namespace MouldSpecification
                 bsManItems.EndEdit();
                 bsCustomerProducts.EndEdit();
                 bsMaterialComp.EndEdit();
-                dgvPolymer.EndEdit();
+                dgvPolymer.EndEdit();                
                 bsMBComp.EndEdit();
+                dgvMasterBatchComp.EndEdit();
                 bsMouldSpec.EndEdit();
                 bsMachPref.EndEdit();
                 dgvMachine.EndEdit();

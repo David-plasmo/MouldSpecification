@@ -252,6 +252,7 @@ namespace MouldSpecification
             {
                 DataViewRowState dvrs;
                 DataRow[] rows;
+                MAN_ItemDAL midal = new MAN_ItemDAL();
 
                 //Process new rows:-
                 if (optionalRowState == "default" || optionalRowState == "Added")
@@ -263,8 +264,11 @@ namespace MouldSpecification
                     for (int i = 0; i < rows.Length; i++)
                     {
                         DataRow dr = rows[i];
-                        ProductDetailsDC dc = DAL.CreateItemFromRow<ProductDetailsDC>(dr);  //populate  dataclass                   
-                        AddMAN_Item(dc);
+                        //ProductDetailsDC dc = DAL.CreateItemFromRow<ProductDetailsDC>(dr);  //populate  dataclass                   
+                        //AddMAN_Item(dc);
+                        MAN_ItemDC dc = DAL.CreateItemFromRow<MAN_ItemDC>(dr);
+                        midal.MAN_Item_ups(dc);
+
 
                         //New primary keys are programmatically assigned a negative sequential number to
                         //allow editing of child tables.  On input to the database, a new key is re-assigned
@@ -328,9 +332,12 @@ namespace MouldSpecification
                             }
                             if (hasChanged)
                             {
-                                ProductDetailsDC dc = DAL.CreateItemFromRow<ProductDetailsDC>(dr);  //populate  dataclass
+                                //ProductDetailsDC dc = DAL.CreateItemFromRow<ProductDetailsDC>(dr);  //populate  dataclass
+                                //UpdateMAN_Item(dc);
 
-                                UpdateMAN_Item(dc);
+                                MAN_ItemDC dc = DAL.CreateItemFromRow<MAN_ItemDC>(dr);
+                                midal.MAN_Item_ups(dc);
+
                                 dr["last_updated_by"] = dc.last_updated_by;
                                 dr["last_updated_on"] = dc.last_updated_on;
                             }
@@ -354,9 +361,11 @@ namespace MouldSpecification
                         DataRow dr = rows[i];
                         if (dr["ItemID", DataRowVersion.Original] != null)
                         {
-                            ProductDetailsDC dc = new ProductDetailsDC();
+                            //ProductDetailsDC dc = new ProductDetailsDC();
+                            MAN_ItemDC dc = DAL.CreateItemFromRow<MAN_ItemDC>(dr);
                             dc.ItemID = Convert.ToInt32(dr["ItemID", DataRowVersion.Original].ToString());
                             DeleteMAN_Item(dc);
+                           
                         }
                     }
                 }
@@ -369,210 +378,210 @@ namespace MouldSpecification
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "UpdateMAN_Item",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 //throw;
             }
         }
 
-        public static void AddMAN_Item(ProductDetailsDC dc)
-        {
-            try
-            {
-                System.Data.SqlClient.SqlCommand cmd = null;
-                SqlConnection connection = new SqlConnection(GetConnectionString());
-                connection.Open();
-                cmd = new System.Data.SqlClient.SqlCommand("AddMAN_Item", connection);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+        //public static void AddMAN_Item(ProductDetailsDC dc)
+        //{
+        //    try
+        //    {
+        //        System.Data.SqlClient.SqlCommand cmd = null;
+        //        SqlConnection connection = new SqlConnection(GetConnectionString());
+        //        connection.Open();
+        //        cmd = new System.Data.SqlClient.SqlCommand("AddMAN_Item", connection);
+        //        cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                cmd.Parameters.Add("@ItemID", SqlDbType.Int, 4);
-                cmd.Parameters["@ItemID"].Direction = System.Data.ParameterDirection.InputOutput;
-                cmd.Parameters["@ItemID"].Value = dc.ItemID;
-                cmd.Parameters.Add("@ITEMNMBR", SqlDbType.Char, 31);
-                cmd.Parameters["@ITEMNMBR"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@ITEMNMBR"].Value = dc.ITEMNMBR;
-                cmd.Parameters.Add("@ITEMDESC", SqlDbType.Char, 101);
-                cmd.Parameters["@ITEMDESC"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@ITEMDESC"].Value = dc.ITEMDESC;
-                cmd.Parameters.Add("@AltCode", SqlDbType.Char, 31);
-                cmd.Parameters["@AltCode"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@AltCode"].Value = dc.AltCode;
-                cmd.Parameters.Add("@ProductType", SqlDbType.Char, 31);
-                cmd.Parameters["@ProductType"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@ProductType"].Value = dc.ProductType;
-                cmd.Parameters.Add("@GradeID", SqlDbType.Int, 4);
-                cmd.Parameters["@GradeID"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@GradeID"].Value = dc.GradeID;
-                cmd.Parameters.Add("@ImageFile", SqlDbType.VarChar, 200);
-                cmd.Parameters["@ImageFile"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@ImageFile"].Value = dc.ImageFile;
-                cmd.Parameters.Add("@ComponentWeight", SqlDbType.Decimal, 9);
-                cmd.Parameters["@ComponentWeight"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@ComponentWeight"].Value = dc.ComponentWeight;
-                cmd.Parameters.Add("@SprueRunnerTotal", SqlDbType.Decimal, 9);
-                cmd.Parameters["@SprueRunnerTotal"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@SprueRunnerTotal"].Value = dc.SprueRunnerTotal;
-                cmd.Parameters.Add("@TotalShotWeight", SqlDbType.Decimal, 9);
-                cmd.Parameters["@TotalShotWeight"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@TotalShotWeight"].Value = dc.TotalShotWeight;
-                cmd.Parameters.Add("@CompDB", SqlDbType.VarChar, 5);
-                cmd.Parameters["@CompDB"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@CompDB"].Value = dc.CompDB;
-                cmd.Parameters.Add("@ITMCLSCD", SqlDbType.Char, 11);
-                cmd.Parameters["@ITMCLSCD"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@ITMCLSCD"].Value = dc.ITMCLSCD;
-                cmd.Parameters.Add("@CtnQty", SqlDbType.Int, 4);
-                cmd.Parameters["@CtnQty"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@CtnQty"].Value = dc.CtnQty;
-                cmd.Parameters.Add("@CartonID", SqlDbType.Int, 4);
-                cmd.Parameters["@CartonID"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@CartonID"].Value = dc.CartonID;
-                cmd.Parameters.Add("@Comments", SqlDbType.VarChar, 200);
-                cmd.Parameters["@Comments"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@Comments"].Value = dc.Comments;
-                cmd.Parameters.Add("@SpecificationFile", SqlDbType.VarChar, 200);
-                cmd.Parameters["@SpecificationFile"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@SpecificationFile"].Value = dc.SpecificationFile;
-                cmd.Parameters.Add("@LabelTypeID", SqlDbType.Int, 4);
-                cmd.Parameters["@LabelTypeID"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@LabelTypeID"].Value = dc.LabelTypeID;
-                cmd.Parameters.Add("@BottleSize", SqlDbType.Char, 11);
-                cmd.Parameters["@BottleSize"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@BottleSize"].Value = dc.BottleSize;
-                cmd.Parameters.Add("@Style", SqlDbType.Char, 11);
-                cmd.Parameters["@Style"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@Style"].Value = dc.Style;
-                cmd.Parameters.Add("@NeckSize", SqlDbType.Char, 11);
-                cmd.Parameters["@NeckSize"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@NeckSize"].Value = dc.NeckSize;
-                cmd.Parameters.Add("@Colour", SqlDbType.Char, 11);
-                cmd.Parameters["@Colour"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@Colour"].Value = dc.Colour;
-                cmd.Parameters.Add("@DangerousGood", SqlDbType.Bit, 1);
-                cmd.Parameters["@DangerousGood"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@DangerousGood"].Value = dc.DangerousGood;
-                cmd.Parameters.Add("@StockLine", SqlDbType.Bit, 1);
-                cmd.Parameters["@StockLine"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@StockLine"].Value = dc.StockLine;
-                cmd.Parameters.Add("@last_updated_on", SqlDbType.DateTime2, 8);
-                cmd.Parameters["@last_updated_on"].Direction = System.Data.ParameterDirection.InputOutput;
-                cmd.Parameters["@last_updated_on"].Value = dc.last_updated_on;
-                cmd.Parameters.Add("@last_updated_by", SqlDbType.VarChar, 50);
-                cmd.Parameters["@last_updated_by"].Direction = System.Data.ParameterDirection.InputOutput;
-                cmd.Parameters["@last_updated_by"].Value = dc.last_updated_by;
+        //        cmd.Parameters.Add("@ItemID", SqlDbType.Int, 4);
+        //        cmd.Parameters["@ItemID"].Direction = System.Data.ParameterDirection.InputOutput;
+        //        cmd.Parameters["@ItemID"].Value = dc.ItemID;
+        //        cmd.Parameters.Add("@ITEMNMBR", SqlDbType.Char, 31);
+        //        cmd.Parameters["@ITEMNMBR"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@ITEMNMBR"].Value = dc.ITEMNMBR;
+        //        cmd.Parameters.Add("@ITEMDESC", SqlDbType.Char, 101);
+        //        cmd.Parameters["@ITEMDESC"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@ITEMDESC"].Value = dc.ITEMDESC;
+        //        cmd.Parameters.Add("@AltCode", SqlDbType.Char, 31);
+        //        cmd.Parameters["@AltCode"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@AltCode"].Value = dc.AltCode;
+        //        cmd.Parameters.Add("@ProductType", SqlDbType.Char, 31);
+        //        cmd.Parameters["@ProductType"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@ProductType"].Value = dc.ProductType;
+        //        cmd.Parameters.Add("@GradeID", SqlDbType.Int, 4);
+        //        cmd.Parameters["@GradeID"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@GradeID"].Value = dc.GradeID;
+        //        cmd.Parameters.Add("@ImageFile", SqlDbType.VarChar, 200);
+        //        cmd.Parameters["@ImageFile"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@ImageFile"].Value = dc.ImageFile;
+        //        cmd.Parameters.Add("@ComponentWeight", SqlDbType.Decimal, 9);
+        //        cmd.Parameters["@ComponentWeight"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@ComponentWeight"].Value = dc.ComponentWeight;
+        //        cmd.Parameters.Add("@SprueRunnerTotal", SqlDbType.Decimal, 9);
+        //        cmd.Parameters["@SprueRunnerTotal"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@SprueRunnerTotal"].Value = dc.SprueRunnerTotal;
+        //        cmd.Parameters.Add("@TotalShotWeight", SqlDbType.Decimal, 9);
+        //        cmd.Parameters["@TotalShotWeight"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@TotalShotWeight"].Value = dc.TotalShotWeight;
+        //        cmd.Parameters.Add("@CompDB", SqlDbType.VarChar, 5);
+        //        cmd.Parameters["@CompDB"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@CompDB"].Value = dc.CompDB;
+        //        cmd.Parameters.Add("@ITMCLSCD", SqlDbType.Char, 11);
+        //        cmd.Parameters["@ITMCLSCD"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@ITMCLSCD"].Value = dc.ITMCLSCD;
+        //        cmd.Parameters.Add("@CtnQty", SqlDbType.Int, 4);
+        //        cmd.Parameters["@CtnQty"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@CtnQty"].Value = dc.CtnQty;
+        //        cmd.Parameters.Add("@CartonID", SqlDbType.Int, 4);
+        //        cmd.Parameters["@CartonID"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@CartonID"].Value = dc.CartonID;
+        //        cmd.Parameters.Add("@Comments", SqlDbType.VarChar, 200);
+        //        cmd.Parameters["@Comments"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@Comments"].Value = dc.Comments;
+        //        cmd.Parameters.Add("@SpecificationFile", SqlDbType.VarChar, 200);
+        //        cmd.Parameters["@SpecificationFile"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@SpecificationFile"].Value = dc.SpecificationFile;
+        //        cmd.Parameters.Add("@LabelTypeID", SqlDbType.Int, 4);
+        //        cmd.Parameters["@LabelTypeID"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@LabelTypeID"].Value = dc.LabelTypeID;
+        //        cmd.Parameters.Add("@BottleSize", SqlDbType.Char, 11);
+        //        cmd.Parameters["@BottleSize"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@BottleSize"].Value = dc.BottleSize;
+        //        cmd.Parameters.Add("@Style", SqlDbType.Char, 11);
+        //        cmd.Parameters["@Style"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@Style"].Value = dc.Style;
+        //        cmd.Parameters.Add("@NeckSize", SqlDbType.Char, 11);
+        //        cmd.Parameters["@NeckSize"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@NeckSize"].Value = dc.NeckSize;
+        //        cmd.Parameters.Add("@Colour", SqlDbType.Char, 11);
+        //        cmd.Parameters["@Colour"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@Colour"].Value = dc.Colour;
+        //        cmd.Parameters.Add("@DangerousGood", SqlDbType.Bit, 1);
+        //        cmd.Parameters["@DangerousGood"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@DangerousGood"].Value = dc.DangerousGood;
+        //        cmd.Parameters.Add("@StockLine", SqlDbType.Bit, 1);
+        //        cmd.Parameters["@StockLine"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@StockLine"].Value = dc.StockLine;
+        //        cmd.Parameters.Add("@last_updated_on", SqlDbType.DateTime2, 8);
+        //        cmd.Parameters["@last_updated_on"].Direction = System.Data.ParameterDirection.InputOutput;
+        //        cmd.Parameters["@last_updated_on"].Value = dc.last_updated_on;
+        //        cmd.Parameters.Add("@last_updated_by", SqlDbType.VarChar, 50);
+        //        cmd.Parameters["@last_updated_by"].Direction = System.Data.ParameterDirection.InputOutput;
+        //        cmd.Parameters["@last_updated_by"].Value = dc.last_updated_by;
 
-                cmd.ExecuteNonQuery();
+        //        cmd.ExecuteNonQuery();
 
-                dc.ItemID = (int)cmd.Parameters["@ItemID"].Value;
-                dc.last_updated_on = (DateTime)cmd.Parameters["@last_updated_on"].Value;
-                dc.last_updated_by = cmd.Parameters["@last_updated_by"].Value.ToString();
-                connection.Close();
-            }
-            catch (Exception excp)
-            {
-                MessageBox.Show(excp.Message);
-            }
-        }
+        //        dc.ItemID = (int)cmd.Parameters["@ItemID"].Value;
+        //        dc.last_updated_on = (DateTime)cmd.Parameters["@last_updated_on"].Value;
+        //        dc.last_updated_by = cmd.Parameters["@last_updated_by"].Value.ToString();
+        //        connection.Close();
+        //    }
+        //    catch (Exception excp)
+        //    {
+        //        MessageBox.Show(excp.Message, "AddMAN_Item",MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //    }
+        //}
 
-        public static void UpdateMAN_Item(ProductDetailsDC dc)
-        {
-            try
-            {
-                System.Data.SqlClient.SqlCommand cmd = null;
-                SqlConnection connection = new SqlConnection(GetConnectionString());
-                connection.Open();
-                cmd = new System.Data.SqlClient.SqlCommand("UpdateMAN_Item", connection);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+        //public static void UpdateMAN_Item(ProductDetailsDC dc)
+        //{
+        //    try
+        //    {
+        //        System.Data.SqlClient.SqlCommand cmd = null;
+        //        SqlConnection connection = new SqlConnection(GetConnectionString());
+        //        connection.Open();
+        //        cmd = new System.Data.SqlClient.SqlCommand("UpdateMAN_Item", connection);
+        //        cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
-                cmd.Parameters.Add("@ItemID", SqlDbType.Int, 4);
-                cmd.Parameters["@ItemID"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@ItemID"].Value = dc.ItemID;
-                cmd.Parameters.Add("@ITEMNMBR", SqlDbType.Char, 31);
-                cmd.Parameters["@ITEMNMBR"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@ITEMNMBR"].Value = dc.ITEMNMBR;
-                cmd.Parameters.Add("@ITEMDESC", SqlDbType.Char, 101);
-                cmd.Parameters["@ITEMDESC"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@ITEMDESC"].Value = dc.ITEMDESC;
-                cmd.Parameters.Add("@AltCode", SqlDbType.Char, 31);
-                cmd.Parameters["@AltCode"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@AltCode"].Value = dc.AltCode;
-                cmd.Parameters.Add("@ProductType", SqlDbType.Char, 31);
-                cmd.Parameters["@ProductType"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@ProductType"].Value = dc.ProductType;
-                cmd.Parameters.Add("@GradeID", SqlDbType.Int, 4);
-                cmd.Parameters["@GradeID"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@GradeID"].Value = dc.GradeID;
-                cmd.Parameters.Add("@ImageFile", SqlDbType.VarChar, 200);
-                cmd.Parameters["@ImageFile"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@ImageFile"].Value = dc.ImageFile;
-                cmd.Parameters.Add("@ComponentWeight", SqlDbType.Decimal, 9);
-                cmd.Parameters["@ComponentWeight"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@ComponentWeight"].Value = dc.ComponentWeight;
-                cmd.Parameters.Add("@SprueRunnerTotal", SqlDbType.Decimal, 9);
-                cmd.Parameters["@SprueRunnerTotal"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@SprueRunnerTotal"].Value = dc.SprueRunnerTotal;
-                cmd.Parameters.Add("@TotalShotWeight", SqlDbType.Decimal, 9);
-                cmd.Parameters["@TotalShotWeight"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@TotalShotWeight"].Value = dc.TotalShotWeight;
-                cmd.Parameters.Add("@CompDB", SqlDbType.VarChar, 5);
-                cmd.Parameters["@CompDB"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@CompDB"].Value = dc.CompDB;
-                cmd.Parameters.Add("@ITMCLSCD", SqlDbType.Char, 11);
-                cmd.Parameters["@ITMCLSCD"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@ITMCLSCD"].Value = dc.ITMCLSCD;
-                cmd.Parameters.Add("@CtnQty", SqlDbType.Int, 4);
-                cmd.Parameters["@CtnQty"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@CtnQty"].Value = dc.CtnQty;
-                cmd.Parameters.Add("@CartonID", SqlDbType.Int, 4);
-                cmd.Parameters["@CartonID"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@CartonID"].Value = dc.CartonID;
-                cmd.Parameters.Add("@Comments", SqlDbType.VarChar, 200);
-                cmd.Parameters["@Comments"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@Comments"].Value = dc.Comments;
-                cmd.Parameters.Add("@SpecificationFile", SqlDbType.VarChar, 200);
-                cmd.Parameters["@SpecificationFile"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@SpecificationFile"].Value = dc.SpecificationFile;
-                cmd.Parameters.Add("@LabelTypeID", SqlDbType.Int, 4);
-                cmd.Parameters["@LabelTypeID"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@LabelTypeID"].Value = dc.LabelTypeID;
-                cmd.Parameters.Add("@BottleSize", SqlDbType.Char, 11);
-                cmd.Parameters["@BottleSize"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@BottleSize"].Value = dc.BottleSize;
-                cmd.Parameters.Add("@Style", SqlDbType.Char, 11);
-                cmd.Parameters["@Style"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@Style"].Value = dc.Style;
-                cmd.Parameters.Add("@NeckSize", SqlDbType.Char, 11);
-                cmd.Parameters["@NeckSize"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@NeckSize"].Value = dc.NeckSize;
-                cmd.Parameters.Add("@Colour", SqlDbType.Char, 11);
-                cmd.Parameters["@Colour"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@Colour"].Value = dc.Colour;
-                cmd.Parameters.Add("@DangerousGood", SqlDbType.Bit, 1);
-                cmd.Parameters["@DangerousGood"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@DangerousGood"].Value = dc.DangerousGood;
-                cmd.Parameters.Add("@StockLine", SqlDbType.Bit, 1);
-                cmd.Parameters["@StockLine"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@StockLine"].Value = dc.StockLine;
-                cmd.Parameters.Add("@last_updated_on", SqlDbType.DateTime2, 8);
-                cmd.Parameters["@last_updated_on"].Direction = System.Data.ParameterDirection.InputOutput;
-                cmd.Parameters["@last_updated_on"].Value = dc.last_updated_on;
-                cmd.Parameters.Add("@last_updated_by", SqlDbType.VarChar, 50);
-                cmd.Parameters["@last_updated_by"].Direction = System.Data.ParameterDirection.InputOutput;
-                cmd.Parameters["@last_updated_by"].Value = dc.last_updated_by;
+        //        cmd.Parameters.Add("@ItemID", SqlDbType.Int, 4);
+        //        cmd.Parameters["@ItemID"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@ItemID"].Value = dc.ItemID;
+        //        cmd.Parameters.Add("@ITEMNMBR", SqlDbType.Char, 31);
+        //        cmd.Parameters["@ITEMNMBR"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@ITEMNMBR"].Value = dc.ITEMNMBR;
+        //        cmd.Parameters.Add("@ITEMDESC", SqlDbType.Char, 101);
+        //        cmd.Parameters["@ITEMDESC"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@ITEMDESC"].Value = dc.ITEMDESC;
+        //        cmd.Parameters.Add("@AltCode", SqlDbType.Char, 31);
+        //        cmd.Parameters["@AltCode"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@AltCode"].Value = dc.AltCode;
+        //        cmd.Parameters.Add("@ProductType", SqlDbType.Char, 31);
+        //        cmd.Parameters["@ProductType"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@ProductType"].Value = dc.ProductType;
+        //        cmd.Parameters.Add("@GradeID", SqlDbType.Int, 4);
+        //        cmd.Parameters["@GradeID"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@GradeID"].Value = dc.GradeID;
+        //        cmd.Parameters.Add("@ImageFile", SqlDbType.VarChar, 200);
+        //        cmd.Parameters["@ImageFile"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@ImageFile"].Value = dc.ImageFile;
+        //        cmd.Parameters.Add("@ComponentWeight", SqlDbType.Decimal, 9);
+        //        cmd.Parameters["@ComponentWeight"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@ComponentWeight"].Value = dc.ComponentWeight;
+        //        cmd.Parameters.Add("@SprueRunnerTotal", SqlDbType.Decimal, 9);
+        //        cmd.Parameters["@SprueRunnerTotal"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@SprueRunnerTotal"].Value = dc.SprueRunnerTotal;
+        //        cmd.Parameters.Add("@TotalShotWeight", SqlDbType.Decimal, 9);
+        //        cmd.Parameters["@TotalShotWeight"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@TotalShotWeight"].Value = dc.TotalShotWeight;
+        //        cmd.Parameters.Add("@CompDB", SqlDbType.VarChar, 5);
+        //        cmd.Parameters["@CompDB"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@CompDB"].Value = dc.CompDB;
+        //        cmd.Parameters.Add("@ITMCLSCD", SqlDbType.Char, 11);
+        //        cmd.Parameters["@ITMCLSCD"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@ITMCLSCD"].Value = dc.ITMCLSCD;
+        //        cmd.Parameters.Add("@CtnQty", SqlDbType.Int, 4);
+        //        cmd.Parameters["@CtnQty"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@CtnQty"].Value = dc.CtnQty;
+        //        cmd.Parameters.Add("@CartonID", SqlDbType.Int, 4);
+        //        cmd.Parameters["@CartonID"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@CartonID"].Value = dc.CartonID;
+        //        cmd.Parameters.Add("@Comments", SqlDbType.VarChar, 200);
+        //        cmd.Parameters["@Comments"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@Comments"].Value = dc.Comments;
+        //        cmd.Parameters.Add("@SpecificationFile", SqlDbType.VarChar, 200);
+        //        cmd.Parameters["@SpecificationFile"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@SpecificationFile"].Value = dc.SpecificationFile;
+        //        cmd.Parameters.Add("@LabelTypeID", SqlDbType.Int, 4);
+        //        cmd.Parameters["@LabelTypeID"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@LabelTypeID"].Value = dc.LabelTypeID;
+        //        cmd.Parameters.Add("@BottleSize", SqlDbType.Char, 11);
+        //        cmd.Parameters["@BottleSize"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@BottleSize"].Value = dc.BottleSize;
+        //        cmd.Parameters.Add("@Style", SqlDbType.Char, 11);
+        //        cmd.Parameters["@Style"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@Style"].Value = dc.Style;
+        //        cmd.Parameters.Add("@NeckSize", SqlDbType.Char, 11);
+        //        cmd.Parameters["@NeckSize"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@NeckSize"].Value = dc.NeckSize;
+        //        cmd.Parameters.Add("@Colour", SqlDbType.Char, 11);
+        //        cmd.Parameters["@Colour"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@Colour"].Value = dc.Colour;
+        //        cmd.Parameters.Add("@DangerousGood", SqlDbType.Bit, 1);
+        //        cmd.Parameters["@DangerousGood"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@DangerousGood"].Value = dc.DangerousGood;
+        //        cmd.Parameters.Add("@StockLine", SqlDbType.Bit, 1);
+        //        cmd.Parameters["@StockLine"].Direction = System.Data.ParameterDirection.Input;
+        //        cmd.Parameters["@StockLine"].Value = dc.StockLine;
+        //        cmd.Parameters.Add("@last_updated_on", SqlDbType.DateTime2, 8);
+        //        cmd.Parameters["@last_updated_on"].Direction = System.Data.ParameterDirection.InputOutput;
+        //        cmd.Parameters["@last_updated_on"].Value = dc.last_updated_on;
+        //        cmd.Parameters.Add("@last_updated_by", SqlDbType.VarChar, 50);
+        //        cmd.Parameters["@last_updated_by"].Direction = System.Data.ParameterDirection.InputOutput;
+        //        cmd.Parameters["@last_updated_by"].Value = dc.last_updated_by;
 
-                cmd.ExecuteNonQuery();
+        //        cmd.ExecuteNonQuery();
 
-                dc.last_updated_on = (DateTime)cmd.Parameters["@last_updated_on"].Value;
-                dc.last_updated_by = cmd.Parameters["@last_updated_by"].Value.ToString();
-                connection.Close();
-            }
-            catch (Exception excp)
-            {
-                MessageBox.Show(excp.Message);
-            }
-        }
+        //        dc.last_updated_on = (DateTime)cmd.Parameters["@last_updated_on"].Value;
+        //        dc.last_updated_by = cmd.Parameters["@last_updated_by"].Value.ToString();
+        //        connection.Close();
+        //    }
+        //    catch (Exception excp)
+        //    {
+        //        MessageBox.Show(excp.Message);
+        //    }
+        //}
 
 
-        public static void DeleteMAN_Item(ProductDetailsDC dc)
+        public static void DeleteMAN_Item(MAN_ItemDC dc)
         {
             try
             {

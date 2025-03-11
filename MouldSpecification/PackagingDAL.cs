@@ -26,8 +26,7 @@ namespace MouldSpecification
         public void UpdatePackaging(DataSet ds,  string tableName = "Packaging")
         {
             try
-            {
-                
+            {               
                 //Process new rows:-
                 DataViewRowState dvrs = DataViewRowState.Added;
                 DataRow[] rows = ds.Tables[tableName].Select("", "", dvrs);
@@ -36,7 +35,11 @@ namespace MouldSpecification
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
-                    PackagingDC dc = DAL.CreateItemFromRow<PackagingDC>(dr);  //populate  dataclass                   
+                    PackagingDC dc = DAL.CreateItemFromRow<PackagingDC>(dr);  //populate  dataclass
+
+                    //convert zero value foreign key to null
+                    dc.CtnID = (dc.CtnID.HasValue ? (dc.CtnID.Value > 0 ? dc.CtnID : null) : null);
+
                     AddPackaging(dc);
 
                 }
@@ -47,7 +50,11 @@ namespace MouldSpecification
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
-                    PackagingDC dc = DAL.CreateItemFromRow<PackagingDC>(dr);  //populate  dataclass                   
+                    PackagingDC dc = DAL.CreateItemFromRow<PackagingDC>(dr);  //populate  dataclass
+                                                                              
+                    //convert zero value foreign key to null
+                    dc.CtnID = (dc.CtnID.HasValue ? (dc.CtnID.Value > 0 ? dc.CtnID : null) : null);
+
                     UpdatePackaging(dc);
                 }
 
