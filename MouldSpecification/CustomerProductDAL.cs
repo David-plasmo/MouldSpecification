@@ -30,7 +30,9 @@ namespace MouldSpecification
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
-                    CustomerProductDC dc = DAL.CreateItemFromRow<CustomerProductDC>(dr);  //populate  dataclass                   
+                    CustomerProductDC dc = DAL.CreateItemFromRow<CustomerProductDC>(dr);  //populate  dataclass
+                    if (dc.CustomerID <= 0) { throw new Exception("UpdateCustomerProduct:  CustomerID must be > 0"); }
+                    //if (dc.ItemID <= 0) { throw new Exception("UpdateCustomerProduct:  ItemID must be > 0"); }                                                                      //
                     CustomerProduct_Ups(dc);
                 }
 
@@ -40,7 +42,9 @@ namespace MouldSpecification
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
-                    CustomerProductDC dc = DAL.CreateItemFromRow<CustomerProductDC>(dr);  //populate  dataclass                   
+                    CustomerProductDC dc = DAL.CreateItemFromRow<CustomerProductDC>(dr);  //populate  dataclass
+                    if (dc.CustomerID <= 0) { throw new Exception("UpdateCustomerProduct:  CustomerID must be > 0"); }
+                    if (dc.ItemID <= 0) { throw new Exception("UpdateCustomerProduct:  ItemID must be > 0"); }                                                                    //
                     CustomerProduct_Ups(dc);
                 }
 
@@ -62,8 +66,8 @@ namespace MouldSpecification
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-                //throw;
+                //MessageBox.Show(ex.Message);
+                throw;
             }
         }
 
@@ -71,6 +75,8 @@ namespace MouldSpecification
         {
             try
             {
+                if (dc.CustomerID <= 0) {  throw new Exception("CustomerProduct_Ups:  CustomerID must be > 0"); }
+                if (dc.ItemID <= 0) { throw new Exception("CustomerProduct_Ups:  ItemID must be > 0"); }
                 SqlCommand cmd = null;
                 ExecuteNonQuery(ref cmd, "CustomerProduct_Ups",
                    CreateParameter("@CustomerID", SqlDbType.Int, dc.CustomerID),
@@ -82,7 +88,7 @@ namespace MouldSpecification
             }
             catch (Exception excp)
             {
-                MessageBox.Show(excp.Message);
+                throw;
             }
         }
 
