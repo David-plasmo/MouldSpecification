@@ -616,7 +616,7 @@ namespace MouldSpecification
                 bsCustomerProducts.DataSource = dsIMSpecificationForm.Tables["CustomerProduct"];
                 bsCustomerProducts.Sort = "CustomerID ASC, ItemID ASC";
                 cboCUSTNAME.DataBindings.Add(new Binding("SelectedValue", bsCustomerProducts, "CustomerID"));
-                cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
+                //cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
                 bsCustomerProducts.CurrentChanged += bsCustomerProducts_CurrentChanged;
                 bsCustomerProducts.ListChanged += bsCustomerProducts_ListChanged;
                 bsCustomerProducts.PositionChanged += bsCustomerProducts_PositionChanged; ;
@@ -718,7 +718,11 @@ namespace MouldSpecification
         private void bsCustomerProducts_ListChanged(object sender, ListChangedEventArgs e)
         {
             DataRowView rowView = (DataRowView)this.bsCustomerProducts.Current;
-            DataRow row = rowView.Row;
+            if (rowView != null)
+            {
+                DataRow row = rowView.Row;
+            }
+                
         }
 
         private void bsCustomerProducts_CurrentChanged(object sender, EventArgs e)
@@ -731,8 +735,12 @@ namespace MouldSpecification
         {
             try
             {
-                DataRowView rowView = (DataRowView)this.bsCustomerProducts.Current;
-                DataRow row = rowView.Row;
+                if(this.bsCustomerProducts.Current != null)
+                {
+                    DataRowView rowView = (DataRowView)this.bsCustomerProducts.Current;
+                    if (rowView != null) { DataRow row = rowView.Row; }
+                }
+                
             }
             catch { }            
         }
@@ -905,17 +913,17 @@ namespace MouldSpecification
 
         }
 
-        private void cboCUSTNAME_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cboCUSTNAME.SelectedIndex != -1)
-            {
-                EditCustomerProduct();
-            }
-        }
+        //private void cboCUSTNAME_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (cboCUSTNAME.SelectedIndex != -1)
+        //    {
+        //        EditCustomerProduct();
+        //    }
+        //}
 
         private void EditCustomerProduct()
         {
-            cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
+            //cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
 
             //locate selected customer in Customer products
             int custID = (int)cboCUSTNAME.SelectedValue;
@@ -937,7 +945,7 @@ namespace MouldSpecification
                 dt.Rows.Add(newRow);
             }
             cboCUSTNAME.SelectedValue = custID;
-            cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
+            //cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
 
             //enable alternative code input for Angel or CP
             string testMatching = "Angel Products | Consolidated Plastics";
@@ -996,12 +1004,12 @@ namespace MouldSpecification
                 bsManItems.RemoveFilter();
                 bsManItems.CurrentChanged += bsManItems_CurrentChanged;
                 tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
-                cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
+                //cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
                 tscboCompany.SelectedIndex = -1;
                 tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
                 tscboProduct.SelectedIndex = -1;
                 cboCUSTNAME.SelectedIndex = -1;
-                cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
+                //cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
 
                 //create new key
                 newItemID--; // -ve increment flags new records
@@ -1030,7 +1038,7 @@ namespace MouldSpecification
                 //Customer Products
                 dt = dsIMSpecificationForm.Tables["CustomerProduct"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
-                dt.Columns["CustomerID"].DefaultValue = LastCustomerID;
+                dt.Columns["CustomerID"].DefaultValue = LastCustomerID.Value;
                 //Machine preference
                 dt = dsIMSpecificationForm.Tables["MachinePref"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
@@ -2194,29 +2202,12 @@ namespace MouldSpecification
                 bsManItems.SuspendBinding();
 
                 tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
-                cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
+                //cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
                 tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
                 tscboProduct.SelectedIndex = -1;
                 cboCUSTNAME.SelectedIndex = -1;
-
-
-                //DataSet ds = new ProductDetailsDAL().SelectMAN_Item(curItemID, null);
-                //DataTable newDT = ds.Tables[0];
-                //DataRow newRow = newDT.Rows[0];
-                //newItemID--;  //generates a -ve new row index
-                //newRow["ItemID"] = newItemID;
-                //string newCode = new ProductDetailsDAL().NewFormattedCode();
-                //newRow["ITEMNMBR"] = newCode;
-                //newRow["ITEMDESC"] = "Copied from:  " + copiedDesc;
-                //newRow.EndEdit();
-                //DataTable existingDT = dsIMSpecificationForm.Tables["MAN_Items"];
-                //existingDT.Rows.Add(newRow);
-                ////existingDT.ImportRow(newRow);
-                //bsManItems.EndEdit();
-                //bsManItems.ResumeBinding();
-
-                //copy Product details
-                bsManItems.SuspendBinding();
+                
+                //copy Product details                
                 DataTable dt = dsIMSpecificationForm.Tables["MAN_Items"];
                 DataView view = new DataView(dt, "", "ItemID", DataViewRowState.CurrentRows);
                 int rowIndexToCopy = view.Find(curItemID);
@@ -2234,16 +2225,9 @@ namespace MouldSpecification
                 newRow["ItemID"] = newItemID;
                 dt.Rows.Add(newRow);
                 dt.AcceptChanges();
-                dt.Rows[dt.Rows.Count - 1].SetAdded();
+                dt.Rows[dt.Rows.Count - 1].SetAdded(); //resets row status back to Added
                 newRow.EndEdit();
                 bsManItems.EndEdit();
-
-                //bsManItems.Position = bsManItems.Count - 1;
-                //drv = (DataRowView)bsManItems.Current;
-                //curItemID = (int)drv.Row["ItemID"];
-                //need statements below to change row state  *** NEITHER WORKING  ***
-                //existingDT.AcceptChanges();
-                //existingDT.Rows[existingDT.Rows.Count - 1].SetAdded();
 
                 int itemIndex = bsManItems.Find("ItemID", newItemID);
                 if (itemIndex != -1)
@@ -2261,7 +2245,7 @@ namespace MouldSpecification
                 bsCustomerProducts.EndEdit();
                 bsCustomerProducts.ResumeBinding();
                 cboCUSTNAME.SelectedValue = LastCustomerID;
-                cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
+                //cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
 
                 //copy Mould Specification
                 bsMouldSpec.SuspendBinding();
@@ -2358,7 +2342,7 @@ namespace MouldSpecification
 
                 bsManItems.CurrentChanged += bsManItems_CurrentChanged;
                 bsManItems.AddingNew += bsManItems_AddingNew;
-                cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
+                //cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
 
                 SaveEdits();
                 RefreshCurrent();
@@ -2642,15 +2626,15 @@ namespace MouldSpecification
                         if (cpIndex != -1)
                         {
                             //bsCustomerProducts.ResumeBinding();
-                            cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
+                            //cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
                             bsCustomerProducts.Position = cpIndex;
-                            cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
+                            //cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
                             DataRowView drv = (DataRowView)this.bsCustomerProducts.Current;
                             dr = drv.Row;
                             LastCustomerID = (int)dr["CustomerID"];
-
+                            
                             //Enable Alternative code input for Angel or Consolidated Plastics
-                            int custIndex = bsCustomer.Find("CustomerID", LastCustomerID);
+                            int custIndex = bsCustomer.Find("CustomerID", LastCustomerID.Value);
                             if (custIndex != -1)
                             {
                                 bsCustomer.Position = custIndex;
@@ -2671,7 +2655,7 @@ namespace MouldSpecification
                             }
                         }
                     }
-                    bsCustomerProducts.Filter = null;
+                    
 
                     //locate ProductGrade aka ProductCategory                   
                     bsProductGradeItem.SuspendBinding();

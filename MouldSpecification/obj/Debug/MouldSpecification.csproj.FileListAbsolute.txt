@@ -402,3 +402,5 @@ C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\b
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\VSLangProj2.xml
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Debug\MouldSpecification.csproj.SuggestedBindingRedirects.cache
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Debug\MouldSpecification.exe.config
+C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\ApplicationAccess.dll
+C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\InjectionMouldReports.dll
