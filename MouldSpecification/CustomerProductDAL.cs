@@ -34,6 +34,9 @@ namespace MouldSpecification
                     if (dc.CustomerID <= 0) { throw new Exception("UpdateCustomerProduct:  CustomerID must be > 0"); }
                     //if (dc.ItemID <= 0) { throw new Exception("UpdateCustomerProduct:  ItemID must be > 0"); }                                                                      //
                     CustomerProduct_Ups(dc);
+                    dr.BeginEdit();
+                    dr["CustomerProductID"] = dc.CustomerProductID;
+                    dr.EndEdit();
                 }
 
                 //Process modified rows: -
