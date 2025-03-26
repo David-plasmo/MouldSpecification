@@ -717,8 +717,20 @@ namespace MouldSpecification
         
         private void bsCustomerProducts_ListChanged(object sender, ListChangedEventArgs e)
         {
+<<<<<<< HEAD
             DataRowView rowView = (DataRowView)this.bsCustomerProducts.Current;
-            DataRow row = rowView.Row;
+            if (rowView != null)
+            {
+                DataRow row = rowView.Row;
+            }
+                
+=======
+            if (this.bsCustomerProducts.Current != null) 
+            {
+                DataRowView rowView = (DataRowView)this.bsCustomerProducts.Current;
+                if (rowView != null) { DataRow row = rowView.Row;  }
+            }                       
+>>>>>>> 5ef8143d5ab6b887fc73d3b2e205d05059e9cb8f
         }
 
         private void bsCustomerProducts_CurrentChanged(object sender, EventArgs e)
@@ -734,12 +746,20 @@ namespace MouldSpecification
         {
             try
             {
+<<<<<<< HEAD
                 if(this.bsCustomerProducts.Current != null)
                 {
                     DataRowView rowView = (DataRowView)this.bsCustomerProducts.Current;
                     if (rowView != null) { DataRow row = rowView.Row; }
                 }
                 
+=======
+                if (this.bsCustomerProducts.Current != null)
+                {
+                    DataRowView rowView = (DataRowView)this.bsCustomerProducts.Current;
+                    if (rowView.Row != null) { DataRow row = rowView.Row; }
+                }                            
+>>>>>>> 5ef8143d5ab6b887fc73d3b2e205d05059e9cb8f
             }
             catch { }            
         }
@@ -921,7 +941,11 @@ namespace MouldSpecification
 
         private void EditCustomerProduct()
         {
+<<<<<<< HEAD
             //cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
+=======
+            //cboCUSTNAME.SelectedIndexChanged
+>>>>>>> 5ef8143d5ab6b887fc73d3b2e205d05059e9cb8f
 
             //locate selected customer in Customer products
             int custID = (int)cboCUSTNAME.SelectedValue;
@@ -1002,7 +1026,11 @@ namespace MouldSpecification
                 bsManItems.RemoveFilter();
                 bsManItems.CurrentChanged += bsManItems_CurrentChanged;
                 tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
+<<<<<<< HEAD
                 //cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
+=======
+                //cboCUSTNAME.SelectedIndexChanged
+>>>>>>> 5ef8143d5ab6b887fc73d3b2e205d05059e9cb8f
                 tscboCompany.SelectedIndex = -1;
                 tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
                 tscboProduct.SelectedIndex = -1;
@@ -2200,7 +2228,11 @@ namespace MouldSpecification
                 bsManItems.SuspendBinding();
 
                 tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
+<<<<<<< HEAD
                 //cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
+=======
+                //cboCUSTNAME.SelectedIndexChanged
+>>>>>>> 5ef8143d5ab6b887fc73d3b2e205d05059e9cb8f
                 tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
                 tscboProduct.SelectedIndex = -1;
                 cboCUSTNAME.SelectedIndex = -1;
@@ -2251,7 +2283,15 @@ namespace MouldSpecification
                 newRow["CustomerProductID"] = LastCustomerID.Value;
                 dt.Rows.Add(newRow);
                 bsCustomerProducts.ResumeBinding();
+<<<<<<< HEAD
                 cboCUSTNAME.SelectedValue = LastCustomerID;
+=======
+                cboCUSTNAME.SelectedValue = LastCustomerID.Value;
+                //dt.Rows.Add(-1,LastCustomerID.Value, newItemID);
+                //bsCustomerProducts.EndEdit();
+                //bsCustomerProducts.ResumeBinding();
+                //cboCUSTNAME.SelectedValue = LastCustomerID.Value;
+>>>>>>> 5ef8143d5ab6b887fc73d3b2e205d05059e9cb8f
                 //cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
 
                 //copy Mould Specification
@@ -2633,7 +2673,11 @@ namespace MouldSpecification
                         if (cpIndex != -1)
                         {
                             //bsCustomerProducts.ResumeBinding();
+<<<<<<< HEAD
                             //cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
+=======
+                            //cboCUSTNAME.SelectedIndexChanged
+>>>>>>> 5ef8143d5ab6b887fc73d3b2e205d05059e9cb8f
                             bsCustomerProducts.Position = cpIndex;
                             //cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
                             DataRowView drv = (DataRowView)this.bsCustomerProducts.Current;
@@ -2663,7 +2707,10 @@ namespace MouldSpecification
                         }
                     }
                     
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5ef8143d5ab6b887fc73d3b2e205d05059e9cb8f
                     //locate ProductGrade aka ProductCategory                   
                     bsProductGradeItem.SuspendBinding();
                     int gradeID = int.TryParse(row["GradeID"].ToString(), out gradeID) ? gradeID : -1;
