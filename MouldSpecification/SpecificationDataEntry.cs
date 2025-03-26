@@ -718,17 +718,16 @@ namespace MouldSpecification
         private void bsCustomerProducts_ListChanged(object sender, ListChangedEventArgs e)
         {
             DataRowView rowView = (DataRowView)this.bsCustomerProducts.Current;
-            if (rowView != null)
-            {
-                DataRow row = rowView.Row;
-            }
-                
+            DataRow row = rowView.Row;
         }
 
         private void bsCustomerProducts_CurrentChanged(object sender, EventArgs e)
         {
-            DataRowView rowView = (DataRowView)this.bsCustomerProducts.Current;
-            DataRow row = rowView.Row;
+            if (this.bsCustomerProducts.Current != null)
+            {
+                DataRowView rowView = (DataRowView)this.bsCustomerProducts.Current;
+                if (rowView != null) { DataRow row = rowView.Row; }
+            }                        
         }
 
         private void bsCustomerProducts_PositionChanged(object sender, EventArgs e)
@@ -752,7 +751,6 @@ namespace MouldSpecification
             dgvMasterBatchComp.Rows[rowIndex].Cells["MB123"].Value = rowIndex + 1;
         }
         
-
         private void dgvMasterBatchComp_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             throw new NotImplementedException();
@@ -999,7 +997,7 @@ namespace MouldSpecification
         {
             try
             {
-                //cboCUSTNAME.SelectedIndexChanged -= cboCUSTNAME_SelectedIndexChanged;
+                //cboCUSTNAME.SelectedIndexChanged
                 bsManItems.CurrentChanged -= bsManItems_CurrentChanged;
                 bsManItems.RemoveFilter();
                 bsManItems.CurrentChanged += bsManItems_CurrentChanged;
@@ -2240,9 +2238,18 @@ namespace MouldSpecification
                 //drv = (DataRowView)bsCustomerProducts.Current;
                 //int custID = (int)drv.Row["CustomerID"];
                 bsCustomerProducts.SuspendBinding();
-                dt = dsIMSpecificationForm.Tables["CustomerProduct"];                        
-                dt.Rows.Add(-1,LastCustomerID.Value, newItemID);
-                bsCustomerProducts.EndEdit();
+                dt = dsIMSpecificationForm.Tables["CustomerProduct"];
+                view = new DataView(dt, "", "ItemID", DataViewRowState.CurrentRows);
+                //rowIndexToCopy = view.Find(curItemID);
+                rowIndexToCopy = view.Find(LastCustomerID.Value);
+                existingRow = view[rowIndexToCopy].Row;
+                //copy to a new row
+                newRow = dt.NewRow();
+                newRow.ItemArray = existingRow.ItemArray.Clone() as object[];
+                newRow["ItemID"] = newItemID;
+                newRow["CustomerID"] = LastCustomerID.Value;
+                newRow["CustomerProductID"] = LastCustomerID.Value;
+                dt.Rows.Add(newRow);
                 bsCustomerProducts.ResumeBinding();
                 cboCUSTNAME.SelectedValue = LastCustomerID;
                 //cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
@@ -3146,7 +3153,7 @@ namespace MouldSpecification
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "SaveEdits", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
