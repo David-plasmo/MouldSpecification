@@ -189,7 +189,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
-            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.AntiqueWhite;
             this.splitContainer1.Panel1.Controls.Add(this.bindingNavigator1);
             this.splitContainer1.Panel1.Controls.Add(this.menuStrip1);
             // 
@@ -197,6 +197,7 @@
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.AutoScrollMinSize = new System.Drawing.Size(25, 25);
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.splitContainer1.Panel2.Controls.Add(this.btnAddNewMB);
             this.splitContainer1.Panel2.Controls.Add(this.gpMasterBatch);
             this.splitContainer1.Panel2.Controls.Add(this.btnAddNewMaterial);
@@ -207,14 +208,14 @@
             this.splitContainer1.Panel2.Controls.Add(this.gpGeneral);
             this.splitContainer1.Panel2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
             this.splitContainer1.Size = new System.Drawing.Size(1008, 606);
-            this.splitContainer1.SplitterDistance = 34;
+            this.splitContainer1.SplitterDistance = 303;
             this.splitContainer1.TabIndex = 0;
             // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = null;
             this.bindingNavigator1.AutoSize = false;
-            this.bindingNavigator1.BackColor = System.Drawing.SystemColors.Control;
+            this.bindingNavigator1.BackColor = System.Drawing.Color.LightBlue;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = null;
             this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -234,7 +235,7 @@
             this.toolStripSeparator1,
             this.tsbtnCancel,
             this.tsbtnAccept});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 24);
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 269);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -242,14 +243,14 @@
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(991, 29);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1008, 34);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 26);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 31);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -277,7 +278,7 @@
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 29);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 34);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -292,7 +293,7 @@
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 29);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 34);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -317,7 +318,7 @@
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 29);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 34);
             // 
             // tsbtnAddNew
             // 
@@ -325,10 +326,9 @@
             this.tsbtnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAddNew.Image")));
             this.tsbtnAddNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnAddNew.Name = "tsbtnAddNew";
-            this.tsbtnAddNew.Size = new System.Drawing.Size(24, 26);
+            this.tsbtnAddNew.Size = new System.Drawing.Size(24, 31);
             this.tsbtnAddNew.Text = "Add";
             this.tsbtnAddNew.ToolTipText = "Add New";
-            this.tsbtnAddNew.Click += new System.EventHandler(this.tsbtnAddNew_Click_1);
             // 
             // tsbtnDelete
             // 
@@ -336,14 +336,14 @@
             this.tsbtnDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnDelete.Image")));
             this.tsbtnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnDelete.Name = "tsbtnDelete";
-            this.tsbtnDelete.Size = new System.Drawing.Size(24, 26);
+            this.tsbtnDelete.Size = new System.Drawing.Size(24, 31);
             this.tsbtnDelete.Text = "Delete";
             this.tsbtnDelete.ToolTipText = "Delete";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 29);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 34);
             // 
             // tsbtnCancel
             // 
@@ -369,6 +369,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.LightBlue;
             this.menuStrip1.Enabled = false;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -380,7 +381,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(991, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 

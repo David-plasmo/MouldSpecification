@@ -2,7 +2,7 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using Utils;
+using static Utils.DrawingUtils;
 
 namespace MouldSpecification
 {
@@ -11,7 +11,7 @@ namespace MouldSpecification
         bool bIsLoading = true;
         bool nonNumberEntered;
         DataSet dsMaterialGrade;
-        Size screenRes = DrawingUtils.ScreenRes();
+        Size screenRes = ScreenRes();
         //ComboBox cboMaterial;
 
         public MaterialGradeCost()
@@ -180,6 +180,7 @@ namespace MouldSpecification
 
         private void MaterialGradeCost_Shown(object sender, EventArgs e)
         {
+            this.splitContainer1.SplitterDistance = p96H(40);
             LoadGrid();
         }
     }

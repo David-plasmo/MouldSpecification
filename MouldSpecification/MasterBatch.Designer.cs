@@ -47,6 +47,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
@@ -89,6 +90,7 @@
             this.Text = "MasterBatch";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MasterBatch_FormClosed);
             this.Load += new System.EventHandler(this.MasterBatchForm_Load);
+            this.Shown += new System.EventHandler(this.MasterBatch_Shown);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);

@@ -2,7 +2,7 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using Utils;
+using static Utils.DrawingUtils;
 
 
 namespace MouldSpecification
@@ -12,7 +12,7 @@ namespace MouldSpecification
         bool nonNumberEntered;
         DataSet dsMasterBatch;
         DataGridViewComboBoxColumn cbcColour;
-        Size screenRes = DrawingUtils.ScreenRes();
+        Size screenRes = ScreenRes();
 
         public MasterBatch()
         {
@@ -243,6 +243,11 @@ namespace MouldSpecification
         private void dgvEdit_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
 
+        }
+
+        private void MasterBatch_Shown(object sender, EventArgs e)
+        {
+            this.splitContainer1.SplitterDistance = p96H(40);
         }
     }
 }

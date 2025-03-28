@@ -38,7 +38,8 @@ namespace MouldSpecification
                     PackagingDC dc = DAL.CreateItemFromRow<PackagingDC>(dr);  //populate  dataclass
 
                     //convert zero value foreign key to null
-                    dc.CtnID = (dc.CtnID.HasValue ? (dc.CtnID.Value > 0 ? dc.CtnID : null) : null);
+                    if (dc.CtnID.HasValue && dc.CtnID == 0) dc.CtnID = null;
+                    if(dc.PalletID.HasValue && dc.PalletID == 0) dc.PalletID = null;                    
 
                     AddPackaging(dc);
 

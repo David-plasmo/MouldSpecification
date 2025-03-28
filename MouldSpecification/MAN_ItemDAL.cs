@@ -20,6 +20,10 @@ namespace MouldSpecification
                 dc.LabelTypeID = (dc.LabelTypeID.HasValue ? (dc.LabelTypeID.Value > 0 ? dc.LabelTypeID :null) : null);
                 dc.CartonID = (dc.CartonID.HasValue ? (dc.CartonID.Value > 0 ? dc.CartonID : null) : null);
 
+                //cannot be null if direction is InputOutput
+                dc.last_updated_by = (dc.last_updated_by != null ? dc.last_updated_by : System.Environment.UserName);
+                dc.last_updated_on = (dc.last_updated_on != null ? dc.last_updated_on : DateTime.MinValue);
+
                 SqlCommand cmd = null;
                 ExecuteNonQuery(ref cmd, "MAN_Item_ups",
                    CreateParameter("@ITEMNMBR", SqlDbType.Char, dc.ITEMNMBR),

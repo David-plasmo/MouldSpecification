@@ -2,6 +2,7 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using static Utils.DrawingUtils;
 
 namespace MouldSpecification
 {
@@ -10,7 +11,7 @@ namespace MouldSpecification
         //bool bIsLoading = true;
         bool nonNumberEntered = false;
         DataSet dsMachine;
-        Size screenRes = Utils.DrawingUtils.ScreenRes();
+        Size screenRes = ScreenRes();
         //ComboBox cboType;
         //ComboBox cboCapacity;
 
@@ -190,6 +191,11 @@ namespace MouldSpecification
                     }
                 }
             }
+        }
+
+        private void Machine_Shown(object sender, EventArgs e)
+        {
+            this.splitContainer1.SplitterDistance = p96H(40);
         }
     }
 }

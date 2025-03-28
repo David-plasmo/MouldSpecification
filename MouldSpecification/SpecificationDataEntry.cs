@@ -756,7 +756,7 @@ namespace MouldSpecification
         
         private void dgvMasterBatchComp_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
 
         private void dgvPolymer_RowPostPaint(object sender, DataGridViewRowPostPaintEventArgs e)
@@ -1023,6 +1023,7 @@ namespace MouldSpecification
                 dt.Columns["MouldID"].DefaultValue = newItemID;
                 dt.Columns["FamilyMould"].DefaultValue = false;
                 dt.Columns["AdditionalLabourReqd"].DefaultValue = false;
+                dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
                 //Quality Control
                 dt = dsIMSpecificationForm.Tables["QualityControl"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
@@ -2235,23 +2236,8 @@ namespace MouldSpecification
                 }
 
                 //add customer for new product
-                //drv = (DataRowView)bsCustomerProducts.Current;
-                //int custID = (int)drv.Row["CustomerID"];
-                //############################################################
-                //############################################################
-                //############################################################
-                //############################################################
-                //############################################################
-                //############################################################
-                //  STOP HERE !!!!!  
-                //############################################################
-                //############################################################
-                //############################################################
-                //############################################################
-                //############################################################
-                //###########################################################
-
-                bsCustomerProducts.SuspendBinding();
+                //  ## bug ## statement following changes current CustomerID to null 
+                //  bsCustomerProducts.SuspendBinding();
                 dt = dsIMSpecificationForm.Tables["CustomerProduct"];
                 view = new DataView(dt, "", "ItemID", DataViewRowState.CurrentRows);
                 //rowIndexToCopy = view.Find(curItemID);
@@ -2264,7 +2250,7 @@ namespace MouldSpecification
                 newRow["CustomerID"] = LastCustomerID.Value;
                 newRow["CustomerProductID"] = -1;
                 dt.Rows.Add(newRow);
-                bsCustomerProducts.ResumeBinding();
+                //bsCustomerProducts.ResumeBinding();
 
                 cboCUSTNAME.SelectedValue = LastCustomerID;
 
@@ -2374,6 +2360,9 @@ namespace MouldSpecification
                 //cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
 
                 SaveEdits();
+
+
+
                 RefreshCurrent();
             }
 
@@ -3154,6 +3143,8 @@ namespace MouldSpecification
                 {
                     row = table.NewRow();
                     row["ItemID"] = LastItemID;
+                    row["CtnID"] = DBNull.Value;
+                    row["PalletID"] = DBNull.Value;
                     row["PackingID"] = table.Rows.Count + 1000;  //create a dummy PK
                     table.Rows.Add(row);
                     

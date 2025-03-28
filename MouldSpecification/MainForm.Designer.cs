@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Product Specification");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Product Data Entry", new System.Windows.Forms.TreeNode[] {
-            treeNode1});
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Product Details");
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Material Composition");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("MasterBatch Composition");
-            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Machine Preference");
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Customer Price Qty");
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Mould Specification");
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Quality Control");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Packaging");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Data Table Maintenance", new System.Windows.Forms.TreeNode[] {
-            treeNode3,
-            treeNode4,
-            treeNode5,
-            treeNode6,
-            treeNode7,
-            treeNode8,
-            treeNode9,
-            treeNode10});
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Product Specification");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Product Data Entry", new System.Windows.Forms.TreeNode[] {
+            treeNode12});
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Product Details");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Material Composition");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("MasterBatch Composition");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Machine Preference");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Customer Price Qty");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Mould Specification");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Quality Control");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Packaging");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Data Table Maintenance", new System.Windows.Forms.TreeNode[] {
+            treeNode14,
+            treeNode15,
+            treeNode16,
+            treeNode17,
+            treeNode18,
+            treeNode19,
+            treeNode20,
+            treeNode21});
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.cboCustomer = new System.Windows.Forms.ComboBox();
@@ -107,6 +107,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.LightBlue;
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Size = new System.Drawing.Size(1311, 606);
             this.splitContainer1.SplitterDistance = 30;
@@ -150,6 +151,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.LightBlue;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mouldToolStripMenuItem,
@@ -341,15 +343,18 @@
             // 
             this.reportsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.injectionMouldToolStripMenuItem4});
+            this.reportsToolStripMenuItem.Enabled = false;
             this.reportsToolStripMenuItem.Name = "reportsToolStripMenuItem";
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(59, 22);
             this.reportsToolStripMenuItem.Text = "Reports";
             // 
             // injectionMouldToolStripMenuItem4
             // 
+            this.injectionMouldToolStripMenuItem4.Enabled = false;
             this.injectionMouldToolStripMenuItem4.Name = "injectionMouldToolStripMenuItem4";
-            this.injectionMouldToolStripMenuItem4.Size = new System.Drawing.Size(158, 22);
+            this.injectionMouldToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
             this.injectionMouldToolStripMenuItem4.Text = "Injection Mould";
+            this.injectionMouldToolStripMenuItem4.Visible = false;
             this.injectionMouldToolStripMenuItem4.Click += new System.EventHandler(this.injectionMouldToolStripMenuItem4_Click);
             // 
             // splitContainer2
@@ -361,6 +366,10 @@
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.Controls.Add(this.tvMain);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.splitContainer2.Size = new System.Drawing.Size(1311, 572);
             this.splitContainer2.SplitterDistance = 118;
             this.splitContainer2.TabIndex = 0;
@@ -370,31 +379,31 @@
             this.tvMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvMain.Location = new System.Drawing.Point(0, 0);
             this.tvMain.Name = "tvMain";
-            treeNode1.Name = "IMSpecificationDataEntry";
-            treeNode1.Text = "Product Specification";
-            treeNode2.Name = "IMSpecificationDataEntryRoot";
-            treeNode2.Text = "Product Data Entry";
-            treeNode3.Name = "ProductDetails";
-            treeNode3.Text = "Product Details";
-            treeNode4.Name = "MaterialComp";
-            treeNode4.Text = "Material Composition";
-            treeNode5.Name = "MasterBatchComp";
-            treeNode5.Text = "MasterBatch Composition";
-            treeNode6.Name = "MachinePref";
-            treeNode6.Text = "Machine Preference";
-            treeNode7.Name = "CustomerPriceQty";
-            treeNode7.Text = "Customer Price Qty";
-            treeNode8.Name = "MouldSpecification";
-            treeNode8.Text = "Mould Specification";
-            treeNode9.Name = "QualityControl";
-            treeNode9.Text = "Quality Control";
-            treeNode10.Name = "Packaging";
-            treeNode10.Text = "Packaging";
-            treeNode11.Name = "TableMaintenance";
-            treeNode11.Text = "Data Table Maintenance";
+            treeNode12.Name = "IMSpecificationDataEntry";
+            treeNode12.Text = "Product Specification";
+            treeNode13.Name = "IMSpecificationDataEntryRoot";
+            treeNode13.Text = "Product Data Entry";
+            treeNode14.Name = "ProductDetails";
+            treeNode14.Text = "Product Details";
+            treeNode15.Name = "MaterialComp";
+            treeNode15.Text = "Material Composition";
+            treeNode16.Name = "MasterBatchComp";
+            treeNode16.Text = "MasterBatch Composition";
+            treeNode17.Name = "MachinePref";
+            treeNode17.Text = "Machine Preference";
+            treeNode18.Name = "CustomerPriceQty";
+            treeNode18.Text = "Customer Price Qty";
+            treeNode19.Name = "MouldSpecification";
+            treeNode19.Text = "Mould Specification";
+            treeNode20.Name = "QualityControl";
+            treeNode20.Text = "Quality Control";
+            treeNode21.Name = "Packaging";
+            treeNode21.Text = "Packaging";
+            treeNode22.Name = "TableMaintenance";
+            treeNode22.Text = "Data Table Maintenance";
             this.tvMain.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2,
-            treeNode11});
+            treeNode13,
+            treeNode22});
             this.tvMain.Size = new System.Drawing.Size(118, 572);
             this.tvMain.TabIndex = 0;
             this.tvMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tvMain_MouseDown);
@@ -404,8 +413,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(1311, 606);
             this.Controls.Add(this.splitContainer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Mould Specification";

@@ -2,7 +2,7 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using Utils;
+using static Utils.DrawingUtils;
 
 namespace MouldSpecification
 {
@@ -29,7 +29,7 @@ namespace MouldSpecification
         /// <summary>
         /// Stores the screen resolution size for dynamic UI adjusments.
         /// </summary>
-        Size screenRes = DrawingUtils.ScreenRes();
+        Size screenRes = ScreenRes();
 
         /// <summary>
         /// Intializes a new instance of the <see cref="AdditiveCost"/> form.
@@ -229,6 +229,7 @@ namespace MouldSpecification
         {
             // Set the form's size to a fixed resolution.
             this.Size = new Size(1500, 1500);
+            this.splitContainer1.SplitterDistance = p96H(40);
 
             // Load data into the grid and apply formatting.
             LoadGrid();

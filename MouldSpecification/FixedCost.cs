@@ -2,14 +2,14 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using Utils;
+using static Utils.DrawingUtils;
 
 namespace MouldSpecification
 {
     public partial class FixedCost : Form
     {
         DataSet dsFixedCost;
-        Size screenRes = DrawingUtils.ScreenRes();
+        Size screenRes = ScreenRes();
 
         public FixedCost()
         {
@@ -53,6 +53,11 @@ namespace MouldSpecification
         private void FixedCost_Load(object sender, EventArgs e)
         {
             LoadGrid();
+        }
+
+        private void FixedCost_Shown(object sender, EventArgs e)
+        {
+            this.splitContainer1.SplitterDistance = p96H(40);
         }
     }
 }

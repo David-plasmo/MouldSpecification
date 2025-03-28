@@ -100,6 +100,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.splitContainer1.Panel2.Controls.Add(this.gpAssemblyImage);
             this.splitContainer1.Panel2.Controls.Add(this.gpGeneral);
             this.splitContainer1.Panel2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
@@ -111,7 +112,7 @@
             // 
             this.bindingNavigator1.AddNewItem = null;
             this.bindingNavigator1.AutoSize = false;
-            this.bindingNavigator1.BackColor = System.Drawing.SystemColors.Control;
+            this.bindingNavigator1.BackColor = System.Drawing.Color.LightBlue;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = null;
             this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -262,6 +263,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.LightBlue;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productSpecificationToolStripMenuItem,
@@ -400,7 +402,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.36364F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.63636F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
             this.tableLayoutPanel1.Controls.Add(this.lblITEMDESC, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblITEMNMBR, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtITEMNMBR, 1, 0);
@@ -446,7 +448,7 @@
             // 
             this.txtITEMNMBR.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtITEMNMBR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtITEMNMBR.Location = new System.Drawing.Point(111, 0);
+            this.txtITEMNMBR.Location = new System.Drawing.Point(110, 0);
             this.txtITEMNMBR.Margin = new System.Windows.Forms.Padding(0);
             this.txtITEMNMBR.MaxLength = 31;
             this.txtITEMNMBR.Name = "txtITEMNMBR";
@@ -470,7 +472,7 @@
             // 
             this.txtITEMDESC.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtITEMDESC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtITEMDESC.Location = new System.Drawing.Point(111, 20);
+            this.txtITEMDESC.Location = new System.Drawing.Point(110, 20);
             this.txtITEMDESC.Margin = new System.Windows.Forms.Padding(0);
             this.txtITEMDESC.MaxLength = 101;
             this.txtITEMDESC.Name = "txtITEMDESC";
@@ -481,7 +483,7 @@
             // txtCustomer
             // 
             this.txtCustomer.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCustomer.Location = new System.Drawing.Point(111, 40);
+            this.txtCustomer.Location = new System.Drawing.Point(110, 40);
             this.txtCustomer.Margin = new System.Windows.Forms.Padding(0);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.ReadOnly = true;

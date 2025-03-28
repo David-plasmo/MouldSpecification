@@ -47,13 +47,14 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvEdit);
             this.splitContainer1.Size = new System.Drawing.Size(800, 450);
-            this.splitContainer1.SplitterDistance = 37;
+            this.splitContainer1.SplitterDistance = 41;
             this.splitContainer1.TabIndex = 0;
             // 
             // label1
@@ -72,7 +73,7 @@
             this.dgvEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvEdit.Location = new System.Drawing.Point(0, 0);
             this.dgvEdit.Name = "dgvEdit";
-            this.dgvEdit.Size = new System.Drawing.Size(800, 409);
+            this.dgvEdit.Size = new System.Drawing.Size(800, 405);
             this.dgvEdit.TabIndex = 0;
             this.dgvEdit.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dgvEdit_CellValidating);
             this.dgvEdit.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvEdit_DataError);
@@ -89,6 +90,7 @@
             this.Text = "Machine";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Machine_FormClosing);
             this.Load += new System.EventHandler(this.Machine_Load);
+            this.Shown += new System.EventHandler(this.Machine_Shown);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);

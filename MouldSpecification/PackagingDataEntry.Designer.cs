@@ -160,7 +160,7 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.LightBlue;
             this.splitContainer1.Panel1.Controls.Add(this.bindingNavigator1);
             this.splitContainer1.Panel1.Controls.Add(this.menuStrip1);
             // 
@@ -168,6 +168,7 @@
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.AutoScrollMargin = new System.Drawing.Size(20, 20);
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.splitContainer1.Panel2.Controls.Add(this.gpAssemblyInstructions);
             this.splitContainer1.Panel2.Controls.Add(this.gpLabel);
             this.splitContainer1.Panel2.Controls.Add(this.gpReworkInstructions);
@@ -186,7 +187,7 @@
             // 
             this.bindingNavigator1.AddNewItem = null;
             this.bindingNavigator1.AutoSize = false;
-            this.bindingNavigator1.BackColor = System.Drawing.SystemColors.Control;
+            this.bindingNavigator1.BackColor = System.Drawing.Color.LightBlue;
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.DeleteItem = null;
             this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -299,6 +300,7 @@
             this.tsbtnAddNew.Size = new System.Drawing.Size(24, 26);
             this.tsbtnAddNew.Text = "Add";
             this.tsbtnAddNew.ToolTipText = "Add New";
+            this.tsbtnAddNew.Click += new System.EventHandler(this.tsbtnAddNew_Click);
             // 
             // tsbtnDelete
             // 
@@ -337,6 +339,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.LightBlue;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productSpecificationToolStripMenuItem,
@@ -682,7 +685,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.50814F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.49186F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 362F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 364F));
             this.tableLayoutPanel3.Controls.Add(this.chkPalletCover, 0, 2);
             this.tableLayoutPanel3.Controls.Add(this.label10, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.cboPalletType, 1, 0);
@@ -731,7 +734,7 @@
             // 
             this.cboPalletType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cboPalletType.FormattingEnabled = true;
-            this.cboPalletType.Location = new System.Drawing.Point(95, 0);
+            this.cboPalletType.Location = new System.Drawing.Point(94, 0);
             this.cboPalletType.Margin = new System.Windows.Forms.Padding(0);
             this.cboPalletType.Name = "cboPalletType";
             this.cboPalletType.Size = new System.Drawing.Size(121, 21);
@@ -752,7 +755,7 @@
             // txtCtnsPerPallet
             // 
             this.txtCtnsPerPallet.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCtnsPerPallet.Location = new System.Drawing.Point(95, 20);
+            this.txtCtnsPerPallet.Location = new System.Drawing.Point(94, 20);
             this.txtCtnsPerPallet.Margin = new System.Windows.Forms.Padding(0);
             this.txtCtnsPerPallet.Name = "txtCtnsPerPallet";
             this.txtCtnsPerPallet.Size = new System.Drawing.Size(45, 20);
@@ -764,7 +767,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(224, 43);
+            this.label6.Location = new System.Drawing.Point(222, 43);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
@@ -776,7 +779,7 @@
             // 
             this.cboWrapping.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cboWrapping.FormattingEnabled = true;
-            this.cboWrapping.Location = new System.Drawing.Point(295, 40);
+            this.cboWrapping.Location = new System.Drawing.Point(293, 40);
             this.cboWrapping.Margin = new System.Windows.Forms.Padding(0);
             this.cboWrapping.Name = "cboWrapping";
             this.cboWrapping.Size = new System.Drawing.Size(121, 21);
@@ -798,7 +801,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.82813F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.17188F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 353F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 355F));
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.chkPackedInCtn, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.cboCtnType, 1, 1);
@@ -856,10 +859,10 @@
             // 
             this.cboCtnType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cboCtnType.FormattingEnabled = true;
-            this.cboCtnType.Location = new System.Drawing.Point(114, 20);
+            this.cboCtnType.Location = new System.Drawing.Point(113, 20);
             this.cboCtnType.Margin = new System.Windows.Forms.Padding(0);
             this.cboCtnType.Name = "cboCtnType";
-            this.cboCtnType.Size = new System.Drawing.Size(119, 21);
+            this.cboCtnType.Size = new System.Drawing.Size(118, 21);
             this.cboCtnType.TabIndex = 16;
             // 
             // chkLiner
@@ -879,7 +882,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(233, 3);
+            this.label2.Location = new System.Drawing.Point(231, 3);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
@@ -889,7 +892,7 @@
             // txtCtnQty
             // 
             this.txtCtnQty.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtCtnQty.Location = new System.Drawing.Point(304, 0);
+            this.txtCtnQty.Location = new System.Drawing.Point(302, 0);
             this.txtCtnQty.Margin = new System.Windows.Forms.Padding(0);
             this.txtCtnQty.Name = "txtCtnQty";
             this.txtCtnQty.Size = new System.Drawing.Size(45, 20);
@@ -914,7 +917,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(233, 63);
+            this.label3.Location = new System.Drawing.Point(231, 63);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 13);
@@ -924,7 +927,7 @@
             // txtBagQty
             // 
             this.txtBagQty.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtBagQty.Location = new System.Drawing.Point(304, 60);
+            this.txtBagQty.Location = new System.Drawing.Point(302, 60);
             this.txtBagQty.Margin = new System.Windows.Forms.Padding(0);
             this.txtBagQty.Name = "txtBagQty";
             this.txtBagQty.Size = new System.Drawing.Size(45, 20);
@@ -949,7 +952,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(233, 83);
+            this.label4.Location = new System.Drawing.Point(231, 83);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 13);
@@ -959,7 +962,7 @@
             // txtPalQty
             // 
             this.txtPalQty.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtPalQty.Location = new System.Drawing.Point(304, 80);
+            this.txtPalQty.Location = new System.Drawing.Point(302, 80);
             this.txtPalQty.Margin = new System.Windows.Forms.Padding(0);
             this.txtPalQty.Name = "txtPalQty";
             this.txtPalQty.Size = new System.Drawing.Size(45, 20);
@@ -983,10 +986,10 @@
             // 
             this.cboPackingStyle.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cboPackingStyle.FormattingEnabled = true;
-            this.cboPackingStyle.Location = new System.Drawing.Point(114, 100);
+            this.cboPackingStyle.Location = new System.Drawing.Point(113, 100);
             this.cboPackingStyle.Margin = new System.Windows.Forms.Padding(0);
             this.cboPackingStyle.Name = "cboPackingStyle";
-            this.cboPackingStyle.Size = new System.Drawing.Size(119, 21);
+            this.cboPackingStyle.Size = new System.Drawing.Size(118, 21);
             this.cboPackingStyle.TabIndex = 28;
             // 
             // picLabelIcon
@@ -1025,7 +1028,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.95014F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.04986F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 170F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 172F));
             this.tableLayoutPanel1.Controls.Add(this.lblITEMDESC, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblITEMNMBR, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtITEMNMBR, 1, 0);
@@ -1081,7 +1084,7 @@
             this.txtITEMNMBR.MaxLength = 31;
             this.txtITEMNMBR.Name = "txtITEMNMBR";
             this.txtITEMNMBR.ReadOnly = true;
-            this.txtITEMNMBR.Size = new System.Drawing.Size(168, 20);
+            this.txtITEMNMBR.Size = new System.Drawing.Size(166, 20);
             this.txtITEMNMBR.TabIndex = 0;
             // 
             // lblCUSTNAME
@@ -1116,7 +1119,7 @@
             this.txtITEMDESC.MaxLength = 101;
             this.txtITEMDESC.Name = "txtITEMDESC";
             this.txtITEMDESC.ReadOnly = true;
-            this.txtITEMDESC.Size = new System.Drawing.Size(168, 20);
+            this.txtITEMDESC.Size = new System.Drawing.Size(166, 20);
             this.txtITEMDESC.TabIndex = 9;
             // 
             // txtCustomer
@@ -1126,7 +1129,7 @@
             this.txtCustomer.Margin = new System.Windows.Forms.Padding(0);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.ReadOnly = true;
-            this.txtCustomer.Size = new System.Drawing.Size(168, 20);
+            this.txtCustomer.Size = new System.Drawing.Size(166, 20);
             this.txtCustomer.TabIndex = 13;
             // 
             // txtProductCategory
@@ -1135,14 +1138,14 @@
             this.txtProductCategory.Margin = new System.Windows.Forms.Padding(0);
             this.txtProductCategory.Name = "txtProductCategory";
             this.txtProductCategory.ReadOnly = true;
-            this.txtProductCategory.Size = new System.Drawing.Size(168, 20);
+            this.txtProductCategory.Size = new System.Drawing.Size(166, 20);
             this.txtProductCategory.TabIndex = 14;
             // 
             // lblProductCategory
             // 
             this.lblProductCategory.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblProductCategory.AutoSize = true;
-            this.lblProductCategory.Location = new System.Drawing.Point(270, 65);
+            this.lblProductCategory.Location = new System.Drawing.Point(268, 65);
             this.lblProductCategory.Margin = new System.Windows.Forms.Padding(0);
             this.lblProductCategory.Name = "lblProductCategory";
             this.lblProductCategory.Size = new System.Drawing.Size(86, 13);
@@ -1154,7 +1157,7 @@
             // 
             this.lblItemID.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblItemID.AutoSize = true;
-            this.lblItemID.Location = new System.Drawing.Point(270, 3);
+            this.lblItemID.Location = new System.Drawing.Point(268, 3);
             this.lblItemID.Margin = new System.Windows.Forms.Padding(0);
             this.lblItemID.Name = "lblItemID";
             this.lblItemID.Size = new System.Drawing.Size(38, 13);

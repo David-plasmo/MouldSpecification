@@ -7,7 +7,7 @@ namespace MouldSpecification
         public int PackingID { get; set; }
         public int ItemID { get; set; }
         public int? CtnID { get; set; }
-        public int PalletID { get; set; }
+        public int? PalletID { get; set; }
         public bool PackedInCtn { get; set; }
         public int CtnQty { get; set; }
         public bool Liner { get; set; }
