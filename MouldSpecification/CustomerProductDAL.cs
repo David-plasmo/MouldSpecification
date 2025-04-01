@@ -38,6 +38,7 @@ namespace MouldSpecification
                     dr["CustomerProductID"] = dc.CustomerProductID;
                     dr.EndEdit();
                 }
+                ds.AcceptChanges();
 
                 //Process modified rows: -
                 dvrs = DataViewRowState.ModifiedCurrent;
@@ -50,6 +51,7 @@ namespace MouldSpecification
                     if (dc.ItemID <= 0) { throw new Exception("UpdateCustomerProduct:  ItemID must be > 0"); }                                                                    //
                     CustomerProduct_Ups(dc);
                 }
+                
 
                 //process deleted rows:-                
                 dvrs = DataViewRowState.Deleted;

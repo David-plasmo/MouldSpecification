@@ -207,8 +207,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.gpMaterial);
             this.splitContainer1.Panel2.Controls.Add(this.gpGeneral);
             this.splitContainer1.Panel2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.splitContainer1.Size = new System.Drawing.Size(1008, 606);
-            this.splitContainer1.SplitterDistance = 303;
+            this.splitContainer1.Size = new System.Drawing.Size(1008, 867);
+            this.splitContainer1.SplitterDistance = 55;
             this.splitContainer1.TabIndex = 0;
             // 
             // bindingNavigator1
@@ -235,7 +235,7 @@
             this.toolStripSeparator1,
             this.tsbtnCancel,
             this.tsbtnAccept});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 269);
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 24);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -243,7 +243,7 @@
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1008, 34);
+            this.bindingNavigator1.Size = new System.Drawing.Size(991, 34);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -381,7 +381,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
-            this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(991, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1566,7 +1566,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1008, 606);
+            this.ClientSize = new System.Drawing.Size(1008, 867);
             this.Controls.Add(this.splitContainer1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SpecificationDataEntry";

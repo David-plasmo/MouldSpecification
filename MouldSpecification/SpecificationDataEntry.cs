@@ -616,7 +616,7 @@ namespace MouldSpecification
                 bsCustomerProducts.DataSource = dsIMSpecificationForm.Tables["CustomerProduct"];
                 bsCustomerProducts.Sort = "CustomerID ASC, ItemID ASC";
                 cboCUSTNAME.DataBindings.Add(new Binding("SelectedValue", bsCustomerProducts, "CustomerID"));
-                //cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
+                cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
                 bsCustomerProducts.CurrentChanged += bsCustomerProducts_CurrentChanged;
                 bsCustomerProducts.ListChanged += bsCustomerProducts_ListChanged;
                 bsCustomerProducts.PositionChanged += bsCustomerProducts_PositionChanged; ;
@@ -714,7 +714,13 @@ namespace MouldSpecification
                 MessageBox.Show(ex.Message, "BindControls", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
+        private void cboCUSTNAME_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboCUSTNAME != null && cboCUSTNAME.SelectedIndex != -1)
+                LastCustomerID = (int)cboCUSTNAME.SelectedValue;
+        }
+
         private void bsCustomerProducts_ListChanged(object sender, ListChangedEventArgs e)
         {
             DataRowView rowView = (DataRowView)this.bsCustomerProducts.Current;
@@ -999,11 +1005,13 @@ namespace MouldSpecification
             try
             {
                 //cboCUSTNAME.SelectedIndexChanged
-                bsManItems.CurrentChanged -= bsManItems_CurrentChanged;
-                bsManItems.RemoveFilter();
-                bsManItems.CurrentChanged += bsManItems_CurrentChanged;
-                tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
-                tscboCompany.SelectedIndex = -1;
+                //bsManItems.CurrentChanged -= bsManItems_CurrentChanged;
+                //bsManItems.RemoveFilter();
+                //bsManItems.CurrentChanged += bsManItems_CurrentChanged;
+                //tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
+                //ignoreZero = true;                //
+                //tscboCompany.SelectedIndex = -1;  //SelectedIndexChanged event resets -1 to zero
+                //ignoreZero = false;               //  
                 tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
                 tscboProduct.SelectedIndex = -1;
                 cboCUSTNAME.SelectedIndex = -1;
@@ -1016,12 +1024,13 @@ namespace MouldSpecification
                 //Items
                 DataTable dt = dsIMSpecificationForm.Tables["MAN_Items"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
-                //Injection Mould
+                dt.Columns["ProductType"].DefaultValue = "IM";                
                 dt.Columns["ITEMNMBR"].DefaultValue = "[NEW]";
+                //Injection Mould
                 dt = dsIMSpecificationForm.Tables["InjectionMouldSpecification"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
                 dt.Columns["MouldID"].DefaultValue = newItemID;
-                dt.Columns["FamilyMould"].DefaultValue = false;
+                dt.Columns["FamilyMould"].DefaultValue = false;                
                 dt.Columns["AdditionalLabourReqd"].DefaultValue = false;
                 dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
                 //Quality Control
@@ -1034,10 +1043,15 @@ namespace MouldSpecification
                 dt = dsIMSpecificationForm.Tables["MaterialComp"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
                 dt.Columns["MaterialGradeID"].DefaultValue = newItemID;
+                dt.Columns["MaterialCompID"].DefaultValue = newItemID;
+                //Material Grade
+                dt = dsIMSpecificationForm.Tables["LookupMaterialGrade"];
+                dt.Columns["MaterialGradeID"].DefaultValue = newItemID;
                 //Customer Products
                 dt = dsIMSpecificationForm.Tables["CustomerProduct"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
                 dt.Columns["CustomerID"].DefaultValue = LastCustomerID.Value;
+                dt.Columns["CustomerProductID"].DefaultValue = newItemID;                
                 //Machine preference
                 dt = dsIMSpecificationForm.Tables["MachinePref"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
@@ -1051,8 +1065,7 @@ namespace MouldSpecification
                 curPolymerNo = 0;
                 tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
                 tscboProduct.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
-
-
+                                                             
             }
             catch (Exception ex)
             {
@@ -1160,10 +1173,25 @@ namespace MouldSpecification
                     tscboProduct.Enabled = false;
                     tsbtnReport.Enabled = false;
 
-                    //add new Injection Mould
-                    DataTable dt = dsIMSpecificationForm.Tables["InjectionMouldSpecification"];
+                    //add new CustomerProduct
+                    DataTable dt = dsIMSpecificationForm.Tables["CustomerProduct"];
                     DataView view = new DataView(dt, "", "ItemID", DataViewRowState.CurrentRows);
                     int indexNotFound = view.Find(curItemID);
+                    if (indexNotFound == -1)
+                    {
+                        bsCustomerProducts.SuspendBinding();
+                        var newRow = dt.NewRow();
+                        dt.Rows.Add(newRow);
+                        //MessageBox.Show(newRow["ItemID"].ToString() + ", " + newRow["MouldNumber"].ToString());
+                        //bsMouldSpec.ResetBindings(false);
+                        bsCustomerProducts.ResumeBinding();
+                    }
+
+
+                    //add new Injection Mould
+                    dt = dsIMSpecificationForm.Tables["InjectionMouldSpecification"];
+                    view = new DataView(dt, "", "ItemID", DataViewRowState.CurrentRows);
+                    indexNotFound = view.Find(curItemID);
                     if (indexNotFound == -1)
                     {
                         bsMouldSpec.SuspendBinding();
@@ -1336,8 +1364,12 @@ namespace MouldSpecification
 
         private void tscboCompany_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            if (tscboCompany.SelectedIndex == -1 ||
-                (tscboCompany.SelectedIndex == 0 && ignoreZero))
+            // ## gotcha !!! ##
+            // toolstrip combo automatically changes selected index to 0 after detecting value of -1
+            // workaround:  set ignoreZero to true !!!
+            // ###
+            if (tscboCompany.SelectedIndex == -1 || 
+               (tscboCompany.SelectedIndex == 0 && ignoreZero))
                 return;
             else if (CustomerFilterOn)
             {                
@@ -2484,10 +2516,7 @@ namespace MouldSpecification
 
         }
 
-        private void tsbtnAddNew_Click_1(object sender, EventArgs e)
-        {
-            bsManItems.AddNew();
-        }
+        
 
         private void FormatMBGrid()
         {
