@@ -794,6 +794,7 @@ namespace MouldSpecification
             int itemID = (int)row["ItemID"];
             DataTable dt = (DataTable)bsMaterialComp.DataSource;
             dt.Columns["ItemID"].DefaultValue = itemID;
+            dt.Columns["MaterialGradeID"].DefaultValue = itemID;
 
             //DataTable ct = dsIMSpecificationForm.Relations["ItemMaterialComp"].ChildTable;
             //DataRow[] foundRows = ct.Select("ItemID = " + itemID.ToString());
@@ -2774,13 +2775,13 @@ namespace MouldSpecification
                     //locate item in MaterialComp
                     bsMaterialComp.SuspendBinding();
                     bsMaterialGrade.SuspendBinding();
-                    bsMaterialComp.ResetBindings(false);
-                    bsMaterialGrade.ResetBindings(false);
+                    //bsMaterialComp.ResetBindings(false);
+                    //bsMaterialGrade.ResetBindings(false);
                     bsMaterialComp.Filter = "IsActive = 1";
                     int mgID = bsMaterialComp.Find("ItemID", itemID);
                     if (mgID != -1)
                     {
-                        bsMaterialComp.ResetBindings(false);
+                        //bsMaterialComp.ResetBindings(false);
                         bsMaterialComp.ResumeBinding();
                         bsMaterialComp.Position = mgID;
                         rowView = (DataRowView)this.bsMaterialComp.Current;
