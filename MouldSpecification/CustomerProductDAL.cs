@@ -38,7 +38,7 @@ namespace MouldSpecification
                     dr["CustomerProductID"] = dc.CustomerProductID;
                     dr.EndEdit();
                 }
-                ds.AcceptChanges();
+                if (rows.Length > 0) ds.AcceptChanges();
 
                 //Process modified rows: -
                 dvrs = DataViewRowState.ModifiedCurrent;
