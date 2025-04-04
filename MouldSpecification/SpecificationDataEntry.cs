@@ -1028,12 +1028,15 @@ namespace MouldSpecification
                 dt.Columns["ItemID"].DefaultValue = newItemID;
                 dt.Columns["ProductType"].DefaultValue = "IM";                
                 dt.Columns["ITEMNMBR"].DefaultValue = "[NEW]";
+                dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
+                dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
                 //Injection Mould
                 dt = dsIMSpecificationForm.Tables["InjectionMouldSpecification"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
                 dt.Columns["MouldID"].DefaultValue = newItemID;
                 dt.Columns["FamilyMould"].DefaultValue = false;                
                 dt.Columns["AdditionalLabourReqd"].DefaultValue = false;
+                dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
                 dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
                 //Quality Control
                 dt = dsIMSpecificationForm.Tables["QualityControl"];
@@ -1041,28 +1044,45 @@ namespace MouldSpecification
                 dt.Columns["QualityControlID"].DefaultValue = newItemID;
                 dt.Columns["ProductSample"].DefaultValue = false;
                 dt.Columns["CertificateOfConformance"].DefaultValue = false;
+                dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
+                dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
+
                 //Material Composition
                 dt = dsIMSpecificationForm.Tables["MaterialComp"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
                 dt.Columns["MaterialGradeID"].DefaultValue = newItemID;
                 dt.Columns["MaterialCompID"].DefaultValue = newItemID;
+                dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
+                dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
+
                 //Material Grade
                 dt = dsIMSpecificationForm.Tables["LookupMaterialGrade"];
                 dt.Columns["MaterialGradeID"].DefaultValue = newItemID;
+                dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
+                dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
+
                 //Customer Products
                 dt = dsIMSpecificationForm.Tables["CustomerProduct"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
                 dt.Columns["CustomerID"].DefaultValue = LastCustomerID.Value;
-                dt.Columns["CustomerProductID"].DefaultValue = newItemID;                
+                dt.Columns["CustomerProductID"].DefaultValue = newItemID; 
+                
                 //Machine preference
                 dt = dsIMSpecificationForm.Tables["MachinePref"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
+                dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
+                dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
+                dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
+                dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
+
                 //Masterbatch composition
                 dt = dsIMSpecificationForm.Tables["MasterBatchComp"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
                 dt.Columns["MBID"].DefaultValue = newItemID;
                 dt.Columns["MBCompID"].DefaultValue = newItemID;
                 dt.Columns["MB123"].DefaultValue = 1;
+                dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
+                dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
 
                 curPolymerNo = 0;
                 tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
@@ -3449,7 +3469,7 @@ namespace MouldSpecification
         {
             //ResizeControls();
             //Rectangle r = new Rectangle(5, 5, p96W(1000), p96H(1100));
-           
+            this.Size = new Size(p96W(1024), p96H(935));
             bindingNavigator1.Height = p96H(30);
             splitContainer1.SplitterDistance = p96H(55);
             //btnDeleteAdditive.Size = new System.Drawing.Size(p96W(24), p96W(24));

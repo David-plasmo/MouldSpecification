@@ -23,41 +23,46 @@ namespace MouldSpecification
             }
         }
 
-        public void UpdateQualityControl(DataSet ds, string optionalTableName = "default")
+        public void UpdateQualityControl(DataSet ds, string tableName = "QualityControl")
         {
             try
             {
 
                 //Process new rows:-
                 DataViewRowState dvrs = DataViewRowState.Added;
-                DataRow[] rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //DataRow[] rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                DataRow[] rows = ds.Tables[tableName].Select("", "", dvrs);
 
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
                     QualityControlDC dc = DAL.CreateItemFromRow<QualityControlDC>(dr);  //populate  dataclass                   
-                    AddQualityControl(dc);
+                    //AddQualityControl(dc);
+                    QualityControl_ups(dc);
                 }
 
                 //Process modified rows:-
                 dvrs = DataViewRowState.ModifiedCurrent;
-                rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                rows = ds.Tables[tableName].Select("", "", dvrs);
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
                     QualityControlDC dc = DAL.CreateItemFromRow<QualityControlDC>(dr);  //populate  dataclass                   
-                    UpdateQualityControl(dc);
+                    //UpdateQualityControl(dc);
+                    QualityControl_ups(dc);
                 }
 
                 //process deleted rows:-                
                 dvrs = DataViewRowState.Deleted;
-                rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                rows = ds.Tables[tableName].Select("", "", dvrs);
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
@@ -65,7 +70,8 @@ namespace MouldSpecification
                     {
                         QualityControlDC dc = new QualityControlDC();
                         dc.QualityControlID = Convert.ToInt32(dr["QualityControlID", DataRowVersion.Original].ToString());
-                        DeleteQualityControl(dc);
+                        //DeleteQualityControl(dc);
+                        QualityControl_del(dc);
                     }
                 }
 
@@ -78,6 +84,49 @@ namespace MouldSpecification
             }
         }
 
+        public void QualityControl_ups(QualityControlDC dc)
+        {
+            try
+            {
+                SqlCommand cmd = null;
+                ExecuteNonQuery(ref cmd, "QualityControl_ups",
+                   CreateParameter("@QualityControlID", SqlDbType.Int, dc.QualityControlID, ParameterDirection.InputOutput),
+                   CreateParameter("@ItemID", SqlDbType.Int, dc.ItemID),
+                   CreateParameter("@FinishedPTQC", SqlDbType.VarChar, dc.FinishedPTQC),
+                   CreateParameter("@ProductSample", SqlDbType.Bit, dc.ProductSample),
+                   CreateParameter("@CertificateOfConformance", SqlDbType.Bit, dc.CertificateOfConformance),
+                   CreateParameter("@Notes", SqlDbType.VarChar, dc.Notes),
+                   CreateParameter("@LabelIcon", SqlDbType.VarChar, dc.LabelIcon),
+                   CreateParameter("@Costing", SqlDbType.NVarChar, dc.Costing),
+                   CreateParameter("@last_updated_by", SqlDbType.VarChar, dc.last_updated_by, ParameterDirection.InputOutput),
+                   CreateParameter("@last_updated_on", SqlDbType.DateTime2, dc.last_updated_on, ParameterDirection.InputOutput));
+
+
+                dc.QualityControlID = (int)cmd.Parameters["@QualityControlID"].Value;
+                dc.last_updated_by = cmd.Parameters["@last_updated_by"].Value.ToString();
+                dc.last_updated_on = (DateTime)cmd.Parameters["@last_updated_on"].Value;
+            }
+            catch (Exception excp)
+            {
+                MessageBox.Show(excp.Message);
+            }
+        }
+
+        public void QualityControl_del(QualityControlDC dc)
+        {
+            try
+            {
+                SqlCommand cmd = null;
+                ExecuteNonQuery(ref cmd, "QualityControl_del",
+                   CreateParameter("@QualityControlID", SqlDbType.Int, dc.QualityControlID));
+            }
+            catch (Exception excp)
+            {
+                MessageBox.Show(excp.Message);
+            }
+        }
+
+        /*
         public static void AddQualityControl(QualityControlDC dc)
         {
             try
@@ -209,5 +258,6 @@ namespace MouldSpecification
                 MessageBox.Show(excp.Message);
             }
         }
+        */
     }
 }

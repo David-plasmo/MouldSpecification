@@ -72,17 +72,18 @@ namespace MouldSpecification
             }
         }
 
-        public void UpdateMasterBatchComp(DataSet ds, string optionalTableName = "default")
+        public void UpdateMasterBatchComp(DataSet ds, string tableName = "MasterBatchComp")
         {
             try
             {
 
                 //Process new rows:-
                 DataViewRowState dvrs = DataViewRowState.Added;
-                DataRow[] rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //DataRow[] rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
                 //MachineDAL md = new MachineDAL();
+                DataRow[] rows = ds.Tables[tableName].Select("", "", dvrs);
 
                 for (int i = 0; i < rows.Length; i++)
                 {
@@ -90,32 +91,36 @@ namespace MouldSpecification
                     MasterBatchCompDC dc = DAL.CreateItemFromRow<MasterBatchCompDC>(dr);  //populate  dataclass
                     //Give null value for foreign key AdditiveID
                     //If blank was selected from dropdown its value will be zero
-                    if (dc.AdditiveID != null && dc.AdditiveID == 0)
-                        dc.AdditiveID = null;
-                    AddMasterBatchComp(dc);
+                    //if (dc.AdditiveID != null && dc.AdditiveID == 0)
+                    //    dc.AdditiveID = null;
+                    //AddMasterBatchComp(dc);
+                    MasterBatchComp_ups(dc);
                 }
 
                 //Process modified rows:-
                 dvrs = DataViewRowState.ModifiedCurrent;
-                rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                rows = ds.Tables[tableName].Select("", "", dvrs);
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
-                    MasterBatchCompDC dc = DAL.CreateItemFromRow<MasterBatchCompDC>(dr);  //populate  dataclass
-                                                                                          //give null value for foreign key AdditiveID
-                                                                                          //If blank was selected from dropdown its value will be zero
-                    if (dc.AdditiveID != null && dc.AdditiveID == 0)
-                        dc.AdditiveID = null;
-                    UpdateMasterBatchComp(dc);
+                    MasterBatchCompDC dc = DAL.CreateItemFromRow<MasterBatchCompDC>(dr);
+                    //give null value for foreign key AdditiveID
+                    //If blank was selected from dropdown its value will be zero
+                    //if (dc.AdditiveID != null && dc.AdditiveID == 0)
+                    //    dc.AdditiveID = null;
+                    //UpdateMasterBatchComp(dc);
+                    MasterBatchComp_ups(dc);
                 }
 
                 //process deleted rows:-                
                 dvrs = DataViewRowState.Deleted;
-                rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                rows = ds.Tables[tableName].Select("", "", dvrs);
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
@@ -123,7 +128,8 @@ namespace MouldSpecification
                     {
                         MasterBatchCompDC dc = new MasterBatchCompDC();
                         dc.MBCompID = Convert.ToInt32(dr["MBCompID", DataRowVersion.Original].ToString());
-                        DeleteMasterBatchComp(dc);
+                        //DeleteMasterBatchComp(dc);
+                        MasterBatchComp_del(dc);
                     }
                 }
 
@@ -135,6 +141,52 @@ namespace MouldSpecification
                 //throw;
             }
         }
+
+        public void MasterBatchComp_ups(MasterBatchCompDC dc)
+        {
+            try
+            {
+                SqlCommand cmd = null;
+                ExecuteNonQuery(ref cmd, "MasterBatchComp_ups",
+                   CreateParameter("@MBCompID", SqlDbType.Int, dc.MBCompID, ParameterDirection.InputOutput),
+                   CreateParameter("@MBID", SqlDbType.Int, dc.MBID),
+                   CreateParameter("@ItemID", SqlDbType.Int, dc.ItemID),
+                   CreateParameter("@MB123", SqlDbType.Int, dc.MB123),
+                   CreateParameter("@MBPercent", SqlDbType.Real, dc.MBPercent),
+                   CreateParameter("@IsPreferred", SqlDbType.Bit, dc.IsPreferred),
+                   CreateParameter("@AdditiveID", SqlDbType.Int, dc.AdditiveID),
+                   CreateParameter("@AdditivePC", SqlDbType.Real, dc.AdditivePC),
+                   CreateParameter("@last_updated_by", SqlDbType.VarChar, dc.last_updated_by, ParameterDirection.InputOutput),
+                   CreateParameter("@last_updated_on", SqlDbType.DateTime2, dc.last_updated_on, ParameterDirection.InputOutput));
+
+
+                dc.MBCompID = (int)cmd.Parameters["@MBCompID"].Value;
+                dc.last_updated_by = cmd.Parameters["@last_updated_by"].Value.ToString();
+                dc.last_updated_on = (DateTime)cmd.Parameters["@last_updated_on"].Value;
+            }
+            catch (Exception excp)
+            {
+                MessageBox.Show(excp.Message);
+            }
+        }
+
+        public void MasterBatchComp_del(MasterBatchCompDC dc)
+        {
+            try
+            {
+                SqlCommand cmd = null;
+                ExecuteNonQuery(ref cmd, "MasterBatchComp_del",
+                   CreateParameter("@MBCompID", SqlDbType.Int, dc.MBCompID));
+
+
+            }
+            catch (Exception excp)
+            {
+                MessageBox.Show(excp.Message);
+            }
+        }
+
+        /*
         public static void AddMasterBatchComp(MasterBatchCompDC dc)
         {
             try
@@ -265,5 +317,6 @@ namespace MouldSpecification
                 MessageBox.Show(excp.Message);
             }
         }
+        */
     }
 }

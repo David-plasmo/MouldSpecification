@@ -23,42 +23,47 @@ namespace MouldSpecification
             }
         }
 
-        public void UpdateIMSpecification(DataSet ds, string optionalTableName = "default")
+        public void UpdateIMSpecification(DataSet ds, string tableName = "InjectionMouldSpecification")
         {
             try
             {
 
                 //Process new rows:-
                 DataViewRowState dvrs = DataViewRowState.Added;
-                DataRow[] rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //DataRow[] rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                DataRow[] rows = ds.Tables[tableName].Select("", "", dvrs);
 
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
                     IMSpecificationDC dc = DAL.CreateItemFromRow<IMSpecificationDC>(dr);  //populate  dataclass                   
-                    AddInjectionMouldSpecification(dc);
+                    //AddInjectionMouldSpecification(dc);
+                    InjectionMouldSpecification_ups(dc);
 
                 }
 
                 //Process modified rows:-
                 dvrs = DataViewRowState.ModifiedCurrent;
-                rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                rows = ds.Tables[tableName].Select("", "", dvrs);
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
                     IMSpecificationDC dc = DAL.CreateItemFromRow<IMSpecificationDC>(dr);  //populate  dataclass                   
-                    UpdateInjectionMouldSpecification(dc);
+                    //UpdateInjectionMouldSpecification(dc);
+                    InjectionMouldSpecification_ups(dc);
                 }
 
                 //process deleted rows:-                
                 dvrs = DataViewRowState.Deleted;
-                rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                rows = ds.Tables[tableName].Select("", "", dvrs);
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
@@ -66,7 +71,8 @@ namespace MouldSpecification
                     {
                         IMSpecificationDC dc = new IMSpecificationDC();
                         dc.MouldID = Convert.ToInt32(dr["MouldID", DataRowVersion.Original].ToString());
-                        DeleteInjectionMouldSpecification(dc);
+                        //DeleteInjectionMouldSpecification(dc);
+                        InjectionMouldSpecification_del(dc);
                     }
                 }
 
@@ -79,6 +85,61 @@ namespace MouldSpecification
             }
         }
 
+        public void InjectionMouldSpecification_ups(IMSpecificationDC dc)
+        {
+            try
+            {
+                SqlCommand cmd = null;
+                ExecuteNonQuery(ref cmd, "InjectionMouldSpecification_ups",
+                   CreateParameter("@MouldID", SqlDbType.Int, dc.MouldID, ParameterDirection.InputOutput),
+                   CreateParameter("@ItemID", SqlDbType.Int, dc.ItemID),
+                   CreateParameter("@MouldNumber", SqlDbType.VarChar, dc.MouldNumber),
+                   CreateParameter("@MouldLocation", SqlDbType.VarChar, dc.MouldLocation),
+                   CreateParameter("@MouldOwner", SqlDbType.VarChar, dc.MouldOwner),
+                   CreateParameter("@FamilyMould", SqlDbType.Bit, dc.FamilyMould),
+                   CreateParameter("@NoOfCavities", SqlDbType.Int, dc.NoOfCavities),
+                   CreateParameter("@NoOfPart", SqlDbType.Int, dc.NoOfPart),
+                   CreateParameter("@PartSummary", SqlDbType.VarChar, dc.PartSummary),
+                   CreateParameter("@Operation", SqlDbType.VarChar, dc.Operation),
+                   CreateParameter("@OtherFeatures", SqlDbType.VarChar, dc.OtherFeatures),
+                   CreateParameter("@FixedHalf", SqlDbType.VarChar, dc.FixedHalf),
+                   CreateParameter("@FixedHalfTemp", SqlDbType.VarChar, dc.FixedHalfTemp),
+                   CreateParameter("@MovingHalf", SqlDbType.VarChar, dc.MovingHalf),
+                   CreateParameter("@MovingHalfTemp", SqlDbType.VarChar, dc.MovingHalfTemp),
+                   CreateParameter("@PremouldReq", SqlDbType.VarChar, dc.PremouldReq),
+                   CreateParameter("@PostMouldReq", SqlDbType.VarChar, dc.PostMouldReq),
+                   CreateParameter("@AdditionalLabourReqd", SqlDbType.Bit, dc.AdditionalLabourReqd),
+                   CreateParameter("@last_updated_by", SqlDbType.VarChar, dc.last_updated_by, ParameterDirection.InputOutput),
+                   CreateParameter("@last_updated_on", SqlDbType.DateTime2, dc.last_updated_on, ParameterDirection.InputOutput));
+
+
+                dc.MouldID = (int)cmd.Parameters["@MouldID"].Value;
+                dc.last_updated_by = cmd.Parameters["@last_updated_by"].Value.ToString();
+                dc.last_updated_on = (DateTime)cmd.Parameters["@last_updated_on"].Value;
+            }
+            catch (Exception excp)
+            {
+                MessageBox.Show(excp.Message);
+            }
+        }
+
+        public void InjectionMouldSpecification_del(IMSpecificationDC dc)
+        {
+            try
+            {
+                SqlCommand cmd = null;
+                ExecuteNonQuery(ref cmd, "InjectionMouldSpecification_del",
+                   CreateParameter("@MouldID", SqlDbType.Int, dc.MouldID));
+
+
+            }
+            catch (Exception excp)
+            {
+                MessageBox.Show(excp.Message);
+            }
+        }
+
+        /*
         public static void AddInjectionMouldSpecification(IMSpecificationDC dc)
         {
             try
@@ -269,5 +330,6 @@ namespace MouldSpecification
                 MessageBox.Show(excp.Message);
             }
         }
+        */
     }
 }

@@ -18,7 +18,7 @@ namespace MouldSpecification
             catch (System.Exception e) { return null; }            
         }
 
-        public void UpdateCustomerProduct(DataSet ds, string tableName)
+        public void UpdateCustomerProduct(DataSet ds, string tableName = "CustomerProduct")
         {
             try
             {
@@ -38,7 +38,7 @@ namespace MouldSpecification
                     dr["CustomerProductID"] = dc.CustomerProductID;
                     dr.EndEdit();
                 }
-                if (rows.Length > 0) ds.AcceptChanges();
+                if (rows.Length > 0) ds.Tables[tableName].AcceptChanges();
 
                 //Process modified rows: -
                 dvrs = DataViewRowState.ModifiedCurrent;

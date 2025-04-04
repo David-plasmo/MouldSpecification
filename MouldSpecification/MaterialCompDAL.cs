@@ -96,16 +96,17 @@ namespace MouldSpecification
             }
         }
 
-        public void UpdateMaterialComp(DataSet ds, string optionalTableName = "default")
+        public void UpdateMaterialComp(DataSet ds, string tableName = "MaterialComp")
         {
             try
             {
                 //Process new rows:-
                 DataViewRowState dvrs = DataViewRowState.Added;
                 //DataRow[] rows = ds.Tables[0].Select("", "", dvrs);
-                DataRow[] rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //DataRow[] rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                DataRow[] rows = ds.Tables[tableName].Select("", "", dvrs);
 
                 for (int i = 0; i < rows.Length; i++)
                 {
@@ -114,18 +115,16 @@ namespace MouldSpecification
                     //AddMaterialComp(dc);
                     MaterialComp_ups(dc);
                 }
-                if (rows.Length > 0)
-                {
-                    if (optionalTableName != "default") ds.Tables[optionalTableName].AcceptChanges();
-                    else ds.Tables[0].AcceptChanges();
-                }
+                if (rows.Length > 0) ds.Tables[tableName].AcceptChanges();
+                
                     
 
                 //Process modified rows:-
                 dvrs = DataViewRowState.ModifiedCurrent;
-                rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                rows = ds.Tables[tableName].Select("", "", dvrs);
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
@@ -136,9 +135,10 @@ namespace MouldSpecification
 
                 //process deleted rows:-                
                 dvrs = DataViewRowState.Deleted;
-                rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                rows = ds.Tables[tableName].Select("", "", dvrs);
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];

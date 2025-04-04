@@ -57,42 +57,47 @@ namespace MouldSpecification
             }
         }
 
-        public void UpdateMachinePref(DataSet ds, string optionalTableName = "default")
+        public void UpdateMachinePref(DataSet ds, string tableName = "MachinePref")
         {
             try
             {
 
                 //Process new rows:-
                 DataViewRowState dvrs = DataViewRowState.Added;
-                DataRow[] rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //DataRow[] rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                DataRow[] rows = ds.Tables[tableName].Select("", "", dvrs);
 
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
                     MachinePrefDC dc = DAL.CreateItemFromRow<MachinePrefDC>(dr);  //populate  dataclass                   
-                    AddMachinePref(dc);
+                    //AddMachinePref(dc);
+                    MachinePref_ups(dc);
 
                 }
 
                 //Process modified rows:-
                 dvrs = DataViewRowState.ModifiedCurrent;
-                rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                rows = ds.Tables[tableName].Select("", "", dvrs);
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
                     MachinePrefDC dc = DAL.CreateItemFromRow<MachinePrefDC>(dr);  //populate  dataclass                   
-                    UpdateMachinePref(dc);
+                    //UpdateMachinePref(dc);
+                    MachinePref_ups(dc);
                 }
 
                 //process deleted rows:-                
                 dvrs = DataViewRowState.Deleted;
-                rows = (optionalTableName == "default")
-                    ? ds.Tables[0].Select("", "", dvrs)
-                    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                //rows = (optionalTableName == "default")
+                //    ? ds.Tables[0].Select("", "", dvrs)
+                //    : ds.Tables[optionalTableName].Select("", "", dvrs);
+                rows = ds.Tables[tableName].Select("", "", dvrs);
                 for (int i = 0; i < rows.Length; i++)
                 {
                     DataRow dr = rows[i];
@@ -100,7 +105,8 @@ namespace MouldSpecification
                     {
                         MachinePrefDC dc = new MachinePrefDC();
                         dc.MachPrefID = Convert.ToInt32(dr["MachPrefID", DataRowVersion.Original].ToString());
-                        DeleteMachinePref(dc);
+                        //DeleteMachinePref(dc);
+                        MachinePref_del(dc);
                     }
                 }
 
@@ -112,6 +118,55 @@ namespace MouldSpecification
             }
         }
 
+        public void MachinePref_ups(MachinePrefDC dc)
+        {
+            try
+            {
+                SqlCommand cmd = null;
+                ExecuteNonQuery(ref cmd, "MachinePref_ups",
+                   CreateParameter("@MachPrefID", SqlDbType.Int, dc.MachPrefID, ParameterDirection.InputOutput),
+                   CreateParameter("@MachineID", SqlDbType.Int, dc.MachineID),
+                   CreateParameter("@ProgramNo", SqlDbType.Int, dc.ProgramNo),
+                   CreateParameter("@ItemID", SqlDbType.Int, dc.ItemID),
+                   CreateParameter("@MachineABC", SqlDbType.Char, dc.MachineABC),
+                   CreateParameter("@CycleTime", SqlDbType.Float, dc.CycleTime),
+                   CreateParameter("@NoPartsPerHour", SqlDbType.Int, dc.NoPartsPerHour),
+                   CreateParameter("@IsPreferred", SqlDbType.Bit, dc.IsPreferred),
+                   CreateParameter("@BMMachineNo", SqlDbType.Int, dc.BMMachineNo),
+                   CreateParameter("@CycleTimeFrom", SqlDbType.Int, dc.CycleTimeFrom),
+                   CreateParameter("@CycleTimeTo", SqlDbType.Int, dc.CycleTimeTo),
+                   CreateParameter("@BlowingTime", SqlDbType.Int, dc.BlowingTime),
+                   CreateParameter("@last_updated_by", SqlDbType.VarChar, dc.last_updated_by, ParameterDirection.InputOutput),
+                   CreateParameter("@last_updated_on", SqlDbType.DateTime2, dc.last_updated_on, ParameterDirection.InputOutput));
+
+
+                dc.MachPrefID = (int)cmd.Parameters["@MachPrefID"].Value;
+                dc.last_updated_by = cmd.Parameters["@last_updated_by"].Value.ToString();
+                dc.last_updated_on = (DateTime)cmd.Parameters["@last_updated_on"].Value;
+            }
+            catch (Exception excp)
+            {
+                MessageBox.Show(excp.Message);
+            }
+        }
+
+        public void MachinePref_del(MachinePrefDC dc)
+        {
+            try
+            {
+                SqlCommand cmd = null;
+                ExecuteNonQuery(ref cmd, "MachinePref_del",
+                   CreateParameter("@MachPrefID", SqlDbType.Int, dc.MachPrefID));
+
+
+            }
+            catch (Exception excp)
+            {
+                MessageBox.Show(excp.Message);
+            }
+        }
+
+        /*
         public static void AddMachinePref(MachinePrefDC dc)
         {
             try
@@ -241,7 +296,7 @@ namespace MouldSpecification
                 MessageBox.Show(excp.Message);
             }
         }
-
+        */
     }
 }
 
