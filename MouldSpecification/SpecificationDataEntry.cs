@@ -794,7 +794,8 @@ namespace MouldSpecification
             int itemID = (int)row["ItemID"];
             DataTable dt = (DataTable)bsMaterialComp.DataSource;
             dt.Columns["ItemID"].DefaultValue = itemID;
-            dt.Columns["MaterialGradeID"].DefaultValue = itemID;
+            dt.Columns["MaterialGradeID"].DefaultValue = -1;
+            dt.Columns["MaterialCompID"].DefaultValue = -1;
 
             //DataTable ct = dsIMSpecificationForm.Relations["ItemMaterialComp"].ChildTable;
             //DataRow[] foundRows = ct.Select("ItemID = " + itemID.ToString());

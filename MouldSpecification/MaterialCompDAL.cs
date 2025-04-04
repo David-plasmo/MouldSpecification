@@ -111,9 +111,15 @@ namespace MouldSpecification
                 {
                     DataRow dr = rows[i];
                     MaterialCompDC dc = DAL.CreateItemFromRow<MaterialCompDC>(dr);  //populate  dataclass                   
-                    AddMaterialComp(dc);
-
+                    //AddMaterialComp(dc);
+                    MaterialComp_ups(dc);
                 }
+                if (rows.Length > 0)
+                {
+                    if (optionalTableName != "default") ds.Tables[optionalTableName].AcceptChanges();
+                    else ds.Tables[0].AcceptChanges();
+                }
+                    
 
                 //Process modified rows:-
                 dvrs = DataViewRowState.ModifiedCurrent;
@@ -124,7 +130,8 @@ namespace MouldSpecification
                 {
                     DataRow dr = rows[i];
                     MaterialCompDC dc = DAL.CreateItemFromRow<MaterialCompDC>(dr);  //populate  dataclass                   
-                    UpdateMaterialComp(dc);
+                    //UpdateMaterialComp(dc);
+                    MaterialComp_ups(dc);
                 }
 
                 //process deleted rows:-                
@@ -139,7 +146,8 @@ namespace MouldSpecification
                     {
                         MaterialCompDC dc = new MaterialCompDC();
                         dc.MaterialCompID = Convert.ToInt32(dr["MaterialCompID", DataRowVersion.Original].ToString());
-                        DeleteMaterialComp(dc);
+                        //DeleteMaterialComp(dc);
+                        MaterialComp_del(dc);
                     }
                 }
 
@@ -152,6 +160,50 @@ namespace MouldSpecification
             }
         }
 
+        public void MaterialComp_ups(MaterialCompDC dc)
+        {
+            try
+            {
+                SqlCommand cmd = null;
+                ExecuteNonQuery(ref cmd, "MaterialComp_ups",
+                   CreateParameter("@MaterialCompID", SqlDbType.Int, dc.MaterialCompID, ParameterDirection.InputOutput),
+                   CreateParameter("@MaterialGradeID", SqlDbType.Int, dc.MaterialGradeID),
+                   CreateParameter("@ItemID", SqlDbType.Int, dc.ItemID),
+                   CreateParameter("@Polymer123", SqlDbType.Int, dc.Polymer123),
+                   CreateParameter("@PolymerPercent", SqlDbType.Real, dc.PolymerPercent),
+                   CreateParameter("@RegrindMaxPC", SqlDbType.Real, dc.RegrindMaxPC),
+                   CreateParameter("@IsActive", SqlDbType.Bit, dc.IsActive),
+                   CreateParameter("@last_updated_by", SqlDbType.VarChar, dc.last_updated_by, ParameterDirection.InputOutput),
+                   CreateParameter("@last_updated_on", SqlDbType.DateTime2, dc.last_updated_on, ParameterDirection.InputOutput));
+
+
+                dc.MaterialCompID = (int)cmd.Parameters["@MaterialCompID"].Value;
+                dc.last_updated_by = cmd.Parameters["@last_updated_by"].Value.ToString();
+                dc.last_updated_on = (DateTime)cmd.Parameters["@last_updated_on"].Value;
+            }
+            catch (Exception excp)
+            {
+                MessageBox.Show(excp.Message);
+            }
+        }
+
+        public void MaterialComp_del(MaterialCompDC dc)
+        {
+            try
+            {
+                SqlCommand cmd = null;
+                ExecuteNonQuery(ref cmd, "MaterialComp_del",
+                   CreateParameter("@MaterialCompID", SqlDbType.Int, dc.MaterialCompID));
+
+
+            }
+            catch (Exception excp)
+            {
+                MessageBox.Show(excp.Message);
+            }
+        }
+
+        /*
         public static void AddMaterialComp(MaterialCompDC dc)
         {
             try
@@ -209,7 +261,7 @@ namespace MouldSpecification
                 MessageBox.Show(excp.Message);
             }
         }
-
+        
         public static void UpdateMaterialComp(MaterialCompDC dc)
         {
             try
@@ -283,7 +335,7 @@ namespace MouldSpecification
                 MessageBox.Show(excp.Message);
             }
         }
-
+        */
     }
 
 }
