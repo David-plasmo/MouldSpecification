@@ -796,12 +796,8 @@ namespace MouldSpecification
             dt.Columns["ItemID"].DefaultValue = itemID;
             dt.Columns["MaterialGradeID"].DefaultValue = -1;
             dt.Columns["MaterialCompID"].DefaultValue = -1;
-
-            //DataTable ct = dsIMSpecificationForm.Relations["ItemMaterialComp"].ChildTable;
-            //DataRow[] foundRows = ct.Select("ItemID = " + itemID.ToString());
-            //int count = foundRows.Length;
-
-            //btnAddNewMaterial.Enabled = (count < maxRowsMaterial);
+            dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
+            dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
         }
 
         private void bsMBComp_AddingNew(object sender, AddingNewEventArgs e)
@@ -812,14 +808,11 @@ namespace MouldSpecification
             int itemID = (int)row["ItemID"];
             DataTable dt = (DataTable)bsMBComp.DataSource;
             dt.Columns["ItemID"].DefaultValue = itemID;
-            dt.Columns["MB123"].DefaultValue = dgvMasterBatchComp.Rows.Count + 1;
-
-
-            //DataTable ct = dsIMSpecificationForm.Relations["ItemMaterialComp"].ChildTable;
-            //DataRow[] foundRows = ct.Select("ItemID = " + itemID.ToString());
-            //int count = foundRows.Length;
-
-            //btnAddNewMaterial.Enabled = (count < maxRowsMaterial);
+            dt.Columns["MB123"].DefaultValue = dgvMasterBatchComp.Rows.Count + 1;          
+            dt.Columns["MBID"].DefaultValue = -1;
+            dt.Columns["MBCompID"].DefaultValue = -1;          
+            dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
+            dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
         }
 
         private void bsMachPref_AddingNew(object sender, AddingNewEventArgs e)
@@ -830,7 +823,9 @@ namespace MouldSpecification
             int itemID = (int)row["ItemID"];
             DataTable dt = (DataTable)bsMachPref.DataSource;
             dt.Columns["ItemID"].DefaultValue = itemID;
-            
+            dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
+            dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
+
             //DataTable ct = dsIMSpecificationForm.Relations["MachinePref"].ChildTable;
             //DataRow[] foundRows = ct.Select("ItemID = " + itemID.ToString());
             //int count = foundRows.Length;
@@ -1058,8 +1053,8 @@ namespace MouldSpecification
                 //Material Grade
                 dt = dsIMSpecificationForm.Tables["LookupMaterialGrade"];
                 dt.Columns["MaterialGradeID"].DefaultValue = newItemID;
-                dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
-                dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
+                //dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
+                //dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
 
                 //Customer Products
                 dt = dsIMSpecificationForm.Tables["CustomerProduct"];
@@ -1874,9 +1869,16 @@ namespace MouldSpecification
                     {
                         cbec = new DataGridViewComboBoxEditingControl();
                         cbec = e.Control as DataGridViewComboBoxEditingControl;
+
+
+
                         cbec.DropDownStyle = ComboBoxStyle.DropDown;
                         cbec.SelectedIndexChanged -= Cbec_SelectedIndexChanged;
                         cbec.SelectedIndexChanged += Cbec_SelectedIndexChanged;
+
+                        // Fix the black background issue on the drop down menu
+                        e.CellStyle.BackColor = this.dgvMasterBatchComp.DefaultCellStyle.BackColor;
+
                     }
                 }
             }

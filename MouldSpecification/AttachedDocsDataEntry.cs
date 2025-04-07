@@ -148,6 +148,12 @@ namespace MouldSpecification
         /// </summary>
         private void DoSave()
         {
+            DataSet ds = dsAttachedDoc;
+            DataRowView drv = (DataRowView)this.bsManItems.Current;
+            DataRow row = drv.Row;
+            int currentID = (int)row["ItemID"];
+            LastItemID = currentID;
+
             // End edit mode for the attached documents binding source.
             bsAttachedDoc.EndEdit();
 
