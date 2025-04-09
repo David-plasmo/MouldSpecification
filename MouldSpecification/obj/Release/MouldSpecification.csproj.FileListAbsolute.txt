@@ -7,7 +7,6 @@ C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\b
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\ApplicationAccess.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Azure.Core.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Azure.Identity.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\InjectionMouldReports.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Bcl.TimeProvider.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Data.SqlClient.dll
@@ -214,3 +213,4 @@ C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\o
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpe.9F26BE33.Up2Date
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.exe
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.pdb
+C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\InjectionMouldReports.dll

@@ -406,6 +406,8 @@ namespace MouldSpecification
                     if (dr == DialogResult.OK)
                     {
                         new ProductDetailsDAL().DeleteProductDetails(itemID);
+                        this.LastCustomerID = null;
+                        this.LastItemID = null;
                         this.DialogResult = DialogResult.Retry;
                         this.Close();
                     }
@@ -624,12 +626,15 @@ namespace MouldSpecification
                 //Navigation toolbar
                 bindingNavigator1.BindingSource = new BindingSource();
                 bindingNavigator1.BindingSource = bsManItems;
-                
+
                 //bsNavigator = new BindingSource();                                           
                 //bsNavigator.DataMember = dsIMSpecificationForm.Relations["CustProductItem"].RelationName;
                 //bsNavigator.DataSource = bsCustomerProducts;
                 //bindingNavigator1.BindingSource = bsNavigator;
 
+                bsMouldSpec.AddingNew += bsMouldSpec_AddingNew; ;
+                bsQC.AddingNew += bsQC_AddingNew;
+                bsCustomerProducts.AddingNew += bsCustomerProducts_AddingNew;
 
                 bsManItems.CurrentChanged += bsManItems_CurrentChanged;
 
@@ -707,12 +712,43 @@ namespace MouldSpecification
                 //btnDeleteMB.Click += btnDeleteMB_Click;
                 //btnDeleteAdditive.Click += btnDeleteAdditive_Click;
 
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "BindControls", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void bsCustomerProducts_AddingNew(object sender, AddingNewEventArgs e)
+        {
+            DataRowView rowView = (DataRowView)this.bsManItems.Current;
+            DataRow row = rowView.Row;
+            int itemID = (int)row["ItemID"];
+            DataTable dt = (DataTable)bsCustomerProducts.DataSource;
+            dt.Columns["ItemID"].DefaultValue = itemID;
+            dt.Columns["CustomerProductID"].DefaultValue = -1;
+        }
+
+        private void bsQC_AddingNew(object sender, AddingNewEventArgs e)
+        {
+            DataRowView rowView = (DataRowView)this.bsManItems.Current;
+            DataRow row = rowView.Row;
+            int itemID = (int)row["ItemID"];
+            DataTable dt = (DataTable)bsQC.DataSource;
+            dt.Columns["ItemID"].DefaultValue = itemID;
+            dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
+            dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
+        }
+
+        private void bsMouldSpec_AddingNew(object sender, AddingNewEventArgs e)
+        {
+            DataRowView rowView = (DataRowView)this.bsManItems.Current;
+            DataRow row = rowView.Row;            
+            int itemID = (int)row["ItemID"];
+            DataTable dt = (DataTable)bsMouldSpec.DataSource;
+            dt.Columns["ItemID"].DefaultValue = itemID;
+            dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
+            dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
         }
 
         private void cboCUSTNAME_SelectedIndexChanged(object sender, EventArgs e)
@@ -1060,7 +1096,7 @@ namespace MouldSpecification
                 dt = dsIMSpecificationForm.Tables["CustomerProduct"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
                 dt.Columns["CustomerID"].DefaultValue = LastCustomerID.Value;
-                dt.Columns["CustomerProductID"].DefaultValue = newItemID; 
+                dt.Columns["CustomerProductID"].DefaultValue = -1; 
                 
                 //Machine preference
                 dt = dsIMSpecificationForm.Tables["MachinePref"];
@@ -2298,19 +2334,23 @@ namespace MouldSpecification
                 view = new DataView(dt, "", "ItemID", DataViewRowState.CurrentRows);
                 //rowIndexToCopy = view.Find(curItemID);
                 rowIndexToCopy = view.Find(LastCustomerID.Value);
-                existingRow = view[rowIndexToCopy].Row;
-                //copy to a new row
-                newRow = dt.NewRow();
-                newRow.ItemArray = existingRow.ItemArray.Clone() as object[];
-                newRow["ItemID"] = newItemID;
-                newRow["CustomerID"] = LastCustomerID.Value;
-                newRow["CustomerProductID"] = -1;
-                dt.Rows.Add(newRow);
+                if(rowIndexToCopy != -1)
+                {
+                    existingRow = view[rowIndexToCopy].Row;
+                    //copy to a new row
+                    newRow = dt.NewRow();
+                    newRow.ItemArray = existingRow.ItemArray.Clone() as object[];
+                    newRow["ItemID"] = newItemID;
+                    newRow["CustomerID"] = LastCustomerID.Value;
+                    newRow["CustomerProductID"] = -1;
+                    dt.Rows.Add(newRow);
+                }
+               
                 //bsCustomerProducts.ResumeBinding();
 
                 cboCUSTNAME.SelectedValue = LastCustomerID;
 
-                cboCUSTNAME.SelectedValue = LastCustomerID.Value;
+                //cboCUSTNAME.SelectedValue = LastCustomerID.Value;
                 //dt.Rows.Add(-1,LastCustomerID.Value, newItemID);
                 //bsCustomerProducts.EndEdit();
                 //bsCustomerProducts.ResumeBinding();
@@ -2323,12 +2363,15 @@ namespace MouldSpecification
                 dt = dsIMSpecificationForm.Tables["InjectionMouldSpecification"];
                 view = new DataView(dt, "", "ItemID", DataViewRowState.CurrentRows);
                 rowIndexToCopy = view.Find(curItemID);
-                existingRow = view[rowIndexToCopy].Row;
-                //copy to a new row
-                newRow = dt.NewRow();
-                newRow.ItemArray = existingRow.ItemArray.Clone() as object[];
-                newRow["ItemID"] = newItemID;
-                dt.Rows.Add(newRow);
+                if(rowIndexToCopy != -1)
+                {
+                    existingRow = view[rowIndexToCopy].Row;
+                    //copy to a new row
+                    newRow = dt.NewRow();
+                    newRow.ItemArray = existingRow.ItemArray.Clone() as object[];
+                    newRow["ItemID"] = newItemID;
+                    dt.Rows.Add(newRow);
+                }                
                 bsMouldSpec.ResumeBinding();
                 //bsMouldSpec.CurrentChanged += bsMouldSpec_CurrentChanged;
 
@@ -2337,12 +2380,15 @@ namespace MouldSpecification
                 dt = dsIMSpecificationForm.Tables["QualityControl"];
                 view = new DataView(dt, "", "ItemID", DataViewRowState.CurrentRows);
                 rowIndexToCopy = view.Find(curItemID);
-                existingRow = view[rowIndexToCopy].Row;
-                //copy to a new row
-                newRow = dt.NewRow();
-                newRow.ItemArray = existingRow.ItemArray.Clone() as object[];
-                newRow["ItemID"] = newItemID;
-                dt.Rows.Add(newRow);
+                if(rowIndexToCopy != -1)
+                {
+                    existingRow = view[rowIndexToCopy].Row;
+                    //copy to a new row
+                    newRow = dt.NewRow();
+                    newRow.ItemArray = existingRow.ItemArray.Clone() as object[];
+                    newRow["ItemID"] = newItemID;
+                    dt.Rows.Add(newRow);
+                }                
                 bsQC.ResumeBinding();
 
                 //copy Material Composition
@@ -2849,7 +2895,11 @@ namespace MouldSpecification
                         //bsMouldSpec.Position = msID;
                         //rowView = (DataRowView)this.bsMouldSpec.Current;
                         //row = rowView.Row;
-
+                    }
+                    else
+                    {
+                        bsMouldSpec.AddNew();
+                        bsMouldSpec.ResumeBinding();
                     }
 
                     //locate machine preference
@@ -2881,6 +2931,11 @@ namespace MouldSpecification
                         //rowView = (DataRowView)this.bsQC.Current;
                         //row = rowView.Row;
                         //MessageBox.Show(row["ItemID"].ToString() + ", " + row["FinishedPTQC"].ToString());
+                    }
+                    else
+                    {
+                        bsQC.AddNew();
+                        bsQC.ResumeBinding();
                     }
                 }
                 //MessageBox.Show(bsManItems.Position.ToString());
@@ -3084,7 +3139,8 @@ namespace MouldSpecification
                 bsQC.EndEdit();
 
                 //Process new items in parent table
-                new ProductDetailsDAL().UpdateMAN_Item(ds, "MAN_Items", "Added", false);
+                //new ProductDetailsDAL().UpdateMAN_Item(ds, "MAN_Items", "Added", false);
+                new MAN_ItemDAL().UpdateMAN_Item(ds, "MAN_Items", "Added");
 
                 DataView dv = new DataView();
 
@@ -3212,8 +3268,8 @@ namespace MouldSpecification
 
 
                 //process parent modified/deleted
-                new ProductDetailsDAL().UpdateMAN_Item(dsIMSpecificationForm, "MAN_Items", "Modify/Delete", true);
-
+                //new ProductDetailsDAL().UpdateMAN_Item(dsIMSpecificationForm, "MAN_Items", "Modify/Delete", true);
+                new MAN_ItemDAL().UpdateMAN_Item(ds, "MAN_Items", "Modified/Deleted");
             }
             catch (Exception ex)
             {

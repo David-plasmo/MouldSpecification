@@ -12,18 +12,76 @@ namespace MouldSpecification
 {
     class MAN_ItemDAL :DataAccessBase
     {
+
+        public void UpdateMAN_Item(DataSet ds, string tableName = "MAN_Items", string updateType = "Added")
+        {
+            try
+            {
+                DataViewRowState dvrs;
+                DataRow[] rows;
+
+                //Process new rows:-
+                if (updateType == "Added")
+                {
+                    dvrs = DataViewRowState.Added;
+                    rows = ds.Tables[tableName].Select("", "", dvrs);
+
+                    for (int i = 0; i < rows.Length; i++)
+                    {
+                        DataRow dr = rows[i];
+                        MAN_ItemDC dc = DAL.CreateItemFromRow<MAN_ItemDC>(dr);  //populate  dataclass                                       
+                        MAN_Item_ups(dc);
+                        dr.BeginEdit();
+                        dr["ItemID"] = dc.ItemID;
+                        dr["last_updated_by"] = dc.last_updated_by;
+                        dr["last_updated_on"] = dc.last_updated_on;
+                    }
+
+                    return;
+                }
+                else
+                {
+                    //Process modified rows:-
+                    dvrs = DataViewRowState.ModifiedCurrent;
+                    rows = ds.Tables[tableName].Select("", "", dvrs);
+                    for (int i = 0; i < rows.Length; i++)
+                    {
+                        DataRow dr = rows[i];
+                        MAN_ItemDC dc = DAL.CreateItemFromRow<MAN_ItemDC>(dr);  //populate  dataclass                                       
+                        MAN_Item_ups(dc);
+                        dr.BeginEdit();                        
+                        dr["last_updated_by"] = dc.last_updated_by;
+                        dr["last_updated_on"] = dc.last_updated_on;
+                    }
+
+                    //process deleted rows:-                
+                    dvrs = DataViewRowState.Deleted;
+                    rows = ds.Tables[tableName].Select("", "", dvrs);
+                    for (int i = 0; i < rows.Length; i++)
+                    {
+                        DataRow dr = rows[i];
+                        if (dr["MachPrefID", DataRowVersion.Original] != null)
+                        {
+                            MAN_ItemDC dc = new MAN_ItemDC();
+                            dc.ItemID = Convert.ToInt32(dr["ItemID", DataRowVersion.Original].ToString());
+                            MAN_Item_del(dc);
+                        }
+                    }
+
+                    //ds.AcceptChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+
         public void MAN_Item_ups(MAN_ItemDC dc)
         {
             try
             {
-                //convert any zeros to null, for foreign keys
-                dc.LabelTypeID = (dc.LabelTypeID.HasValue ? (dc.LabelTypeID.Value > 0 ? dc.LabelTypeID :null) : null);
-                dc.CartonID = (dc.CartonID.HasValue ? (dc.CartonID.Value > 0 ? dc.CartonID : null) : null);
-
-                //cannot be null if direction is InputOutput
-                dc.last_updated_by = (dc.last_updated_by != null ? dc.last_updated_by : System.Environment.UserName);
-                dc.last_updated_on = (dc.last_updated_on != null ? dc.last_updated_on : DateTime.MinValue);
-
                 SqlCommand cmd = null;
                 ExecuteNonQuery(ref cmd, "MAN_Item_ups",
                    CreateParameter("@ITEMNMBR", SqlDbType.Char, dc.ITEMNMBR),
@@ -57,7 +115,23 @@ namespace MouldSpecification
             }
             catch (Exception excp)
             {
-                MessageBox.Show("MAN_ItemDAL: " + excp.Message, "MAN_Item_ups",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(excp.Message);
+            }
+        }
+
+        public void MAN_Item_del(MAN_ItemDC dc)
+        {
+            try
+            {
+                SqlCommand cmd = null;
+                ExecuteNonQuery(ref cmd, "MAN_Item_del",
+                   CreateParameter("@ItemID", SqlDbType.Int, dc.ItemID));
+
+
+            }
+            catch (Exception excp)
+            {
+                MessageBox.Show(excp.Message);
             }
         }
     }
