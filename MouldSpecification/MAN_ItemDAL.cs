@@ -12,6 +12,25 @@ namespace MouldSpecification
 {
     class MAN_ItemDAL :DataAccessBase
     {
+        public int NewItemID { get; set; }  
+
+        public void CopyToNew(int fromItemID, int customerID)
+        {
+            try
+            {
+                int newItemID = 0;
+
+                SqlCommand cmd = null;
+                ExecuteNonQuery(ref cmd, "CopyToNewIM",
+                   CreateParameter("@FromItemID", SqlDbType.Int, fromItemID),
+                   CreateParameter("@CustomerID", SqlDbType.Int, customerID),
+                   CreateParameter("@ItemID", SqlDbType.Int, newItemID, ParameterDirection.InputOutput));
+
+                newItemID = (int)cmd.Parameters["@ItemID"].Value;
+                NewItemID = newItemID;                
+            }
+            catch (Exception ex) {MessageBox.Show(ex.Message); return; }
+        }
 
         public void UpdateMAN_Item(DataSet ds, string tableName = "MAN_Items", string updateType = "Added")
         {
