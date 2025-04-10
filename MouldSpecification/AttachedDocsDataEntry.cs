@@ -15,24 +15,10 @@ namespace MouldSpecification
     /// </summary>
     public partial class AttachedDocsDataEntry : Form
     {
-        /// <summary>
-        /// Gets or sets the identifier for the last edited item.
-        /// </summary>
+        
         public int? LastItemID { get; set; }
-
-        /// <summary>
-        /// Gets or sets the identifier for the last edited customer.
-        /// </summary>
         public int? LastCustomerID { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether the customer filter is applied.
-        /// </summary>
         public bool CustomerFilterOn { get; set; }
-
-        /// <summary>
-        /// Specifies the name of the next form for navigation via the menu strip.
-        /// </summary>
         public string NextForm { get; set; }
 
         // ToolStrip controls for additional functionality
@@ -45,13 +31,7 @@ namespace MouldSpecification
         // DataSet and BindingSources for data binding
         DataSet dsAttachedDoc;
         BindingSource bsManItems, bsProductGradeItem, bsCustomerProducts, bsCustomer, bsAttachedDoc;
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AttachedDocsDataEntry"/> class with specified item and customer IDs.
-        /// </summary>
-        /// <param name="lastItemID"> The identifier of the last edited item. </param>
-        /// <param name="lastCustomerID"> The identifier of the last edited customer. </param>
-        /// <param name="customerFilterOn"> Specifies whether the customer filter is applied. </param>
+        
         public AttachedDocsDataEntry(int? lastItemID, int? lastCustomerID, bool customerFilterOn = false)
         {
             InitializeComponent();
@@ -112,14 +92,9 @@ namespace MouldSpecification
 
         public AttachedDocsDataEntry()
         {
-           // Empty Constructor
+           
         }
 
-        /// <summary>
-        /// Handles the Click event of the accept button (tsbtnAccept).
-        /// </summary>
-        /// <param name="sender"> The source of the event. </param>
-        /// <param name="e"> An EventArgs that contains the event data. </param>
         private void tsbtnAccept_Click(object sender, EventArgs e)
         {
             // Save te data
@@ -130,22 +105,12 @@ namespace MouldSpecification
             this.Close();
         }
 
-        /// <summary>
-        /// Handles the Click event of the cancel button (tsbtnCancel).
-        /// Cancels the current edit operation on the binding source.
-        /// </summary>
-        /// <param name="sender"> The source of the event. </param>
-        /// <param name="e"> An EventArgs that contains event data. </param>
         private void tsbtnCancel_Click(object sender, EventArgs e)
         {
             // Cancel the current edit operation on the attached documents bindings source.
             bsAttachedDoc.CancelEdit();
         }
-
-        /// <summary>
-        /// Save the changes made to the attached documents data by ending the edit mode,
-        /// updating the dataset, and synchronizing it with the database.
-        /// </summary>
+      
         private void DoSave()
         {
             DataSet ds = dsAttachedDoc;
@@ -255,82 +220,33 @@ namespace MouldSpecification
             tsbtnAddNew.Enabled = false;
             tsbtnReport.Enabled = false;
 
-            // Set the size and image for the "New Row" button and attach the event handler for click.
-            // Resizing the button according to a custom scale factor.
-            btnNewRow.Size = new Size(p96W(24), p96H(20));
-
-            // Scaling the button image.
-            btnNewRow.Image = RescaleImage((Bitmap)Properties.Resources.NewRow, btnNewRow.Width, btnNewRow.Height);
-
-            // Event handler for button click.
+            btnNewRow.Size = new Size(p96W(24), p96H(20));           
+            btnNewRow.Image = RescaleImage((Bitmap)Properties.Resources.NewRow, btnNewRow.Width, btnNewRow.Height);            
             btnNewRow.Click += btnNewRow_Click;
-
-            // Configure the properties of the company combobox (tscboCompany).
-            // Enables autocomplete with suggestions.
-            tscboCompany.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-
-            // Set custom data source for autocomplete.
-            tscboCompany.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-
-            // Set dropdown height for better accessibility.
+            
+            tscboCompany.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;            
+            tscboCompany.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;           
             tscboCompany.DropDownHeight = 400;
-
-            // Set dropdown width.
             tscboCompany.DropDownWidth = 300;
-
-            // Set the style of the dropdown.
             tscboCompany.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
-
-            // Prevents the combobox from resizing the dropdown list automatically.
-            tscboCompany.IntegralHeight = false;
-
-            // Set max number of items in the dropdown list.
-            tscboCompany.MaxDropDownItems = 9;
-
-            // Define merge action for combobox items.
+           
+            tscboCompany.IntegralHeight = false;  // Prevents the combobox from resizing the dropdown list automatically.
+            tscboCompany.MaxDropDownItems = 9;            
             tscboCompany.MergeAction = System.Windows.Forms.MergeAction.Insert;
-
-            // Set the name of the combobox.
-            tscboCompany.Name = "tscboCompany";
-
-            // Set size of the combobox.
+            tscboCompany.Name = "tscboCompany";            
             tscboCompany.Size = new System.Drawing.Size(p96W(250), p96H(25));
-
-            // Sort the items in the combobox.
             tscboCompany.Sorted = true;
 
-            // Configure the properties of the product combobox (tscboProduct) similarly to company combobox.
-            // Enable autocomplete for products.
             tscboProduct.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-
-            // Set custom data source.
             tscboProduct.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-
-            // Set dropdown height for better accessibility.
             tscboProduct.DropDownHeight = 400;
-
-            // Set dropdown width.
             tscboProduct.DropDownWidth = 200;
-
-            // Set the style of the dropdown.
             tscboProduct.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
-
-            // Prevents resizing of the dropdown list.
             tscboProduct.IntegralHeight = false;
-
-            // Set max number of items in the dropdown.
             tscboProduct.MaxDropDownItems = 9;
-
-            // Set merge action for items.
             tscboProduct.MergeAction = System.Windows.Forms.MergeAction.Insert;
-
-            // Set the name of the combobox.
             tscboProduct.Name = "tscboProduct";
-
-            // Set the combobox size.
             tscboProduct.Size = new System.Drawing.Size(p96W(200), p96H(25));
-
-            // Sort the items in the combox.
             tscboProduct.Sorted = true;            
 
             // Fetch data sets and bind them to the control on the form.
@@ -348,12 +264,7 @@ namespace MouldSpecification
             }
         }
 
-        /// <summary>
-        /// Handles the Shown event of the AttachedDocsDataEntry form.
-        /// Sets the initial size, layout, and state of the form when it is displayed.
-        /// </summary>
-        /// <param name="sender"> The source of the event. </param>
-        /// <param name="e"> An EvenArgs object that contains the event data. </param>
+       
         private void AttachedDocsDataEntry_Shown(object sender, EventArgs e)
         {
             // Set the bounds of the form using a rectangle with a specified size.
@@ -382,17 +293,11 @@ namespace MouldSpecification
                 // If a customer filter is applied and valid customer and item IDs are provided.
                 if (CustomerFilterOn && LastCustomerID.HasValue && LastItemID.HasValue)
                 {
-                    // Temporarily detach the SelectedIndexChanged event handler to avoid recursive triggers.
-                    tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
-
-                    // Set the company combobox to the last customer ID.
+                    tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;                    
                     tscboCompany.ComboBox.SelectedValue = LastCustomerID;
-
-                    // Apply the product filter based on the last customer and item IDs.
                     SetProductFilter(LastCustomerID.Value, LastItemID.Value);
-
-                    // Reattach the event handler after making changes.
                     tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
+                    RefreshCurrent();
                 }
                 else
                 {
@@ -477,7 +382,6 @@ namespace MouldSpecification
         {
             try
             {
-                // Bind the MAN_Items tables to a Binding
                 bsManItems = new BindingSource
                 {
                     DataSource = dsAttachedDoc,

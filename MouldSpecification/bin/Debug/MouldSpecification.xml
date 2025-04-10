@@ -840,55 +840,6 @@
             Represents the data entry form for managing attached documents related to items and customers.
             </summary>
         </member>
-        <member name="P:MouldSpecification.AttachedDocsDataEntry.LastItemID">
-            <summary>
-            Gets or sets the identifier for the last edited item.
-            </summary>
-        </member>
-        <member name="P:MouldSpecification.AttachedDocsDataEntry.LastCustomerID">
-            <summary>
-            Gets or sets the identifier for the last edited customer.
-            </summary>
-        </member>
-        <member name="P:MouldSpecification.AttachedDocsDataEntry.CustomerFilterOn">
-            <summary>
-            Gets or sets a value indicating whether the customer filter is applied.
-            </summary>
-        </member>
-        <member name="P:MouldSpecification.AttachedDocsDataEntry.NextForm">
-            <summary>
-            Specifies the name of the next form for navigation via the menu strip.
-            </summary>
-        </member>
-        <member name="M:MouldSpecification.AttachedDocsDataEntry.#ctor(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Boolean)">
-            <summary>
-            Initializes a new instance of the <see cref="T:MouldSpecification.AttachedDocsDataEntry"/> class with specified item and customer IDs.
-            </summary>
-            <param name="lastItemID"> The identifier of the last edited item. </param>
-            <param name="lastCustomerID"> The identifier of the last edited customer. </param>
-            <param name="customerFilterOn"> Specifies whether the customer filter is applied. </param>
-        </member>
-        <member name="M:MouldSpecification.AttachedDocsDataEntry.tsbtnAccept_Click(System.Object,System.EventArgs)">
-            <summary>
-            Handles the Click event of the accept button (tsbtnAccept).
-            </summary>
-            <param name="sender"> The source of the event. </param>
-            <param name="e"> An EventArgs that contains the event data. </param>
-        </member>
-        <member name="M:MouldSpecification.AttachedDocsDataEntry.tsbtnCancel_Click(System.Object,System.EventArgs)">
-            <summary>
-            Handles the Click event of the cancel button (tsbtnCancel).
-            Cancels the current edit operation on the binding source.
-            </summary>
-            <param name="sender"> The source of the event. </param>
-            <param name="e"> An EventArgs that contains event data. </param>
-        </member>
-        <member name="M:MouldSpecification.AttachedDocsDataEntry.DoSave">
-            <summary>
-            Save the changes made to the attached documents data by ending the edit mode,
-            updating the dataset, and synchronizing it with the database.
-            </summary>
-        </member>
         <member name="M:MouldSpecification.AttachedDocsDataEntry.productSpecificationToolStripMenuItem_Click(System.Object,System.EventArgs)">
             <summary>
             Handles the Click event of the Product specification menu item.
@@ -928,14 +879,6 @@
             </summary>
             <param name="sender"> The source of the event. </param>
             <param name="e"> An EventArgs that contains the event data. </param>
-        </member>
-        <member name="M:MouldSpecification.AttachedDocsDataEntry.AttachedDocsDataEntry_Shown(System.Object,System.EventArgs)">
-            <summary>
-            Handles the Shown event of the AttachedDocsDataEntry form.
-            Sets the initial size, layout, and state of the form when it is displayed.
-            </summary>
-            <param name="sender"> The source of the event. </param>
-            <param name="e"> An EvenArgs object that contains the event data. </param>
         </member>
         <member name="M:MouldSpecification.AttachedDocsDataEntry.SetFormState">
             <summary>

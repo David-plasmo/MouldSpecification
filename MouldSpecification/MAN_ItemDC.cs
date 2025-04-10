@@ -21,8 +21,8 @@ namespace MouldSpecification
         public string CompDB { get; set; }
         public string ITMCLSCD { get; set; }
         public int CtnQty { get; set; }
-        public int? CartonID { get; set; }
-        public int? LabelTypeID { get; set; }
+        public int CartonID { get; set; }
+        public int LabelTypeID { get; set; }
         public string BottleSize { get; set; }
         public string Style { get; set; }
         public string NeckSize { get; set; }
@@ -63,4 +63,5 @@ namespace MouldSpecification
         public MAN_ItemDC() { }
 
     }
+
 }
