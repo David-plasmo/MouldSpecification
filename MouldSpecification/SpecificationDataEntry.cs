@@ -2263,7 +2263,29 @@ namespace MouldSpecification
         private void btnCopyToNew_Click(object sender, EventArgs e)
         {
             SaveEdits();
-            CopyToNew();
+            //CopyToNew();
+
+            btnCopyToNew.Enabled = false;
+            //bindingNavigator does not allow disabling of built-in navigation buttons.
+            //Set invisible instead;   available option buttons are now Save and Cancel only.
+            bindingNavigatorMoveFirstItem.Visible = false;
+            bindingNavigatorMovePreviousItem.Visible = false;
+            tsbtnDelete.Visible = false;
+            tsbtnAddNew.Visible = false;
+            tscboCompany.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
+
+            tscboCompany.Enabled = false;
+            tscboProduct.Enabled = false;
+            tsbtnReport.Enabled = false;
+
+            DataRowView drv = (DataRowView)bsManItems.Current;
+            int curItemID = (int)drv.Row["ItemID"];
+            int curCustomerID = LastCustomerID.Value;
+            MAN_ItemDAL dal = new MAN_ItemDAL();
+            dal.CopyToNew(curItemID, curCustomerID);
+            this.LastItemID = dal.NewItemID;
+            this.DialogResult = DialogResult.Retry;
+            this.Close();
         }
 
         private void CopyToNew()
