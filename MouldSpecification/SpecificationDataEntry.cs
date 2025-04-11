@@ -862,9 +862,12 @@ namespace MouldSpecification
             dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
             dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
 
-            //DataTable ct = dsIMSpecificationForm.Relations["MachinePref"].ChildTable;
-            //DataRow[] foundRows = ct.Select("ItemID = " + itemID.ToString());
-            //int count = foundRows.Length;
+            DataTable ct = dsIMSpecificationForm.Relations["MachinePref"].ChildTable;
+            DataRow[] foundRows = ct.Select("ItemID = " + itemID.ToString());
+            int count = foundRows.Length;
+            string machineABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            string curABC = machineABC.Substring(count, 1);
+            dt.Columns["MachineABC"].DefaultValue = curABC;
 
             //btnAddNewMachine.Enabled = (count < maxRowsMachine);
         }

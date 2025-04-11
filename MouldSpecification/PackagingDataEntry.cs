@@ -946,7 +946,7 @@ namespace MouldSpecification
             {
                 DataGridViewCell cell =
                 dgvPackingImage.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                cell.ToolTipText = "Click to browse for file name.";
+                cell.ToolTipText = "Click to browse for image file.";
             }
 
             //assign graphic images
