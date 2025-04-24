@@ -3162,7 +3162,7 @@ namespace MouldSpecification
                 bsMachPref.EndEdit();
                 dgvMachine.EndEdit();
                 bsQC.EndEdit();
-
+                
                 //Process new items in parent table
                 //new ProductDetailsDAL().UpdateMAN_Item(ds, "MAN_Items", "Added", false);
                 new MAN_ItemDAL().UpdateMAN_Item(ds, "MAN_Items", "Added");
@@ -3262,6 +3262,9 @@ namespace MouldSpecification
                         }
                     }
                 }
+
+
+
 
                 new CustomerProductDAL().UpdateCustomerProduct(dsIMSpecificationForm, "CustomerProduct");
                 new MaterialCompDAL().UpdateMaterialComp(dsIMSpecificationForm, "MaterialComp");

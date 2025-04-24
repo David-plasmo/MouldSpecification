@@ -7,11 +7,15 @@ namespace MouldSpecification
 {
     public class SpecificationDataEntryDAL : DataAccessBase
     {
-        public DataSet GetCustomerIndex(string productType)
+        public string ProductType { get; set; }
+
+        public DataSet GetCustomerIndex(string productType = "IM")
         {
             try
             {
-                DataSet ds = ExecuteDataSet("SelectCustomerIndex",CreateParameter("@ProductType", SqlDbType.VarChar, productType));
+                ProductType = productType;
+                DataSet ds = ExecuteDataSet("SelectCustomerIndex",
+                    CreateParameter("@ProductType", SqlDbType.VarChar, productType));
                 return ds;
             }
             catch (Exception ex)
@@ -21,11 +25,13 @@ namespace MouldSpecification
             }
         }
 
-        public DataSet GetProductIndex(string productType)
+        public DataSet GetProductIndex(string productType = "IM")
         {
             try
             {
-                DataSet ds = ExecuteDataSet("SelectMAN_ItemIndex", CreateParameter("@ProductType", SqlDbType.VarChar, productType));
+                ProductType = productType;
+                DataSet ds = ExecuteDataSet("SelectMAN_ItemIndex", 
+                    CreateParameter("@ProductType", SqlDbType.VarChar, productType));
                 return ds;
             }
             catch (Exception ex)
@@ -49,13 +55,16 @@ namespace MouldSpecification
                 dsOut.Tables.Add(manItems);
 
                 // create customer table
-                dt = ExecuteDataSet("SelectCustomer").Tables[0];
+                dt = ExecuteDataSet("SelectCustomer", 
+                    CreateParameter("@ProductType", SqlDbType.VarChar, ProductType)).Tables[0];
+                
                 DataTable customer = dt.Copy();
                 customer.TableName = "Customer";
                 dsOut.Tables.Add(customer);
 
                 // create customer - product table 
-                dt = ExecuteDataSet("SelectCustomerProduct").Tables[0];
+                dt = ExecuteDataSet("SelectCustomerProduct", 
+                    CreateParameter("@ProductType", SqlDbType.VarChar, ProductType)).Tables[0];
                 DataTable custProduct = dt.Copy();
                 custProduct.TableName = "CustomerProduct";
                 dsOut.Tables.Add(custProduct);
@@ -167,17 +176,23 @@ namespace MouldSpecification
         {
             try
             {
+                //Set filter on Injection Mould product type
+                ProductType = "IM";
+
                 //create output dataset and add tables                
                 DataSet dsOut = new DataSet();
 
                 //create product index
-                DataTable dt = ExecuteDataSet("SelectMAN_ItemIndex").Tables[0];
+                DataTable dt = ExecuteDataSet("SelectMAN_ItemIndex", 
+                    CreateParameter("@ProductType", SqlDbType.VarChar, ProductType)).Tables[0];
                 DataTable product = dt.Copy();
                 product.TableName = "Product";
                 dsOut.Tables.Add(product);
 
+                
                 // create product table               
-                dt = ExecuteDataSet("SelectMAN_Item").Tables[0];
+                dt = ExecuteDataSet("SelectMAN_Item", 
+                    CreateParameter("@ProductType", SqlDbType.VarChar, ProductType)).Tables[0];
                 DataTable manItems = dt.Copy();
                 manItems.TableName = "MAN_Items";
                 dsOut.Tables.Add(manItems);
@@ -187,13 +202,13 @@ namespace MouldSpecification
                 DataTable customer = dt.Copy();
                 customer.TableName = "Customer";
                 dsOut.Tables.Add(customer);
+                
 
                 // create customer - product table 
                 dt = ExecuteDataSet("SelectCustomerProduct").Tables[0];
                 DataTable custProduct = dt.Copy();
                 custProduct.TableName = "CustomerProduct";
                 dsOut.Tables.Add(custProduct);
-
 
                 //create quality control table
                 dt = ExecuteDataSet("SelectQualityControl").Tables[0];
@@ -267,10 +282,10 @@ namespace MouldSpecification
                 reworkInstruction.TableName = "ReworkInstruction";
                 dsOut.Tables.Add(reworkInstruction);
 
-                //create AssemblyInstruction table
+                //create AssemblyInstruction pivot table
                 dt = ExecuteDataSet("SelectAssemblyInstruction_Pivot").Tables[0];
                 DataTable assemblyInstruction = dt.Copy();
-                assemblyInstruction.TableName = "AssemblyInstruction";
+                assemblyInstruction.TableName = "AssemblyInstructionPivot";
                 dsOut.Tables.Add(assemblyInstruction);
 
 
@@ -320,17 +335,22 @@ namespace MouldSpecification
         {
             try
             {
+                //Set filter on Injection Mould product type
+                ProductType = "IM";
+
                 //create output dataset and add tables                
                 DataSet dsOut = new DataSet();
 
                 //create product index
-                DataTable dt = ExecuteDataSet("SelectMAN_ItemIndex").Tables[0];
+                DataTable dt = ExecuteDataSet("SelectMAN_ItemIndex", 
+                    CreateParameter("@ProductType", SqlDbType.VarChar, ProductType)).Tables[0];
                 DataTable product = dt.Copy();
                 product.TableName = "Product";
                 dsOut.Tables.Add(product);
 
                 // create product table               
-                dt = ExecuteDataSet("SelectMAN_Item").Tables[0];
+                dt = ExecuteDataSet("SelectMAN_Item", 
+                    CreateParameter("@ProductType", SqlDbType.VarChar, ProductType)).Tables[0];
                 DataTable manItems = dt.Copy();
                 manItems.TableName = "MAN_Items";
                 dsOut.Tables.Add(manItems);
@@ -372,17 +392,22 @@ namespace MouldSpecification
         {
             try
             {
+                //Set filter on Injection Mould product type
+                ProductType = "IM";
+
                 //create output dataset and add tables                
                 DataSet dsOut = new DataSet();
 
                 //create product index
-                DataTable dt = ExecuteDataSet("SelectMAN_ItemIndex").Tables[0];
+                DataTable dt = ExecuteDataSet("SelectMAN_ItemIndex", 
+                    CreateParameter("@ProductType", SqlDbType.VarChar, ProductType)).Tables[0];
                 DataTable product = dt.Copy();
                 product.TableName = "Product";
                 dsOut.Tables.Add(product);
 
                 // create product table               
-                dt = ExecuteDataSet("SelectMAN_Item").Tables[0];
+                dt = ExecuteDataSet("SelectMAN_Item", 
+                    CreateParameter("@ProductType", SqlDbType.VarChar, ProductType)).Tables[0];
                 DataTable manItems = dt.Copy();
                 manItems.TableName = "MAN_Items";
                 dsOut.Tables.Add(manItems);

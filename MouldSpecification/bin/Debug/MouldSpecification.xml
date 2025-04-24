@@ -241,81 +241,16 @@
         </member>
         <member name="M:MouldSpecification.AssemblyInstructionDAL.UpdateFromPivotTable(System.Data.DataSet,System.String)">
             <summary>
-            Updates the Assembly Instructions in the database based on the changes in a DataSet's pivot table.
+            Updates the Assembly Instructions in the database based on changes to the input DataSet, ds
+            
             Handles added, modified, and deleted rows.
             </summary>
-            <param name="ds"> The DataSet containing the pivot table. </param>
-            <param name="tableName"> The name of the table within the DataSet to process. </param>
-        </member>
-        <member name="M:MouldSpecification.AssemblyInstructionDAL.UpdateAssemblyInstruction(System.Data.DataSet,System.String)">
-            <summary>
-            Updates the Assembly Instructions in the database based on changes in a DataSet.
-            Handles added, modified, and deleted rows.
-            </summary>
-            <param name="ds"> The Dataset containing the table with assembly instructions. </param>
-            <param name="tableName"> The name of the table within the DataSet to process. </param>
-        </member>
-        <member name="M:MouldSpecification.AssemblyInstructionDAL.AddAssemblyInstruction(MouldSpecification.AssemblyInstructionDC)">
-            <summary>
-            Adds a new assembly instruction to the database.
-            </summary>
-            <param name="dc"> The <see cref="T:MouldSpecification.AssemblyInstructionDC"/> object containing the details of the assembly instruction to add. </param>
-        </member>
-        <member name="M:MouldSpecification.AssemblyInstructionDAL.UpdateAssemblyInstruction(MouldSpecification.AssemblyInstructionDC)">
-            <summary>
-            Updates an existing assembly instruction in the database
-            </summary>
-            <param name="dc"> The <see cref="T:MouldSpecification.AssemblyInstructionDC"/> object containing the updated details of the assembly instruction. </param>
-        </member>
-        <member name="M:MouldSpecification.AssemblyInstructionDAL.DeleteAssemblyInstruction(MouldSpecification.AssemblyInstructionDC)">
-            <summary>
-            Delete an existing assembly instruction from the database.
-            </summary>
-            <param name="dc"> The <see cref="T:MouldSpecification.AssemblyInstructionDC"/> object containing the details of the assembly instruction to delete. </param>
+            <param name="ds"> A DataSet containing a pivot table, modified by a DataGridView control. </param>
+            <param name="tableName"> The name of the pivot table within the DataSet to process. </param>
         </member>
         <member name="T:MouldSpecification.AssemblyInstructionDC">
             <summary>
             Represents an assembly instruction in the system.
-            </summary>
-        </member>
-        <member name="P:MouldSpecification.AssemblyInstructionDC.AssemblyInstructionID">
-            <summary>
-            Gets or sets the unique identifier for the assembly instruction.
-            </summary>
-        </member>
-        <member name="P:MouldSpecification.AssemblyInstructionDC.ItemID">
-            <summary>
-            Gets or sets the identifier for the item associated with the assembly instruction.
-            </summary>
-        </member>
-        <member name="P:MouldSpecification.AssemblyInstructionDC.InstructionNo">
-            <summary>
-            Gets or sets the instruction number for the assembly instruction.
-            </summary>
-        </member>
-        <member name="P:MouldSpecification.AssemblyInstructionDC.AssemblyInstruction">
-            <summary>
-            Gets or sets the textual description of the assembly instruction.
-            </summary>
-        </member>
-        <member name="P:MouldSpecification.AssemblyInstructionDC.AssemblyImageFilePath">
-            <summary>
-            Gets or sets the file path to the image associated with the assembly instruction.
-            </summary>
-        </member>
-        <member name="M:MouldSpecification.AssemblyInstructionDC.#ctor(System.Int32,System.Int32,System.Int32,System.String,System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:MouldSpecification.AssemblyInstructionDC"/> class with the specified values.
-            </summary>
-            <param name="AssemblyInstructionID_"> The unique identifier for the assembly instruction. </param>
-            <param name="ItemID_"> The identifier for the item associated with the instruction. </param>
-            <param name="InstructionNo_"> The instruction number. </param>
-            <param name="AssemblyInstruction_"> The textual description of the instruction. </param>
-            <param name="assemblyImageFilePath"> The file path to the image associated with the instruction. </param>
-        </member>
-        <member name="M:MouldSpecification.AssemblyInstructionDC.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:MouldSpecification.AssemblyInstructionDC"/> class with default values.
             </summary>
         </member>
         <member name="T:MouldSpecification.AttachedDocDAL">

@@ -331,6 +331,7 @@
     <Compile Include="AdditiveCostDC.cs" />
     <Compile Include="AssemblyInstructionDAL.cs" />
     <Compile Include="AssemblyInstructionDC.cs" />
+    <Compile Include="AssemblyInstructionPivotDC.cs" />
     <Compile Include="AttachedDocDAL.cs" />
     <Compile Include="AttachedDocDC.cs" />
     <Compile Include="CalendarEditingControl.cs" />

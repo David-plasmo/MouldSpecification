@@ -50,7 +50,7 @@ namespace MouldSpecification
             bsPackaging, bsPackingImage, bsPackingInstruction, bsReworkInstruction,
             //bsItemPackaging,
             bsCartonPackaging, bsPalletPackaging,
-            bsAssemblyInstruction;
+            bsAssemblyInstructionPivot;
        
         bool ReworkExpanded = true;
         bool AssemblyExpanded = true;
@@ -135,7 +135,7 @@ namespace MouldSpecification
             bsPackaging.CancelEdit(); 
             bsCartonPackaging.CancelEdit(); 
             bsPalletPackaging.CancelEdit();
-            bsAssemblyInstruction.CancelEdit(); 
+            bsAssemblyInstructionPivot.CancelEdit(); 
             this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
@@ -433,9 +433,9 @@ namespace MouldSpecification
                 FormatReworkInstruction();
 
                 //Assembly instruction
-                bsAssemblyInstruction = new BindingSource();
-                bsAssemblyInstruction.AddingNew += bsAssemblyInstruction_AddingNew;
-                bsAssemblyInstruction.DataSource = dsPackaging.Tables["AssemblyInstruction"];
+                bsAssemblyInstructionPivot = new BindingSource();
+                bsAssemblyInstructionPivot.AddingNew += bsAssemblyInstructionPivot_AddingNew;
+                bsAssemblyInstructionPivot.DataSource = dsPackaging.Tables["AssemblyInstructionPivot"];
                 dgvAssemblyInstruction.DataSource = bsManItems;
                 dgvAssemblyInstruction.DataMember = "ItemAssemblyInstruction";
                 dgvAssemblyInstruction.DataBindingComplete += dgvAssemblyInstruction_DataBindingComplete;
@@ -509,6 +509,33 @@ namespace MouldSpecification
             catch (Exception ex) { }
         }
 
+        private void bsAssemblyInstructionPivot_AddingNew(object sender, AddingNewEventArgs e)
+        {
+            try
+            {
+                DataRowView rowView = (DataRowView)this.bsManItems.Current;
+                DataRow row = rowView.Row;
+                //MessageBox.Show(row["ItemID"].ToString());
+                int itemID = (int)row["ItemID"];
+                DataTable dt = (DataTable)bsAssemblyInstructionPivot.DataSource;
+                dt.Columns["ItemID1"].DefaultValue = itemID;
+                dt.Columns["ItemID2"].DefaultValue = itemID;
+                dt.Columns["AssemblyInstructionID1"].DefaultValue = -1;
+                dt.Columns["AssemblyInstructionID2"].DefaultValue = -1;
+
+                DataTable ct = dsPackaging.Relations["ItemAssemblyInstruction"].ChildTable;
+                DataRow[] foundRows = ct.Select("ItemID1 = " + LastItemID.ToString());
+                int count = foundRows.Length;
+                int instructionNo = (count + 1) * 2 - 1;  //creates sequence of 1,3,5
+                dt.Columns["InstructionNo1"].DefaultValue = instructionNo;
+                dt.Columns["InstructionNo2"].DefaultValue = instructionNo + 1;
+
+                btnAssemblyImageNewRow.Enabled = count < maxRows;
+                
+            }
+            catch (Exception ex) { }
+        }
+
         private void bsReworkInstruction_AddingNew(object sender, AddingNewEventArgs e)
         {
             try
@@ -523,34 +550,7 @@ namespace MouldSpecification
             }
             catch (Exception ex) { }
         }
-
-        
-        private void bsAssemblyInstruction_AddingNew(object sender, AddingNewEventArgs e)
-        {
-            try
-            {
-                DataRowView rowView = (DataRowView)this.bsManItems.Current;
-                DataRow row = rowView.Row;
-                //MessageBox.Show(row["ItemID"].ToString());
-                int itemID = (int)row["ItemID"];
-                DataTable dt = (DataTable)bsAssemblyInstruction.DataSource;
-                dt.Columns["ItemID1"].DefaultValue = itemID;
-                dt.Columns["ItemID2"].DefaultValue = itemID;
-
-                DataTable ct = dsPackaging.Relations["ItemAssemblyInstruction"].ChildTable;
-                DataRow[] foundRows = ct.Select("ItemID1 = " + itemID.ToString());
-                int count = foundRows.Length;
-
-                int instructionNo = (count + 1) * 2 - 1;  //creates sequence of 1,3,5
-                dt.Columns["InstructionNo1"].DefaultValue = instructionNo;
-                dt.Columns["InstructionNo2"].DefaultValue = instructionNo + 1;
-
-                btnAssemblyImageNewRow.Enabled = (count < maxRows);
-                lblAddImageRow.Enabled = (count < maxRows);
-            }
-            catch (Exception ex) { }
-        }
-
+                
         private void FormatPackingImage()
         {
             try
@@ -1489,9 +1489,9 @@ namespace MouldSpecification
         private void btnAssemblyImageNewRow_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("todo:  add new image row");                             
-            bsAssemblyInstruction.AddNew();
-            bsAssemblyInstruction.EndEdit();
-            bsAssemblyInstruction.Position = bsAssemblyInstruction.Count - 1;
+            bsAssemblyInstructionPivot.AddNew();
+            bsAssemblyInstructionPivot.EndEdit();
+            bsAssemblyInstructionPivot.Position = bsAssemblyInstructionPivot.Count - 1;
             DataTable ct = dsPackaging.Relations["ItemAssemblyInstruction"].ChildTable;
             DataRow[] foundRows = ct.Select("ItemID1 = " + LastItemID.ToString());
             int count = foundRows.Length;
@@ -1572,9 +1572,10 @@ namespace MouldSpecification
         private void PackagingDataEntry_Shown(object sender, EventArgs e)
         {
             //Rectangle r = new Rectangle(5, 5, p96W(2176), p96H(1950));
-            Rectangle r = new Rectangle(5, 5, p96W(1000), p96H(2000));
-            this.DesktopBounds = r;
-            this.DesktopBounds = r;
+            //Rectangle r = new Rectangle(5, 5, p96W(1000), p96H(2000));
+            //this.DesktopBounds = r;
+            //this.DesktopBounds = r;
+            this.Size = new Size(p96W(1024), p96H(935));
             bindingNavigator1.Height = p96H(30);
             splitContainer1.SplitterDistance = p96H(55);
             splitContainer2.SplitterDistance = p96H(25);//Assembly Instruction
@@ -1650,11 +1651,11 @@ namespace MouldSpecification
                 ReworkInstructionDAL reworkInstructionDAL = new ReworkInstructionDAL();
                 reworkInstructionDAL.UpdateReworkInstruction(dsPackaging, "ReworkInstruction");
 
-                bsAssemblyInstruction.EndEdit();
+                bsAssemblyInstructionPivot.EndEdit();
                 dgvAssemblyInstruction.EndEdit();
                 AssemblyInstructionDAL assemblyInstructionDAL = new AssemblyInstructionDAL();
                 //assemblyInstructionDAL.UpdateAssemblyInstruction(dsPackaging, "AssemblyInstruction");
-                assemblyInstructionDAL.UpdateFromPivotTable(dsPackaging, "AssemblyInstruction");
+                assemblyInstructionDAL.UpdateFromPivotTable(dsPackaging, "AssemblyInstructionPivot");
 
             }
             catch (Exception ex) { }
@@ -1665,31 +1666,7 @@ namespace MouldSpecification
         {
             try
             {
-                InjectionMouldReports.Reports.ViewReport(LastItemID.Value, "ProductPackaging.rdlc");
-
-                //** won't load as a dll
-                //IMSpecificationReport f = new IMSpecificationReport();
-                //WindowsFormsFramework.ReportPrompt f = new WindowsFormsFramework.ReportPrompt();
-                //f.ShowDialog();
-                /*
-                // load as exe
-                var appSettings = ConfigurationManager.AppSettings;
-                string reportPath = appSettings["IMReportsPath"];
-                string appStartPath = System.Windows.Forms.Application.StartupPath;
-                ProcessStartInfo info = new ProcessStartInfo();
-                info.FileName = appStartPath + reportPath + @"\InjectionMouldReports.exe";
-                //int custID = (int)tscboCompany.ComboBox.SelectedValue;
-                //int itemID = (int)tscboProduct.ComboBox.SelectedValue;
-                int custID = (int)LastCustomerID;
-                int itemID = (int)LastItemID;
-                info.Arguments = custID.ToString() + " " + itemID.ToString() + " " + "ProductPackagingSheet.rdlc";
-                info.UseShellExecute = true;
-                info.CreateNoWindow = false;
-                info.WorkingDirectory = reportPath;
-                Process proc = Process.Start(info);
-                proc.WaitForExit();
-                proc.Dispose();
-                */
+                InjectionMouldReports.Reports.ViewReport(LastItemID.Value, "ProductPackaging.rdlc");                
             }
             catch (Exception ex)
             {
@@ -2063,21 +2040,21 @@ namespace MouldSpecification
 
                     //locate item in AssemblyInstruction
                     AssemblyExpanded = true; //collapses control if no data 
-                    bsAssemblyInstruction.SuspendBinding();
-                    int asID = bsAssemblyInstruction.Find("ItemID1", itemID);
+                    bsAssemblyInstructionPivot.SuspendBinding();
+                    int asID = bsAssemblyInstructionPivot.Find("ItemID1", itemID);
                     if (asID != -1)
                     {
                         AssemblyExpanded = false; //expands control to show data
-                        bsAssemblyInstruction.ResumeBinding();
-                        bsAssemblyInstruction.Position = asID;
+                        bsAssemblyInstructionPivot.ResumeBinding();
+                        bsAssemblyInstructionPivot.Position = asID;
                     }
                     else
                     {
                         //create new assembly instruction record
-                        bsAssemblyInstruction.AddNew();
-                        bsAssemblyInstruction.EndEdit();
-                        bsAssemblyInstruction.ResumeBinding();
-                        bsAssemblyInstruction.Position = bsAssemblyInstruction.Count - 1;
+                        bsAssemblyInstructionPivot.AddNew();
+                        bsAssemblyInstructionPivot.EndEdit();
+                        bsAssemblyInstructionPivot.ResumeBinding();
+                        bsAssemblyInstructionPivot.Position = bsAssemblyInstructionPivot.Count - 1;
                     }
 
                     DataTable ct = dsPackaging.Relations["ItemAssemblyInstruction"].ChildTable;

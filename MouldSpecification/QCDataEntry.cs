@@ -841,14 +841,17 @@ namespace MouldSpecification
                 DataTable dt = (DataTable)bsQCInstruction.DataSource;
                 dt.Columns["ItemID1"].DefaultValue = itemID;
                 dt.Columns["ItemID2"].DefaultValue = itemID;
+                dt.Columns["QCInstructionID1"].DefaultValue = -1;
+                dt.Columns["QCInstructionID2"].DefaultValue = -1;
 
                 DataTable ct = dsQCInstruction.Relations["ItemQCInstruction"].ChildTable;
                 DataRow[] foundRows = ct.Select("ItemID1 = " + itemID.ToString());
                 int count = foundRows.Length;
-
                 int instructionNo = (count + 1) * 2 - 1;  //creates sequence of 1,3,5
                 dt.Columns["InstructionNo1"].DefaultValue = instructionNo;
                 dt.Columns["InstructionNo2"].DefaultValue = instructionNo + 1;
+
+                
 
                 btnQCInstructionNewRow.Enabled = (count < maxRows);
                 lblQCInstructionNewRow.Enabled = (count < maxRows);
