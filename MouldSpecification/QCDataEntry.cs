@@ -30,7 +30,7 @@ namespace MouldSpecification
         ToolStripComboBox tscboProduct;
         ToolStripButton tsbtnReport;
 
-        int maxRows = 2;
+        int maxRows = 3;
         bool ignoreZero = false;  //causes tscboCompany SelectedIndexChanged event to exit immediately, when true and index = 0;
 
         DataSet dsQCInstruction;
@@ -258,7 +258,15 @@ namespace MouldSpecification
 
         private void DoSave()
         {
-            bsManItems.CurrentChanged -= bsManItems_CurrentChanged; //form is about to close;  don't want to refresh
+
+            bsManItems.CurrentChanged -= bsManItems_CurrentChanged; 
+            DataViewRowState dvrs;
+            //DataRow[] rows;
+            DataSet ds = dsQCInstruction;
+            DataRowView drv = (DataRowView)this.bsManItems.Current;
+            DataRow row = drv.Row;
+            int currentID = (int)row["ItemID"];
+            LastItemID = currentID;
             bsQCInstruction.EndEdit();
             dgvQCInstruction.EndEdit();
             QCInstructionDAL qCInstructionDAL = new QCInstructionDAL();
@@ -528,7 +536,7 @@ namespace MouldSpecification
                 DataRow dr = ((DataRowView)bm.Current).Row;
                 dr.Delete();
                 dr.EndEdit();
-                btnQCInstructionNewRow.Enabled = (bm.Count < 2);                    
+                btnQCInstructionNewRow.Enabled = (bm.Count < maxRows);                    
             }
         }
 
@@ -821,8 +829,7 @@ namespace MouldSpecification
                 dgvQCInstruction.DataBindingComplete += dgvQCInstruction_DataBindingComplete;
                 dgvQCInstruction.DataError += dgvQCInstruction_DataError;
                 FormatQCInstruction();
-
-
+                
             }
             catch (Exception ex)
             {
