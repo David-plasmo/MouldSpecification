@@ -880,6 +880,7 @@ namespace MouldSpecification
                     DataRow dr = ((DataRowView)bm.Current).Row;
                     dr.Delete();
                     dr.EndEdit();
+                    btnAssemblyImageNewRow.Enabled = (bm.Count < maxRows);
                 }
             }
         }
@@ -1331,7 +1332,7 @@ namespace MouldSpecification
                 if (e.ColumnIndex == colIndex1)
                 {
                     image = EmptyImage();
-                    if (dgvAssemblyInstruction.Rows[e.RowIndex].Cells["AssemblyImageFilepath1"].Value != DBNull.Value)
+                    if (dgvAssemblyInstruction.Rows[e.RowIndex].Cells["AssemblyImageFilepath1"].Value != null)
                     {
                         filepath = dgvAssemblyInstruction.Rows[e.RowIndex].Cells["AssemblyImageFilePath1"].Value.ToString();
                         if (System.IO.File.Exists(filepath))
@@ -1343,7 +1344,7 @@ namespace MouldSpecification
                 else if (e.ColumnIndex == colIndex2)
                 {
                     image = EmptyImage();
-                    if (dgvAssemblyInstruction.Rows[e.RowIndex].Cells["AssemblyImageFilePath2"].Value != DBNull.Value)
+                    if (dgvAssemblyInstruction.Rows[e.RowIndex].Cells["AssemblyImageFilePath2"].Value != null)
                     {
                         filepath = dgvAssemblyInstruction.Rows[e.RowIndex].Cells["AssemblyImageFilepath2"].Value.ToString();
                         if (System.IO.File.Exists(filepath))
@@ -1621,7 +1622,7 @@ namespace MouldSpecification
             {               
                 bsManItems.CurrentChanged -= bsManItems_CurrentChanged; //form is about to close;  don't want to refresh
                 DataViewRowState dvrs;
-                DataRow[] rows;
+                //DataRow[] rows;
                 DataSet ds = dsPackaging;
                 DataRowView drv = (DataRowView)this.bsManItems.Current;
                 DataRow row = drv.Row;
