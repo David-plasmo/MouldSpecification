@@ -793,7 +793,7 @@ namespace MouldSpecification
         {
             int rowIndex = e.Row.Index;
             //dgvMasterBatchComp[rowIndex].Cells["MB123"].Value = rowIndex + 1;
-            dgvMasterBatchComp.Rows[rowIndex].Cells["MB123"].Value = rowIndex + 1;
+            //dgvMasterBatchComp.Rows[rowIndex].Cells["MB123"].Value = rowIndex + 1;
         }
         
         private void dgvMasterBatchComp_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -1084,6 +1084,7 @@ namespace MouldSpecification
                 //Material Composition
                 dt = dsIMSpecificationForm.Tables["MaterialComp"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
+                dt.Columns["Polymer123"].DefaultValue = 1;
                 dt.Columns["MaterialGradeID"].DefaultValue = newItemID;
                 dt.Columns["MaterialCompID"].DefaultValue = newItemID;
                 dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
@@ -1104,6 +1105,7 @@ namespace MouldSpecification
                 //Machine preference
                 dt = dsIMSpecificationForm.Tables["MachinePref"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
+                dt.Columns["MachineABC"].DefaultValue = "A";;
                 dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
                 dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
                 dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
@@ -1575,6 +1577,12 @@ namespace MouldSpecification
                 cbcMaterial.DisplayStyleForCurrentCellOnly = true;
                 cbcMaterial.DisplayStyle = DataGridViewComboBoxDisplayStyle.Nothing;
 
+                /*
+                 * change request Trish 29/04/25:  
+                 * -- remove Additional notes from MaterialGrade;    
+                 * -- move into MAN_Items
+                 * -- display in MATERIAL group under MasterBatch grid
+                 * 
                 //Create a dynamic combobox column for Additional Notes
                 DataGridViewComboBoxColumn cbcAdditionalNotes = new DataGridViewComboBoxColumn();
                 //dt = dsIMSpecificationForm.Tables["LookupMaterialComp"];
@@ -1589,6 +1597,7 @@ namespace MouldSpecification
                 dgvPolymer.Columns["AdditionalNotes"].HeaderText = "Additional Notes";
                 cbcAdditionalNotes.DisplayStyleForCurrentCellOnly = true;
                 cbcAdditionalNotes.DisplayStyle = DataGridViewComboBoxDisplayStyle.Nothing;
+                */
 
                 dgvPolymer.Columns["MaterialCompID"].Visible = false;
                 dgvPolymer.Columns["ItemID"].Visible = false;
@@ -1666,7 +1675,7 @@ namespace MouldSpecification
                 dgvPolymer.Columns["PolymerPercent"].Width = p96W(70);
                 dgvPolymer.Columns["Grade"].Width = p96W(250);
                 dgvPolymer.Columns["Material"].Width = p96W(100);
-                dgvPolymer.Columns["AdditionalNotes"].Width = p96W(230);
+                //dgvPolymer.Columns["AdditionalNotes"].Width = p96W(230);
 
                 dgvPolymer.EditingControlShowing +=
                    new DataGridViewEditingControlShowingEventHandler(dgvPolymer_EditingControlShowing);
@@ -2980,7 +2989,8 @@ namespace MouldSpecification
             {
                 //dgvMachine.UserAddedRow += dgvMachine_RowCountChanged;
                 dgvMachine.UserDeletedRow += dgvMachine_UserDeletedRow;
-
+                //dgvMachine.DataBindingComplete += dgvMachine_DataBindingComplete;
+                //dgvMachine.RowValidating += dgvMachine_RowValidating;
                 DataGridViewCellStyle style = dgvMachine.ColumnHeadersDefaultCellStyle;
                 style.BackColor = Color.LightSteelBlue;
                 style.ForeColor = Color.Black;
@@ -3069,6 +3079,34 @@ namespace MouldSpecification
             }
         }
 
+        //private void dgvMachine_RowValidating(object sender, DataGridViewCellCancelEventArgs e)
+        //{
+        //    DataGridViewRow row = dgvMachine.Rows[e.RowIndex];
+        //    DataGridViewCell cellABC = row.Cells[dgvMachine.Columns["MachineABC"].Index];
+        //    if(cellABC.Value.ToString().Length == 0)
+        //    {
+        //        int rowIndex = row.Index;
+        //        string machineABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        //        string curABC = machineABC.Substring(rowIndex, 1);
+        //        cellABC.Value = curABC;
+        //    }
+        //    e.Cancel = false;
+        //}
+
+        //private void dgvMachine_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        //{
+        //    foreach (DataGridViewRow row in dgvMachine.Rows)
+        //    {
+        //        if (row.Cells["MachineABC"].Value == DBNull.Value)
+        //        {
+        //            int rowIndex = row.Index;
+        //            string machineABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        //            string curABC = machineABC.Substring(rowIndex, 1);
+        //            //dgvMachine.Rows[rowIndex].Cells["MachineABC"].Value = curABC;
+        //        }
+        //    }
+        //}
+
         private void dgvMachine_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
         {
             btnAddNewMachine.Enabled = dgvMachine.Rows.Count < maxRowsMachine;
@@ -3125,11 +3163,12 @@ namespace MouldSpecification
 
         private void dgvMachine_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
         {
-            int rowIndex = e.Row.Index;
-            string machineABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            string curABC = machineABC.Substring(rowIndex, 1);
-            dgvMachine.Rows[rowIndex].Cells["MachineABC"].Value = curABC;
-            dgvMachine.Rows[rowIndex].HeaderCell.Value = "Machine " + curABC;
+            //int rowIndex = e.Row.Index;
+            //string machineABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            //string curABC = machineABC.Substring(rowIndex, 1);
+            //dgvMachine.Rows[rowIndex].Cells["MachineABC"].Value = curABC;
+            //dgvMachine.Rows[rowIndex].HeaderCell.Value = "Machine " + curABC;
+            bsMachPref.AddNew();
         }
 
         //private void tsbtnExit_Click(object sender, EventArgs e)
