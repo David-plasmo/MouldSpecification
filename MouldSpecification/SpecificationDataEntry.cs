@@ -648,6 +648,7 @@ namespace MouldSpecification
                 txtTotalShotWeight.DataBindings.Add(new Binding("Text", bsManItems, "TotalShotWeight"));
                 lblItemID.DataBindings.Add(new Binding("Text", bsManItems, "ItemID"));
                 txtAltCode.DataBindings.Add(new Binding("Text", bsManItems, "AltCode"));
+                txtAdditionalNotes.DataBindings.Add(new Binding("Text", bsManItems, "AdditionalNotes"));
 
                 txtMouldNumber.DataBindings.Add(new Binding("Text", bsMouldSpec, "MouldNumber"));
                 txtMouldOwner.DataBindings.Add(new Binding("Text", bsMouldSpec, "MouldOwner"));

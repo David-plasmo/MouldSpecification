@@ -59,8 +59,8 @@ namespace MouldSpecification
             dgvEdit.Columns[1].Visible = false;
             dgvEdit.Columns["MaterialGrade"].Width = 200;
             dgvEdit.Columns["MaterialGrade"].HeaderText = "Material Grade";
-            dgvEdit.Columns["AdditionalNotes"].HeaderText = "Additional Notes";
-            dgvEdit.Columns["AdditionalNotes"].Width = 200;
+            //dgvEdit.Columns["AdditionalNotes"].HeaderText = "Additional Notes";
+            //dgvEdit.Columns["AdditionalNotes"].Width = 200;
             dgvEdit.Columns["CostPerKg"].Width = 60;
             dgvEdit.Columns["Comment"].Width = 200;
             dgvEdit.Columns["CostPerKg"].DefaultCellStyle.Format = "N3";
@@ -169,7 +169,7 @@ namespace MouldSpecification
                 }
                 dgvEdit.EndEdit();
                 dgvEdit.DataSource = null;
-                MaterialGradeDAL.UpdateMaterialGrade(dsMaterialGrade);
+                new MaterialGradeDAL().UpdateMaterialGrade(dsMaterialGrade);
 
             }
             catch

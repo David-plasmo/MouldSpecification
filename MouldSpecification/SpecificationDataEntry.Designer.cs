@@ -55,6 +55,8 @@
             this.addProductsForCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCustomersForProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addEditCustomersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtAdditionalNotes = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAddNewMB = new System.Windows.Forms.Button();
             this.gpMasterBatch = new System.Windows.Forms.GroupBox();
             this.dgvMasterBatchComp = new System.Windows.Forms.DataGridView();
@@ -198,6 +200,8 @@
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.AutoScrollMinSize = new System.Drawing.Size(25, 25);
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.splitContainer1.Panel2.Controls.Add(this.txtAdditionalNotes);
+            this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.btnAddNewMB);
             this.splitContainer1.Panel2.Controls.Add(this.gpMasterBatch);
             this.splitContainer1.Panel2.Controls.Add(this.btnAddNewMaterial);
@@ -207,8 +211,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.gpMaterial);
             this.splitContainer1.Panel2.Controls.Add(this.gpGeneral);
             this.splitContainer1.Panel2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.splitContainer1.Size = new System.Drawing.Size(1008, 606);
-            this.splitContainer1.SplitterDistance = 36;
+            this.splitContainer1.Size = new System.Drawing.Size(1008, 911);
+            this.splitContainer1.SplitterDistance = 54;
             this.splitContainer1.TabIndex = 0;
             // 
             // bindingNavigator1
@@ -443,6 +447,22 @@
             this.addEditCustomersToolStripMenuItem.Text = "Add/Edit Customers";
             this.addEditCustomersToolStripMenuItem.Click += new System.EventHandler(this.addEditCustomersToolStripMenuItem_Click);
             // 
+            // txtAdditionalNotes
+            // 
+            this.txtAdditionalNotes.Location = new System.Drawing.Point(102, 435);
+            this.txtAdditionalNotes.Name = "txtAdditionalNotes";
+            this.txtAdditionalNotes.Size = new System.Drawing.Size(529, 20);
+            this.txtAdditionalNotes.TabIndex = 40;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 438);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Additional Notes";
+            // 
             // btnAddNewMB
             // 
             this.btnAddNewMB.AutoSize = true;
@@ -609,11 +629,11 @@
             this.gpMould.Controls.Add(this.gpMouldRequirements);
             this.gpMould.Controls.Add(this.gpFinishedProduct);
             this.gpMould.Enabled = false;
-            this.gpMould.Location = new System.Drawing.Point(9, 443);
+            this.gpMould.Location = new System.Drawing.Point(9, 468);
             this.gpMould.Margin = new System.Windows.Forms.Padding(0);
             this.gpMould.Name = "gpMould";
             this.gpMould.Padding = new System.Windows.Forms.Padding(0);
-            this.gpMould.Size = new System.Drawing.Size(899, 591);
+            this.gpMould.Size = new System.Drawing.Size(899, 573);
             this.gpMould.TabIndex = 11;
             this.gpMould.TabStop = false;
             this.gpMould.Text = "MOULD";
@@ -1575,7 +1595,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1008, 606);
+            this.ClientSize = new System.Drawing.Size(1008, 911);
             this.Controls.Add(this.splitContainer1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SpecificationDataEntry";
@@ -1749,5 +1769,7 @@
         private System.Windows.Forms.DataGridView dgvMasterBatchComp;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAddNewMB;
+        private System.Windows.Forms.TextBox txtAdditionalNotes;
+        private System.Windows.Forms.Label label1;
     }
 }

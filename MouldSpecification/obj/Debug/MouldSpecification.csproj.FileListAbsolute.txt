@@ -90,7 +90,6 @@ C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\b
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Azure.Core.xml
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Azure.Identity.xml
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\InjectionMouldReports.pdb
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\InjectionMouldReports.dll.config
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.Bcl.TimeProvider.xml
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.Data.SqlClient.xml
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.Identity.Client.xml
@@ -375,9 +374,7 @@ C:\Users\david\source\repos\David-plasmo\MouldSpecification_SAVE\MouldSpecificat
 C:\Users\david\source\repos\David-plasmo\MouldSpecification_SAVE\MouldSpecification\obj\Debug\MouldSpe.9F26BE33.Up2Date
 C:\Users\david\source\repos\David-plasmo\MouldSpecification_SAVE\MouldSpecification\obj\Debug\MouldSpecification.exe
 C:\Users\david\source\repos\David-plasmo\MouldSpecification_SAVE\MouldSpecification\obj\Debug\MouldSpecification.pdb
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\InjectionMouldReports.exe.config
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\ApplicationAccess.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\InjectionMouldReports.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.Build.Framework.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
@@ -404,3 +401,4 @@ C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\b
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\VSLangProj2.xml
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Debug\MouldSpecification.csproj.SuggestedBindingRedirects.cache
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Debug\MouldSpecification.exe.config
+C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\InjectionMouldReports.dll.config
