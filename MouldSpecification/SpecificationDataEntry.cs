@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using Utils;
 using static Utils.DrawingUtils;
+using InjectionMouldReports;
 //using Microsoft.Office.Interop.Excel;
 
 
@@ -30,6 +31,9 @@ namespace MouldSpecification
         //straight away.  Applies to tscboCompany
         bool ignoreZero = false;
 
+        bool ChangedByCode = false;  //to exit SelectedIndexChanged event when SelectedValue is changed by code;
+                                     //event continues to fire, even if unsubscribed !!!!
+
         //private BindingSource bindingIMSpecification;
         DataSet dsCompany, dsProduct, dsGradeID, dsIMSpecificationForm,
                 dsPolymerGrade, dsPolymerType, dsMBColour;
@@ -47,6 +51,8 @@ namespace MouldSpecification
 
         ToolStripLabel tslCompany;
         ToolStripComboBox tscboCompany;
+        ToolStripLabel tslCode;
+        ToolStripComboBox tscboCode;
         ToolStripLabel tslProduct;
         ToolStripComboBox tscboProduct;
         ToolStripButton tsbtnReport;
@@ -82,17 +88,21 @@ namespace MouldSpecification
             NextForm = this.Name;
 
             this.SuspendLayout();
-            tslCompany = new ToolStripLabel() { Text = "Company" };
+            tslCompany = new ToolStripLabel() { Text = "Company" };            
+            tslCode = new ToolStripLabel() { Text = "Code" };
             tslProduct = new ToolStripLabel() { Text = "Product" };
             tscboCompany = new ToolStripComboBox();
+            tscboCode = new ToolStripComboBox();
             tscboProduct = new ToolStripComboBox();
-            //tscboEntryForm = new ToolStripComboBox() { Text = "Product Specification" }; ;
+            //tscboEntryForm = new ToolStripComboBox() { Text = "Product Specification" }; 
             tsbtnReport = new ToolStripButton() { Text = "Report" };
 
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[]
             {
                 tslCompany,
                 tscboCompany,
+                tslCode,
+                tscboCode,
                 tslProduct,
                 tscboProduct,
                 //tscboEntryForm,
@@ -1209,10 +1219,15 @@ namespace MouldSpecification
                     //reset product filter dropdown index
                     if (bsManItems.Filter != null)
                     {
-                        int itemID = (int)dr["ItemID"];
+                        int itemID = (int)dr["ItemID"];                        
                         tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
+                        ChangedByCode = true; //unsubscribing doesn't work for navigation bar combobox !!!
                         tscboProduct.ComboBox.SelectedValue = itemID;
                         tscboProduct.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
+                        tscboCode.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
+                        tscboCode.ComboBox.SelectedValue = itemID;
+                        tscboCode.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
+                        ChangedByCode = false;
                     }
                 }
 
@@ -1231,6 +1246,7 @@ namespace MouldSpecification
                     tscboCompany.Enabled = false;
                     tscboProduct.Enabled = false;
                     tsbtnReport.Enabled = false;
+                    tscboCode.Enabled = false;
 
                     //add new CustomerProduct
                     DataTable dt = dsIMSpecificationForm.Tables["CustomerProduct"];
@@ -1397,27 +1413,36 @@ namespace MouldSpecification
 
         private void tscboProduct_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            if (tscboProduct.SelectedIndex != -1)
+            if (tscboProduct.SelectedIndex != -1 && !ignoreZero)
             {
                 int itemID = (int)tscboProduct.ComboBox.SelectedValue;
-                if (bsManItems == null)
+                if(itemID != LastItemID && !ChangedByCode)
                 {
+                    LastItemID = itemID;
+                    tscboCode.ComboBox.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
+                    ChangedByCode = true;
+                    tscboCode.ComboBox.SelectedValue = itemID;
+                    tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
+                    ChangedByCode = false;
+                    if (bsManItems == null)
                     {
-                        BindControls();
-                        FormatPolymerGrid();
-                        FormatAdditiveGrid();
-                        FormatMBGrid();
-                        FormatMasterBatchCompGrid();
-                        FormatMachineGrid();
-                        EnableGroups(true);
+                        {
+                            BindControls();
+                            FormatPolymerGrid();
+                            FormatAdditiveGrid();
+                            FormatMBGrid();
+                            FormatMasterBatchCompGrid();
+                            FormatMachineGrid();
+                            EnableGroups(true);
+                        }
                     }
-                }
-                int itemIndex = bsManItems.Find("ItemID", itemID);
-                if (itemID != -1)
-                {
-                    tsbtnReport.Enabled = true;
-                    bsManItems.Position = itemIndex;
-                }
+                    int itemIndex = bsManItems.Find("ItemID", itemID);
+                    if (itemID != -1)
+                    {
+                        tsbtnReport.Enabled = true;
+                        bsManItems.Position = itemIndex;
+                    }
+                }                
             }
         }
 
@@ -1428,16 +1453,16 @@ namespace MouldSpecification
             // workaround:  set ignoreZero to true !!!
             // ###
             if (tscboCompany.SelectedIndex == -1 || 
-               (tscboCompany.SelectedIndex == 0 && ignoreZero))
+               (tscboCompany.SelectedIndex == 0 && ignoreZero) )
+            {
                 return;
-            else if (CustomerFilterOn)
-            {                
-                int custID = (int)tscboCompany.ComboBox.SelectedValue;
-                SetProductFilter(custID); 
-                //ignoreZero = false;
-            }
-            else
-                CustomerFilterOn = false;
+            }                                      
+            int custID = (int)tscboCompany.ComboBox.SelectedValue;
+            if (custID != LastCustomerID)
+            {
+                SetProductFilter(custID);
+                LastCustomerID = custID;
+            }                      
         }
 
         private void SetProductFilter(int custID, int itemID = 0)
@@ -1450,7 +1475,8 @@ namespace MouldSpecification
                 DataView dv = new DataView(dt, "CustomerID = " + custID.ToString(), "CustomerID", DataViewRowState.CurrentRows);
                 DataTable dt1 = dv.ToTable();
                 DataTable dt2 = dsProduct.Tables["product"];
-                dt2.DefaultView.RowFilter = "";
+                //dt2.DefaultView.RowFilter = "";
+                string rowFilter = "";
                 if (dt1.Rows.Count == 0)
                 {
                     if (MessageBox.Show("This customer has no products.  Do you wish to add this customer for an existing product?",
@@ -1464,17 +1490,33 @@ namespace MouldSpecification
                 else
                 {
                     var ids = dt1.AsEnumerable().Select(r => r.Field<int>("ItemID"));                    
-                    dt2.DefaultView.RowFilter = string.Format("ItemID in ({0})", string.Join(",", ids));
-                }                
+                    //dt2.DefaultView.RowFilter = string.Format("ItemID in ({0})", string.Join(",", ids));
+                    rowFilter = string.Format("ItemID in ({0})", string.Join(",", ids));
+                    itemID = ids.FirstOrDefault();
+                }
+                //populate navigation bar Product dropdown
+                DataView vp = new DataView(dt2);
+                vp.Sort = "ITEMDESC ASC";
+                vp.RowFilter = rowFilter;
                 tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;                
                 tscboProduct.ComboBox.DataBindings.Clear();
-                tscboProduct.ComboBox.SelectedIndex = -1;
+                //tscboProduct.ComboBox.SelectedIndex = -1;
                 ignoreZero = true;  //exits SelectedIndexChanged 
-                tscboProduct.ComboBox.DataSource = dt2;
+                tscboProduct.ComboBox.DataSource = vp;
                 tscboProduct.ComboBox.ValueMember = "ItemID";
-                tscboProduct.ComboBox.DisplayMember = "ITEMDESC";
-                
-                tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
+                tscboProduct.ComboBox.DisplayMember = "ITEMDESC";                
+                //tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
+
+                // populate navigation bar code dropdown
+                DataView vc = new DataView(dt2);
+                vc.Sort = "ITEMNMBR ASC";
+                vc.RowFilter = rowFilter;
+                tscboCode.ComboBox.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
+                tscboCode.ComboBox.DataBindings.Clear();
+                tscboCode.ComboBox.DataSource = vc;
+                tscboCode.ComboBox.ValueMember = "ItemID";
+                tscboCode.ComboBox.DisplayMember = "ITEMNMBR";
+                //tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
                 if (dt1.Rows.Count > 0)
                 {
                     ignoreZero = false;
@@ -1485,20 +1527,22 @@ namespace MouldSpecification
                         FormatAdditiveGrid();
                         FormatMBGrid();
                         FormatMasterBatchCompGrid();
-                        FormatMachineGrid();                        
+                        FormatMachineGrid();
                     }
                     EnableGroups(true);
-                    bsManItems.Filter = dt2.DefaultView.RowFilter;
+                    bsManItems.Filter = rowFilter;
                     if (itemID != 0)
-                        if (dt2.DefaultView.RowFilter.Contains(itemID.ToString()))
+                    {
+                        if (rowFilter.Contains(itemID.ToString()))
                         {
+                            ChangedByCode = true;
                             tscboProduct.ComboBox.SelectedValue = itemID;
-                        }
-                        else
-                            tscboProduct.ComboBox.SelectedIndex = 0;
-                    else
-                        //position to first item within selected company
-                        tscboProduct.ComboBox.SelectedIndex = 0;
+                            tscboCode.ComboBox.SelectedValue = itemID;
+                            ChangedByCode = false;
+                            tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
+                            tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
+                        }                         
+                    }                         
                 }
                 //bsManItems.Filter = dv2.RowFilter;
             }
@@ -1506,6 +1550,42 @@ namespace MouldSpecification
             {
                 MessageBox.Show(ex.Message, "SetProductFilter", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }            
+        }
+
+        private void tscboCode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tscboCode.SelectedIndex != -1 )
+            {
+                int itemID = (int)tscboCode.ComboBox.SelectedValue;
+                if (itemID != LastItemID && !ChangedByCode)
+                {
+                    LastItemID = itemID;
+                    tscboProduct.ComboBox.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
+                    ChangedByCode = true; //event still fires, even though unsubscribed !! 
+                                          //set this boolean to exit the event 
+                    tscboProduct.ComboBox.SelectedValue = itemID;
+                    tscboProduct.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
+                    ChangedByCode = false;
+                    if (bsManItems == null)
+                    {
+                        {
+                            BindControls();
+                            FormatPolymerGrid();
+                            FormatAdditiveGrid();
+                            FormatMBGrid();
+                            FormatMasterBatchCompGrid();
+                            FormatMachineGrid();
+                            EnableGroups(true);
+                        }
+                    }
+                    int itemIndex = bsManItems.Find("ItemID", itemID);
+                    if (itemID != -1)
+                    {
+                        tsbtnReport.Enabled = true;
+                        bsManItems.Position = itemIndex;
+                    }
+                }
+            }
         }
 
         private void EnableGroups(bool flag)
