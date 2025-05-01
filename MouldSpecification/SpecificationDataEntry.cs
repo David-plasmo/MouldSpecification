@@ -220,7 +220,7 @@ namespace MouldSpecification
                 tscboCompany.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
                 tscboCompany.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
                 tscboCompany.DropDownHeight = 400;
-                tscboCompany.DropDownWidth = 300;
+                tscboCompany.DropDownWidth = p96W(250);
                 tscboCompany.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
                 tscboCompany.IntegralHeight = false;
                 tscboCompany.MaxDropDownItems = 9;
@@ -229,16 +229,28 @@ namespace MouldSpecification
                 tscboCompany.Size = new System.Drawing.Size(p96W(250), p96H(25));
                 tscboCompany.Sorted = true;
 
+                tscboCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+                tscboCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+                tscboCode.DropDownHeight = 400;
+                tscboCode.DropDownWidth = p96W(150);
+                tscboCode.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+                tscboCode.IntegralHeight = false;
+                tscboCode.MaxDropDownItems = 9;
+                tscboCode.MergeAction = System.Windows.Forms.MergeAction.Insert;
+                tscboCode.Name = "tscboCode";
+                tscboCode.Size = new System.Drawing.Size(p96W(150), p96H(25));
+                tscboCode.Sorted = true;
+
                 tscboProduct.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
                 tscboProduct.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
                 tscboProduct.DropDownHeight = 400;
-                tscboProduct.DropDownWidth = 200;
+                tscboProduct.DropDownWidth = p96W(300);
                 tscboProduct.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
                 tscboProduct.IntegralHeight = false;
                 tscboProduct.MaxDropDownItems = 9;
                 tscboProduct.MergeAction = System.Windows.Forms.MergeAction.Insert;
                 tscboProduct.Name = "tscboProduct";
-                tscboProduct.Size = new System.Drawing.Size(p96W(200), p96H(25));
+                tscboProduct.Size = new System.Drawing.Size(p96W(300), p96H(25));
                 tscboProduct.Sorted = true;
 
                 this.errorProvider1 = new System.Windows.Forms.ErrorProvider();
@@ -339,12 +351,17 @@ namespace MouldSpecification
                 tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
 
                 dt = dsProduct.Tables[0];
-                dt.TableName = "product";
+                dt.TableName = "product";                
                 tscboProduct.ComboBox.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
+                ChangedByCode = true;  //workaround for SelectedIndexChanged event still firing, even though unsubscribed!!!
                 tscboProduct.ComboBox.DataSource = dt;
                 tscboProduct.ComboBox.DisplayMember = "ITEMDESC";
                 //tscboProduct.ComboBox.DisplayMember = "DisplayValue";            
                 tscboProduct.ComboBox.ValueMember = "ItemID";
+                tscboCode.ComboBox.DataSource = dt;
+                tscboCode.ComboBox.DisplayMember = "ITEMNMBR";
+                tscboCode.ComboBox.ValueMember = "ItemID";
+
                 dt.RowChanging += Dt_RowChanging;
                 dt.TableNewRow += Dt_TableNewRow;
                 if (CustomerFilterOn && LastCustomerID.HasValue && LastItemID.HasValue)
@@ -362,8 +379,12 @@ namespace MouldSpecification
                         //position to last selected product, without customer filter
                         tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
                         tscboCompany.ComboBox.SelectedIndex = -1;
+                        tscboCode.ComboBox.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
+                        tscboCode.ComboBox.SelectedIndex = -1;
                         tscboProduct.ComboBox.SelectedValue = LastItemID;
+                        tscboCode.ComboBox.SelectedValue = LastItemID;
                         tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
+                        tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
                         RefreshCurrent();
                     }
                     else
@@ -375,10 +396,15 @@ namespace MouldSpecification
                         tscboProduct.ComboBox.SelectedIndex = -1;
                         tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
                         tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
+                        tscboCode.ComboBox.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
+                        tscboCode.ComboBox.SelectedIndex = -1;
+                        tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
                         //tscboProduct.ComboBox.SelectedIndex = 0;
                         //RefreshCurrent();
                     }
                 }
+
+                ChangedByCode = false;  //re-enables navigation bar combobox SelectedIndexChanged events
             }
             catch (Exception ex)
             {
