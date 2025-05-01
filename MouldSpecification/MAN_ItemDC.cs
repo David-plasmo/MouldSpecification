@@ -31,8 +31,14 @@ namespace MouldSpecification
         public Boolean StockLine { get; set; }
         public DateTime last_updated_on { get; set; }
         public string last_updated_by { get; set; }
+        public string AdditionalNotes { get; set; }
 
-        public MAN_ItemDC(int ItemID_, string ITEMNMBR_, string ITEMDESC_, string AltCode_, string ProductType_, int GradeID_, string ImageFile_, decimal ComponentWeight_, decimal SprueRunnerTotal_, decimal TotalShotWeight_, string CompDB_, string ITMCLSCD_, int CtnQty_, int CartonID_, int LabelTypeID_, string BottleSize_, string Style_, string NeckSize_, string Colour_, Boolean DangerousGood_, Boolean StockLine_, DateTime last_updated_on_, string last_updated_by_)
+        public MAN_ItemDC(int ItemID_, string ITEMNMBR_, string ITEMDESC_, string AltCode_, 
+            string ProductType_, int GradeID_, string ImageFile_, decimal ComponentWeight_, 
+            decimal SprueRunnerTotal_, decimal TotalShotWeight_, string CompDB_, string ITMCLSCD_, 
+            int CtnQty_, int CartonID_, int LabelTypeID_, string BottleSize_, string Style_, 
+            string NeckSize_, string Colour_, Boolean DangerousGood_, Boolean StockLine_, 
+            DateTime last_updated_on_, string last_updated_by_, string AdditionalNotes_)
         {
             this.ItemID = ItemID_;
             this.ITEMNMBR = ITEMNMBR_;
@@ -57,6 +63,7 @@ namespace MouldSpecification
             this.StockLine = StockLine_;
             this.last_updated_on = last_updated_on_;
             this.last_updated_by = last_updated_by_;
+            this.AdditionalNotes = AdditionalNotes_;
 
         }
 

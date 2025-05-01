@@ -55,6 +55,8 @@
             this.addProductsForCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCustomersForProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addEditCustomersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtAdditionalNotes = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAddNewMB = new System.Windows.Forms.Button();
             this.gpMasterBatch = new System.Windows.Forms.GroupBox();
             this.dgvMasterBatchComp = new System.Windows.Forms.DataGridView();
@@ -198,6 +200,8 @@
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.AutoScrollMinSize = new System.Drawing.Size(25, 25);
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.splitContainer1.Panel2.Controls.Add(this.txtAdditionalNotes);
+            this.splitContainer1.Panel2.Controls.Add(this.label1);
             this.splitContainer1.Panel2.Controls.Add(this.btnAddNewMB);
             this.splitContainer1.Panel2.Controls.Add(this.gpMasterBatch);
             this.splitContainer1.Panel2.Controls.Add(this.btnAddNewMaterial);
@@ -207,8 +211,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.gpMaterial);
             this.splitContainer1.Panel2.Controls.Add(this.gpGeneral);
             this.splitContainer1.Panel2.Margin = new System.Windows.Forms.Padding(0, 3, 0, 0);
-            this.splitContainer1.Size = new System.Drawing.Size(1008, 606);
-            this.splitContainer1.SplitterDistance = 36;
+            this.splitContainer1.Size = new System.Drawing.Size(1008, 911);
+            this.splitContainer1.SplitterDistance = 54;
             this.splitContainer1.TabIndex = 0;
             // 
             // bindingNavigator1
@@ -443,6 +447,22 @@
             this.addEditCustomersToolStripMenuItem.Text = "Add/Edit Customers";
             this.addEditCustomersToolStripMenuItem.Click += new System.EventHandler(this.addEditCustomersToolStripMenuItem_Click);
             // 
+            // txtAdditionalNotes
+            // 
+            this.txtAdditionalNotes.Location = new System.Drawing.Point(102, 435);
+            this.txtAdditionalNotes.Name = "txtAdditionalNotes";
+            this.txtAdditionalNotes.Size = new System.Drawing.Size(529, 20);
+            this.txtAdditionalNotes.TabIndex = 40;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 438);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.TabIndex = 39;
+            this.label1.Text = "Additional Notes";
+            // 
             // btnAddNewMB
             // 
             this.btnAddNewMB.AutoSize = true;
@@ -476,7 +496,7 @@
             this.dgvMasterBatchComp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvMasterBatchComp.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMasterBatchComp.Location = new System.Drawing.Point(3, 16);
-            this.dgvMasterBatchComp.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dgvMasterBatchComp.Margin = new System.Windows.Forms.Padding(1);
             this.dgvMasterBatchComp.Name = "dgvMasterBatchComp";
             this.dgvMasterBatchComp.RowHeadersWidth = 92;
             this.dgvMasterBatchComp.RowTemplate.Height = 19;
@@ -520,9 +540,9 @@
             this.gpImage.Controls.Add(this.lblProductImage);
             this.gpImage.Enabled = false;
             this.gpImage.Location = new System.Drawing.Point(510, 11);
-            this.gpImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpImage.Margin = new System.Windows.Forms.Padding(2);
             this.gpImage.Name = "gpImage";
-            this.gpImage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpImage.Padding = new System.Windows.Forms.Padding(2);
             this.gpImage.Size = new System.Drawing.Size(454, 202);
             this.gpImage.TabIndex = 36;
             this.gpImage.TabStop = false;
@@ -530,7 +550,7 @@
             // picImageFile
             // 
             this.picImageFile.Location = new System.Drawing.Point(273, 12);
-            this.picImageFile.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.picImageFile.Margin = new System.Windows.Forms.Padding(1);
             this.picImageFile.Name = "picImageFile";
             this.picImageFile.Size = new System.Drawing.Size(171, 132);
             this.picImageFile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -574,7 +594,7 @@
             // 
             this.txtImageFile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtImageFile.Location = new System.Drawing.Point(8, 173);
-            this.txtImageFile.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtImageFile.Margin = new System.Windows.Forms.Padding(1);
             this.txtImageFile.Name = "txtImageFile";
             this.txtImageFile.Size = new System.Drawing.Size(406, 20);
             this.txtImageFile.TabIndex = 30;
@@ -609,11 +629,11 @@
             this.gpMould.Controls.Add(this.gpMouldRequirements);
             this.gpMould.Controls.Add(this.gpFinishedProduct);
             this.gpMould.Enabled = false;
-            this.gpMould.Location = new System.Drawing.Point(9, 443);
+            this.gpMould.Location = new System.Drawing.Point(9, 468);
             this.gpMould.Margin = new System.Windows.Forms.Padding(0);
             this.gpMould.Name = "gpMould";
             this.gpMould.Padding = new System.Windows.Forms.Padding(0);
-            this.gpMould.Size = new System.Drawing.Size(899, 591);
+            this.gpMould.Size = new System.Drawing.Size(899, 573);
             this.gpMould.TabIndex = 11;
             this.gpMould.TabStop = false;
             this.gpMould.Text = "MOULD";
@@ -643,7 +663,7 @@
             this.tableLayoutPanel7.Controls.Add(this.lblOtherFeatures, 0, 2);
             this.tableLayoutPanel7.Controls.Add(this.txtOperation, 1, 1);
             this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 83);
-            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tableLayoutPanel7.Margin = new System.Windows.Forms.Padding(1);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 3;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -793,7 +813,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMouldOwner.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMouldOwner.Location = new System.Drawing.Point(80, 16);
-            this.txtMouldOwner.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtMouldOwner.Margin = new System.Windows.Forms.Padding(1);
             this.txtMouldOwner.Name = "txtMouldOwner";
             this.txtMouldOwner.Size = new System.Drawing.Size(163, 20);
             this.txtMouldOwner.TabIndex = 12;
@@ -816,7 +836,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtNoOfPart.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNoOfPart.Location = new System.Drawing.Point(475, 31);
-            this.txtNoOfPart.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtNoOfPart.Margin = new System.Windows.Forms.Padding(1);
             this.txtNoOfPart.Name = "txtNoOfPart";
             this.txtNoOfPart.Size = new System.Drawing.Size(34, 20);
             this.txtNoOfPart.TabIndex = 16;
@@ -828,7 +848,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMouldLocation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMouldLocation.Location = new System.Drawing.Point(328, 1);
-            this.txtMouldLocation.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtMouldLocation.Margin = new System.Windows.Forms.Padding(1);
             this.txtMouldLocation.Name = "txtMouldLocation";
             this.txtMouldLocation.Size = new System.Drawing.Size(87, 20);
             this.txtMouldLocation.TabIndex = 11;
@@ -848,7 +868,7 @@
             // 
             this.txtNoOfCavities.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNoOfCavities.Location = new System.Drawing.Point(328, 31);
-            this.txtNoOfCavities.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtNoOfCavities.Margin = new System.Windows.Forms.Padding(1);
             this.txtNoOfCavities.Name = "txtNoOfCavities";
             this.txtNoOfCavities.Size = new System.Drawing.Size(29, 20);
             this.txtNoOfCavities.TabIndex = 15;
@@ -884,7 +904,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtMouldNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMouldNumber.Location = new System.Drawing.Point(80, 1);
-            this.txtMouldNumber.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txtMouldNumber.Margin = new System.Windows.Forms.Padding(1);
             this.txtMouldNumber.Name = "txtMouldNumber";
             this.txtMouldNumber.Size = new System.Drawing.Size(163, 20);
             this.txtMouldNumber.TabIndex = 10;
@@ -938,7 +958,7 @@
             this.tableLayoutPanel3.Controls.Add(this.lblFixedDegC, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.lblMovDegC, 2, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(1);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
@@ -1044,7 +1064,7 @@
             this.dgvMachine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMachine.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvMachine.Location = new System.Drawing.Point(3, 16);
-            this.dgvMachine.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dgvMachine.Margin = new System.Windows.Forms.Padding(1);
             this.dgvMachine.Name = "dgvMachine";
             this.dgvMachine.RowHeadersWidth = 92;
             this.dgvMachine.RowTemplate.Height = 19;
@@ -1201,7 +1221,7 @@
             this.tableLayoutPanel2.Controls.Add(this.txtTotalShotWeight, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(1);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
@@ -1298,7 +1318,7 @@
             this.dgvPolymer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvPolymer.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvPolymer.Location = new System.Drawing.Point(3, 16);
-            this.dgvPolymer.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.dgvPolymer.Margin = new System.Windows.Forms.Padding(1);
             this.dgvPolymer.Name = "dgvPolymer";
             this.dgvPolymer.RowHeadersWidth = 92;
             this.dgvPolymer.RowTemplate.Height = 19;
@@ -1321,7 +1341,7 @@
             // btnCopyToNew
             // 
             this.btnCopyToNew.Location = new System.Drawing.Point(387, 15);
-            this.btnCopyToNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCopyToNew.Margin = new System.Windows.Forms.Padding(2);
             this.btnCopyToNew.Name = "btnCopyToNew";
             this.btnCopyToNew.Size = new System.Drawing.Size(90, 21);
             this.btnCopyToNew.TabIndex = 33;
@@ -1575,7 +1595,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1008, 606);
+            this.ClientSize = new System.Drawing.Size(1008, 911);
             this.Controls.Add(this.splitContainer1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "SpecificationDataEntry";
@@ -1749,5 +1769,7 @@
         private System.Windows.Forms.DataGridView dgvMasterBatchComp;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAddNewMB;
+        private System.Windows.Forms.TextBox txtAdditionalNotes;
+        private System.Windows.Forms.Label label1;
     }
 }

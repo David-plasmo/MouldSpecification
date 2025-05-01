@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using Utils;
 using static Utils.DrawingUtils;
+using InjectionMouldReports;
 //using Microsoft.Office.Interop.Excel;
 
 
@@ -30,6 +31,9 @@ namespace MouldSpecification
         //straight away.  Applies to tscboCompany
         bool ignoreZero = false;
 
+        bool ChangedByCode = false;  //to exit SelectedIndexChanged event when SelectedValue is changed by code;
+                                     //event continues to fire, even if unsubscribed !!!!
+
         //private BindingSource bindingIMSpecification;
         DataSet dsCompany, dsProduct, dsGradeID, dsIMSpecificationForm,
                 dsPolymerGrade, dsPolymerType, dsMBColour;
@@ -47,6 +51,8 @@ namespace MouldSpecification
 
         ToolStripLabel tslCompany;
         ToolStripComboBox tscboCompany;
+        ToolStripLabel tslCode;
+        ToolStripComboBox tscboCode;
         ToolStripLabel tslProduct;
         ToolStripComboBox tscboProduct;
         ToolStripButton tsbtnReport;
@@ -82,17 +88,21 @@ namespace MouldSpecification
             NextForm = this.Name;
 
             this.SuspendLayout();
-            tslCompany = new ToolStripLabel() { Text = "Company" };
+            tslCompany = new ToolStripLabel() { Text = "Company" };            
+            tslCode = new ToolStripLabel() { Text = "Code" };
             tslProduct = new ToolStripLabel() { Text = "Product" };
             tscboCompany = new ToolStripComboBox();
+            tscboCode = new ToolStripComboBox();
             tscboProduct = new ToolStripComboBox();
-            //tscboEntryForm = new ToolStripComboBox() { Text = "Product Specification" }; ;
+            //tscboEntryForm = new ToolStripComboBox() { Text = "Product Specification" }; 
             tsbtnReport = new ToolStripButton() { Text = "Report" };
 
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[]
             {
                 tslCompany,
                 tscboCompany,
+                tslCode,
+                tscboCode,
                 tslProduct,
                 tscboProduct,
                 //tscboEntryForm,
@@ -210,7 +220,7 @@ namespace MouldSpecification
                 tscboCompany.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
                 tscboCompany.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
                 tscboCompany.DropDownHeight = 400;
-                tscboCompany.DropDownWidth = 300;
+                tscboCompany.DropDownWidth = p96W(250);
                 tscboCompany.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
                 tscboCompany.IntegralHeight = false;
                 tscboCompany.MaxDropDownItems = 9;
@@ -219,16 +229,28 @@ namespace MouldSpecification
                 tscboCompany.Size = new System.Drawing.Size(p96W(250), p96H(25));
                 tscboCompany.Sorted = true;
 
+                tscboCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+                tscboCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+                tscboCode.DropDownHeight = 400;
+                tscboCode.DropDownWidth = p96W(150);
+                tscboCode.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+                tscboCode.IntegralHeight = false;
+                tscboCode.MaxDropDownItems = 9;
+                tscboCode.MergeAction = System.Windows.Forms.MergeAction.Insert;
+                tscboCode.Name = "tscboCode";
+                tscboCode.Size = new System.Drawing.Size(p96W(150), p96H(25));
+                tscboCode.Sorted = true;
+
                 tscboProduct.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
                 tscboProduct.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
                 tscboProduct.DropDownHeight = 400;
-                tscboProduct.DropDownWidth = 200;
+                tscboProduct.DropDownWidth = p96W(300);
                 tscboProduct.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
                 tscboProduct.IntegralHeight = false;
                 tscboProduct.MaxDropDownItems = 9;
                 tscboProduct.MergeAction = System.Windows.Forms.MergeAction.Insert;
                 tscboProduct.Name = "tscboProduct";
-                tscboProduct.Size = new System.Drawing.Size(p96W(200), p96H(25));
+                tscboProduct.Size = new System.Drawing.Size(p96W(300), p96H(25));
                 tscboProduct.Sorted = true;
 
                 this.errorProvider1 = new System.Windows.Forms.ErrorProvider();
@@ -329,12 +351,17 @@ namespace MouldSpecification
                 tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
 
                 dt = dsProduct.Tables[0];
-                dt.TableName = "product";
+                dt.TableName = "product";                
                 tscboProduct.ComboBox.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
+                ChangedByCode = true;  //workaround for SelectedIndexChanged event still firing, even though unsubscribed!!!
                 tscboProduct.ComboBox.DataSource = dt;
                 tscboProduct.ComboBox.DisplayMember = "ITEMDESC";
                 //tscboProduct.ComboBox.DisplayMember = "DisplayValue";            
                 tscboProduct.ComboBox.ValueMember = "ItemID";
+                tscboCode.ComboBox.DataSource = dt;
+                tscboCode.ComboBox.DisplayMember = "ITEMNMBR";
+                tscboCode.ComboBox.ValueMember = "ItemID";
+
                 dt.RowChanging += Dt_RowChanging;
                 dt.TableNewRow += Dt_TableNewRow;
                 if (CustomerFilterOn && LastCustomerID.HasValue && LastItemID.HasValue)
@@ -352,8 +379,12 @@ namespace MouldSpecification
                         //position to last selected product, without customer filter
                         tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
                         tscboCompany.ComboBox.SelectedIndex = -1;
+                        tscboCode.ComboBox.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
+                        tscboCode.ComboBox.SelectedIndex = -1;
                         tscboProduct.ComboBox.SelectedValue = LastItemID;
+                        tscboCode.ComboBox.SelectedValue = LastItemID;
                         tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
+                        tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
                         RefreshCurrent();
                     }
                     else
@@ -365,10 +396,15 @@ namespace MouldSpecification
                         tscboProduct.ComboBox.SelectedIndex = -1;
                         tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
                         tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
+                        tscboCode.ComboBox.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
+                        tscboCode.ComboBox.SelectedIndex = -1;
+                        tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
                         //tscboProduct.ComboBox.SelectedIndex = 0;
                         //RefreshCurrent();
                     }
                 }
+
+                ChangedByCode = false;  //re-enables navigation bar combobox SelectedIndexChanged events
             }
             catch (Exception ex)
             {
@@ -648,6 +684,7 @@ namespace MouldSpecification
                 txtTotalShotWeight.DataBindings.Add(new Binding("Text", bsManItems, "TotalShotWeight"));
                 lblItemID.DataBindings.Add(new Binding("Text", bsManItems, "ItemID"));
                 txtAltCode.DataBindings.Add(new Binding("Text", bsManItems, "AltCode"));
+                txtAdditionalNotes.DataBindings.Add(new Binding("Text", bsManItems, "AdditionalNotes"));
 
                 txtMouldNumber.DataBindings.Add(new Binding("Text", bsMouldSpec, "MouldNumber"));
                 txtMouldOwner.DataBindings.Add(new Binding("Text", bsMouldSpec, "MouldOwner"));
@@ -793,7 +830,7 @@ namespace MouldSpecification
         {
             int rowIndex = e.Row.Index;
             //dgvMasterBatchComp[rowIndex].Cells["MB123"].Value = rowIndex + 1;
-            dgvMasterBatchComp.Rows[rowIndex].Cells["MB123"].Value = rowIndex + 1;
+            //dgvMasterBatchComp.Rows[rowIndex].Cells["MB123"].Value = rowIndex + 1;
         }
         
         private void dgvMasterBatchComp_DataError(object sender, DataGridViewDataErrorEventArgs e)
@@ -1084,6 +1121,7 @@ namespace MouldSpecification
                 //Material Composition
                 dt = dsIMSpecificationForm.Tables["MaterialComp"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
+                dt.Columns["Polymer123"].DefaultValue = 1;
                 dt.Columns["MaterialGradeID"].DefaultValue = newItemID;
                 dt.Columns["MaterialCompID"].DefaultValue = newItemID;
                 dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
@@ -1104,6 +1142,7 @@ namespace MouldSpecification
                 //Machine preference
                 dt = dsIMSpecificationForm.Tables["MachinePref"];
                 dt.Columns["ItemID"].DefaultValue = newItemID;
+                dt.Columns["MachineABC"].DefaultValue = "A";;
                 dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
                 dt.Columns["last_updated_by"].DefaultValue = System.Environment.UserName;
                 dt.Columns["last_updated_on"].DefaultValue = DateTime.MinValue;
@@ -1206,10 +1245,15 @@ namespace MouldSpecification
                     //reset product filter dropdown index
                     if (bsManItems.Filter != null)
                     {
-                        int itemID = (int)dr["ItemID"];
+                        int itemID = (int)dr["ItemID"];                        
                         tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
+                        ChangedByCode = true; //unsubscribing doesn't work for navigation bar combobox !!!
                         tscboProduct.ComboBox.SelectedValue = itemID;
                         tscboProduct.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
+                        tscboCode.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
+                        tscboCode.ComboBox.SelectedValue = itemID;
+                        tscboCode.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
+                        ChangedByCode = false;
                     }
                 }
 
@@ -1228,6 +1272,7 @@ namespace MouldSpecification
                     tscboCompany.Enabled = false;
                     tscboProduct.Enabled = false;
                     tsbtnReport.Enabled = false;
+                    tscboCode.Enabled = false;
 
                     //add new CustomerProduct
                     DataTable dt = dsIMSpecificationForm.Tables["CustomerProduct"];
@@ -1394,27 +1439,36 @@ namespace MouldSpecification
 
         private void tscboProduct_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            if (tscboProduct.SelectedIndex != -1)
+            if (tscboProduct.SelectedIndex != -1 && !ignoreZero)
             {
                 int itemID = (int)tscboProduct.ComboBox.SelectedValue;
-                if (bsManItems == null)
+                if(itemID != LastItemID && !ChangedByCode)
                 {
+                    LastItemID = itemID;
+                    tscboCode.ComboBox.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
+                    ChangedByCode = true;
+                    tscboCode.ComboBox.SelectedValue = itemID;
+                    tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
+                    ChangedByCode = false;
+                    if (bsManItems == null)
                     {
-                        BindControls();
-                        FormatPolymerGrid();
-                        FormatAdditiveGrid();
-                        FormatMBGrid();
-                        FormatMasterBatchCompGrid();
-                        FormatMachineGrid();
-                        EnableGroups(true);
+                        {
+                            BindControls();
+                            FormatPolymerGrid();
+                            FormatAdditiveGrid();
+                            FormatMBGrid();
+                            FormatMasterBatchCompGrid();
+                            FormatMachineGrid();
+                            EnableGroups(true);
+                        }
                     }
-                }
-                int itemIndex = bsManItems.Find("ItemID", itemID);
-                if (itemID != -1)
-                {
-                    tsbtnReport.Enabled = true;
-                    bsManItems.Position = itemIndex;
-                }
+                    int itemIndex = bsManItems.Find("ItemID", itemID);
+                    if (itemID != -1)
+                    {
+                        tsbtnReport.Enabled = true;
+                        bsManItems.Position = itemIndex;
+                    }
+                }                
             }
         }
 
@@ -1425,16 +1479,16 @@ namespace MouldSpecification
             // workaround:  set ignoreZero to true !!!
             // ###
             if (tscboCompany.SelectedIndex == -1 || 
-               (tscboCompany.SelectedIndex == 0 && ignoreZero))
+               (tscboCompany.SelectedIndex == 0 && ignoreZero) )
+            {
                 return;
-            else if (CustomerFilterOn)
-            {                
-                int custID = (int)tscboCompany.ComboBox.SelectedValue;
-                SetProductFilter(custID); 
-                //ignoreZero = false;
-            }
-            else
-                CustomerFilterOn = false;
+            }                                      
+            int custID = (int)tscboCompany.ComboBox.SelectedValue;
+            if (custID != LastCustomerID)
+            {
+                SetProductFilter(custID);
+                LastCustomerID = custID;
+            }                      
         }
 
         private void SetProductFilter(int custID, int itemID = 0)
@@ -1447,7 +1501,8 @@ namespace MouldSpecification
                 DataView dv = new DataView(dt, "CustomerID = " + custID.ToString(), "CustomerID", DataViewRowState.CurrentRows);
                 DataTable dt1 = dv.ToTable();
                 DataTable dt2 = dsProduct.Tables["product"];
-                dt2.DefaultView.RowFilter = "";
+                //dt2.DefaultView.RowFilter = "";
+                string rowFilter = "";
                 if (dt1.Rows.Count == 0)
                 {
                     if (MessageBox.Show("This customer has no products.  Do you wish to add this customer for an existing product?",
@@ -1461,17 +1516,33 @@ namespace MouldSpecification
                 else
                 {
                     var ids = dt1.AsEnumerable().Select(r => r.Field<int>("ItemID"));                    
-                    dt2.DefaultView.RowFilter = string.Format("ItemID in ({0})", string.Join(",", ids));
-                }                
+                    //dt2.DefaultView.RowFilter = string.Format("ItemID in ({0})", string.Join(",", ids));
+                    rowFilter = string.Format("ItemID in ({0})", string.Join(",", ids));
+                    itemID = ids.FirstOrDefault();
+                }
+                //populate navigation bar Product dropdown
+                DataView vp = new DataView(dt2);
+                vp.Sort = "ITEMDESC ASC";
+                vp.RowFilter = rowFilter;
                 tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;                
                 tscboProduct.ComboBox.DataBindings.Clear();
-                tscboProduct.ComboBox.SelectedIndex = -1;
+                //tscboProduct.ComboBox.SelectedIndex = -1;
                 ignoreZero = true;  //exits SelectedIndexChanged 
-                tscboProduct.ComboBox.DataSource = dt2;
+                tscboProduct.ComboBox.DataSource = vp;
                 tscboProduct.ComboBox.ValueMember = "ItemID";
-                tscboProduct.ComboBox.DisplayMember = "ITEMDESC";
-                
-                tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
+                tscboProduct.ComboBox.DisplayMember = "ITEMDESC";                
+                //tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
+
+                // populate navigation bar code dropdown
+                DataView vc = new DataView(dt2);
+                vc.Sort = "ITEMNMBR ASC";
+                vc.RowFilter = rowFilter;
+                tscboCode.ComboBox.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
+                tscboCode.ComboBox.DataBindings.Clear();
+                tscboCode.ComboBox.DataSource = vc;
+                tscboCode.ComboBox.ValueMember = "ItemID";
+                tscboCode.ComboBox.DisplayMember = "ITEMNMBR";
+                //tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
                 if (dt1.Rows.Count > 0)
                 {
                     ignoreZero = false;
@@ -1482,20 +1553,22 @@ namespace MouldSpecification
                         FormatAdditiveGrid();
                         FormatMBGrid();
                         FormatMasterBatchCompGrid();
-                        FormatMachineGrid();                        
+                        FormatMachineGrid();
                     }
                     EnableGroups(true);
-                    bsManItems.Filter = dt2.DefaultView.RowFilter;
+                    bsManItems.Filter = rowFilter;
                     if (itemID != 0)
-                        if (dt2.DefaultView.RowFilter.Contains(itemID.ToString()))
+                    {
+                        if (rowFilter.Contains(itemID.ToString()))
                         {
+                            ChangedByCode = true;
                             tscboProduct.ComboBox.SelectedValue = itemID;
-                        }
-                        else
-                            tscboProduct.ComboBox.SelectedIndex = 0;
-                    else
-                        //position to first item within selected company
-                        tscboProduct.ComboBox.SelectedIndex = 0;
+                            tscboCode.ComboBox.SelectedValue = itemID;
+                            ChangedByCode = false;
+                            tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
+                            tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
+                        }                         
+                    }                         
                 }
                 //bsManItems.Filter = dv2.RowFilter;
             }
@@ -1503,6 +1576,42 @@ namespace MouldSpecification
             {
                 MessageBox.Show(ex.Message, "SetProductFilter", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }            
+        }
+
+        private void tscboCode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tscboCode.SelectedIndex != -1 )
+            {
+                int itemID = (int)tscboCode.ComboBox.SelectedValue;
+                if (itemID != LastItemID && !ChangedByCode)
+                {
+                    LastItemID = itemID;
+                    tscboProduct.ComboBox.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
+                    ChangedByCode = true; //event still fires, even though unsubscribed !! 
+                                          //set this boolean to exit the event 
+                    tscboProduct.ComboBox.SelectedValue = itemID;
+                    tscboProduct.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
+                    ChangedByCode = false;
+                    if (bsManItems == null)
+                    {
+                        {
+                            BindControls();
+                            FormatPolymerGrid();
+                            FormatAdditiveGrid();
+                            FormatMBGrid();
+                            FormatMasterBatchCompGrid();
+                            FormatMachineGrid();
+                            EnableGroups(true);
+                        }
+                    }
+                    int itemIndex = bsManItems.Find("ItemID", itemID);
+                    if (itemID != -1)
+                    {
+                        tsbtnReport.Enabled = true;
+                        bsManItems.Position = itemIndex;
+                    }
+                }
+            }
         }
 
         private void EnableGroups(bool flag)
@@ -1575,6 +1684,12 @@ namespace MouldSpecification
                 cbcMaterial.DisplayStyleForCurrentCellOnly = true;
                 cbcMaterial.DisplayStyle = DataGridViewComboBoxDisplayStyle.Nothing;
 
+                /*
+                 * change request Trish 29/04/25:  
+                 * -- remove Additional notes from MaterialGrade;    
+                 * -- move into MAN_Items
+                 * -- display in MATERIAL group under MasterBatch grid
+                 * 
                 //Create a dynamic combobox column for Additional Notes
                 DataGridViewComboBoxColumn cbcAdditionalNotes = new DataGridViewComboBoxColumn();
                 //dt = dsIMSpecificationForm.Tables["LookupMaterialComp"];
@@ -1589,6 +1704,7 @@ namespace MouldSpecification
                 dgvPolymer.Columns["AdditionalNotes"].HeaderText = "Additional Notes";
                 cbcAdditionalNotes.DisplayStyleForCurrentCellOnly = true;
                 cbcAdditionalNotes.DisplayStyle = DataGridViewComboBoxDisplayStyle.Nothing;
+                */
 
                 dgvPolymer.Columns["MaterialCompID"].Visible = false;
                 dgvPolymer.Columns["ItemID"].Visible = false;
@@ -1666,7 +1782,7 @@ namespace MouldSpecification
                 dgvPolymer.Columns["PolymerPercent"].Width = p96W(70);
                 dgvPolymer.Columns["Grade"].Width = p96W(250);
                 dgvPolymer.Columns["Material"].Width = p96W(100);
-                dgvPolymer.Columns["AdditionalNotes"].Width = p96W(230);
+                //dgvPolymer.Columns["AdditionalNotes"].Width = p96W(230);
 
                 dgvPolymer.EditingControlShowing +=
                    new DataGridViewEditingControlShowingEventHandler(dgvPolymer_EditingControlShowing);
@@ -2980,7 +3096,8 @@ namespace MouldSpecification
             {
                 //dgvMachine.UserAddedRow += dgvMachine_RowCountChanged;
                 dgvMachine.UserDeletedRow += dgvMachine_UserDeletedRow;
-
+                //dgvMachine.DataBindingComplete += dgvMachine_DataBindingComplete;
+                //dgvMachine.RowValidating += dgvMachine_RowValidating;
                 DataGridViewCellStyle style = dgvMachine.ColumnHeadersDefaultCellStyle;
                 style.BackColor = Color.LightSteelBlue;
                 style.ForeColor = Color.Black;
@@ -3069,6 +3186,34 @@ namespace MouldSpecification
             }
         }
 
+        //private void dgvMachine_RowValidating(object sender, DataGridViewCellCancelEventArgs e)
+        //{
+        //    DataGridViewRow row = dgvMachine.Rows[e.RowIndex];
+        //    DataGridViewCell cellABC = row.Cells[dgvMachine.Columns["MachineABC"].Index];
+        //    if(cellABC.Value.ToString().Length == 0)
+        //    {
+        //        int rowIndex = row.Index;
+        //        string machineABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        //        string curABC = machineABC.Substring(rowIndex, 1);
+        //        cellABC.Value = curABC;
+        //    }
+        //    e.Cancel = false;
+        //}
+
+        //private void dgvMachine_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        //{
+        //    foreach (DataGridViewRow row in dgvMachine.Rows)
+        //    {
+        //        if (row.Cells["MachineABC"].Value == DBNull.Value)
+        //        {
+        //            int rowIndex = row.Index;
+        //            string machineABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        //            string curABC = machineABC.Substring(rowIndex, 1);
+        //            //dgvMachine.Rows[rowIndex].Cells["MachineABC"].Value = curABC;
+        //        }
+        //    }
+        //}
+
         private void dgvMachine_UserDeletedRow(object sender, DataGridViewRowEventArgs e)
         {
             btnAddNewMachine.Enabled = dgvMachine.Rows.Count < maxRowsMachine;
@@ -3125,11 +3270,12 @@ namespace MouldSpecification
 
         private void dgvMachine_DefaultValuesNeeded(object sender, DataGridViewRowEventArgs e)
         {
-            int rowIndex = e.Row.Index;
-            string machineABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            string curABC = machineABC.Substring(rowIndex, 1);
-            dgvMachine.Rows[rowIndex].Cells["MachineABC"].Value = curABC;
-            dgvMachine.Rows[rowIndex].HeaderCell.Value = "Machine " + curABC;
+            //int rowIndex = e.Row.Index;
+            //string machineABC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            //string curABC = machineABC.Substring(rowIndex, 1);
+            //dgvMachine.Rows[rowIndex].Cells["MachineABC"].Value = curABC;
+            //dgvMachine.Rows[rowIndex].HeaderCell.Value = "Machine " + curABC;
+            bsMachPref.AddNew();
         }
 
         //private void tsbtnExit_Click(object sender, EventArgs e)

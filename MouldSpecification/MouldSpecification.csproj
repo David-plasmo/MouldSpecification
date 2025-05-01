@@ -93,7 +93,7 @@
     </Reference>
     <Reference Include="InjectionMouldReports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\plasmo-sql\Packages\MouldSpecificationReports\Release\InjectionMouldReports.dll</HintPath>
+      <HintPath>..\..\MouldSpecificationReports\InjectionMouldReports\bin\Release\InjectionMouldReports.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>

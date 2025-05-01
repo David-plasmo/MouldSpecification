@@ -125,7 +125,8 @@ namespace MouldSpecification
                    CreateParameter("@DangerousGood", SqlDbType.Bit, dc.DangerousGood),
                    CreateParameter("@StockLine", SqlDbType.Bit, dc.StockLine),
                    CreateParameter("@last_updated_on", SqlDbType.DateTime2, dc.last_updated_on, ParameterDirection.InputOutput),
-                   CreateParameter("@last_updated_by", SqlDbType.VarChar, dc.last_updated_by, ParameterDirection.InputOutput));
+                   CreateParameter("@last_updated_by", SqlDbType.VarChar, dc.last_updated_by, ParameterDirection.InputOutput),
+                   CreateParameter("@AdditionalNotes", SqlDbType.VarChar, dc.AdditionalNotes));
 
 
                 dc.ItemID = (int)cmd.Parameters["@ItemID"].Value;

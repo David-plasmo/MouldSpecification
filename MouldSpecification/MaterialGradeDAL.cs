@@ -35,7 +35,7 @@ namespace MouldSpecification
                 return null;
             }
         }
-        public static void UpdateMaterialGrade(DataSet ds)
+        public void UpdateMaterialGrade(DataSet ds)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace MouldSpecification
                 {
                     DataRow dr = rows[i];
                     MaterialGradeDC dc = DAL.CreateItemFromRow<MaterialGradeDC>(dr);  //populate  dataclass                   
-                    AddMaterialGrade(dc);
+                    MaterialGrade_ups(dc);
 
                 }
 
@@ -60,7 +60,7 @@ namespace MouldSpecification
                 {
                     DataRow dr = rows[i];
                     MaterialGradeDC dc = DAL.CreateItemFromRow<MaterialGradeDC>(dr);  //populate  dataclass                   
-                    UpdateMaterialGrade(dc);
+                    MaterialGrade_ups(dc);
                 }
 
                 //process deleted rows:-                
@@ -77,7 +77,7 @@ namespace MouldSpecification
                         //MaterialGradeDC dc = DAL.CreateItemFromRow<MaterialGradeDC>(dr);  //populate  dataclass
                         MaterialGradeDC dc = new MaterialGradeDC();
                         dc.MaterialGradeID = Convert.ToInt32(dr["MaterialGradeID", DataRowVersion.Original].ToString());
-                        DeleteMaterialGrade(dc);
+                        MaterialGrade_del(dc);
                     }
                 }
                 ds.AcceptChanges();
@@ -90,53 +90,26 @@ namespace MouldSpecification
             }
         }
 
-        public static void AddMaterialGrade(MaterialGradeDC dc)
+        public void MaterialGrade_ups(MaterialGradeDC dc)
         {
             try
             {
-                System.Data.SqlClient.SqlCommand cmd = null;
-                SqlConnection connection = new SqlConnection(GetConnectionString());
-                connection.Open();
-                cmd = new System.Data.SqlClient.SqlCommand("AddMaterialGrade", connection);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlCommand cmd = null;
+                ExecuteNonQuery(ref cmd, "MaterialGrade_ups",
+                   CreateParameter("@MaterialGradeID", SqlDbType.Int, dc.MaterialGradeID, ParameterDirection.InputOutput),
+                   CreateParameter("@MaterialID", SqlDbType.Int, dc.MaterialID),
+                   CreateParameter("@MaterialGrade", SqlDbType.VarChar, dc.MaterialGrade),
+                   CreateParameter("@CostPerKg", SqlDbType.Decimal, dc.CostPerKg),
+                   CreateParameter("@Supplier", SqlDbType.VarChar, dc.Supplier),
+                   CreateParameter("@Comment", SqlDbType.VarChar, dc.Comment),
+                   CreateParameter("@MachineType", SqlDbType.VarChar, dc.MachineType),
+                   CreateParameter("@last_updated_by", SqlDbType.VarChar, dc.last_updated_by, ParameterDirection.InputOutput),
+                   CreateParameter("@last_updated_on", SqlDbType.DateTime2, dc.last_updated_on, ParameterDirection.InputOutput));
 
-                cmd.Parameters.Add("@MaterialGradeID", SqlDbType.Int, 4);
-                cmd.Parameters["@MaterialGradeID"].Direction = System.Data.ParameterDirection.InputOutput;
-                cmd.Parameters["@MaterialGradeID"].Value = dc.MaterialGradeID;
-                cmd.Parameters.Add("@MaterialID", SqlDbType.Int, 4);
-                cmd.Parameters["@MaterialID"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@MaterialID"].Value = dc.MaterialID;
-                cmd.Parameters.Add("@MaterialGrade", SqlDbType.VarChar, 50);
-                cmd.Parameters["@MaterialGrade"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@MaterialGrade"].Value = dc.MaterialGrade;
-                cmd.Parameters.Add("@CostPerKg", SqlDbType.Decimal, 9);
-                cmd.Parameters["@CostPerKg"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@CostPerKg"].Value = dc.CostPerKg;
-                cmd.Parameters.Add("@Supplier", SqlDbType.VarChar, 100);
-                cmd.Parameters["@Supplier"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@Supplier"].Value = dc.Supplier;
-                cmd.Parameters.Add("@Comment", SqlDbType.VarChar, 100);
-                cmd.Parameters["@Comment"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@Comment"].Value = dc.Comment;
-                cmd.Parameters.Add("@AdditionalNotes", SqlDbType.VarChar, 100);
-                cmd.Parameters["@AdditionalNotes"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@AdditionalNotes"].Value = dc.AdditionalNotes;
-                cmd.Parameters.Add("@MachineType", SqlDbType.VarChar, 100);
-                cmd.Parameters["@MachineType"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@MachineType"].Value = dc.AdditionalNotes;
-                cmd.Parameters.Add("@last_updated_by", SqlDbType.VarChar, 50);
-                cmd.Parameters["@last_updated_by"].Direction = System.Data.ParameterDirection.InputOutput;
-                cmd.Parameters["@last_updated_by"].Value = dc.last_updated_by;
-                cmd.Parameters.Add("@last_updated_on", SqlDbType.DateTime2, 8);
-                cmd.Parameters["@last_updated_on"].Direction = System.Data.ParameterDirection.InputOutput;
-                cmd.Parameters["@last_updated_on"].Value = dc.last_updated_on;
-
-                cmd.ExecuteNonQuery();
 
                 dc.MaterialGradeID = (int)cmd.Parameters["@MaterialGradeID"].Value;
                 dc.last_updated_by = cmd.Parameters["@last_updated_by"].Value.ToString();
                 dc.last_updated_on = (DateTime)cmd.Parameters["@last_updated_on"].Value;
-                connection.Close();
             }
             catch (Exception excp)
             {
@@ -144,76 +117,15 @@ namespace MouldSpecification
             }
         }
 
-        public static void UpdateMaterialGrade(MaterialGradeDC dc)
+        public void MaterialGrade_del(MaterialGradeDC dc)
         {
             try
             {
-                System.Data.SqlClient.SqlCommand cmd = null;
-                SqlConnection connection = new SqlConnection(GetConnectionString());
-                connection.Open();
-                cmd = new System.Data.SqlClient.SqlCommand("UpdateMaterialGrade", connection);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                SqlCommand cmd = null;
+                ExecuteNonQuery(ref cmd, "MaterialGrade_del",
+                   CreateParameter("@MaterialGradeID", SqlDbType.Int, dc.MaterialGradeID));
 
-                cmd.Parameters.Add("@MaterialGradeID", SqlDbType.Int, 4);
-                cmd.Parameters["@MaterialGradeID"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@MaterialGradeID"].Value = dc.MaterialGradeID;
-                cmd.Parameters.Add("@MaterialID", SqlDbType.Int, 4);
-                cmd.Parameters["@MaterialID"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@MaterialID"].Value = dc.MaterialID;
-                cmd.Parameters.Add("@MaterialGrade", SqlDbType.VarChar, 50);
-                cmd.Parameters["@MaterialGrade"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@MaterialGrade"].Value = dc.MaterialGrade;
-                cmd.Parameters.Add("@CostPerKg", SqlDbType.Decimal, 9);
-                cmd.Parameters["@CostPerKg"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@CostPerKg"].Value = dc.CostPerKg;
-                cmd.Parameters.Add("@Supplier", SqlDbType.VarChar, 100);
-                cmd.Parameters["@Supplier"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@Supplier"].Value = dc.Supplier;
-                cmd.Parameters.Add("@Comment", SqlDbType.VarChar, 100);
-                cmd.Parameters["@Comment"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@Comment"].Value = dc.Comment;
-                cmd.Parameters.Add("@AdditionalNotes", SqlDbType.VarChar, 2);
-                cmd.Parameters["@AdditionalNotes"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@AdditionalNotes"].Value = dc.MachineType;
-                cmd.Parameters.Add("@MachineType", SqlDbType.VarChar, 100);
-                cmd.Parameters["@MachineType"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@MachineType"].Value = dc.AdditionalNotes;
-                cmd.Parameters.Add("@last_updated_by", SqlDbType.VarChar, 50);
-                cmd.Parameters["@last_updated_by"].Direction = System.Data.ParameterDirection.InputOutput;
-                cmd.Parameters["@last_updated_by"].Value = dc.last_updated_by;
-                cmd.Parameters.Add("@last_updated_on", SqlDbType.DateTime2, 8);
-                cmd.Parameters["@last_updated_on"].Direction = System.Data.ParameterDirection.InputOutput;
-                cmd.Parameters["@last_updated_on"].Value = dc.last_updated_on;
 
-                cmd.ExecuteNonQuery();
-
-                dc.last_updated_by = cmd.Parameters["@last_updated_by"].Value.ToString();
-                dc.last_updated_on = (DateTime)cmd.Parameters["@last_updated_on"].Value;
-                connection.Close();
-            }
-            catch (Exception excp)
-            {
-                MessageBox.Show(excp.Message);
-            }
-        }
-
-        public static void DeleteMaterialGrade(MaterialGradeDC dc)
-        {
-            try
-            {
-                System.Data.SqlClient.SqlCommand cmd = null;
-                SqlConnection connection = new SqlConnection(GetConnectionString());
-                connection.Open();
-                cmd = new System.Data.SqlClient.SqlCommand("DeleteMaterialGrade", connection);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
-                cmd.Parameters.Add("@MaterialGradeID", SqlDbType.Int, 4);
-                cmd.Parameters["@MaterialGradeID"].Direction = System.Data.ParameterDirection.Input;
-                cmd.Parameters["@MaterialGradeID"].Value = dc.MaterialGradeID;
-
-                cmd.ExecuteNonQuery();
-
-                connection.Close();
             }
             catch (Exception excp)
             {

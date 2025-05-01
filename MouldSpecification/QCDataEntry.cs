@@ -478,7 +478,7 @@ namespace MouldSpecification
             else if (dgvQCInstruction.CurrentCell.OwningColumn.Name == "QCImage2")
                 fieldName = "QCImageFilepath2";
 
-            MessageBox.Show("todo:  browse " + fieldName + ";  sender: " + scName);
+            //MessageBox.Show("todo:  browse " + fieldName + ";  sender: " + scName);
             OpenFileDialog fdlg = new OpenFileDialog();
             fdlg.Title = "QC Instruction Image Files";
             fdlg.InitialDirectory = @"S:CONSOLIDATED PLASTICS\INJECTION MOULDING\Database\Images\";
