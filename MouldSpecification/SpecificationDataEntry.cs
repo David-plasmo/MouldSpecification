@@ -55,7 +55,7 @@ namespace MouldSpecification
         ToolStripComboBox tscboCode;
         ToolStripLabel tslProduct;
         ToolStripComboBox tscboProduct;
-        ToolStripButton tsbtnReport;
+        //ToolStripButton tsbtnReport;
         //ToolStripComboBox tscboEntryForm;
 
 
@@ -95,7 +95,7 @@ namespace MouldSpecification
             tscboCode = new ToolStripComboBox();
             tscboProduct = new ToolStripComboBox();
             //tscboEntryForm = new ToolStripComboBox() { Text = "Product Specification" }; 
-            tsbtnReport = new ToolStripButton() { Text = "Report" };
+            //tsbtnReport = new ToolStripButton() { Text = "Report" };
 
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[]
             {
@@ -104,15 +104,15 @@ namespace MouldSpecification
                 tslCode,
                 tscboCode,
                 tslProduct,
-                tscboProduct,
+                tscboProduct
                 //tscboEntryForm,
-                tsbtnReport
+                //tsbtnReport
             });
 
             //tsbtnAccept.Click += tsbtnAccept_Click;
             tsbtnCancel.Click += tsbtnCancel_Click;
             //tsbtnReload.Click += tsbtnReload_Click;
-            tsbtnReport.Click += tsbtnReport_Click;
+            btnReport.Click += tsbtnReport_Click;
 
             foreach (RowStyle style in this.tableLayoutPanel1.RowStyles)
             {
@@ -214,7 +214,7 @@ namespace MouldSpecification
                 tsbtnDelete.Enabled = false;
                 tsbtnCancel.Enabled = false;
                 tsbtnAccept.Enabled = false;
-                tsbtnReport.Enabled = false;
+                btnReport.Enabled = false;
                 lblItemID.Visible = false;
 
                 tscboCompany.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
@@ -1271,7 +1271,7 @@ namespace MouldSpecification
 
                     tscboCompany.Enabled = false;
                     tscboProduct.Enabled = false;
-                    tsbtnReport.Enabled = false;
+                    btnReport.Enabled = false;
                     tscboCode.Enabled = false;
 
                     //add new CustomerProduct
@@ -1465,7 +1465,7 @@ namespace MouldSpecification
                     int itemIndex = bsManItems.Find("ItemID", itemID);
                     if (itemID != -1)
                     {
-                        tsbtnReport.Enabled = true;
+                        btnReport.Enabled = true;
                         bsManItems.Position = itemIndex;
                     }
                 }                
@@ -1607,7 +1607,7 @@ namespace MouldSpecification
                     int itemIndex = bsManItems.Find("ItemID", itemID);
                     if (itemID != -1)
                     {
-                        tsbtnReport.Enabled = true;
+                        btnReport.Enabled = true;
                         bsManItems.Position = itemIndex;
                     }
                 }
@@ -1628,6 +1628,8 @@ namespace MouldSpecification
             tsbtnDelete.Enabled = flag;
             tsbtnCancel.Enabled = flag;
             tsbtnAccept.Enabled = flag;
+            lblAdditionalNotes.ForeColor = flag ? Color.Black : Color.DimGray;
+            txtAdditionalNotes.Enabled = flag;
         }
 
         private void FormatPolymerGrid()
@@ -2395,7 +2397,7 @@ namespace MouldSpecification
 
             tscboCompany.Enabled = false;
             tscboProduct.Enabled = false;
-            tsbtnReport.Enabled = false;
+            btnReport.Enabled = false;
 
             DataRowView drv = (DataRowView)bsManItems.Current;
             int curItemID = (int)drv.Row["ItemID"];
@@ -2422,7 +2424,7 @@ namespace MouldSpecification
 
                 tscboCompany.Enabled = false;
                 tscboProduct.Enabled = false;
-                tsbtnReport.Enabled = false;
+                btnReport.Enabled = false;
 
                 DataRowView drv = (DataRowView)bsManItems.Current;
                 int curItemID = (int)drv.Row["ItemID"];
@@ -2727,8 +2729,6 @@ namespace MouldSpecification
 
         }
 
-        
-
         private void FormatMBGrid()
         {
             try
@@ -2866,11 +2866,13 @@ namespace MouldSpecification
                     //form will reopen here after Save
                     if (itemID > 0)
                     {
-                        tsbtnReport.Enabled = true;
+                        btnReport.Enabled = true;
                         LastItemID = itemID;
                         tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
+                        ChangedByCode = true;
                         tscboProduct.ComboBox.SelectedValue = itemID;
                         tscboProduct.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
+                        ChangedByCode = false;
                     }
                     
                     //locate customer for this product
@@ -3701,7 +3703,7 @@ namespace MouldSpecification
         {
             //ResizeControls();
             //Rectangle r = new Rectangle(5, 5, p96W(1000), p96H(1100));
-            this.Size = new Size(p96W(1024), p96H(935));
+            this.Size = new Size(p96W(1125), p96H(935));
             bindingNavigator1.Height = p96H(30);
             splitContainer1.SplitterDistance = p96H(55);
             //btnDeleteAdditive.Size = new System.Drawing.Size(p96W(24), p96W(24));
