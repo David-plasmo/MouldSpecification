@@ -202,10 +202,11 @@ namespace MouldSpecification
                 DataTable customer = dt.Copy();
                 customer.TableName = "Customer";
                 dsOut.Tables.Add(customer);
-                
+
 
                 // create customer - product table 
-                dt = ExecuteDataSet("SelectCustomerProduct").Tables[0];
+                dt = ExecuteDataSet("SelectCustomerProduct",
+                    CreateParameter("@ProductType", SqlDbType.VarChar, ProductType)).Tables[0];
                 DataTable custProduct = dt.Copy();
                 custProduct.TableName = "CustomerProduct";
                 dsOut.Tables.Add(custProduct);

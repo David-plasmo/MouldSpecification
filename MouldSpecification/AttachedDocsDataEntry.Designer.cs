@@ -66,6 +66,7 @@
             this.lblCUSTNAME = new System.Windows.Forms.Label();
             this.txtITEMDESC = new System.Windows.Forms.TextBox();
             this.txtCustomer = new System.Windows.Forms.TextBox();
+            this.btnReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -402,7 +403,8 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.36364F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 63.63636F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
+            this.tableLayoutPanel1.Controls.Add(this.btnReport, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblITEMDESC, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblITEMNMBR, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtITEMNMBR, 1, 0);
@@ -453,7 +455,7 @@
             this.txtITEMNMBR.MaxLength = 31;
             this.txtITEMNMBR.Name = "txtITEMNMBR";
             this.txtITEMNMBR.ReadOnly = true;
-            this.txtITEMNMBR.Size = new System.Drawing.Size(194, 20);
+            this.txtITEMNMBR.Size = new System.Drawing.Size(193, 20);
             this.txtITEMNMBR.TabIndex = 0;
             // 
             // lblCUSTNAME
@@ -477,7 +479,7 @@
             this.txtITEMDESC.MaxLength = 101;
             this.txtITEMDESC.Name = "txtITEMDESC";
             this.txtITEMDESC.ReadOnly = true;
-            this.txtITEMDESC.Size = new System.Drawing.Size(194, 20);
+            this.txtITEMDESC.Size = new System.Drawing.Size(193, 20);
             this.txtITEMDESC.TabIndex = 9;
             // 
             // txtCustomer
@@ -487,8 +489,19 @@
             this.txtCustomer.Margin = new System.Windows.Forms.Padding(0);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.ReadOnly = true;
-            this.txtCustomer.Size = new System.Drawing.Size(194, 20);
+            this.txtCustomer.Size = new System.Drawing.Size(193, 20);
             this.txtCustomer.TabIndex = 13;
+            // 
+            // btnReport
+            // 
+            this.btnReport.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnReport.Location = new System.Drawing.Point(330, 0);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(0);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(83, 20);
+            this.btnReport.TabIndex = 29;
+            this.btnReport.Text = "Report";
+            this.btnReport.UseVisualStyleBackColor = true;
             // 
             // AttachedDocsDataEntry
             // 
@@ -561,5 +574,6 @@
         private System.Windows.Forms.Button btnNewRow;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblAddNewRow;
+        private System.Windows.Forms.Button btnReport;
     }
 }

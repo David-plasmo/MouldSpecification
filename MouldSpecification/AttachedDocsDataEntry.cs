@@ -15,23 +15,26 @@ namespace MouldSpecification
     /// </summary>
     public partial class AttachedDocsDataEntry : Form
     {
-        
+
         public int? LastItemID { get; set; }
         public int? LastCustomerID { get; set; }
         public bool CustomerFilterOn { get; set; }
         public string NextForm { get; set; }
 
-        // ToolStrip controls for additional functionality
+        bool ChangedByCode = false; //forces exit to SelectedIndexChanged event for toostrip combobox control
+        
+        // ToolStrip controls to be added to Navigation bar
         ToolStripLabel tslCompany;
         ToolStripComboBox tscboCompany;
+        ToolStripLabel tslCode;
+        ToolStripComboBox tscboCode;
         ToolStripLabel tslProduct;
         ToolStripComboBox tscboProduct;
-        ToolStripButton tsbtnReport;
 
         // DataSet and BindingSources for data binding
         DataSet dsAttachedDoc;
         BindingSource bsManItems, bsProductGradeItem, bsCustomerProducts, bsCustomer, bsAttachedDoc;
-        
+
         public AttachedDocsDataEntry(int? lastItemID, int? lastCustomerID, bool customerFilterOn = false)
         {
             InitializeComponent();
@@ -48,28 +51,31 @@ namespace MouldSpecification
             tsbtnCancel.Click += tsbtnCancel_Click;
             tsbtnAccept.Click += tsbtnAccept_Click;
 
-            // Initialize ToolStrip controls
-            this.SuspendLayout();
             tslCompany = new ToolStripLabel() { Text = "Company" };
+            tslCode = new ToolStripLabel() { Text = "Code" };
             tslProduct = new ToolStripLabel() { Text = "Product" };
             tscboCompany = new ToolStripComboBox();
+            tscboCode = new ToolStripComboBox();
             tscboProduct = new ToolStripComboBox();
-            tsbtnReport = new ToolStripButton() { Text = "Report" };
-            
+            //tscboEntryForm = new ToolStripComboBox() { Text = "Product Specification" }; 
+            //btnReport = new ToolStripButton() { Text = "Report" };
 
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[]
             {
                 tslCompany,
                 tscboCompany,
+                tslCode,
+                tscboCode,
                 tslProduct,
-                tscboProduct,
-                tsbtnReport
+                tscboProduct
+                //tscboEntryForm,
+                //btnReport
             });
 
             //tsbtnAccept.Click += tsbtnAccept_Click;
             //tsbtnCancel.Click += tsbtnCancel_Click;
             //tsbtnReload.Click += tsbtnReload_Click;
-            tsbtnReport.Click += tsbtnReport_Click;
+            btnReport.Click += btnReport_Click;
 
             foreach (RowStyle style in this.tableLayoutPanel1.RowStyles)
             {
@@ -85,14 +91,14 @@ namespace MouldSpecification
 
         }
 
-        private void tsbtnReport_Click(object sender, EventArgs e)
+        private void btnReport_Click(object sender, EventArgs e)
         {
             InjectionMouldReports.Reports.ViewReport(LastItemID.Value, "AttachedDocuments.rdlc");
         }
 
         public AttachedDocsDataEntry()
         {
-           
+
         }
 
         private void tsbtnAccept_Click(object sender, EventArgs e)
@@ -110,7 +116,7 @@ namespace MouldSpecification
             // Cancel the current edit operation on the attached documents bindings source.
             bsAttachedDoc.CancelEdit();
         }
-      
+
         private void DoSave()
         {
             DataSet ds = dsAttachedDoc;
@@ -218,64 +224,63 @@ namespace MouldSpecification
             // Disable toolbar buttons initially.
             tsbtnDelete.Enabled = false;
             tsbtnAddNew.Enabled = false;
-            tsbtnReport.Enabled = false;
+            btnReport.Enabled = false;
 
-            btnNewRow.Size = new Size(p96W(24), p96H(20));           
-            btnNewRow.Image = RescaleImage((Bitmap)Properties.Resources.NewRow, btnNewRow.Width, btnNewRow.Height);            
+            btnNewRow.Size = new Size(p96W(24), p96H(20));
+            btnNewRow.Image = RescaleImage((Bitmap)Properties.Resources.NewRow, btnNewRow.Width, btnNewRow.Height);
             btnNewRow.Click += btnNewRow_Click;
-            
-            tscboCompany.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;            
-            tscboCompany.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;           
+
+            tscboCompany.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            tscboCompany.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             tscboCompany.DropDownHeight = 400;
-            tscboCompany.DropDownWidth = 300;
+            tscboCompany.DropDownWidth = p96W(250);
             tscboCompany.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
-           
-            tscboCompany.IntegralHeight = false;  // Prevents the combobox from resizing the dropdown list automatically.
-            tscboCompany.MaxDropDownItems = 9;            
+            tscboCompany.IntegralHeight = false;
+            tscboCompany.MaxDropDownItems = 9;
             tscboCompany.MergeAction = System.Windows.Forms.MergeAction.Insert;
-            tscboCompany.Name = "tscboCompany";            
+            tscboCompany.Name = "tscboCompany";
             tscboCompany.Size = new System.Drawing.Size(p96W(250), p96H(25));
             tscboCompany.Sorted = true;
+
+            tscboCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            tscboCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            tscboCode.DropDownHeight = 400;
+            tscboCode.DropDownWidth = p96W(150);
+            tscboCode.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+            tscboCode.IntegralHeight = false;
+            tscboCode.MaxDropDownItems = 9;
+            tscboCode.MergeAction = System.Windows.Forms.MergeAction.Insert;
+            tscboCode.Name = "tscboCode";
+            tscboCode.Size = new System.Drawing.Size(p96W(150), p96H(25));
+            tscboCode.Sorted = true;
 
             tscboProduct.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             tscboProduct.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             tscboProduct.DropDownHeight = 400;
-            tscboProduct.DropDownWidth = 200;
+            tscboProduct.DropDownWidth = p96W(300);
             tscboProduct.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
             tscboProduct.IntegralHeight = false;
             tscboProduct.MaxDropDownItems = 9;
             tscboProduct.MergeAction = System.Windows.Forms.MergeAction.Insert;
             tscboProduct.Name = "tscboProduct";
-            tscboProduct.Size = new System.Drawing.Size(p96W(200), p96H(25));
-            tscboProduct.Sorted = true;            
+            tscboProduct.Size = new System.Drawing.Size(p96W(300), p96H(25));
+            tscboProduct.Sorted = true;
 
             // Fetch data sets and bind them to the control on the form.
             GetDataSets();
             BindControls();
-
-            // If the LastItemID has a value, set up the combobox to select the item corresponding to LastItemID.
-            if (LastItemID.HasValue)
-            {
-                // Event handler for when the product selection changes.
-                tscboProduct.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
-
-                // Set the selected value in the combobox.
-                tscboProduct.ComboBox.SelectedValue = (int)LastItemID;
-            }
+           
         }
 
-       
+
         private void AttachedDocsDataEntry_Shown(object sender, EventArgs e)
         {
             // Set the bounds of the form using a rectangle with a specified size.
-            Rectangle r = new Rectangle(5, 5, p96W(1000), p96H(1100));
+            Rectangle r = new Rectangle(5, 5, p96W(1175), p96H(1100));
             this.DesktopBounds = r;
 
-            // Adjust the spltter distances for the split containers.
-            // Set the splitter distance for the first split container.
+            bindingNavigator1.Height = p96H(30);
             splitContainer1.SplitterDistance = p96H(55);
-
-            // Set the splitter distance for the second split container.
             splitContainer2.SplitterDistance = p96H(25);
 
             // Initialize the form's state based on filters and previous selections.
@@ -290,67 +295,75 @@ namespace MouldSpecification
         {
             try
             {
-                // If a customer filter is applied and valid customer and item IDs are provided.
+                //disable NavigationBar controls
+                foreach (Object o in bindingNavigator1.Items)
+                {
+                    if (o.GetType() == typeof(System.Windows.Forms.ToolStripComboBox))
+                    {
+                        ToolStripComboBox tscb = (ToolStripComboBox)o;
+                        if (tscb.Name != "tscboCompany")
+                            tscb.Enabled = false;
+                    }
+                    if (o.GetType() == typeof(ToolStripLabel))
+                    {
+                        ToolStripLabel lb = (ToolStripLabel)o;
+                        if (lb.Text != "Company")
+                            lb.ForeColor = SystemColors.GrayText;
+                    }
+                }
+
+                //Populate Toolbar Customer dropdown                
+                DataTable dt = (DataTable)dsAttachedDoc.Tables["Customer"].Copy();
+                dt.TableName = "customer";
+                tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
+                ChangedByCode = true;
+                tscboCompany.ComboBox.DataSource = dt;
+                tscboCompany.ComboBox.DisplayMember = "CUSTNAME";
+                tscboCompany.ComboBox.ValueMember = "CustomerID";
+                tscboCompany.ComboBox.SelectedIndex = -1;
+                tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
+                ChangedByCode = false;
+
                 if (CustomerFilterOn && LastCustomerID.HasValue && LastItemID.HasValue)
                 {
-                    tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;                    
-                    tscboCompany.ComboBox.SelectedValue = LastCustomerID;
+                    tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
+                    ChangedByCode = true;
+                    tscboCompany.ComboBox.SelectedValue = LastCustomerID.Value;
                     SetProductFilter(LastCustomerID.Value, LastItemID.Value);
                     tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
-                    RefreshCurrent();
-                }
-                else
-                {
-                    if (LastItemID.HasValue)
-                    {
-                        // Temporarily detach event handlers to make changes.
-                        tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
-
-                        // Reset company company combobox selection.
-                        tscboCompany.ComboBox.SelectedIndex = -1;
-                        tscboProduct.ComboBox.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
-
-                        // Reset product combobox selection.
-                        tscboProduct.ComboBox.SelectedIndex = -1;
-
-
-                        int lastItemID = LastItemID.Value;
-                        tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
-                        tscboProduct.ComboBox.SelectedValue = lastItemID;
-
-                        // Reattach the event handler for company combobox.
-                        tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
-
-                        // Refresh the current view or data bindings.
-                        RefreshCurrent();
-                    }
-                    else
-                    {
-                        // If no valid item ID, reset both company and product comboboxes.
-                        tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
-
-                        // Reset product combobox selection.
-                        tscboProduct.ComboBox.SelectedIndex = -1;
-
-                        // Reset company combobox selection.
-                        tscboCompany.ComboBox.SelectedIndex = -1;
-
-                        // Reattach the event handlers.
-                        tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
-                        tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
-
-                        // Set a default value for the product combobox.
-                        tscboProduct.ComboBox.SelectedIndex = 0;
-
-                        // Refresh the current view or data bindings.
-                        RefreshCurrent();
-                    }
+                    ChangedByCode = false;
                 }
             }
             catch (Exception ex)
             {
-                // Show an error message if any exception occurs during the process.
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void tscboCode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tscboCode.SelectedIndex != -1 && !ChangedByCode)
+            {
+                int itemID = (int)tscboCode.ComboBox.SelectedValue;
+
+                if (itemID != LastItemID)
+                {
+                    LastItemID = itemID;
+                    if (bsManItems == null)
+                    {
+                        {
+                            BindControls();
+                            FormatAttachedDocGrid();
+                            EnableGroups(true);
+                        }
+                    }
+                    int itemIndex = bsManItems.Find("ItemID", itemID);
+                    if (itemID != -1)
+                    {
+                        btnReport.Enabled = true;
+                        bsManItems.Position = itemIndex;
+                    }
+                }
             }
         }
 
@@ -368,8 +381,8 @@ namespace MouldSpecification
                 // Build and assign the dataset containing attached document data.
                 dsAttachedDoc = dal.BuildAttachedDocDataset();
             }
-            catch (Exception ex) 
-            { 
+            catch (Exception ex)
+            {
                 // Suppress exceptions (Consider logging the exception for debugging).
             }
         }
@@ -436,7 +449,7 @@ namespace MouldSpecification
 
                 // Reattach the event.
                 tscboProduct.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
-               
+
                 // Bind text boxes to specific fields in the MAN_Items and Customer tables.
                 txtITEMNMBR.DataBindings.Add(new Binding("Text", bsManItems, "ITEMNMBR"));
                 txtITEMDESC.DataBindings.Add(new Binding("Text", bsManItems, "ITEMDESC"));
@@ -476,23 +489,26 @@ namespace MouldSpecification
         /// <param name="e"> The event arguments.  </param>
         private void tscboProduct_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            // Ensure a valid product is selected in the ComboBox.
-            if (tscboProduct.SelectedIndex != -1)
+            if (tscboProduct.SelectedIndex != -1 && !ChangedByCode)
             {
-                // Retrieve the ItemID of the selected product.
                 int itemID = (int)tscboProduct.ComboBox.SelectedValue;
-
-                // Find the index of the corresponding item in the MAN_Items BindingSource.
-                int itemIndex = bsManItems.Find("ItemID", itemID);
-
-                // Check if the ItemID was found in the MAN_Items data source.
-                if (itemID != -1)
+                if (itemID != LastItemID)
                 {
-                    // Enable the Report button as a valid product is selected.
-                    tsbtnReport.Enabled = true;
-
-                    // Update the MAN_Items BindingsSource to the position of the selected product.
-                    bsManItems.Position = itemIndex;
+                    LastItemID = itemID;
+                    if (bsManItems == null)
+                    {
+                        {
+                            BindControls();
+                            FormatAttachedDocGrid();
+                            EnableGroups(true);
+                        }
+                    }
+                    int itemIndex = bsManItems.Find("ItemID", itemID);
+                    if (itemID != -1)
+                    {
+                        btnReport.Enabled = true;
+                        bsManItems.Position = itemIndex;
+                    }
                 }
             }
         }
@@ -535,7 +551,7 @@ namespace MouldSpecification
                 // Set the default value for the "ItemID"
                 dt.Columns["ItemID"].DefaultValue = itemID;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
 
             }
@@ -548,7 +564,7 @@ namespace MouldSpecification
         private void FormatAttachedDocGrid()
         {
             try
-            { 
+            {
                 // Disables the option to add new rows manually in the DataGridView.
                 dgvAttachedDocs.AllowUserToAddRows = false;
 
@@ -627,14 +643,14 @@ namespace MouldSpecification
                 DataGridViewImageColumn bc = new DataGridViewImageColumn();
 
                 // Name of the new column.
-                bc.Name = "Browse";    
-                
+                bc.Name = "Browse";
+
                 // Sets the header text to empty.
                 bc.HeaderText = string.Empty;
 
                 // Defines the column as an image type.
                 bc.ValueType = typeof(Image);
-              
+
                 // Inserts the new "Browse" image column at the 4th position (index 3).
                 dgvAttachedDocs.Columns.Insert(3, bc);
 
@@ -648,12 +664,12 @@ namespace MouldSpecification
 
             }
             catch (Exception ex)
-            { 
+            {
                 // Catches any exceptions and displays the error message in a message box.
                 MessageBox.Show(ex.Message);
             }
         }
-        
+
         /// <summary>
         /// Handles the CellFormatting event of the DataGridView to customize the appearance of specific cells.
         /// Specifically, this method formats the "Browse" column by adding a tooltip and image.
@@ -669,7 +685,7 @@ namespace MouldSpecification
                     return;
 
                 // Check if the column being formatted is the "Browse" column.
-                if (dgvAttachedDocs.Columns[e.ColumnIndex].Name == "Browse" )
+                if (dgvAttachedDocs.Columns[e.ColumnIndex].Name == "Browse")
                 {
                     // Retrieve the specific cell being formatted.
                     DataGridViewCell cell = dgvAttachedDocs.Rows[e.RowIndex].Cells[e.ColumnIndex];
@@ -685,10 +701,10 @@ namespace MouldSpecification
 
                     // Set the value of the cell to the "browse" image. 
                     e.Value = image;
-                }                
+                }
             }
-            catch (Exception ex) 
-            { 
+            catch (Exception ex)
+            {
 
             }
         }
@@ -711,11 +727,11 @@ namespace MouldSpecification
                     DataGridViewCell clickedCell = (sender as DataGridView).Rows[e.RowIndex].Cells[e.ColumnIndex];
 
                     // Select the clicked cell in the DataGridView.
-                    this.dgvAttachedDocs.CurrentCell = clickedCell;  
+                    this.dgvAttachedDocs.CurrentCell = clickedCell;
 
                     // Get the mouse position relative to the DataGridView.
                     var relativeMousePosition = dgvAttachedDocs.PointToClient(Cursor.Position);
-                    
+
                     // Retrieve the value of the "DocFilePath" column for the clicked row.
                     int fp1Index = dgvAttachedDocs.Columns["DocFilePath"].Index;
                     string fp1 = dgvAttachedDocs.Rows[e.RowIndex].Cells[fp1Index].Value.ToString();
@@ -726,7 +742,7 @@ namespace MouldSpecification
 
                     // Add menu items based on the file path value.
                     if (fp1.Length > 0)
-                    cms.Items.Add("&Open", Resources.show, new System.EventHandler(this.Open_Click));
+                        cms.Items.Add("&Open", Resources.show, new System.EventHandler(this.Open_Click));
                     cms.Items.Add("&Browse", Resources.browse, new System.EventHandler(this.Browse_Click));
 
                     // Add a separator to the context menu.
@@ -748,9 +764,9 @@ namespace MouldSpecification
         /// <param name="e"> Provides data for the event. </param>
         private void Open_Click(Object sender, EventArgs e)
         {
-            
+
             try
-            {  
+            {
                 // Get the count of selected rows in the DataGridView.
                 int rowCount = dgvAttachedDocs.Rows.GetRowCount(DataGridViewElementStates.Selected);
 
@@ -777,7 +793,7 @@ namespace MouldSpecification
                     process.Start();
                 }
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
 
             }
@@ -810,7 +826,7 @@ namespace MouldSpecification
 
                 // File filter.
                 fdlg.Filter = "Docx (*.docx)|*.docx|Excel (*.xlsx)|*.xlsx|PDF (*.pdf)|*.pdf|JPG (*.jpg)|*.jpg|PNG (*.png)|*.png|tif (*.tif)|*.tif|Bitmap (*.bmp)|*.bmp|All files (*.*)|*.*";
-                
+
                 // Default filter selection.
                 fdlg.FilterIndex = 1;
 
@@ -842,7 +858,7 @@ namespace MouldSpecification
         /// <param name="sender"> The source of the event, typically the menu item. </param>
         /// <param name="e"> Provides data for the event. </param>
         private void Delete_Click(Object sender, EventArgs e)
-        {       
+        {
             try
             {
                 // Get the name of the control that triggered the context menu.
@@ -866,10 +882,10 @@ namespace MouldSpecification
                     }
                 }
             }
-            catch(Exception ex) 
-            { 
+            catch (Exception ex)
+            {
 
-            }            
+            }
         }
 
         /// <summary>
@@ -927,10 +943,10 @@ namespace MouldSpecification
                         string fileSelected = fdlg.FileName;
 
                         // Update the file path in the respective cell of the DataGridView.
-                        dgvAttachedDocs.Rows[e.RowIndex].Cells[fieldName].Value = fdlg.FileName;  
-                        
+                        dgvAttachedDocs.Rows[e.RowIndex].Cells[fieldName].Value = fdlg.FileName;
+
                         // Commit the changes to the DataGridView.
-                        dgvAttachedDocs.EndEdit();     
+                        dgvAttachedDocs.EndEdit();
                     }
                 }
                 else
@@ -938,10 +954,10 @@ namespace MouldSpecification
                     // If the clicked cell is not part of the "Browse" column, exit the method.
                     return;
 
-                
+
             }
-            catch (Exception ex) 
-            { 
+            catch (Exception ex)
+            {
 
             }
         }
@@ -1014,19 +1030,15 @@ namespace MouldSpecification
                     // If the ItemID is invalid (-999), exit the method
                     if (itemID == -999)
                         return;
-
-                    // If a valid ItemID is found (greater than 0), update the product dropdown
-                    if (itemID > 0)
+                                       
+                    //reset product filter dropdown index
+                    if (bsManItems.Filter != null)
                     {
-                        // Store the LastItemID and temporarily unscribe from the event to avoid unnecessary triggers
-                        LastItemID = itemID;
                         tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
-
-                        // Set the selected value of the Product combo box to the current ItemID
-                        tscboProduct.ComboBox.SelectedValue = itemID;
-
-                        // Re-subscribe to the event after the value has been updated
-                        tscboProduct.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
+                        ChangedByCode = true; //workaround:  unsubscribing doesn't work for navigation bar combobox !!!
+                        SetDropDownIndex(tscboProduct, itemID);
+                        SetDropDownIndex(tscboCode, itemID);
+                        ChangedByCode = false;
                     }
                     
                     // Look for the corresponding CustomerProduct for the current ItemID
@@ -1095,7 +1107,7 @@ namespace MouldSpecification
 
                         // Enable UI elemnts for adding a new row
                         btnNewRow.Enabled = true;
-                        lblAddNewRow.Enabled = true;    
+                        lblAddNewRow.Enabled = true;
                     }
                 }
             }
@@ -1109,18 +1121,24 @@ namespace MouldSpecification
         /// </summary>
         /// <param name="sender"> The object that raised the event. </param>
         /// <param name="e"> The event arguments. </param>
-        private void tscboCompany_SelectedIndexChanged(object sender, EventArgs e)
+        private void tscboCompany_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            // Checks if a valid company is selected in the combo box
-            if (tscboCompany.SelectedIndex != -1)
+            // ## gotcha !!! ##
+            // toolstrip combo automatically changes selected index to 0 when datasource changes and has been
+            // programmatically set to -1;  event still fires, even if unsubscribed!!!
+            // workaround:  set ChangedByCode to true !!!
+            // ###
+            if (tscboCompany.SelectedIndex != -1 && !ChangedByCode)
             {
-                // Retrieves the selected CustomerID
                 int custID = (int)tscboCompany.ComboBox.SelectedValue;
-
-                // Calls the SetProductFilter method to update to product filter based on the selected CustomerID
-                SetProductFilter(custID);
-            };
+                if (custID != LastCustomerID)
+                {
+                    SetProductFilter(custID);
+                    LastCustomerID = custID;
+                }
+            }
         }
+
 
         /// <summary>
         /// Sets the product filter based on the selected customer and optionally an item ID.
@@ -1130,64 +1148,133 @@ namespace MouldSpecification
         /// <param name="itemID"> The ID of the selected item (optional, default is 0). </param>
         private void SetProductFilter(int custID, int itemID = 0)
         {
-            // Marks the filter as active
-            CustomerFilterOn = true;
-
-            // Creates a copy of the "CustomerProduct" table to filter by customer
-            DataTable dt = dsAttachedDoc.Tables["CustomerProduct"].Copy();
-
-            // Filters the data to include only rows where the "CustomerID" matches the selected customer ID
-            DataView dv = new DataView(dt, "CustomerID = " + custID.ToString(), "CustomerID", DataViewRowState.CurrentRows);
-            DataTable dt1 = dv.ToTable();
-
-            // Extracts the ItemIDs related to the selected customer.
-            var ids = dt1.AsEnumerable().Select(r => r.Field<int>("ItemID"));
-
-            // Retrieves the "Product" table to apply the filter
-            DataTable dt2 = dsAttachedDoc.Tables["Product"];
-
-            // Applies a filter to the "Product" table based on the related ItemsIDs
-            dt2.DefaultView.RowFilter = string.Format("ItemID in ({0})", string.Join(",", ids));
-
-            // Unsubcribes from the SelectedIndexChanged event temporarily to avoid unnecessary triggers
-            tscboProduct.ComboBox.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
-
-            // Clears any existing data bindings and resets the combo box
-            tscboProduct.ComboBox.DataBindings.Clear();
-            tscboProduct.ComboBox.ValueMember = null;
-
-            // Sets the filtered product table as the data source for the combo box
-            tscboProduct.ComboBox.DataSource = dt2;
-            tscboProduct.ComboBox.ValueMember = "ItemID";
-            tscboProduct.ComboBox.DisplayMember = "ITEMDESC";
-
-            // Clears the selected index in the combo box
-            tscboProduct.ComboBox.SelectedIndex = -1;
-
-            // Re-subscribes to the SelectedIndexChanged event after updating the data source
-            tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
-
-            // If there are products available after filtering
-            if (dt2.Rows.Count > 0)
+            try
             {
-                // Unsubcribes from the CurrentChanged event temporarily to avoid unwanted triggers 
-                bsManItems.CurrentChanged -= bsManItems_CurrentChanged;
-
-                // Applies the row filter to the binding source of the items
-                bsManItems.Filter = dt2.DefaultView.RowFilter;
-
-                // Re-subscribes to the CurrentChanged event after applying the filter.
-                bsManItems.CurrentChanged += bsManItems_CurrentChanged;
-
-                // If a specific itemID is provided, select that item in the product combo box
-                if (itemID != 0)
-                    
-                    tscboProduct.ComboBox.SelectedValue = itemID;
+                LastCustomerID = custID;
+                CustomerFilterOn = true;
+                DataTable dt = dsAttachedDoc.Tables["CustomerProduct"].Copy();
+                DataView dv = new DataView(dt, "CustomerID = " + custID.ToString(), "CustomerID", DataViewRowState.CurrentRows);
+                DataTable dt1 = dv.ToTable();
+                DataTable dt2 = dsAttachedDoc.Tables["Product"];
+                dt2.DefaultView.RowFilter = "";
+                string rowFilter = "";
+                if (dt1.Rows.Count == 0)
+                {
+                    MessageBox.Show("This customer has no products. You may wish to add this customer for an existing product",
+                                            "Add customer for product", MessageBoxButtons.OK, MessageBoxIcon.Question);
+                    EnableGroups(false);
+                }
                 else
-                    
-                    // Otherwise, select the first item in the list
-                    tscboProduct.ComboBox.SelectedIndex = 0;
+                {
+                    var ids = dt1.AsEnumerable().Select(r => r.Field<int>("ItemID"));
+                    //dt2.DefaultView.RowFilter = string.Format("ItemID in ({0})", string.Join(",", ids));
+                    rowFilter = string.Format("ItemID in ({0})", string.Join(",", ids));
+                    //itemID = ids.FirstOrDefault(); //sets itemID to first element, if not located
+                    int defaultItemID = ids.FirstOrDefault();  //selects first item
+                    LastItemID = (rowFilter.Contains(itemID.ToString())) ? itemID : defaultItemID;
+                }
+
+                //populate navigation bar Product dropdown
+                DataView vp = new DataView(dt2);
+                vp.RowFilter = rowFilter;
+                vp.Sort = "ITEMDESC ASC";
+                tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;  //doesnt work!!
+                ChangedByCode = true;  //workaround to force exit to SelectedIndexChanged event  
+                tscboProduct.ComboBox.DataBindings.Clear();                              
+                tscboProduct.ComboBox.DataSource = vp;
+                tscboProduct.ComboBox.ValueMember = "ItemID";
+                tscboProduct.ComboBox.DisplayMember = "ITEMDESC";
+                tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
+
+                // populate navigation bar code dropdown
+                DataView vc = new DataView(dt2);
+                vc.RowFilter = rowFilter;
+                vc.Sort = "ITEMNMBR ASC";
+                tscboCode.ComboBox.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
+                tscboCode.ComboBox.DataBindings.Clear();
+                tscboCode.ComboBox.DataSource = vc;
+                tscboCode.ComboBox.ValueMember = "ItemID";
+                tscboCode.ComboBox.DisplayMember = "ITEMNMBR";
+                tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
+                ChangedByCode = false;
+
+                if (dt1.Rows.Count > 0)
+                {                    
+                    if (bsManItems == null)
+                    {
+                        BindControls();
+                        FormatAttachedDocGrid();
+                    }
+                    bsManItems.Filter = rowFilter;
+                    int itemIndex = bsManItems.Find("ItemID", itemID);
+                    if (itemID != -1)
+                    {
+                        EnableGroups(true);
+                        bsManItems.Position = itemIndex;
+                        tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
+                        tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
+                    }
+                }
+                //bsManItems.Filter = dv2.RowFilter;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "SetProductFilter", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void EnableGroups(bool flag)
+        {
+            //gpGeneral.Enabled = flag;
+            //gpQCInstruction.Enabled = flag;
+            //dgvQCInstruction.Visible = flag;
+            dgvAttachedDocs.Visible = flag; 
+
+            //enable NavigationBar controls
+            foreach (Object o in bindingNavigator1.Items)
+            {
+                if (o.GetType() == typeof(System.Windows.Forms.ToolStripComboBox))
+                {
+                    ToolStripComboBox tscb = (ToolStripComboBox)o;
+                    if (tscb.Name != "tscboCompany")
+                        tscb.Enabled = flag;
+                }
+                if (o.GetType() == typeof(ToolStripLabel))
+                {
+                    ToolStripLabel lb = (ToolStripLabel)o;
+                    if (lb.Text != "Company")
+                        lb.ForeColor = flag ? Color.Black : SystemColors.GrayText;
+                }
+            }
+
+            btnReport.Enabled = flag;
+        }
+
+        private void SetDropDownIndex(ToolStripComboBox tscb, int itemID)
+        {
+            try
+            {
+                int selectedIndex = -1;
+                for (int i = 0; i < tscb.ComboBox.Items.Count; i++)
+                {
+                    DataRowView drv = tscb.ComboBox.Items[i] as DataRowView;
+                    DataRow row = drv.Row;
+
+                    if (row != null)
+                    {
+                        //string displayValue = row["ITEMNMBR"].ToString();
+                        //Debug.Print(displayValue);
+                        int testItemID = Convert.ToInt32(row["ItemID"].ToString());
+                        if (testItemID == itemID)
+                        {
+                            selectedIndex = i;
+                            tscb.ComboBox.SelectedIndex = selectedIndex;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch { }
         }
     }
 }

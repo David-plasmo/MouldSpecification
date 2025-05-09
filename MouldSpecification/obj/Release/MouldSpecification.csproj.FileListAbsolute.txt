@@ -80,7 +80,6 @@ C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\b
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Azure.Identity.xml
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\InjectionMouldReports.pdb
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\InjectionMouldReports.dll.config
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\InjectionMouldReports.exe.config
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Bcl.TimeProvider.xml
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Data.SqlClient.xml
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Identity.Client.xml

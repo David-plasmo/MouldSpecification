@@ -34,9 +34,9 @@ namespace MouldSpecification
         //ToolStripButton tsbtnReport;
 
         int maxRows = 3;
-        bool ignoreZero = false;  //causes tscboCompany SelectedIndexChanged event to exit immediately, when true and index = 0;
-        bool ChangedByCode = false;
 
+        bool ChangedByCode = false; //workaround to force exit of SelectedIndexChanged event for toolstrip combobox controls.
+       
         DataSet dsQCInstruction;
         BindingSource bsManItems, bsProductGradeItem, bsCustomerProducts, bsCustomer, bsQCInstruction;
 
@@ -114,7 +114,7 @@ namespace MouldSpecification
 
         private void QCDataEntry_Shown(object sender, EventArgs e)
         {
-            Rectangle r = new Rectangle(5, 5, p96W(1000), p96H(1100));
+            Rectangle r = new Rectangle(5, 5, p96W(1175), p96H(1100));
             this.DesktopBounds = r;
             bindingNavigator1.Height = p96H(30);
             splitContainer1.SplitterDistance = p96H(55);
@@ -130,58 +130,48 @@ namespace MouldSpecification
         {
             try
             {
+                //disable NavigationBar controls
+                foreach (Object o in bindingNavigator1.Items)
+                {
+                    if (o.GetType() == typeof(System.Windows.Forms.ToolStripComboBox))
+                    {
+                        ToolStripComboBox tscb = (ToolStripComboBox)o;
+                        if (tscb.Name != "tscboCompany")
+                            tscb.Enabled = false;
+                    }
+                    if (o.GetType() == typeof(ToolStripLabel))
+                    {
+                        ToolStripLabel lb = (ToolStripLabel)o;
+                        if (lb.Text != "Company")
+                            lb.ForeColor = SystemColors.GrayText;
+                    }
+                }
+
+                //Populate Toolbar Customer dropdown                
+                DataTable dt = (DataTable)dsQCInstruction.Tables["Customer"].Copy();
+                dt.TableName = "customer";
+                tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
+                ChangedByCode = true;
+                tscboCompany.ComboBox.DataSource = dt;
+                tscboCompany.ComboBox.DisplayMember = "CUSTNAME";
+                tscboCompany.ComboBox.ValueMember = "CustomerID";
+                tscboCompany.ComboBox.SelectedIndex = -1;
+                tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
+                ChangedByCode = false;
+
                 if (CustomerFilterOn && LastCustomerID.HasValue && LastItemID.HasValue)
                 {
-                    //position to last selected customer and product
-                    ChangedByCode = true;
                     tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
-                    tscboCompany.ComboBox.SelectedValue = LastCustomerID;
-                    ChangedByCode = false;
-                    SetProductFilter(LastCustomerID.Value, LastItemID.Value);                    
-                    RefreshCurrent();
-                }
-                else
-                {
-                    if (LastItemID.HasValue)
-                    {
-                        //position to last selected product, without customer filter
-                        ChangedByCode = true;
-                        tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
-                        tscboCompany.ComboBox.SelectedIndex = -1;
-                        tscboProduct.ComboBox.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
-                        tscboProduct.ComboBox.SelectedIndex = -1;
-                        int lastItemID = LastItemID.Value;
-                        tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
-                        tscboProduct.ComboBox.SelectedValue = lastItemID;
-                        tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
-                        tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
-                        tscboCode.ComboBox.SelectedValue = lastItemID;
-                        tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
-                        ChangedByCode |= false;
-                        RefreshCurrent();
-                        //SetComboBoxSelectionByValue(lastItemID);
-                    }
-                    else
-                    {
-                        //position to first product with no product filter
-                        ChangedByCode &= true;
-                        tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
-                        tscboCompany.ComboBox.SelectedIndex = -1;
-                        tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
-                        tscboProduct.ComboBox.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
-                        tscboProduct.ComboBox.SelectedIndex = -1;
-                        tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
-                        tscboCode.ComboBox.SelectedIndex = 0;
-                        ChangedByCode = false;
-                        RefreshCurrent();
-                    }
+                    ChangedByCode = true;
+                    tscboCompany.ComboBox.SelectedValue = LastCustomerID.Value;
+                    SetProductFilter(LastCustomerID.Value, LastItemID.Value);
+                    tscboCompany.ComboBox.SelectedIndexChanged += tscboCompany_SelectedIndexChanged;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void productSpecificationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -225,7 +215,7 @@ namespace MouldSpecification
             tsbtnDelete.Enabled = false;
             tsbtnAddNew.Enabled = false;
             btnReport.Enabled = false;
-            btnReport.Click += tsbtnReport_Click;
+            btnReport.Click += btnReport_Click;
 
             //lblItemID.Visible = false;
 
@@ -746,36 +736,12 @@ namespace MouldSpecification
             dgvQCInstruction.ClearSelection();
         }
 
-        private void tsbtnReport_Click(object sender, EventArgs e)
+        private void btnReport_Click(object sender, EventArgs e)
         {
             try
             {
                 InjectionMouldReports.Reports.ViewReport(LastItemID.Value, "QCInstruction.rdlc");
-
-                /*
-                //** won't load as a dll
-                //IMSpecificationReport f = new IMSpecificationReport();
-                //WindowsFormsFramework.ReportPrompt f = new WindowsFormsFramework.ReportPrompt();
-                //f.ShowDialog();
-
-                // load as exe
-                var appSettings = ConfigurationManager.AppSettings;
-                string reportPath = appSettings["IMReportsPath"];
-                string appStartPath = System.Windows.Forms.Application.StartupPath;
-                ProcessStartInfo info = new ProcessStartInfo();
-                info.FileName = appStartPath + reportPath + @"\InjectionMouldReports.exe";
-                //int custID = (int)tscboCompany.ComboBox.SelectedValue;
-                //int itemID = (int)tscboProduct.ComboBox.SelectedValue;
-                int custID = (int)LastCustomerID;
-                int itemID = (int)LastItemID;
-                info.Arguments = custID.ToString() + " " + itemID.ToString() + " " + "QCInstruction.rdlc";
-                info.UseShellExecute = true;
-                info.CreateNoWindow = false;
-                info.WorkingDirectory = reportPath;
-                Process proc = Process.Start(info);
-                proc.WaitForExit();
-                proc.Dispose();
-                */
+               
             }
             catch (Exception ex)
             {
@@ -898,41 +864,44 @@ namespace MouldSpecification
             catch (Exception ex) { }
         }
 
-        private void tscboCompany_SelectedIndexChanged(object sender, EventArgs e)
+        private void tscboCompany_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            if (tscboCompany.SelectedIndex == -1 ||
-              (tscboCompany.SelectedIndex == 0 && ignoreZero))
+            // ## gotcha !!! ##
+            // toolstrip combo automatically changes selected index to 0 after detecting value of -1
+            // workaround:  set ChangedByCode to true !!!
+            // ###
+            if (tscboCompany.SelectedIndex != -1 && !ChangedByCode)
             {
-                return;
-            }
-            int custID = (int)tscboCompany.ComboBox.SelectedValue;
-            if (custID != LastCustomerID)
-            {
-                SetProductFilter(custID);
-                LastCustomerID = custID;
+                int custID = (int)tscboCompany.ComboBox.SelectedValue;
+                if (custID != LastCustomerID)
+                {
+                    SetProductFilter(custID);
+                    LastCustomerID = custID;
+                }
             }
         }
 
         private void tscboProduct_SelectedIndexChanged(object sender, System.EventArgs e)
         {
-            if (tscboProduct.SelectedIndex != -1 && !ignoreZero)
+            if (tscboProduct.SelectedIndex != -1 && !ChangedByCode)
             {
                 int itemID = (int)tscboProduct.ComboBox.SelectedValue;
-                if (itemID != LastItemID && !ChangedByCode)
+                if (itemID != LastItemID)
                 {
                     LastItemID = itemID;
-                    tscboCode.ComboBox.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
-                    ChangedByCode = true;
-                    tscboCode.ComboBox.SelectedValue = itemID;
-                    tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
-                    ChangedByCode = false;
-                    
+                    if (bsManItems == null)
+                    {
+                        {
+                            BindControls();
+                            FormatQCInstruction();
+                            EnableGroups(true);
+                        }
+                    }
                     int itemIndex = bsManItems.Find("ItemID", itemID);
                     if (itemID != -1)
                     {
                         btnReport.Enabled = true;
                         bsManItems.Position = itemIndex;
-                        //RefreshCurrent();
                     }
                 }
             }
@@ -944,8 +913,7 @@ namespace MouldSpecification
             {
                 LastCustomerID = custID;
                 CustomerFilterOn = true;
-                //DataTable dt = dsIMSpecificationForm.Tables["CustomerProduct"].Copy();
-                DataTable dt = (DataTable)bsCustomerProducts.DataSource;
+                DataTable dt = dsQCInstruction.Tables["CustomerProduct"].Copy();                
                 DataView dv = new DataView(dt, "CustomerID = " + custID.ToString(), "CustomerID", DataViewRowState.CurrentRows);
                 DataTable dt1 = dv.ToTable();
                 DataTable dt2 = dsQCInstruction.Tables["Product"];
@@ -962,46 +930,48 @@ namespace MouldSpecification
                     var ids = dt1.AsEnumerable().Select(r => r.Field<int>("ItemID"));
                     //dt2.DefaultView.RowFilter = string.Format("ItemID in ({0})", string.Join(",", ids));
                     rowFilter = string.Format("ItemID in ({0})", string.Join(",", ids));
-                    itemID = ids.FirstOrDefault(); //sets itemID to first element, if not located
+                    //itemID = ids.FirstOrDefault(); //sets itemID to first element, if not located
+                    int defaultItemID = ids.FirstOrDefault();  //selects first item
+                    LastItemID = (rowFilter.Contains(itemID.ToString())) ? itemID : defaultItemID;
                 }
+
                 //populate navigation bar Product dropdown
-                tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
-                tscboProduct.ComboBox.DataBindings.Clear();
-                tscboProduct.ComboBox.SelectedIndex = -1;
-                ignoreZero = true;  //exits SelectedIndexChanged 
                 DataView vp = new DataView(dt2);
-                vp.Sort = "ITEMDESC ASC";
                 vp.RowFilter = rowFilter;
+                vp.Sort = "ITEMDESC ASC";
+                tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
+                ChangedByCode = true;
+                tscboProduct.ComboBox.DataBindings.Clear();                                              
                 tscboProduct.ComboBox.DataSource = vp;
                 tscboProduct.ComboBox.ValueMember = "ItemID";
-                tscboProduct.ComboBox.DisplayMember = "ITEMDESC";
+                tscboProduct.ComboBox.DisplayMember = "ITEMDESC";                
+                tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
 
                 // populate navigation bar code dropdown
                 DataView vc = new DataView(dt2);
-                vc.Sort = "ITEMNMBR ASC";
                 vc.RowFilter = rowFilter;
+                vc.Sort = "ITEMNMBR ASC";
                 tscboCode.ComboBox.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
                 tscboCode.ComboBox.DataBindings.Clear();
                 tscboCode.ComboBox.DataSource = vc;
                 tscboCode.ComboBox.ValueMember = "ItemID";
                 tscboCode.ComboBox.DisplayMember = "ITEMNMBR";
+                tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
+                ChangedByCode = false;
 
                 if (dt1.Rows.Count > 0)
-                {
-                    ignoreZero = false;
+                {                    
                     if (bsManItems == null)
                     {
                         BindControls();
                         FormatQCInstruction();
                     }
-                    EnableGroups(true);
                     bsManItems.Filter = rowFilter;
-                    if (itemID != 0)
+                    int itemIndex = bsManItems.Find("ItemID", itemID);
+                    if (itemID != -1)
                     {
-                        ChangedByCode = true;
-                        tscboProduct.ComboBox.SelectedValue = itemID;
-                        tscboCode.ComboBox.SelectedValue = itemID;
-                        ChangedByCode = false;
+                        EnableGroups(true);
+                        bsManItems.Position = itemIndex;
                         tscboProduct.ComboBox.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
                         tscboCode.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
                     }
@@ -1013,33 +983,51 @@ namespace MouldSpecification
                 MessageBox.Show(ex.Message, "SetProductFilter", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        
+        private void SetDropDownIndex(ToolStripComboBox tscb, int itemID)
+        {
+            try
+            {
+                int selectedIndex = -1;
+                for (int i = 0; i < tscb.ComboBox.Items.Count; i++)
+                {
+                    DataRowView drv = tscb.ComboBox.Items[i] as DataRowView;
+                    DataRow row = drv.Row;
+
+                    if (row != null)
+                    {
+                        //string displayValue = row["ITEMNMBR"].ToString();
+                        //Debug.Print(displayValue);
+                        int testItemID = Convert.ToInt32(row["ItemID"].ToString());
+                        if (testItemID == itemID)
+                        {
+                            selectedIndex = i;
+                            tscb.ComboBox.SelectedIndex = selectedIndex;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch { }
+        }
 
         private void tscboCode_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (tscboCode.SelectedIndex != -1)
+            if (tscboCode.SelectedIndex != -1 && !ChangedByCode)
             {
                 int itemID = (int)tscboCode.ComboBox.SelectedValue;
-                if (itemID != LastItemID && !ChangedByCode)
+
+                if (itemID != LastItemID)
                 {
                     LastItemID = itemID;
-                    tscboProduct.ComboBox.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
-                    ChangedByCode = true; //event still fires, even though unsubscribed !! 
-                                          //set this boolean to exit the event 
-                    tscboProduct.ComboBox.SelectedValue = itemID;
-                    tscboProduct.ComboBox.SelectedIndexChanged += tscboCode_SelectedIndexChanged;
-                    ChangedByCode = false;
-                    //if (bsManItems == null)
-                    //{
-                    //    {
-                    //        BindControls();
-                    //        FormatPolymerGrid();
-                    //        FormatAdditiveGrid();
-                    //        FormatMBGrid();
-                    //        FormatMasterBatchCompGrid();
-                    //        FormatMachineGrid();
-                    //        EnableGroups(true);
-                    //    }
-                    //}
+                    if (bsManItems == null)
+                    {
+                        {
+                            BindControls();
+                            FormatQCInstruction();
+                            EnableGroups(true);
+                        }
+                    }
                     int itemIndex = bsManItems.Find("ItemID", itemID);
                     if (itemID != -1)
                     {
@@ -1054,7 +1042,24 @@ namespace MouldSpecification
         {
             gpGeneral.Enabled = flag;
             gpQCInstruction.Enabled = flag;
-            dgvQCInstruction.Visible = flag;            
+            dgvQCInstruction.Visible = flag;
+
+            //enable NavigationBar controls
+            foreach (Object o in bindingNavigator1.Items)
+            {
+                if (o.GetType() == typeof(System.Windows.Forms.ToolStripComboBox))
+                {
+                    ToolStripComboBox tscb = (ToolStripComboBox)o;
+                    if (tscb.Name != "tscboCompany")
+                        tscb.Enabled = flag;
+                }
+                if (o.GetType() == typeof(ToolStripLabel))
+                {
+                    ToolStripLabel lb = (ToolStripLabel)o;
+                    if (lb.Text != "Company")
+                        lb.ForeColor = flag ? Color.Black : SystemColors.GrayText;
+                }
+            }
         }
 
 
@@ -1139,14 +1144,14 @@ namespace MouldSpecification
                         return;
 
 
-                    //form will reopen here after Save
-                    if (itemID > 0)
+                    //reset product filter dropdown index
+                    if (bsManItems.Filter != null)
                     {
-                        LastItemID = itemID;
                         tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
-                        tscboProduct.ComboBox.SelectedValue = itemID;
-                        tscboProduct.SelectedIndexChanged += tscboProduct_SelectedIndexChanged;
-                        btnReport.Enabled = true;
+                        ChangedByCode = true; //unsubscribing doesn't work for navigation bar combobox !!!
+                        SetDropDownIndex(tscboProduct, itemID);
+                        SetDropDownIndex(tscboCode, itemID);
+                        ChangedByCode = false;
                     }
 
                     //MessageBox.Show(bsManItems.Position.ToString());
