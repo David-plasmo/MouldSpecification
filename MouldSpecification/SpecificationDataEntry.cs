@@ -13,6 +13,7 @@ using static Utils.DrawingUtils;
 using InjectionMouldReports;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Drawing.Text;
+using System.Globalization;
 //using Microsoft.Office.Interop.Excel;
 
 
@@ -657,9 +658,25 @@ namespace MouldSpecification
                 txtITEMDESC.DataBindings.Add(new Binding("Text", bsManItems, "ITEMDESC", false,
                     DataSourceUpdateMode.OnValidation));
                 txtImageFile.DataBindings.Add(new Binding("Text", bsManItems, "ImageFile"));
-                txtComponentWeight.DataBindings.Add(new Binding("Text", bsManItems, "ComponentWeight"));
-                txtSprueRunnerTotal.DataBindings.Add(new Binding("Text", bsManItems, "SprueRunnerTotal"));
-                txtTotalShotWeight.DataBindings.Add(new Binding("Text", bsManItems, "TotalShotWeight"));
+
+                //ComponentWeight 
+                Binding b = new Binding("Text", bsManItems, "ComponentWeight");
+                b.Format += new ConvertEventHandler(DecimalToString);
+                b.Parse += new ConvertEventHandler(StringToDecimal);
+                txtComponentWeight.DataBindings.Add(b);
+
+                //SprueRunnerTotal
+                b = new Binding("Text", bsManItems, "SprueRunnerTotal");
+                b.Format += new ConvertEventHandler(DecimalToString);
+                b.Parse += new ConvertEventHandler(StringToDecimal);
+                txtSprueRunnerTotal.DataBindings.Add(b);
+
+                //TotalShotWeight
+                b = new Binding("Text", bsManItems, "TotalShotWeight");
+                b.Format += new ConvertEventHandler(DecimalToString);
+                b.Parse += new ConvertEventHandler(StringToDecimal);
+                txtTotalShotWeight.DataBindings.Add(b);
+
                 lblItemID.DataBindings.Add(new Binding("Text", bsManItems, "ItemID"));
                 txtAltCode.DataBindings.Add(new Binding("Text", bsManItems, "AltCode"));
                 txtAdditionalNotes.DataBindings.Add(new Binding("Text", bsManItems, "AdditionalNotes"));
@@ -732,6 +749,23 @@ namespace MouldSpecification
             {
                 MessageBox.Show(ex.Message, "BindControls", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void DecimalToString(object sender, ConvertEventArgs cevent)
+        {
+            if (cevent.DesiredType != typeof(string)) return;
+
+            // Use the ToString method to format the value as currency ("c").
+            cevent.Value = ((decimal)cevent.Value).ToString("0.##");
+
+        }
+
+        private void StringToDecimal(object sender, ConvertEventArgs cevent)
+        {
+            if (cevent.DesiredType != typeof(decimal)) return;
+
+            // Converts the string back to decimal using the static Parse method.
+            cevent.Value = Decimal.Parse(cevent.Value.ToString(), NumberStyles.AllowDecimalPoint, null);
         }
 
         private void bsCustomerProducts_AddingNew(object sender, AddingNewEventArgs e)
