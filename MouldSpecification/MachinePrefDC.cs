@@ -40,5 +40,5 @@ namespace MouldSpecification
 
         public MachinePrefDC() { }
 
-    }
+    }    
 }
