@@ -8,7 +8,27 @@ namespace MouldSpecification
 {
     internal class CustomerDAL : DataAccessBase
     {
-        
+        //selects customer details from any GP database, searching by company, customer code or name
+        public DataSet SelectGPCustomer(string companyCode, string custNmbr, string custName)
+        {
+            try
+            {
+                SqlCommand cmd = null;
+                SqlConnection cnx = new SqlConnection(GetConnectionString("PLASMO-DB-01"));
+                cmd = new SqlCommand();
+                cmd.Connection = cnx;
+                return ExecuteDataSet(ref cmd, "PlasmoIntegration.dbo.SelectGPCustomer",
+                   CreateParameter("@CompanyCode", SqlDbType.VarChar, companyCode),
+                   CreateParameter("@CustNmbr", SqlDbType.VarChar, custNmbr),
+                   CreateParameter("@CUSTNAME", SqlDbType.VarChar, custName));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
         public DataSet SelectCustomerClass()
         {  
             // Execute stored procedure to get customer classification.
@@ -177,7 +197,6 @@ namespace MouldSpecification
                    CreateParameter("@PHONE3", SqlDbType.Char, dc.PHONE3),
                    CreateParameter("@FAX", SqlDbType.Char, dc.FAX),
                    CreateParameter("@PYMTRMID", SqlDbType.Char, dc.PYMTRMID),
-                   CreateParameter("@LOCNCODE", SqlDbType.Char, dc.LOCNCODE),
                    CreateParameter("@last_updated_by", SqlDbType.VarChar, dc.last_updated_by, ParameterDirection.InputOutput),
                    CreateParameter("@last_updated_on", SqlDbType.DateTime2, dc.last_updated_on, ParameterDirection.InputOutput));
 

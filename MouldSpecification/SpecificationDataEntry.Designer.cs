@@ -151,6 +151,7 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -443,6 +444,8 @@
             // 
             // addEditCustomersToolStripMenuItem
             // 
+            this.addEditCustomersToolStripMenuItem.Checked = true;
+            this.addEditCustomersToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.addEditCustomersToolStripMenuItem.Name = "addEditCustomersToolStripMenuItem";
             this.addEditCustomersToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.addEditCustomersToolStripMenuItem.Text = "Add/Edit Customers";
@@ -1787,5 +1790,6 @@
         private System.Windows.Forms.TextBox txtAdditionalNotes;
         private System.Windows.Forms.Label lblAdditionalNotes;
         private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -603,6 +603,7 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="QCDataEntry.resx">
       <DependentUpon>QCDataEntry.cs</DependentUpon>
@@ -658,6 +659,7 @@
   <ItemGroup>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
     <Content Include="Resources\Images\delete.png" />
+    <EmbeddedResource Include="Resources\Images\general.png" />
     <Content Include="Resources\Images\sortAZ_green.png" />
     <Content Include="Resources\Images\sortAZ_Off.png" />
     <Content Include="Resources\Images\sortAZ_On.png" />

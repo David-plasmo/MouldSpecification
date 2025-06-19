@@ -655,6 +655,11 @@ private void cboProduct_SelectedIndexChanged(object sender, EventArgs e)
             }
         }
 
+        private void suppliersToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //private void injectionMouldToolStripMenuItem4_Click(object sender, EventArgs e)
         //{
 

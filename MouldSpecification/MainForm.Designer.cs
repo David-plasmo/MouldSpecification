@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Product Specification");
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Product Data Entry", new System.Windows.Forms.TreeNode[] {
-            treeNode12});
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Product Details");
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Material Composition");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("MasterBatch Composition");
-            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Machine Preference");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Customer Price Qty");
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Mould Specification");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Quality Control");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Packaging");
-            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("Data Table Maintenance", new System.Windows.Forms.TreeNode[] {
-            treeNode14,
-            treeNode15,
-            treeNode16,
-            treeNode17,
-            treeNode18,
-            treeNode19,
-            treeNode20,
-            treeNode21});
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Product Specification");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Product Data Entry", new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Product Details");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Material Composition");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("MasterBatch Composition");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Machine Preference");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Customer Price Qty");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Mould Specification");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Quality Control");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Packaging");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Data Table Maintenance", new System.Windows.Forms.TreeNode[] {
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7,
+            treeNode8,
+            treeNode9,
+            treeNode10});
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.cboCustomer = new System.Windows.Forms.ComboBox();
@@ -179,7 +179,7 @@
             // 
             this.blowMouldToolStripMenuItem1.Enabled = false;
             this.blowMouldToolStripMenuItem1.Name = "blowMouldToolStripMenuItem1";
-            this.blowMouldToolStripMenuItem1.Size = new System.Drawing.Size(158, 22);
+            this.blowMouldToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.blowMouldToolStripMenuItem1.Text = "Injection Mould";
             this.blowMouldToolStripMenuItem1.Click += new System.EventHandler(this.blowMouldToolStripMenuItem1_Click);
             // 
@@ -187,14 +187,14 @@
             // 
             this.injectionMouldToolStripMenuItem.Enabled = false;
             this.injectionMouldToolStripMenuItem.Name = "injectionMouldToolStripMenuItem";
-            this.injectionMouldToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.injectionMouldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.injectionMouldToolStripMenuItem.Text = "Blow Mould";
             // 
             // extrusionMouldToolStripMenuItem
             // 
             this.extrusionMouldToolStripMenuItem.Enabled = false;
             this.extrusionMouldToolStripMenuItem.Name = "extrusionMouldToolStripMenuItem";
-            this.extrusionMouldToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.extrusionMouldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.extrusionMouldToolStripMenuItem.Text = "Extrusion";
             // 
             // mouldToolStripMenuItem1
@@ -214,7 +214,7 @@
             // blowMouldToolStripMenuItem
             // 
             this.blowMouldToolStripMenuItem.Name = "blowMouldToolStripMenuItem";
-            this.blowMouldToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.blowMouldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.blowMouldToolStripMenuItem.Text = "Additive";
             this.blowMouldToolStripMenuItem.Click += new System.EventHandler(this.blowMouldToolStripMenuItem_Click);
             // 
@@ -224,7 +224,7 @@
             this.materialToolStripMenuItem,
             this.materialTypeToolStripMenuItem});
             this.polymerToolStripMenuItem.Name = "polymerToolStripMenuItem";
-            this.polymerToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.polymerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.polymerToolStripMenuItem.Text = "Material";
             this.polymerToolStripMenuItem.Click += new System.EventHandler(this.polymerToolStripMenuItem_Click);
             // 
@@ -245,35 +245,36 @@
             // machineToolStripMenuItem
             // 
             this.machineToolStripMenuItem.Name = "machineToolStripMenuItem";
-            this.machineToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.machineToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.machineToolStripMenuItem.Text = "Machine";
             this.machineToolStripMenuItem.Click += new System.EventHandler(this.machineToolStripMenuItem_Click);
             // 
             // masterBatchToolStripMenuItem
             // 
             this.masterBatchToolStripMenuItem.Name = "masterBatchToolStripMenuItem";
-            this.masterBatchToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.masterBatchToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.masterBatchToolStripMenuItem.Text = "MasterBatch";
             this.masterBatchToolStripMenuItem.Click += new System.EventHandler(this.masterBatchToolStripMenuItem_Click);
             // 
             // fixedCostsToolStripMenuItem
             // 
             this.fixedCostsToolStripMenuItem.Name = "fixedCostsToolStripMenuItem";
-            this.fixedCostsToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.fixedCostsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.fixedCostsToolStripMenuItem.Text = "Fixed Costs";
             this.fixedCostsToolStripMenuItem.Click += new System.EventHandler(this.fixedCostsToolStripMenuItem_Click);
             // 
             // suppliersToolStripMenuItem
             // 
             this.suppliersToolStripMenuItem.Name = "suppliersToolStripMenuItem";
-            this.suppliersToolStripMenuItem.Size = new System.Drawing.Size(137, 6);
+            this.suppliersToolStripMenuItem.Size = new System.Drawing.Size(177, 6);
             // 
             // suppliersToolStripMenuItem1
             // 
             this.suppliersToolStripMenuItem1.Enabled = false;
             this.suppliersToolStripMenuItem1.Name = "suppliersToolStripMenuItem1";
-            this.suppliersToolStripMenuItem1.Size = new System.Drawing.Size(140, 22);
+            this.suppliersToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.suppliersToolStripMenuItem1.Text = "Suppliers";
+            this.suppliersToolStripMenuItem1.Click += new System.EventHandler(this.suppliersToolStripMenuItem1_Click);
             // 
             // accessToolStripMenuItem
             // 
@@ -352,7 +353,7 @@
             // 
             this.injectionMouldToolStripMenuItem4.Enabled = false;
             this.injectionMouldToolStripMenuItem4.Name = "injectionMouldToolStripMenuItem4";
-            this.injectionMouldToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.injectionMouldToolStripMenuItem4.Size = new System.Drawing.Size(158, 22);
             this.injectionMouldToolStripMenuItem4.Text = "Injection Mould";
             this.injectionMouldToolStripMenuItem4.Visible = false;
             this.injectionMouldToolStripMenuItem4.Click += new System.EventHandler(this.injectionMouldToolStripMenuItem4_Click);
@@ -379,31 +380,31 @@
             this.tvMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tvMain.Location = new System.Drawing.Point(0, 0);
             this.tvMain.Name = "tvMain";
-            treeNode12.Name = "IMSpecificationDataEntry";
-            treeNode12.Text = "Product Specification";
-            treeNode13.Name = "IMSpecificationDataEntryRoot";
-            treeNode13.Text = "Product Data Entry";
-            treeNode14.Name = "ProductDetails";
-            treeNode14.Text = "Product Details";
-            treeNode15.Name = "MaterialComp";
-            treeNode15.Text = "Material Composition";
-            treeNode16.Name = "MasterBatchComp";
-            treeNode16.Text = "MasterBatch Composition";
-            treeNode17.Name = "MachinePref";
-            treeNode17.Text = "Machine Preference";
-            treeNode18.Name = "CustomerPriceQty";
-            treeNode18.Text = "Customer Price Qty";
-            treeNode19.Name = "MouldSpecification";
-            treeNode19.Text = "Mould Specification";
-            treeNode20.Name = "QualityControl";
-            treeNode20.Text = "Quality Control";
-            treeNode21.Name = "Packaging";
-            treeNode21.Text = "Packaging";
-            treeNode22.Name = "TableMaintenance";
-            treeNode22.Text = "Data Table Maintenance";
+            treeNode1.Name = "IMSpecificationDataEntry";
+            treeNode1.Text = "Product Specification";
+            treeNode2.Name = "IMSpecificationDataEntryRoot";
+            treeNode2.Text = "Product Data Entry";
+            treeNode3.Name = "ProductDetails";
+            treeNode3.Text = "Product Details";
+            treeNode4.Name = "MaterialComp";
+            treeNode4.Text = "Material Composition";
+            treeNode5.Name = "MasterBatchComp";
+            treeNode5.Text = "MasterBatch Composition";
+            treeNode6.Name = "MachinePref";
+            treeNode6.Text = "Machine Preference";
+            treeNode7.Name = "CustomerPriceQty";
+            treeNode7.Text = "Customer Price Qty";
+            treeNode8.Name = "MouldSpecification";
+            treeNode8.Text = "Mould Specification";
+            treeNode9.Name = "QualityControl";
+            treeNode9.Text = "Quality Control";
+            treeNode10.Name = "Packaging";
+            treeNode10.Text = "Packaging";
+            treeNode11.Name = "TableMaintenance";
+            treeNode11.Text = "Data Table Maintenance";
             this.tvMain.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode13,
-            treeNode22});
+            treeNode2,
+            treeNode11});
             this.tvMain.Size = new System.Drawing.Size(118, 572);
             this.tvMain.TabIndex = 0;
             this.tvMain.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tvMain_MouseDown);

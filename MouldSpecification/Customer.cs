@@ -31,7 +31,12 @@ namespace MouldSpecification
             InitializeComponent();
             CustomerID = customerID;               
         }
-        
+
+        public Customer()
+        {
+            InitializeComponent();            
+        }
+
         private void Customer_Load(object sender, EventArgs e)
         {
             try
@@ -144,6 +149,11 @@ namespace MouldSpecification
                 
                 //readonly 
                 txtlast_updated_on.DataBindings.Add(new Binding("Text", bsCustomer, "last_updated_on", true, DataSourceUpdateMode.Never, "dd-MM-yyyy HH:mm:ss"));
+
+                //if form opened with no current customer, add new
+                if (lastCustID == 0)
+                    bsCustomer.AddNew();
+
 
                 Cursor.Current = Cursors.Default;
 
@@ -330,6 +340,50 @@ namespace MouldSpecification
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void txtCUSTNAME_TextChanged(object sender, EventArgs e)
+        {
+            btnGetGP.Enabled  = txtCUSTNAME.Text.Length > 0;
+        }
+
+        private void btnGetGP_Click(object sender, EventArgs e)
+        {
+            PopulateFromGP();
+        }
+        private void PopulateFromGP()
+        {
+            try
+            {     
+                //retrieve customer details from GP and populate form
+                DataRowView dv = (DataRowView)bsCustomer.Current;
+                if(dv != null)
+                {
+                    DataRow dr = dv.Row;
+                    string companyCode, custNmbr, custName;
+                    custName = dr["CUSTNAME"].ToString();
+                    custNmbr = (dr["CUSTNMBR"].ToString().Length > 0) ? dr["CUSTNMBR"].ToString() : null;
+                    companyCode = dr["CompDB"].ToString();
+                    //get GP Customer
+                    DataSet ds = new CustomerDAL().SelectGPCustomer(companyCode, custNmbr, custName);
+                    DataTable dt = ds.Tables[0];
+                    if (dt != null && dt.Rows.Count != 0)
+                    {
+                        //loop to populate form from GP row columns
+                        DataRow drGP = dt.Rows[0];
+                        for (int i = 0; i < dt.Columns.Count; i++)
+                        {
+                            string colName = dt.Columns[i].ColumnName;
+                            dr[colName] = drGP[i];
+                        }
+                        dr.EndEdit();
+                    }                    
+                }                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("PopulateFromGP Error: " + ex.Message);
+            }
         }
 
         private void tsbtnAccept_Click(object sender, EventArgs e)

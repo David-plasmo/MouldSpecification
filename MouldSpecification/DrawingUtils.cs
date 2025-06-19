@@ -27,7 +27,9 @@ namespace Utils
             SortAZ_Off = 11,    //sort ascending -toggled on
             SortZA_Off = 12,    //sort descending - toggled on
             plus = 13,
-            minus = 14
+            minus = 14,
+            show = 15,
+            general = 16
         }
 
 
@@ -141,6 +143,16 @@ namespace Utils
                 {
                     myStream = myAssembly.GetManifestResourceStream("MouldSpecification.sortZA_Orange.png");
                     //myStream = myAssembly.GetManifestResourceStream("InjectionMouldBIN.image.folders50.png");
+                }
+                else if (op == ButtonOp.show)
+                {
+                    //myStream = myAssembly.GetManifestResourceStream("MouldSpecification.show.png");
+                    myStream = myAssembly.GetManifestResourceStream("MouldSpecification.Resources.Images.show.png");
+                }
+                else if (op == ButtonOp.general)
+                {
+                    //myStream = myAssembly.GetManifestResourceStream("MouldSpecification.general.png");
+                    myStream = myAssembly.GetManifestResourceStream("MouldSpecification.Resources.Images.general.png");
                 }
 
                 Bitmap image = new Bitmap(myStream);

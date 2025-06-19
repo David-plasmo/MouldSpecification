@@ -1,6 +1,8 @@
 ﻿using DataService;
+
 using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace MouldSpecification
@@ -23,7 +25,7 @@ namespace MouldSpecification
                 MessageBox.Show(ex.Message);
                 return null;
             }
-        }
+        }       
 
         public DataSet GetProductIndex(string productType = "IM")
         {

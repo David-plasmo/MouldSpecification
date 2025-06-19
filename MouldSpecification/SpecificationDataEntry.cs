@@ -51,6 +51,7 @@ namespace MouldSpecification
         DataGridView dgvMBCode, dgvAdditive;
 
         ToolStripLabel tslCompany;
+        ToolStripButton tsbtnEditCompany;
         ToolStripComboBox tscboCompany;
         ToolStripLabel tslCode;
         ToolStripComboBox tscboCode;
@@ -89,7 +90,10 @@ namespace MouldSpecification
             NextForm = this.Name;
 
             this.SuspendLayout();
-            tslCompany = new ToolStripLabel() { Text = "Company" };            
+            tslCompany = new ToolStripLabel() { Text = "Company" };
+            tsbtnEditCompany = new ToolStripButton(); //{ Text = "Edit" };
+            tsbtnEditCompany.ToolTipText = "Add/Edit Company";
+            //tsbtnEditCompany.Image = GetImage(ButtonOp.show, p96H(20), p96H(20));
             tslCode = new ToolStripLabel() { Text = "Code" };
             tslProduct = new ToolStripLabel() { Text = "Product" };
             tscboCompany = new ToolStripComboBox();
@@ -100,8 +104,9 @@ namespace MouldSpecification
 
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[]
             {
+                tsbtnEditCompany,
                 tslCompany,
-                tscboCompany,
+                tscboCompany,                
                 tslCode,
                 tscboCode,
                 tslProduct,
@@ -260,6 +265,8 @@ namespace MouldSpecification
 
                 btnCopyToNew.Click += btnCopyToNew_Click;
                 btnBrowseImage.Image = GetImage(ButtonOp.Browse, p96H(20), p96H(20));
+                tsbtnEditCompany.Image = GetImage(ButtonOp.general, p96H(20), p96H(20));
+                tsbtnEditCompany.Click += tsbtnEditCompany_Click;
                 btnBrowseImage.Click += btnBrowseImage_Click;
                 //lblMBCode.Image = DrawingUtils.GetImage(ButtonOp.Expand, p96W(15), p96H(15));
                 //lblAdditiveCode.Image = DrawingUtils.GetImage(ButtonOp.Expand, p96W(15), p96H(15));
@@ -296,6 +303,18 @@ namespace MouldSpecification
             }
             catch (Exception ex) { }
 
+        }
+
+        private void tsbtnEditCompany_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Add/Edit Customers");
+            Customer f = null;
+            if (LastCustomerID.HasValue)
+                f = new Customer(LastCustomerID.Value);                      
+            else
+                f = new Customer();
+                           
+            f.ShowDialog();
         }
 
         private void btnAddNewMaterial_Click(object sender, EventArgs e)

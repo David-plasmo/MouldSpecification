@@ -1055,6 +1055,11 @@
               Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:MouldSpecification.Properties.Resources.general">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:MouldSpecification.Properties.Resources.minus">
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.

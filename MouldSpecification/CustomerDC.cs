@@ -27,15 +27,14 @@ namespace MouldSpecification
         public string PHONE2 { get; set; }
         public string PHONE3 { get; set; }
         public string FAX { get; set; }
-        public string PYMTRMID { get; set; }
-        public string LOCNCODE { get; set; }
+        public string PYMTRMID { get; set; }        
         public string last_updated_by { get; set; }
         public DateTime last_updated_on { get; set; }
 
         public CustomerDC(int CustomerID_, string CompDB_, string CUSTNMBR_, string CUSTNAME_, string CUSTCLAS_, 
             string CNTCPRSN_, string ADRSCODE_, string SHIPMTHD_, string ADDRESS1_, string ADDRESS2_, 
             string ADDRESS3_, string COUNTRY_, string CITY_, string STATE_, string ZIP_, string PHONE1_, 
-            string PHONE2_, string PHONE3_, string FAX_, string PYMTRMID_, string LOCNCODE_, 
+            string PHONE2_, string PHONE3_, string FAX_, string PYMTRMID_, 
             string last_updated_by_, DateTime last_updated_on_)
         {
             this.CustomerID = CustomerID_;
@@ -57,8 +56,7 @@ namespace MouldSpecification
             this.PHONE2 = PHONE2_;
             this.PHONE3 = PHONE3_;
             this.FAX = FAX_;
-            this.PYMTRMID = PYMTRMID_;
-            this.LOCNCODE = LOCNCODE_;
+            this.PYMTRMID = PYMTRMID_;            
             this.last_updated_by = last_updated_by_;
             this.last_updated_on = last_updated_on_;
 

@@ -90,8 +90,10 @@
             this.cboState = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cboPostCode = new System.Windows.Forms.ComboBox();
+            this.btnGetGP = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAccept = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.bnCustomer)).BeginInit();
             this.bnCustomer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -304,7 +306,8 @@
             this.tableLayoutPanel1.Controls.Add(this.cboState, 3, 10);
             this.tableLayoutPanel1.Controls.Add(this.label14, 2, 11);
             this.tableLayoutPanel1.Controls.Add(this.cboPostCode, 3, 11);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 40);
+            this.tableLayoutPanel1.Controls.Add(this.btnGetGP, 2, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 41);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 21;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
@@ -528,6 +531,7 @@
             this.txtCUSTNAME.Name = "txtCUSTNAME";
             this.txtCUSTNAME.Size = new System.Drawing.Size(233, 20);
             this.txtCUSTNAME.TabIndex = 19;
+            this.txtCUSTNAME.TextChanged += new System.EventHandler(this.txtCUSTNAME_TextChanged);
             // 
             // label11
             // 
@@ -747,6 +751,19 @@
             this.cboPostCode.Size = new System.Drawing.Size(121, 21);
             this.cboPostCode.TabIndex = 61;
             // 
+            // btnGetGP
+            // 
+            this.btnGetGP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnGetGP.Location = new System.Drawing.Point(333, 24);
+            this.btnGetGP.Margin = new System.Windows.Forms.Padding(0);
+            this.btnGetGP.Name = "btnGetGP";
+            this.btnGetGP.Size = new System.Drawing.Size(67, 24);
+            this.btnGetGP.TabIndex = 64;
+            this.btnGetGP.Text = "GP";
+            this.toolTip1.SetToolTip(this.btnGetGP, "Populate from GP");
+            this.btnGetGP.UseVisualStyleBackColor = true;
+            this.btnGetGP.Click += new System.EventHandler(this.btnGetGP_Click);
+            // 
             // btnCancel
             // 
             this.btnCancel.Location = new System.Drawing.Point(235, 566);
@@ -854,5 +871,7 @@
         private System.Windows.Forms.ComboBox cboState;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cboPostCode;
+        private System.Windows.Forms.Button btnGetGP;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
