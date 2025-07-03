@@ -772,7 +772,7 @@ namespace MouldSpecification
 
         private void DecimalToString(object sender, ConvertEventArgs cevent)
         {
-            if (cevent.DesiredType != typeof(string)) return;
+            if (cevent.DesiredType != typeof(string) || cevent.Value.ToString().Length == 0 ) return;
 
             // Use the ToString method to format the value as currency ("c").
             cevent.Value = ((decimal)cevent.Value).ToString("0.##");
@@ -1108,20 +1108,12 @@ namespace MouldSpecification
         {
             try
             {
-                //cboCUSTNAME.SelectedIndexChanged
-                //bsManItems.CurrentChanged -= bsManItems_CurrentChanged;
-                //bsManItems.RemoveFilter();
-                //bsManItems.CurrentChanged += bsManItems_CurrentChanged;
-                //tscboCompany.ComboBox.SelectedIndexChanged -= tscboCompany_SelectedIndexChanged;
-                //ignoreZero = true;                //
-                //tscboCompany.SelectedIndex = -1;  //SelectedIndexChanged event resets -1 to zero
-                //ignoreZero = false;               //  
                 tscboProduct.SelectedIndexChanged -= tscboProduct_SelectedIndexChanged;
                 tscboCode.SelectedIndexChanged -= tscboCode_SelectedIndexChanged;
                 tscboProduct.SelectedIndex = -1;
                 tscboCode.SelectedIndex = -1;
                 cboCUSTNAME.SelectedIndex = -1;
-                //cboCUSTNAME.SelectedIndexChanged += cboCUSTNAME_SelectedIndexChanged;
+                
 
                 //create new key
                 newItemID--; // -ve increment flags new records

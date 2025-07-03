@@ -31,6 +31,8 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvEdit = new System.Windows.Forms.DataGridView();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -48,13 +50,15 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.splitContainer1.Panel1.Controls.Add(this.btnCancel);
+            this.splitContainer1.Panel1.Controls.Add(this.btnSave);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvEdit);
-            this.splitContainer1.Size = new System.Drawing.Size(962, 476);
-            this.splitContainer1.SplitterDistance = 38;
+            this.splitContainer1.Size = new System.Drawing.Size(896, 808);
+            this.splitContainer1.SplitterDistance = 64;
             this.splitContainer1.TabIndex = 0;
             // 
             // label1
@@ -74,15 +78,36 @@
             this.dgvEdit.Location = new System.Drawing.Point(0, 0);
             this.dgvEdit.Name = "dgvEdit";
             this.dgvEdit.RowHeadersWidth = 92;
-            this.dgvEdit.Size = new System.Drawing.Size(962, 434);
+            this.dgvEdit.Size = new System.Drawing.Size(896, 740);
             this.dgvEdit.TabIndex = 0;
             this.dgvEdit.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvEdit_UserDeletingRow);
+            this.dgvEdit.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgvEdit_MouseUp);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(342, 13);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 10;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(474, 13);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 11;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // MaterialGradeCost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(962, 476);
+            this.ClientSize = new System.Drawing.Size(896, 808);
             this.Controls.Add(this.splitContainer1);
             this.Name = "MaterialGradeCost";
             this.Text = "Material Grade Cost";
@@ -104,5 +129,7 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvEdit;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSave;
     }
 }

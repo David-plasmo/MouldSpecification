@@ -1,7 +1,11 @@
-﻿using System;
+﻿using Microsoft.Reporting.Map.WebForms.BingMaps;
+using System;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataGrid;
+using System.Drawing;
 using static Utils.DrawingUtils;
 
 namespace MouldSpecification
@@ -11,9 +15,10 @@ namespace MouldSpecification
         bool bIsLoading = true;
         bool nonNumberEntered;
         DataSet dsMaterialGrade;
+        DataView dvMaterialGrade;
         Size screenRes = ScreenRes();
         //ComboBox cboMaterial;
-
+       
         public MaterialGradeCost()
         {
             InitializeComponent();
@@ -21,27 +26,10 @@ namespace MouldSpecification
 
         private void MaterialGradeForm_Load(object sender, EventArgs e)
         {
-            //bIsLoading = true;
-            //cboMaterial = new ComboBox();           
-            //DataSet dsMt = new MaterialGradeDAL().GetMaterial();
-            //this.cboMaterial = new ComboBox();
-            //this.cboMaterial.Width = 200;
-            //this.cboMaterial.ValueMember = "MaterialID";
-            //this.cboMaterial.DisplayMember = "ShortDesc";
-            //this.cboMaterial.DataSource = dsMt.Tables[0];
-            //this.cboMaterial.Visible = false;
-            //this.dgvEdit.Controls.Add(this.cboMaterial);
-            //Associate the event-handling method with the SelectedIndexChanged event.
-            //this.cboMaterial.SelectedIndexChanged += new System.EventHandler(cboMaterial_SelectedIndexChanged);
-
-            //LoadGrid();
-            //bIsLoading = false;
-            //this.Size = new Size(800, 1000);
+           
         }
         private void LoadGrid()
-        {
-            //ProductDataService pds = new ProductDataService();
-            //dsMaterialGrade = pds.GetMaterialGradeRef();
+        {            
             dsMaterialGrade = new MaterialGradeDAL().SelectMaterialGrade();
             DataGridViewCellStyle style = dgvEdit.ColumnHeadersDefaultCellStyle;
             style.BackColor = Color.Navy;
@@ -54,59 +42,108 @@ namespace MouldSpecification
             dgvEdit.AutoGenerateColumns = true;
             dgvEdit.RowHeadersWidth = Convert.ToInt32(26 * screenRes.Width / 96);
 
-            dgvEdit.DataSource = dsMaterialGrade.Tables[0];
+            dvMaterialGrade = dsMaterialGrade.Tables[0].DefaultView;
+            dgvEdit.DataSource = dvMaterialGrade;
             dgvEdit.Columns[0].Visible = false;
             dgvEdit.Columns[1].Visible = false;
             dgvEdit.Columns["MaterialGrade"].Width = 200;
             dgvEdit.Columns["MaterialGrade"].HeaderText = "Material Grade";
             //dgvEdit.Columns["AdditionalNotes"].HeaderText = "Additional Notes";
             //dgvEdit.Columns["AdditionalNotes"].Width = 200;
-            dgvEdit.Columns["CostPerKg"].Width = 60;
+            dgvEdit.Columns["CostPerKg"].Width = 80;
             dgvEdit.Columns["Comment"].Width = 200;
             dgvEdit.Columns["CostPerKg"].DefaultCellStyle.Format = "N3";
             dgvEdit.Columns["CostPerKg"].HeaderText = "Cost/kg      $";
             dgvEdit.Columns["CostPerKg"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvEdit.Columns["MachineType"].Visible = false;
             dgvEdit.Columns["last_updated_by"].Visible = false;
             dgvEdit.Columns["last_updated_on"].Visible = false;
+            dgvEdit.Columns["MaterialDisplayValue"].Visible = false;
 
-            //setup dropdown columns for material
+            //setup dropdown column for material
             DataGridViewComboBoxColumn cbcMaterial = new DataGridViewComboBoxColumn();
             DataSet dsMaterial = new MaterialGradeDAL().GetMaterial();
             DataTable dt = dsMaterial.Tables[0];
-            cbcMaterial.DataSource = dt;
+            //dataview to sort material by DisplayMember (default is ValueMember, which is meaningless to user)
+            DataView dv = new DataView(dt);
+            dv.Sort = "ShortDesc";
+            cbcMaterial.DataSource = dv;
             cbcMaterial.ValueMember = "MaterialID";
             cbcMaterial.DisplayMember = "ShortDesc";
             cbcMaterial.Name = "Material";
+            cbcMaterial.SortMode = DataGridViewColumnSortMode.Automatic;
             cbcMaterial.DataPropertyName = "MaterialID";
             dgvEdit.Columns.Insert(1, cbcMaterial);
             dgvEdit.Columns["Material"].HeaderText = "Material";
             cbcMaterial.DisplayStyleForCurrentCellOnly = true;
             cbcMaterial.DisplayStyle = DataGridViewComboBoxDisplayStyle.Nothing;
 
-            dgvEdit.CellValidating += DgvEdit_CellValidating;
 
+            
+
+            //setup dropdown column for material grade machine type 
+            DataGridViewComboBoxColumn cbcMGMachineType = new DataGridViewComboBoxColumn();
+            DataSet dsMGMachineType = new MaterialGradeDAL().SelectMGMachineType(); 
+            dt = dsMGMachineType.Tables[0];
+            cbcMGMachineType.DataSource = dt;
+            cbcMGMachineType.ValueMember = "MachineType";
+            cbcMGMachineType.DisplayMember = "MachineType";
+            cbcMGMachineType.Name = "MachineType";
+            cbcMGMachineType.DataPropertyName = "MachineType";
+            cbcMGMachineType.DisplayStyle = DataGridViewComboBoxDisplayStyle.Nothing;
+            cbcMGMachineType.SortMode = DataGridViewColumnSortMode.Automatic;
+            dgvEdit.Columns.RemoveAt(5);
+            dgvEdit.Columns.Insert(6, cbcMGMachineType);
+            dgvEdit.Columns["MachineType"].HeaderText = "MachineType";
+            dgvEdit.Columns["MachineType"].Width = 120;
+            cbcMaterial.DisplayStyleForCurrentCellOnly = true;
+            
+
+            dgvEdit.CellValidating += DgvEdit_CellValidating;
         }
 
-        private void DgvEdit_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        private void dgvEdit_MouseUp(object sender, MouseEventArgs e)
         {
-            if (dgvEdit.Columns[e.ColumnIndex].DataPropertyName == "MaterialGrade"
-                && e.FormattedValue.ToString() != dgvEdit.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString())
+            System.Drawing.Point p1 = new System.Drawing.Point(e.X, e.Y);
+            DataGridView.HitTestInfo hti = dgvEdit.HitTest(e.X, e.Y);
+            if (hti.Type != DataGridViewHitTestType.ColumnHeader)
+                base.OnMouseUp(e);
+            else
             {
-                DataTable dt = (DataTable)dgvEdit.DataSource;
-                DataRow[] rows = dt.Select("MaterialGrade = '" + e.FormattedValue + "'");
-
-                if (rows.Length > 0)
+               
+                int colIndex = hti.ColumnIndex;
+                string colHeading = dgvEdit.Columns[colIndex].HeaderText;
+                if (colHeading == "Material")
                 {
-                    MessageBox.Show("This MaterialGrade is already used.");
-                    e.Cancel = true;
-                }
+                    //MessageBox.Show("to do:  sort on " + colHeading);
+                    dvMaterialGrade.Sort = "MaterialDisplayValue ASC, MaterialGrade ASC";
+
+                }               
             }
         }
 
-        private void cboMaterial_SelectedIndexChanged(object sender, System.EventArgs e)
-        {
 
+
+        private void DgvEdit_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+    {
+        if (dgvEdit.Columns[e.ColumnIndex].DataPropertyName == "MaterialGrade"
+            && e.FormattedValue.ToString() != dgvEdit.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString())
+        {
+            DataTable dt = (DataTable)dgvEdit.DataSource;
+            DataRow[] rows = dt.Select("MaterialGrade = '" + e.FormattedValue + "'");
+
+            if (rows.Length > 0)
+            {
+                MessageBox.Show("This MaterialGrade is already used.");
+                e.Cancel = true;
+            }
         }
+    }
+
+    private void cboMaterial_SelectedIndexChanged(object sender, System.EventArgs e)
+    {
+
+    }
 
 
         private void dgvEdit_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
@@ -160,6 +197,17 @@ namespace MouldSpecification
 
         private void MaterialGradeCost_FormClosed(object sender, FormClosedEventArgs e)
         {
+            
+        }
+
+        private void MaterialGradeCost_Shown(object sender, EventArgs e)
+        {
+            this.splitContainer1.SplitterDistance = p96H(40);
+            LoadGrid();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
             try
             {
                 //bClosing = true;
@@ -170,6 +218,7 @@ namespace MouldSpecification
                 dgvEdit.EndEdit();
                 dgvEdit.DataSource = null;
                 new MaterialGradeDAL().UpdateMaterialGrade(dsMaterialGrade);
+                this.Close();
 
             }
             catch
@@ -178,10 +227,9 @@ namespace MouldSpecification
             }
         }
 
-        private void MaterialGradeCost_Shown(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.splitContainer1.SplitterDistance = p96H(40);
-            LoadGrid();
-        }
+            this.Close();
+        }        
     }
 }

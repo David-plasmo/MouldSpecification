@@ -35,6 +35,16 @@ namespace MouldSpecification
                 return null;
             }
         }
+
+        public DataSet SelectMGMachineType()
+        {
+            try
+            {
+                return ExecuteDataSet("[dbo].[SelectMGMachineType]");
+            }
+            catch (Exception ex) { return null; } 
+        }
+
         public void UpdateMaterialGrade(DataSet ds)
         {
             try
@@ -116,6 +126,7 @@ namespace MouldSpecification
                 MessageBox.Show(excp.Message);
             }
         }
+
 
         public void MaterialGrade_del(MaterialGradeDC dc)
         {
