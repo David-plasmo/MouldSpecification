@@ -14,6 +14,7 @@ namespace MouldSpecification
     {
         bool bIsLoading = true;
         bool nonNumberEntered;
+        bool sortASC = false;
         DataSet dsMaterialGrade;
         DataView dvMaterialGrade;
         Size screenRes = ScreenRes();
@@ -102,6 +103,15 @@ namespace MouldSpecification
             dgvEdit.CellValidating += DgvEdit_CellValidating;
         }
 
+        //Workaround to implement column sorting on the DisplayMember of a combobox column, in a databound grid.
+        //(Automatic sorting in combobox columns only works for ValueMembers, which might not coincide with the DisplayValue
+        //that the user sees and may want to sort.)
+        //
+        //Assumes the DataGridView control is bound to a DataView, which is sortable, and 
+        //contains a read-only column holding the display value, which should be set not visible.
+        //(The display value is shown by the combobox column;  the repetition of this in
+        //the DataView, as a hidden column, is to enable sorting.)
+        //
         private void dgvEdit_MouseUp(object sender, MouseEventArgs e)
         {
             System.Drawing.Point p1 = new System.Drawing.Point(e.X, e.Y);
@@ -109,42 +119,49 @@ namespace MouldSpecification
             if (hti.Type != DataGridViewHitTestType.ColumnHeader)
                 base.OnMouseUp(e);
             else
-            {
-               
+            {               
                 int colIndex = hti.ColumnIndex;
                 string colHeading = dgvEdit.Columns[colIndex].HeaderText;
                 if (colHeading == "Material")
                 {
-                    //MessageBox.Show("to do:  sort on " + colHeading);
-                    dvMaterialGrade.Sort = "MaterialDisplayValue ASC, MaterialGrade ASC";
-
+                    string sortDir;                    
+                    sortASC = !sortASC; //toggles sort direction
+                    if (sortASC)
+                    {
+                        sortDir = "MaterialDisplayValue ASC, MaterialGrade ASC";
+                        dvMaterialGrade.Sort = sortDir;
+                        dgvEdit.Columns[colIndex].HeaderCell.SortGlyphDirection = SortOrder.Descending;
+                    }
+                    else
+                    {
+                        sortDir = "MaterialDisplayValue DESC, MaterialGrade DESC";
+                        dvMaterialGrade.Sort = sortDir;
+                        dgvEdit.Columns[colIndex].HeaderCell.SortGlyphDirection = SortOrder.Ascending;
+                    }                                                                              
                 }               
             }
         }
 
-
-
         private void DgvEdit_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
-    {
-        if (dgvEdit.Columns[e.ColumnIndex].DataPropertyName == "MaterialGrade"
-            && e.FormattedValue.ToString() != dgvEdit.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString())
         {
-            DataTable dt = (DataTable)dgvEdit.DataSource;
-            DataRow[] rows = dt.Select("MaterialGrade = '" + e.FormattedValue + "'");
-
-            if (rows.Length > 0)
+            if (dgvEdit.Columns[e.ColumnIndex].DataPropertyName == "MaterialGrade"
+                && e.FormattedValue.ToString() != dgvEdit.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString())
             {
-                MessageBox.Show("This MaterialGrade is already used.");
-                e.Cancel = true;
+                DataTable dt = (DataTable)dgvEdit.DataSource;
+                DataRow[] rows = dt.Select("MaterialGrade = '" + e.FormattedValue + "'");
+
+                if (rows.Length > 0)
+                {
+                    MessageBox.Show("This MaterialGrade is already used.");
+                    e.Cancel = true;
+                }
             }
         }
-    }
 
-    private void cboMaterial_SelectedIndexChanged(object sender, System.EventArgs e)
-    {
+        private void cboMaterial_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
 
-    }
-
+        }
 
         private void dgvEdit_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
