@@ -88,7 +88,6 @@
             this.splitContainer1.BackColor = System.Drawing.SystemColors.Control;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -104,10 +103,9 @@
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.AntiqueWhite;
             this.splitContainer1.Panel2.Controls.Add(this.gpQCInstruction);
             this.splitContainer1.Panel2.Controls.Add(this.gpGeneral);
-            this.splitContainer1.Panel2.Margin = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.splitContainer1.Size = new System.Drawing.Size(1599, 1368);
-            this.splitContainer1.SplitterDistance = 156;
-            this.splitContainer1.SplitterWidth = 7;
+            this.splitContainer1.Panel2.Margin = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.splitContainer1.Size = new System.Drawing.Size(872, 575);
+            this.splitContainer1.SplitterDistance = 65;
             this.splitContainer1.TabIndex = 1;
             // 
             // bindingNavigator1
@@ -134,22 +132,22 @@
             this.toolStripSeparator1,
             this.tsbtnCancel,
             this.tsbtnAccept});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 102);
+            this.bindingNavigator1.Location = new System.Drawing.Point(0, 36);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.Padding = new System.Windows.Forms.Padding(0, 0, 4, 0);
+            this.bindingNavigator1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1599, 54);
+            this.bindingNavigator1.Size = new System.Drawing.Size(872, 29);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 49);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 26);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -176,7 +174,7 @@
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 54);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 29);
             // 
             // bindingNavigatorPositionItem
             // 
@@ -184,14 +182,14 @@
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(41, 31);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(24, 23);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 54);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 29);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -216,7 +214,7 @@
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 54);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 29);
             // 
             // tsbtnAddNew
             // 
@@ -224,7 +222,7 @@
             this.tsbtnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAddNew.Image")));
             this.tsbtnAddNew.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnAddNew.Name = "tsbtnAddNew";
-            this.tsbtnAddNew.Size = new System.Drawing.Size(34, 49);
+            this.tsbtnAddNew.Size = new System.Drawing.Size(24, 26);
             this.tsbtnAddNew.Text = "Add";
             this.tsbtnAddNew.ToolTipText = "Add New";
             // 
@@ -234,14 +232,14 @@
             this.tsbtnDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnDelete.Image")));
             this.tsbtnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnDelete.Name = "tsbtnDelete";
-            this.tsbtnDelete.Size = new System.Drawing.Size(34, 49);
+            this.tsbtnDelete.Size = new System.Drawing.Size(24, 26);
             this.tsbtnDelete.Text = "Delete";
             this.tsbtnDelete.ToolTipText = "Delete";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 54);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 29);
             // 
             // tsbtnCancel
             // 
@@ -266,7 +264,6 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.LightBlue;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.productSpecificationToolStripMenuItem,
@@ -275,8 +272,8 @@
             this.attachedDocumentsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1599, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(3, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(872, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -285,47 +282,45 @@
             this.productSpecificationToolStripMenuItem.Checked = true;
             this.productSpecificationToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.productSpecificationToolStripMenuItem.Name = "productSpecificationToolStripMenuItem";
-            this.productSpecificationToolStripMenuItem.Size = new System.Drawing.Size(195, 29);
+            this.productSpecificationToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.productSpecificationToolStripMenuItem.Text = "Product Specification";
             this.productSpecificationToolStripMenuItem.Click += new System.EventHandler(this.productSpecificationToolStripMenuItem_Click);
             // 
             // productPackagingToolStripMenuItem
             // 
             this.productPackagingToolStripMenuItem.Name = "productPackagingToolStripMenuItem";
-            this.productPackagingToolStripMenuItem.Size = new System.Drawing.Size(175, 29);
+            this.productPackagingToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
             this.productPackagingToolStripMenuItem.Text = "Product Packaging";
             this.productPackagingToolStripMenuItem.Click += new System.EventHandler(this.productPackagingToolStripMenuItem_Click);
             // 
             // qCInstructionsToolStripMenuItem
             // 
             this.qCInstructionsToolStripMenuItem.Name = "qCInstructionsToolStripMenuItem";
-            this.qCInstructionsToolStripMenuItem.Size = new System.Drawing.Size(150, 29);
+            this.qCInstructionsToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.qCInstructionsToolStripMenuItem.Text = "QC Instructions";
             this.qCInstructionsToolStripMenuItem.Click += new System.EventHandler(this.qCInstructionsToolStripMenuItem_Click);
             // 
             // attachedDocumentsToolStripMenuItem
             // 
             this.attachedDocumentsToolStripMenuItem.Name = "attachedDocumentsToolStripMenuItem";
-            this.attachedDocumentsToolStripMenuItem.Size = new System.Drawing.Size(195, 29);
+            this.attachedDocumentsToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.attachedDocumentsToolStripMenuItem.Text = "Attached Documents";
             this.attachedDocumentsToolStripMenuItem.Click += new System.EventHandler(this.attachedDocumentsToolStripMenuItem_Click);
             // 
             // gpQCInstruction
             // 
             this.gpQCInstruction.Controls.Add(this.splitContainer2);
-            this.gpQCInstruction.Location = new System.Drawing.Point(0, 166);
-            this.gpQCInstruction.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gpQCInstruction.Location = new System.Drawing.Point(0, 90);
             this.gpQCInstruction.Name = "gpQCInstruction";
-            this.gpQCInstruction.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
-            this.gpQCInstruction.Size = new System.Drawing.Size(1296, 1015);
+            this.gpQCInstruction.Size = new System.Drawing.Size(707, 550);
             this.gpQCInstruction.TabIndex = 22;
             this.gpQCInstruction.TabStop = false;
             // 
             // splitContainer2
             // 
             this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(6, 28);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.splitContainer2.Location = new System.Drawing.Point(3, 16);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -338,29 +333,29 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dgvQCInstruction);
-            this.splitContainer2.Size = new System.Drawing.Size(1284, 981);
-            this.splitContainer2.SplitterDistance = 46;
-            this.splitContainer2.SplitterWidth = 2;
+            this.splitContainer2.Size = new System.Drawing.Size(701, 531);
+            this.splitContainer2.SplitterDistance = 25;
+            this.splitContainer2.SplitterWidth = 1;
             this.splitContainer2.TabIndex = 0;
             // 
             // btnQCInstructionNewRow
             // 
             this.btnQCInstructionNewRow.Enabled = false;
             this.btnQCInstructionNewRow.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQCInstructionNewRow.Location = new System.Drawing.Point(810, 2);
-            this.btnQCInstructionNewRow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQCInstructionNewRow.Location = new System.Drawing.Point(442, 1);
+            this.btnQCInstructionNewRow.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btnQCInstructionNewRow.Name = "btnQCInstructionNewRow";
-            this.btnQCInstructionNewRow.Size = new System.Drawing.Size(24, 26);
+            this.btnQCInstructionNewRow.Size = new System.Drawing.Size(13, 14);
             this.btnQCInstructionNewRow.TabIndex = 52;
             this.btnQCInstructionNewRow.UseVisualStyleBackColor = true;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(4, 4);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(2, 2);
+            this.label12.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(169, 24);
+            this.label12.Size = new System.Drawing.Size(99, 13);
             this.label12.TabIndex = 54;
             this.label12.Text = "QC INSTRUCTION";
             // 
@@ -368,10 +363,10 @@
             // 
             this.lblQCInstructionNewRow.AutoSize = true;
             this.lblQCInstructionNewRow.Enabled = false;
-            this.lblQCInstructionNewRow.Location = new System.Drawing.Point(874, 4);
-            this.lblQCInstructionNewRow.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblQCInstructionNewRow.Location = new System.Drawing.Point(477, 2);
+            this.lblQCInstructionNewRow.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.lblQCInstructionNewRow.Name = "lblQCInstructionNewRow";
-            this.lblQCInstructionNewRow.Size = new System.Drawing.Size(132, 24);
+            this.lblQCInstructionNewRow.Size = new System.Drawing.Size(76, 13);
             this.lblQCInstructionNewRow.TabIndex = 53;
             this.lblQCInstructionNewRow.Text = "Add New Row";
             // 
@@ -383,22 +378,22 @@
             this.dgvQCInstruction.ColumnHeadersVisible = false;
             this.dgvQCInstruction.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvQCInstruction.Location = new System.Drawing.Point(0, 0);
-            this.dgvQCInstruction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvQCInstruction.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.dgvQCInstruction.Name = "dgvQCInstruction";
             this.dgvQCInstruction.RowHeadersVisible = false;
             this.dgvQCInstruction.RowHeadersWidth = 4;
             this.dgvQCInstruction.RowTemplate.Height = 37;
-            this.dgvQCInstruction.Size = new System.Drawing.Size(1284, 933);
+            this.dgvQCInstruction.Size = new System.Drawing.Size(701, 505);
             this.dgvQCInstruction.TabIndex = 31;
             // 
             // gpGeneral
             // 
             this.gpGeneral.Controls.Add(this.tableLayoutPanel1);
-            this.gpGeneral.Location = new System.Drawing.Point(6, 0);
+            this.gpGeneral.Location = new System.Drawing.Point(3, 0);
             this.gpGeneral.Margin = new System.Windows.Forms.Padding(0);
             this.gpGeneral.Name = "gpGeneral";
             this.gpGeneral.Padding = new System.Windows.Forms.Padding(0);
-            this.gpGeneral.Size = new System.Drawing.Size(862, 174);
+            this.gpGeneral.Size = new System.Drawing.Size(470, 94);
             this.gpGeneral.TabIndex = 0;
             this.gpGeneral.TabStop = false;
             this.gpGeneral.Text = "GENERAL";
@@ -409,7 +404,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.95014F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.04986F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 258F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
             this.tableLayoutPanel1.Controls.Add(this.lblITEMDESC, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblITEMNMBR, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtITEMNMBR, 1, 0);
@@ -417,25 +412,25 @@
             this.tableLayoutPanel1.Controls.Add(this.txtITEMDESC, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtCustomer, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.btnReport, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 42);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 23);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(808, 113);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(441, 61);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // lblITEMDESC
             // 
             this.lblITEMDESC.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblITEMDESC.AutoSize = true;
-            this.lblITEMDESC.Location = new System.Drawing.Point(0, 43);
+            this.lblITEMDESC.Location = new System.Drawing.Point(0, 23);
             this.lblITEMDESC.Margin = new System.Windows.Forms.Padding(0);
             this.lblITEMDESC.Name = "lblITEMDESC";
-            this.lblITEMDESC.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.lblITEMDESC.Size = new System.Drawing.Size(185, 24);
+            this.lblITEMDESC.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.lblITEMDESC.Size = new System.Drawing.Size(106, 13);
             this.lblITEMDESC.TabIndex = 8;
             this.lblITEMDESC.Text = "Product Description";
             // 
@@ -443,11 +438,11 @@
             // 
             this.lblITEMNMBR.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblITEMNMBR.AutoSize = true;
-            this.lblITEMNMBR.Location = new System.Drawing.Point(0, 6);
+            this.lblITEMNMBR.Location = new System.Drawing.Point(0, 3);
             this.lblITEMNMBR.Margin = new System.Windows.Forms.Padding(0);
             this.lblITEMNMBR.Name = "lblITEMNMBR";
-            this.lblITEMNMBR.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.lblITEMNMBR.Size = new System.Drawing.Size(137, 24);
+            this.lblITEMNMBR.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.lblITEMNMBR.Size = new System.Drawing.Size(78, 13);
             this.lblITEMNMBR.TabIndex = 6;
             this.lblITEMNMBR.Text = "Product Code";
             // 
@@ -455,23 +450,23 @@
             // 
             this.txtITEMNMBR.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtITEMNMBR.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtITEMNMBR.Location = new System.Drawing.Point(208, 4);
+            this.txtITEMNMBR.Location = new System.Drawing.Point(113, 0);
             this.txtITEMNMBR.Margin = new System.Windows.Forms.Padding(0);
             this.txtITEMNMBR.MaxLength = 31;
             this.txtITEMNMBR.Name = "txtITEMNMBR";
             this.txtITEMNMBR.ReadOnly = true;
-            this.txtITEMNMBR.Size = new System.Drawing.Size(339, 29);
+            this.txtITEMNMBR.Size = new System.Drawing.Size(186, 20);
             this.txtITEMNMBR.TabIndex = 0;
             // 
             // lblCUSTNAME
             // 
             this.lblCUSTNAME.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblCUSTNAME.AutoSize = true;
-            this.lblCUSTNAME.Location = new System.Drawing.Point(0, 81);
+            this.lblCUSTNAME.Location = new System.Drawing.Point(0, 44);
             this.lblCUSTNAME.Margin = new System.Windows.Forms.Padding(0);
             this.lblCUSTNAME.Name = "lblCUSTNAME";
-            this.lblCUSTNAME.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-            this.lblCUSTNAME.Size = new System.Drawing.Size(102, 24);
+            this.lblCUSTNAME.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.lblCUSTNAME.Size = new System.Drawing.Size(57, 13);
             this.lblCUSTNAME.TabIndex = 10;
             this.lblCUSTNAME.Text = "Customer";
             // 
@@ -479,41 +474,40 @@
             // 
             this.txtITEMDESC.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtITEMDESC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtITEMDESC.Location = new System.Drawing.Point(208, 41);
+            this.txtITEMDESC.Location = new System.Drawing.Point(113, 20);
             this.txtITEMDESC.Margin = new System.Windows.Forms.Padding(0);
             this.txtITEMDESC.MaxLength = 101;
             this.txtITEMDESC.Name = "txtITEMDESC";
             this.txtITEMDESC.ReadOnly = true;
-            this.txtITEMDESC.Size = new System.Drawing.Size(339, 29);
+            this.txtITEMDESC.Size = new System.Drawing.Size(186, 20);
             this.txtITEMDESC.TabIndex = 9;
             // 
             // txtCustomer
             // 
-            this.txtCustomer.Location = new System.Drawing.Point(208, 74);
+            this.txtCustomer.Location = new System.Drawing.Point(113, 40);
             this.txtCustomer.Margin = new System.Windows.Forms.Padding(0);
             this.txtCustomer.Name = "txtCustomer";
             this.txtCustomer.ReadOnly = true;
-            this.txtCustomer.Size = new System.Drawing.Size(338, 29);
+            this.txtCustomer.Size = new System.Drawing.Size(186, 20);
             this.txtCustomer.TabIndex = 13;
             // 
             // btnReport
             // 
             this.btnReport.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnReport.Location = new System.Drawing.Point(602, 0);
+            this.btnReport.Location = new System.Drawing.Point(328, 0);
             this.btnReport.Margin = new System.Windows.Forms.Padding(0);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(152, 37);
+            this.btnReport.Size = new System.Drawing.Size(83, 20);
             this.btnReport.TabIndex = 29;
             this.btnReport.Text = "Report";
             this.btnReport.UseVisualStyleBackColor = true;
             // 
             // QCDataEntry
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1599, 1368);
+            this.ClientSize = new System.Drawing.Size(872, 575);
             this.Controls.Add(this.splitContainer1);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "QCDataEntry";
             this.Text = "QC Instructions";
             this.Load += new System.EventHandler(this.QCDataEntry_Load);

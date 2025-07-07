@@ -1030,6 +1030,8 @@ namespace MouldSpecification
                     // If the ItemID is invalid (-999), exit the method
                     if (itemID == -999)
                         return;
+
+                    LastItemID = itemID;
                                        
                     //reset product filter dropdown index
                     if (bsManItems.Filter != null)

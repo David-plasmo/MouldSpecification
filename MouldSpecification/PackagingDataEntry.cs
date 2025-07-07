@@ -1919,7 +1919,8 @@ namespace MouldSpecification
                             dr["ItemID"] = itemID;
                             dr.EndEdit();
                         }
-                    }                    
+                    }
+                    LastItemID = (int)dr["ItemID"];
                 }
 
                 //Handle new record

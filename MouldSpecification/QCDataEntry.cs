@@ -1143,6 +1143,7 @@ namespace MouldSpecification
                     if (itemID == -999)
                         return;
 
+                    LastItemID = itemID;
 
                     //reset product filter dropdown index
                     if (bsManItems.Filter != null)
@@ -1212,136 +1213,6 @@ namespace MouldSpecification
                     btnQCInstructionNewRow.Enabled = (count < maxRows);
                     lblQCInstructionNewRow.Enabled = (count < maxRows);
 
-                    /*
-                    //locate item in MasterBatchComp                
-                    bsMasterBatch.SuspendBinding();
-                    bsMBComp.SuspendBinding();
-                    bsMBMBComp.SuspendBinding();
-                    bsAddMBComp.SuspendBinding();
-
-                    //locate MBCode, Colour
-                    //bsMBComp.Filter = "IsPreferred = 1";  -- not in use
-                    int mcIndex = bsMBComp.Find("ItemID", itemID);
-                    if (mcIndex != -1)
-                    {
-                        bsMBComp.ResumeBinding();
-                        bsMBComp.Position = mcIndex;
-                        rowView = (DataRowView)this.bsMBComp.Current;
-                        row = rowView.Row;
-                        int mbID = int.TryParse(row["MBID"].ToString(), out mbID) ? mbID : -1;
-                        if (mbID != -1)
-                        {
-                            //locate Masterbatch colour
-                            bsMasterBatch.ResumeBinding();
-                            bsMBMBComp.ResumeBinding();
-                            int mbIndex = bsMasterBatch.Find("MBID", mbID);
-                            bsMasterBatch.Position = mbIndex;
-                            int mbColourPos = bsMBMBComp.Find("MBID", mbID);
-                            if (mbColourPos != -1)
-                            {
-                                bsMBMBComp.Position = mbColourPos;
-                            }
-
-                            //locate AdditiveCode, Additive
-                            int additiveID = int.TryParse(row["AdditiveID"].ToString(), out additiveID) ? additiveID : -1;
-                            if (additiveID != -1)
-                            {
-                                bsAdditive.ResumeBinding();
-                                bsAddMBComp.ResumeBinding();
-                                int adIndex = bsAdditive.Find("AdditiveID", additiveID);
-                                bsAdditive.Position = adIndex;
-                                int additivePos = bsAddMBComp.Find("AdditiveID", additiveID);
-                                if (additivePos != -1)
-                                {
-                                    bsAddMBComp.Position = additivePos;
-                                }
-                            }
-                        }
-                    }
-
-                    //locate item in MaterialComp
-                    bsMaterialComp.SuspendBinding();
-                    bsMaterialGrade.SuspendBinding();
-                    bsMaterialComp.ResetBindings(false);
-                    bsMaterialGrade.ResetBindings(false);
-                    bsMaterialComp.Filter = "IsActive = 1";
-                    int mgID = bsMaterialComp.Find("ItemID", itemID);
-                    if (mgID != -1)
-                    {
-                        bsMaterialComp.ResetBindings(false);
-                        bsMaterialComp.ResumeBinding();
-                        bsMaterialComp.Position = mgID;
-                        rowView = (DataRowView)this.bsMaterialComp.Current;
-                        row = rowView.Row;
-
-                        //locate MaterialGrade
-                        int materialGradeID = int.TryParse(row["MaterialGradeID"].ToString(), out materialGradeID) ? materialGradeID : -1;
-                        if (materialGradeID != -1)
-                        {
-                            bsMaterialGrade.ResetBindings(false);
-                            bsMaterialGrade.ResumeBinding();
-                            int mgIndex = bsMaterialGrade.Find("MaterialGradeID", materialGradeID);
-                            bsMaterialGrade.Position = mgIndex;
-                        }
-                    }
-
-                    //locate mould specification
-                    bsMouldSpec.EndEdit();
-                    bsMouldSpec.SuspendBinding();
-                    bsMouldSpec.Sort = "ItemID";
-                    //DataTable dt = dsIMSpecificationForm.Tables["InjectionMouldSpecification"];
-                    //DataView view = new DataView(dt, "", "ItemID", DataViewRowState.CurrentRows);
-                    //int msID = view.Find(itemID);
-                    int msID = bsMouldSpec.Find("ItemID", itemID);
-                    if (msID != -1)
-                    {
-                        bsMouldSpec.ResetBindings(false);
-                        bsMouldSpec.ResumeBinding();
-                        //bsMouldSpec.Position = (int)view[msID].Row.RowId();
-                        //MessageBox.Show(view[msID].Row["ItemID"].ToString() + ", " + view[msID].Row["MouldNumber"].ToString());
-                        bsMouldSpec.Position = msID;
-                        //rowView = (DataRowView)this.bsMouldSpec.Current;
-                        //row = rowView.Row;
-                        //MessageBox.Show(row["ItemID"].ToString() + ", " + row["MouldNumber"].ToString());
-                        //bsMouldSpec.Position = msID;
-                        //rowView = (DataRowView)this.bsMouldSpec.Current;
-                        //row = rowView.Row;
-
-                    }
-
-                    //locate machine preference
-                    bsMachPref.EndEdit();
-                    bsMachPref.SuspendBinding();
-                    bsMachPref.Sort = "ItemID";
-                    int mpID = bsMachPref.Find("ItemID", itemID);
-                    if (mpID != -1)
-                    {
-                        bsMachPref.ResetBindings(false);
-                        bsMachPref.ResumeBinding();
-                    }
-
-                    //locate Quality Control
-                    bsQC.EndEdit();
-                    bsQC.SuspendBinding();
-                    //dt = dsIMSpecificationForm.Tables["QualityControl"];
-                    //view = new DataView(dt, "", "ItemID", DataViewRowState.CurrentRows);
-                    //int qcID = view.Find(itemID);
-                    bsQC.Sort = "ItemID";
-                    int qcID = bsQC.Find("ItemID", itemID);
-                    if (qcID != -1)
-                    {
-                        bsQC.ResetBindings(false);
-                        bsQC.ResumeBinding();
-                        //bsQC.Position = (int)view[msID].Row.RowId();
-                        //MessageBox.Show(view[qcID].Row["ItemID"].ToString() + ", " + view[qcID].Row["FinishedPTQC"].ToString());
-                        bsQC.Position = qcID;
-                        //rowView = (DataRowView)this.bsQC.Current;
-                        //row = rowView.Row;
-                        //MessageBox.Show(row["ItemID"].ToString() + ", " + row["FinishedPTQC"].ToString());
-                    }
-                }
-                //MessageBox.Show(bsManItems.Position.ToString());
-                */
                 }
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
