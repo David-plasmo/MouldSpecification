@@ -315,20 +315,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCustomerProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddCustomerProduct.Designer.cs">
-      <DependentUpon>AddCustomerProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdditiveCostDAL.cs" />
-    <Compile Include="AdditiveCost.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AdditiveCost.Designer.cs">
-      <DependentUpon>AdditiveCost.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AdditiveCostDC.cs" />
     <Compile Include="AssemblyInstructionDAL.cs" />
     <Compile Include="AssemblyInstructionDC.cs" />
     <Compile Include="AssemblyInstructionPivotDC.cs" />
@@ -344,15 +330,14 @@
     </Compile>
     <Compile Include="CustomerDAL.cs" />
     <Compile Include="CustomerDC.cs" />
-    <Compile Include="CustomerPriceQty.cs">
+    <Compile Include="CustomerProductDAL.cs" />
+    <Compile Include="CustomerProductDataEntry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CustomerPriceQty.Designer.cs">
-      <DependentUpon>CustomerPriceQty.cs</DependentUpon>
+    <Compile Include="CustomerProductDataEntry.Designer.cs">
+      <DependentUpon>CustomerProductDataEntry.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerPriceQtyDAL.cs" />
-    <Compile Include="CustomerPriceQtyDC.cs" />
-    <Compile Include="CustomerProductDAL.cs" />
+    <Compile Include="CustomerProductDC.cs" />
     <Compile Include="DataAccessBase.cs" />
     <Compile Include="DataClassHelper.cs" />
     <Compile Include="MAN_ItemDAL.cs" />
@@ -363,13 +348,6 @@
     <Compile Include="ProductCustomerDataEntry.Designer.cs">
       <DependentUpon>ProductCustomerDataEntry.cs</DependentUpon>
     </Compile>
-    <Compile Include="CustomerProductDataEntry.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerProductDataEntry.Designer.cs">
-      <DependentUpon>CustomerProductDataEntry.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerProductDC.cs" />
     <Compile Include="DrawingUtils.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="FixedCost.cs">
@@ -410,12 +388,6 @@
     </Compile>
     <Compile Include="MachinePrefDAL.cs" />
     <Compile Include="MachinePrefDC.cs" />
-    <Compile Include="MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainFormDAL.cs" />
     <Compile Include="MainFormDC.cs" />
     <Compile Include="MasterBatchComp.cs">
@@ -425,12 +397,6 @@
     <Compile Include="MasterBatchCompDC.cs" />
     <Compile Include="MasterBatchDAL.cs" />
     <Compile Include="MasterBatchDC.cs" />
-    <Compile Include="MasterBatch.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MasterBatch.Designer.cs">
-      <DependentUpon>MasterBatch.cs</DependentUpon>
-    </Compile>
     <Compile Include="MaterialComp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -535,6 +501,7 @@
     <Compile Include="ReworkInstructionDAL.cs" />
     <Compile Include="ReworkInstructionDC.cs" />
     <Compile Include="SetComboBoxSelectionByValue.cs" />
+    <Compile Include="ShowNextForm.cs" />
     <Compile Include="SpecificationDataEntry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -542,20 +509,14 @@
       <DependentUpon>SpecificationDataEntry.cs</DependentUpon>
     </Compile>
     <Compile Include="SpecificationDataEntryDAL.cs" />
-    <EmbeddedResource Include="AddCustomerProduct.resx">
-      <DependentUpon>AddCustomerProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AdditiveCost.resx">
-      <DependentUpon>AdditiveCost.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductCustomerDataEntry.resx">
-      <DependentUpon>ProductCustomerDataEntry.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CustomerProductDataEntry.resx">
       <DependentUpon>CustomerProductDataEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCustomerDataEntry.resx">
+      <DependentUpon>ProductCustomerDataEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FixedCost.resx">
       <DependentUpon>FixedCost.cs</DependentUpon>
@@ -571,13 +532,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MachinePref.resx">
       <DependentUpon>MachinePref.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MasterBatch.resx">
-      <DependentUpon>MasterBatch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MasterBatchComp.resx">
       <DependentUpon>MasterBatchComp.cs</DependentUpon>

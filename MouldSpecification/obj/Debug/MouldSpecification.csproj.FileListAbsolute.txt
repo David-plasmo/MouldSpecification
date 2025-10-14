@@ -36,7 +36,6 @@ C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\b
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\MouldSpecification.pdb
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Azure.Core.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Azure.Identity.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.Bcl.TimeProvider.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.Data.SqlClient.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.Identity.Client.dll

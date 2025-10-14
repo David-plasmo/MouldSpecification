@@ -7,7 +7,6 @@ C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\b
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\ApplicationAccess.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Azure.Core.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Azure.Identity.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Bcl.TimeProvider.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Data.SqlClient.dll
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Identity.Client.dll
@@ -181,18 +180,13 @@ C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\b
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.csproj.AssemblyReference.cache
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.csproj.SuggestedBindingRedirects.cache
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.exe.config
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.AddCustomerProduct.resources
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.AdditiveCost.resources
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.Customer.resources
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.ProductCustomerDataEntry.resources
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.CustomerProductDataEntry.resources
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.FixedCost.resources
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.ImportAccessIM.resources
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.IMSpecification.resources
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.Machine.resources
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.MachinePref.resources
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.MainForm.resources
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.MasterBatch.resources
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.MasterBatchComp.resources
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.MaterialComp.resources
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.MaterialGradeCost.resources
@@ -213,3 +207,4 @@ C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\o
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.exe
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.pdb
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\InjectionMouldReports.dll
+C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.CustomerProductDataEntry.resources

@@ -169,7 +169,7 @@ namespace MouldSpecification
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "BuildFormDataSet",MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
         }

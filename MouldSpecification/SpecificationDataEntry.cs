@@ -2745,27 +2745,14 @@ namespace MouldSpecification
             }
         }
 
-        private void addCustomersForProductToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddCustomersForProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("handle add customers for product");
             ProductCustomerDataEntry f = new ProductCustomerDataEntry();
             f.ShowDialog();
         }
 
-        private void addProductsForCustomerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("handle add products for customer");
-            CustomerProductDataEntry f = new CustomerProductDataEntry();
-            f.ShowDialog();
-
-        }
-
-        private void addEditCustomersToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("Add/Edit Customers");            
-            Customer f = new Customer(LastCustomerID.Value);
-            f.ShowDialog();
-        }
+        
 
         private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
         {
@@ -3745,7 +3732,7 @@ namespace MouldSpecification
         {
             //ResizeControls();
             //Rectangle r = new Rectangle(5, 5, p96W(1000), p96H(1100));
-            this.Size = new Size(p96W(1175), p96H(935));
+            this.Size = new Size(p96W(1190), p96H(935));
             bindingNavigator1.Height = p96H(30);
             splitContainer1.SplitterDistance = p96H(55);
             //btnDeleteAdditive.Size = new System.Drawing.Size(p96W(24), p96W(24));
@@ -3755,6 +3742,28 @@ namespace MouldSpecification
             dgvPolymer.ClearSelection();
             dgvMachine.ClearSelection();
             SetFormState();
+        }
+
+        private void addProductsForCustomerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("handle add customers for product");
+            ProductCustomerDataEntry f = new ProductCustomerDataEntry();
+            f.ShowDialog();
+        }
+
+        private void addCustomersForProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("handle add products for customer");
+            CustomerProductDataEntry f = new CustomerProductDataEntry();
+            f.ShowDialog();
+
+        }
+
+        private void addEditCustomersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Add/Edit Customers");            
+            Customer f = new Customer(LastCustomerID.Value);
+            f.ShowDialog();
         }
 
         private void gpMaterial_Enter(object sender, EventArgs e)

@@ -18,17 +18,17 @@ namespace MouldSpecification
             Application.SetCompatibleTextRenderingDefault(false);
 
 #if DEBUG
-            //args = new[] { "AppendApplicationObjects" };
+            //args = new[] { "Edit" };
 #endif
             if (args.Length == 0)
             {
-                // Start the main application form (PriceEnquiry)
-                Application.Run(new MainForm());
+                // Start the main application form 
+                ShowNextForm.ShowInputForm("IMSpecificationDataEntry");
             }            
             else if (args[0] == "AppendApplicationObjects")
             {
                 ApplicationAccess aa = new ApplicationAccess();
-                aa.AppendApplicationObjectList("MouldSpecification");
+                aa.Edit("MouldSpecification");
             }
 
             return;

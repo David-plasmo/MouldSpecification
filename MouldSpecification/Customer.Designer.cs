@@ -518,7 +518,6 @@
             this.txtCUSTNMBR.Location = new System.Drawing.Point(100, 50);
             this.txtCUSTNMBR.Margin = new System.Windows.Forms.Padding(0);
             this.txtCUSTNMBR.Name = "txtCUSTNMBR";
-            this.txtCUSTNMBR.ReadOnly = true;
             this.txtCUSTNMBR.Size = new System.Drawing.Size(121, 20);
             this.txtCUSTNMBR.TabIndex = 20;
             // 
