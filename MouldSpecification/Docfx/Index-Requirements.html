@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />	
+  <style>
+  h2{
+    text-align:center;
+    font-size: 30px;
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    font-size: 17px;
+    width: 100%;
+  }
+
+  td {
+    border: 1px solid #686868;
+    text-align: left;
+    padding: 10px;
+  }
+
+  /* Divide the first column to 25% and the second column to 75% */
+  td:nth-child(1) {
+    width: 30%;
+  }
+
+  td:nth-child(2) {
+    width: 70%;
+  }
+
+  tr:nth-child(odd) {
+    background-color: #fbfbfb;
+  }
+
+  .row-heading{
+    font-weight: 600;
+  }
+
+  ul {
+    font-family: Arial, sans-serif;
+    margin: 10px 0;
+  }
+
+  li {
+    margin: 5px 0;
+  }
+
+  .section {
+    margin: 10px 0;
+    padding:0 20px;
+  }
+
+  .subsection {
+    margin: 15px 0;
+    padding-bottom: 10px;
+  }
+  </style>
+</head>
+
+<body>
+  <div>
+    <h2><span style='font-family:"Arial",sans-serif ; text-align: center; color:#0f3d6b;'>Requirements</span></h2>
+
+  </div>
+
+  <div class="section">
+    <h3><span style='font-family:"Arial",sans-serif; font-size:23px;color:#1c5084;'>Technical Requirements</span></h3>
+    <table>
+      <tr>
+        <td class = "row-heading">Development Environment</td>
+        <td>Software Tools <br>
+            - Visual Studio: Version 22 or later <br>
+            - SQL Server Management Studio (SSMS): Version 19 or later
+        </td> 
+      </tr>
+
+      <tr>
+        <td class = "row-heading">Programming Languages</td>
+        <td>- C# Version 4.9.0</td>  
+      </tr>
+
+      <tr>
+        <td class = "row-heading">SQL Server Configuration</td>
+        <td>- Development:  SQL Server Version 19 <br>
+            - Production:  SQL Server Version 12 
+        </td>  
+      </tr>
+
+      <tr>
+        <td class = "row-heading">Connection Management</td>
+        <td>- App.Config connection string, specifying Windows security</td>  
+      </tr>
+
+      <tr>
+        <td class = "row-heading">Database</td>
+        <td>- InjectionMouldMAN<br>
+        </td>  
+      </tr>
+  
+      <tr>
+        <td class = "row-heading">Google Chrome</td>
+        <td>- Version 121.0.6167.185 (Official Build) (64-bit) </td>  
+      </tr>
+      
+      <tr>
+        <td class = "row-heading">Repository</td>
+        <td>- GitHub Version 2.43.2</td>  
+      </tr>
+
+      <tr>
+        <td class = "row-heading">Documentation</td>
+        <td>- Use DocfxTemplate application to copy template files, with the following options selected:  Include "Template Files", "New Files Only", and Include "Database" <br>
+            - Add following command to Visual Studio build event command window:  . " xcopy "$(ProjectDir)..\DefaultFiles\*.*" "$(TargetDir)\DefaultFiles" /Y /I /E "
+        </td>  
+      </tr>
+
+    </table>
+  
+</body>
+</html>
