@@ -1,19 +1,64 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Projects\\Mould Specification\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\mouldspecification\\specificationdataentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|solutionrelative:mouldspecification\\specificationdataentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|c:\\users\\david\\source\\repos\\david-plasmo\\mouldspecification\\mouldspecification\\specificationdataentrydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|solutionrelative:mouldspecification\\specificationdataentrydal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\mouldspecification\\drawingutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|solutionrelative:mouldspecification\\drawingutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\mouldspecification\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|solutionrelative:mouldspecification\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\mouldspecification\\shownextform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|solutionrelative:mouldspecification\\shownextform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\mouldspecification\\productcustomerdataentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|solutionrelative:mouldspecification\\productcustomerdataentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\mouldspecification\\customerproductdataentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|solutionrelative:mouldspecification\\customerproductdataentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\mouldspecification\\specificationdataentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|solutionrelative:mouldspecification\\specificationdataentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\mouldspecification\\specificationdataentry.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|solutionrelative:mouldspecification\\specificationdataentry.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\mouldspecification\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|solutionrelative:mouldspecification\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\mouldspecification\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{A8F42E0E-88D3-4D20-9708-791860549805}|MouldSpecification\\MouldSpecification.csproj|solutionrelative:mouldspecification\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 192,
-          "SelectedChildIndex": -1,
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
               "$type": "Bookmark",
@@ -21,11 +66,139 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DrawingUtils.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\DrawingUtils.cs",
+              "RelativeDocumentMoniker": "MouldSpecification\\DrawingUtils.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\DrawingUtils.cs",
+              "RelativeToolTip": "MouldSpecification\\DrawingUtils.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAADcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-03T08:57:29.863Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductCustomerDataEntry.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\ProductCustomerDataEntry.cs",
+              "RelativeDocumentMoniker": "MouldSpecification\\ProductCustomerDataEntry.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\ProductCustomerDataEntry.cs [Design]",
+              "RelativeToolTip": "MouldSpecification\\ProductCustomerDataEntry.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T07:06:43.652Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SpecificationDataEntry.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\SpecificationDataEntry.Designer.cs",
+              "RelativeDocumentMoniker": "MouldSpecification\\SpecificationDataEntry.Designer.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\SpecificationDataEntry.Designer.cs",
+              "RelativeToolTip": "MouldSpecification\\SpecificationDataEntry.Designer.cs",
+              "ViewState": "AgIAAKwBAAAAAAAAAAAjwMMBAACAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T06:35:22.394Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ShowNextForm.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\ShowNextForm.cs",
+              "RelativeDocumentMoniker": "MouldSpecification\\ShowNextForm.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\ShowNextForm.cs",
+              "RelativeToolTip": "MouldSpecification\\ShowNextForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T05:59:52.109Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SpecificationDataEntryDAL.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\SpecificationDataEntryDAL.cs",
+              "RelativeDocumentMoniker": "MouldSpecification\\SpecificationDataEntryDAL.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\SpecificationDataEntryDAL.cs",
+              "RelativeToolTip": "MouldSpecification\\SpecificationDataEntryDAL.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAADwv2cAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T02:22:17.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SpecificationDataEntry.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\SpecificationDataEntry.cs",
+              "RelativeDocumentMoniker": "MouldSpecification\\SpecificationDataEntry.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\SpecificationDataEntry.cs",
+              "RelativeToolTip": "MouldSpecification\\SpecificationDataEntry.cs",
+              "ViewState": "AgIAAOQBAAAAAAAAAAAjwO4BAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T04:43:59.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\Program.cs",
+              "RelativeDocumentMoniker": "MouldSpecification\\Program.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\Program.cs",
+              "RelativeToolTip": "MouldSpecification\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T05:42:01.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CustomerProductDataEntry.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\CustomerProductDataEntry.cs",
+              "RelativeDocumentMoniker": "MouldSpecification\\CustomerProductDataEntry.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\CustomerProductDataEntry.cs [Design]",
+              "RelativeToolTip": "MouldSpecification\\CustomerProductDataEntry.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T07:05:23.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Customer.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\Customer.cs",
+              "RelativeDocumentMoniker": "MouldSpecification\\Customer.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\Customer.cs [Design]",
+              "RelativeToolTip": "MouldSpecification\\Customer.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T05:39:01.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SpecificationDataEntry.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\SpecificationDataEntry.cs",
+              "RelativeDocumentMoniker": "MouldSpecification\\SpecificationDataEntry.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\SpecificationDataEntry.cs [Design]",
+              "RelativeToolTip": "MouldSpecification\\SpecificationDataEntry.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T04:43:52.537Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\Customer.cs",
+              "RelativeDocumentMoniker": "MouldSpecification\\Customer.cs",
+              "ToolTip": "C:\\Users\\David\\source\\repos\\David-plasmo\\MouldSpecification\\MouldSpecification\\Customer.cs",
+              "RelativeToolTip": "MouldSpecification\\Customer.cs",
+              "ViewState": "AgIAALQAAAAAAAAAAAAAALwAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-14T05:39:36.544Z"
             }
           ]
         }
