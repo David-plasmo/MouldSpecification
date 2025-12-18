@@ -48,7 +48,7 @@ namespace MouldSpecification
         DataViewManager viewManager;
         DataView custView, prodView;
 
-        DataGridView dgvMBCode, dgvAdditive;
+        DataGridView dgvMBCode; //, dgvAdditive;
 
         ToolStripLabel tslCompany;
         ToolStripButton tsbtnEditCompany;
@@ -295,10 +295,10 @@ namespace MouldSpecification
                 this.Controls.Add(dgvMBCode);
                 dgvMBCode.Visible = false;
                 dgvMBCode.Leave += dgvMBCode_Leave;
-                dgvAdditive = new DataGridView();
-                this.Controls.Add(dgvAdditive);
-                dgvAdditive.Visible = false;
-                dgvAdditive.Leave += dgvAdditive_Leave;
+                //dgvAdditive = new DataGridView();
+                //this.Controls.Add(dgvAdditive);
+                //dgvAdditive.Visible = false;
+                //dgvAdditive.Leave += dgvAdditive_Leave;
                 GetDataSets();
             }
             catch (Exception ex) { }
@@ -485,43 +485,43 @@ namespace MouldSpecification
         //    }
         //}
 
-        private void lblAdditiveCode_Click(object sender, EventArgs e)
-        {
-            if (!dgvAdditive.Visible)
-            {
-                //MessageBox.Show("todo:  Show AdditiveGrid");
-                //lblAdditiveCode.Image = DrawingUtils.GetImage(ButtonOp.Collapse, p96W(15), p96H(15));
+        //private void lblAdditiveCode_Click(object sender, EventArgs e)
+        //{
+        //    if (!dgvAdditive.Visible)
+        //    {
+        //        //MessageBox.Show("todo:  Show AdditiveGrid");
+        //        //lblAdditiveCode.Image = DrawingUtils.GetImage(ButtonOp.Collapse, p96W(15), p96H(15));
 
-                //position grid below label cell row
-                //int leftg = gpMaterial.Location.X + tableLayoutPanel5.Location.X + lblAdditiveCode.Location.X;
+        //        //position grid below label cell row
+        //        //int leftg = gpMaterial.Location.X + tableLayoutPanel5.Location.X + lblAdditiveCode.Location.X;
 
-                // Point cScreen = lblAdditiveCode.PointToScreen(lblAdditiveCode.Location);
-                //Point fScreen = this.Location;
-                // Point cFormRel = new Point(cScreen.X - fScreen.X, cScreen.Y - fScreen.Y - p96H(30));
+        //        // Point cScreen = lblAdditiveCode.PointToScreen(lblAdditiveCode.Location);
+        //        //Point fScreen = this.Location;
+        //        // Point cFormRel = new Point(cScreen.X - fScreen.X, cScreen.Y - fScreen.Y - p96H(30));
 
-                //int topg = cFormRel.Y;// + p96H(19);
+        //        //int topg = cFormRel.Y;// + p96H(19);
 
 
-                int leftg = 0, topg = 0;
-                dgvAdditive.Location = new Point(leftg, topg);
-                dgvAdditive.Visible = true;
-                dgvAdditive.BringToFront();
-                dgvAdditive.Focus();
-            }
-            else
-            {
-                MessageBox.Show("todo:  Collapse AdditiveGrid");
-                //lblAdditiveCode.Image = DrawingUtils.GetImage(ButtonOp.Expand, p96W(15), p96H(15));
-                dgvAdditive.Visible = false;
-            }
-        }
+        //        int leftg = 0, topg = 0;
+        //        dgvAdditive.Location = new Point(leftg, topg);
+        //        dgvAdditive.Visible = true;
+        //        dgvAdditive.BringToFront();
+        //        dgvAdditive.Focus();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("todo:  Collapse AdditiveGrid");
+        //        //lblAdditiveCode.Image = DrawingUtils.GetImage(ButtonOp.Expand, p96W(15), p96H(15));
+        //        dgvAdditive.Visible = false;
+        //    }
+        //}
 
-        private void dgvAdditive_Leave(object sender, EventArgs e)
-        {
-            //lblAdditiveCode.Image = DrawingUtils.GetImage(ButtonOp.Expand, p96W(15), p96H(15));
-            dgvAdditive.Visible = false;
-            //MessageBox.Show("todo:  save Additive grid edits");
-        }
+        //private void dgvAdditive_Leave(object sender, EventArgs e)
+        //{
+        //    //lblAdditiveCode.Image = DrawingUtils.GetImage(ButtonOp.Expand, p96W(15), p96H(15));
+        //    dgvAdditive.Visible = false;
+        //    //MessageBox.Show("todo:  save Additive grid edits");
+        //}
 
         private void dgvMBCode_Leave(object sender, EventArgs e)
         {
@@ -740,7 +740,7 @@ namespace MouldSpecification
                 this.dgvMachine.DefaultValuesNeeded += new System.Windows.Forms.DataGridViewRowEventHandler(this.dgvMachine_DefaultValuesNeeded);
 
 
-                dgvAdditive.DataSource = dsIMSpecificationForm.Tables["Additive"];//bsMBComp;
+                //dgvAdditive.DataSource = dsIMSpecificationForm.Tables["Additive"];//bsMBComp;
                                                                                   //dgvAdditive.DataMember = "AdditiveMBComp";
                 dgvMBCode.DataSource = dsIMSpecificationForm.Tables["MasterBatch"];
 
@@ -1462,7 +1462,7 @@ namespace MouldSpecification
                         {
                             BindControls();
                             FormatPolymerGrid();
-                            FormatAdditiveGrid();
+                            //FormatAdditiveGrid();
                             FormatMBGrid();
                             FormatMasterBatchCompGrid();
                             FormatMachineGrid();
@@ -1557,7 +1557,7 @@ namespace MouldSpecification
                     {
                         BindControls();
                         FormatPolymerGrid();
-                        FormatAdditiveGrid();
+                        //FormatAdditiveGrid();
                         FormatMBGrid();
                         FormatMasterBatchCompGrid();
                         FormatMachineGrid();
@@ -1620,7 +1620,7 @@ namespace MouldSpecification
                         {
                             BindControls();
                             FormatPolymerGrid();
-                            FormatAdditiveGrid();
+                            //FormatAdditiveGrid();
                             FormatMBGrid();
                             FormatMasterBatchCompGrid();
                             FormatMachineGrid();
@@ -2283,9 +2283,9 @@ namespace MouldSpecification
                         dgvPolymer.CurrentRow.Cells["MaterialGradeID"].Value = (int)drv["MaterialGradeID"];
                         dgvPolymer.CurrentRow.Cells["Polymer123"].Value = dgvPolymer.CurrentRow.Index + 1;
                         dgvPolymer.CurrentRow.Cells["Material"].Selected = true;
-                        dgvPolymer.CurrentRow.Cells["AdditionalNotes"].Selected = true;
+                        //dgvPolymer.CurrentRow.Cells["AdditionalNotes"].Selected = true;
                         dgvPolymer.CurrentRow.Cells["Material"].Selected = false;
-                        dgvPolymer.CurrentRow.Cells["AdditionalNotes"].Selected = false;
+                        //dgvPolymer.CurrentRow.Cells["AdditionalNotes"].Selected = false;
                         dgvPolymer.CurrentRow.Cells["Grade"].Selected = true;
                         dgvPolymer.EndEdit();
                     }
@@ -2319,14 +2319,14 @@ namespace MouldSpecification
                 {
                     bsMaterialGrade.Position = mgIndex;
                     drv = (DataRowView)bsMaterialGrade.Current;
-                    string additionalNotes = drv.Row["AdditionalNotes"].ToString();
+                    //string additionalNotes = drv.Row["AdditionalNotes"].ToString();
                     int materialID = (int)drv.Row["MaterialID"];
                     int materialIndex = bsMaterial.Find("MaterialID", materialID);
                     if (materialIndex != -1)
                     {
                         bsMaterial.Position = materialIndex;
                         drv = (DataRowView)bsMaterial.Current;
-                        material = drv.Row["ShortDesc"].ToString() + "#" + additionalNotes;
+                        material = drv.Row["ShortDesc"].ToString(); //+ "#" + additionalNotes;
                     }
                     return material;
                 }
@@ -2349,6 +2349,7 @@ namespace MouldSpecification
 
         }
 
+        /*
         private void FormatAdditiveGrid()
         {
             //dsAdditive = new AdditiveCostDAL().SelectAdditiveCost();
@@ -2381,15 +2382,15 @@ namespace MouldSpecification
             dgvAdditive.RowHeadersWidth = p96W(26); //Convert.ToInt32(26 * screenRes.Width / 96);
             //dgvAdditive.DataSource = dsAdditive.Tables[0];
 
-            dgvAdditive.Columns["CostPerKg"].HeaderText = "Cost/kg     $";
-            dgvAdditive.Columns["CostPerKg"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvAdditive.Columns["CostPerKg"].DefaultCellStyle.Format = "N3";
-            dgvAdditive.Columns["CostPerKg"].Width = p96W(100);
+            //dgvAdditive.Columns["CostPerKg"].HeaderText = "Cost/kg     $";
+            //dgvAdditive.Columns["CostPerKg"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            //dgvAdditive.Columns["CostPerKg"].DefaultCellStyle.Format = "N3";
+            //dgvAdditive.Columns["CostPerKg"].Width = p96W(100);
             dgvAdditive.Columns["Additive"].Width = p96W(100);
             dgvAdditive.Columns["Additive"].DisplayIndex = 2;
             dgvAdditive.Columns["Comment"].Width = p96W(100);
-            dgvAdditive.Columns["Description"].Width = p96W(100);
-            dgvAdditive.Columns["AdditiveCOde"].HeaderText = "Additive Code";
+            //dgvAdditive.Columns["Description"].Width = p96W(100);
+            dgvAdditive.Columns["AdditiveCode"].HeaderText = "Additive Code";
             //dgvAdditive.Columns["MBCompID"].Visible = false;
             //dgvAdditive.Columns["MBID"].Visible = false;
             dgvAdditive.Columns["AdditiveID"].Visible = false;
@@ -2402,7 +2403,7 @@ namespace MouldSpecification
             //add keydown event to catch esc key
             dgvAdditive.KeyDown += dgvAdditive_KeyDown;
         }
-
+        
         private void dgvAdditive_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
@@ -2412,7 +2413,7 @@ namespace MouldSpecification
                 dgvAdditive.Visible = false;
             }
         }
-
+        */
         private void dgvMachine_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             //if(dgvMachine.CurrentCell.OwningColumn.Name == "CycleTime")
@@ -2703,6 +2704,7 @@ namespace MouldSpecification
             this.Close();
         }
 
+        /*
         private void dgvAdditive_Click(object sender, EventArgs e)
         {
             try
@@ -2744,6 +2746,7 @@ namespace MouldSpecification
                 MessageBox.Show(ex.Message);
             }
         }
+        */
 
         private void AddCustomersForProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -2789,11 +2792,11 @@ namespace MouldSpecification
                 dgvMBCode.Columns[0].Visible = false;
                 dgvMBCode.Columns["last_updated_by"].Visible = false;
                 dgvMBCode.Columns["last_updated_on"].Visible = false;
-                dgvMBCode.Columns["CostPerKg"].HeaderText = "Cost/kg        $";
-                dgvMBCode.Columns["CostPerKg"].Width = p96W(120);
+                //dgvMBCode.Columns["CostPerKg"].HeaderText = "Cost/kg        $";
+                //dgvMBCode.Columns["CostPerKg"].Width = p96W(120);
                 dgvMBCode.Columns["Comment"].Width = p96W(400);
-                dgvMBCode.Columns["CostPerKg"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-                dgvMBCode.Columns["CostPerKg"].DefaultCellStyle.Format = "N3";
+                //dgvMBCode.Columns["CostPerKg"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                //dgvMBCode.Columns["CostPerKg"].DefaultCellStyle.Format = "N3";
 
                 //add combobox column for colour
                 //DataSet dsMBColour = new MasterBatchDAL().SelectMBColour();
