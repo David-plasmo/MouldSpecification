@@ -371,32 +371,6 @@ C:\Users\david\source\repos\David-plasmo\MouldSpecification_SAVE\MouldSpecificat
 C:\Users\david\source\repos\David-plasmo\MouldSpecification_SAVE\MouldSpecification\obj\Debug\MouldSpecification.pdb
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\InjectionMouldReports.dll.config
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\ApplicationAccess.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.Build.Framework.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.VisualStudio.VSHelp.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.VisualStudio.ProjectAggregator.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.VisualStudio.ComponentModelHost.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\EnvDTE80.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.Build.Tasks.Core.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.VisualStudio.Data.Services.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\VSLangProj.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.VisualStudio.Data.Core.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\VSLangProj80.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.VisualStudio.ManagedInterfaces.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.VisualStudio.GraphModel.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.MSXML.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.Build.Utilities.Core.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.VisualStudio.Interop.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\VSLangProj2.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.VisualStudio.Imaging.Interop.14.0.DesignTime.dll
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\EnvDTE.xml
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.VisualStudio.TemplateWizardInterface.xml
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\EnvDTE80.xml
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\VSLangProj.xml
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\VSLangProj80.xml
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\VSLangProj2.xml
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Debug\MouldSpecification.csproj.SuggestedBindingRedirects.cache
-C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\obj\Debug\MouldSpecification.exe.config
 C:\Users\David\Source\Repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\InjectionMouldReports.dll
 D:\Projects\Mould Specification\MouldSpecification\bin\Debug\x86\SqlServerSpatial160.dll
 D:\Projects\Mould Specification\MouldSpecification\bin\Debug\x64\SqlServerSpatial160.dll
@@ -585,3 +559,8 @@ D:\Projects\Mould Specification\MouldSpecification\obj\Debug\MouldSpecification.
 D:\Projects\Mould Specification\MouldSpecification\obj\Debug\MouldSpe.9F26BE33.Up2Date
 D:\Projects\Mould Specification\MouldSpecification\obj\Debug\MouldSpecification.exe
 D:\Projects\Mould Specification\MouldSpecification\obj\Debug\MouldSpecification.pdb
+C:\Users\David\source\repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\ApplicationAccess.pdb
+C:\Users\David\source\repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\ApplicationAccess.dll.config
+C:\Users\David\source\repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\AddMaterial.dll
+C:\Users\David\source\repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\AddMaterial.pdb
+C:\Users\David\source\repos\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\AddMaterial.dll.config

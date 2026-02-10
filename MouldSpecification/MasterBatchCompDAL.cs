@@ -72,6 +72,20 @@ namespace MouldSpecification
             }
         }
 
+        public DataSet SelectAdditive()
+        {
+            try
+            {
+                DataSet ds = ExecuteDataSet("SelectAdditive");
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
         public void UpdateMasterBatchComp(DataSet ds, string tableName = "MasterBatchComp")
         {
             try

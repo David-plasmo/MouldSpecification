@@ -656,6 +656,11 @@
               Looks up a localized resource of type System.Drawing.Bitmap.
             </summary>
         </member>
+        <member name="P:MouldSpecification.Properties.Resources.Polymer">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
         <member name="P:MouldSpecification.Properties.Resources.Reload">
             <summary>
               Looks up a localized resource of type System.Drawing.Bitmap.
@@ -960,78 +965,6 @@
             Notifies the DataGridView that the value of the cell has changed.
             </summary>
             <param name="eventargs"> The event arguments for the value change event. </param>
-        </member>
-        <member name="T:DataService.Constants">
-            <summary>
-              Contains a listing of constants used throughout the application
-            </summary>
-        </member>
-        <member name="F:DataService.Constants.NullDateTime">
-            <summary>
-            The value used to represent a null DateTime value
-            </summary>
-        </member>
-        <member name="F:DataService.Constants.NullDecimal">
-            <summary>
-            The value used to represent a null decimal value
-            </summary>
-        </member>
-        <member name="F:DataService.Constants.NullDouble">
-            <summary>
-            The value used to represent a null double value
-            </summary>
-        </member>
-        <member name="F:DataService.Constants.NullGuid">
-            <summary>
-            The value used to represent a null Guid value
-            </summary>
-        </member>
-        <member name="F:DataService.Constants.NullInt">
-            <summary>
-            The value used to represent a null int value
-            </summary>
-        </member>
-        <member name="F:DataService.Constants.NullInt16">
-            <summary>
-            The value used to represent a null int16 value (smallint)
-            </summary>
-        </member>
-        <member name="F:DataService.Constants.NullByte">
-            <summary>
-            The value used to represent a null byte value (
-            </summary>
-        </member>
-        <member name="F:DataService.Constants.NullLong">
-            <summary>
-            The value used to represent a null long value (int64) 
-            </summary>
-        </member>
-        <member name="F:DataService.Constants.NullFloat">
-            <summary>
-            The value used to represent a null float value
-            </summary>
-        </member>
-        <member name="F:DataService.Constants.NullString">
-            <summary>
-            The value used to represent a null string value
-            </summary>
-        </member>
-        <member name="F:DataService.Constants.SqlMaxDate">
-            <summary>
-            Maximum DateTime value allowed by SQL Server
-            </summary>
-        </member>
-        <member name="F:DataService.Constants.SqlMinDate">
-            <summary>
-            Minimum DateTime value allowed by SQL Server
-            </summary>
-        </member>
-        <member name="T:DataService.DataAccessBase">
-            <summary>
-              Defines common DataService routines for transaction management, 
-              stored procedure execution, parameter creation, and null value 
-              checking
-            </summary>	
         </member>
         <member name="F:Utils.DrawingUtils.DeviceCap.LOGPIXELSX">
             <summary>

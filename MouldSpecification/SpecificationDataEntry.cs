@@ -14,6 +14,8 @@ using InjectionMouldReports;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Drawing.Text;
 using System.Globalization;
+using Polymer;
+
 //using Microsoft.Office.Interop.Excel;
 
 
@@ -264,7 +266,7 @@ namespace MouldSpecification
 
 
                 btnCopyToNew.Click += btnCopyToNew_Click;
-                btnBrowseImage.Image = GetImage(ButtonOp.Browse, p96H(20), p96H(20));
+                btnBrowseImage.Image = GetImage(ButtonOp.Browse, p96H(20), p96H(20));               
                 tsbtnEditCompany.Image = GetImage(ButtonOp.general, p96H(20), p96H(20));
                 tsbtnEditCompany.Click += tsbtnEditCompany_Click;
                 btnBrowseImage.Click += btnBrowseImage_Click;
@@ -277,19 +279,31 @@ namespace MouldSpecification
                 //btnDeleteMB.Image = RescaleImage((Bitmap)image, btnDeleteMB.Width, btnDeleteMB.Height);
 
                 //set up buttons for adding new rows to polymer, masterbatch and machine datagrids
-                image = Properties.Resources.NewRow;
-                btnAddNewMaterial.Image = RescaleImage((Bitmap)image, btnAddNewMaterial.Width, btnAddNewMaterial.Height);
-                btnAddNewMachine.Image = RescaleImage((Bitmap)image, btnAddNewMachine.Width, btnAddNewMachine.Height);
-                btnAddNewMB.Image = RescaleImage((Bitmap)image, btnAddNewMB.Width, btnAddNewMB.Height);
+                image = RescaleImage(Properties.Resources.NewRow, btnAddNewMaterial.Width, btnAddNewMaterial.Height);
+                btnAddNewMaterial.Image = image;
+                btnAddNewMachine.Image = image;
+                btnAddNewMB.Image = image;
                 btnAddNewMaterial.Click += btnAddNewMaterial_Click;
                 btnAddNewMB.Click += btnAddNewMB_Click;
                 btnAddNewMachine.Click += btnAddNewMachine_Click;
 
+                //add buttons for adding new polymer, masterbatch and additive 
+                image = RescaleImage(Properties.Resources.Polymer, btnAddNewMaterial.Width, btnAddNewMaterial.Height);
+                btnAddPolymer.Image = image;
+                image = RescaleImage(Properties.Resources.show, btnAddNewMaterial.Width, btnAddNewMaterial.Height);
+                btnAddMB.Image = image;
+                image = RescaleImage(Properties.Resources.plus, btnAddNewMaterial.Width, btnAddNewMaterial.Height);
+                btnAdditive.Image = image;
+
+
                 // Create ToolTips for AddNewMachine and AddNewMaterial buttons
                 System.Windows.Forms.ToolTip toolTip1 = new System.Windows.Forms.ToolTip();
-                toolTip1.SetToolTip(this.btnAddNewMaterial, "Add new polymer");
-                toolTip1.SetToolTip(this.btnAddNewMB, "Add new MasterBatch");
-                toolTip1.SetToolTip(this.btnAddNewMachine, "Add new machine");
+                toolTip1.SetToolTip(this.btnAddNewMaterial, "Add new row");
+                toolTip1.SetToolTip(this.btnAddNewMB, "Add new row");
+                toolTip1.SetToolTip(this.btnAddNewMachine, "Add new machine row");
+                toolTip1.SetToolTip(this.btnAddPolymer, "Add new material");
+                toolTip1.SetToolTip(this.btnAddMB, "Add new Masterbatch");
+                toolTip1.SetToolTip(this.btnAdditive, "Add new Additive");
 
                 dgvMBCode = new DataGridView();
                 this.Controls.Add(dgvMBCode);
@@ -3117,6 +3131,35 @@ namespace MouldSpecification
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
 
+        }
+
+        private void btnAddPolymer_Click(object sender, EventArgs e)
+        {
+            AddMaterial.AddPolymer(); //allows addition of polymer to Material Composition;  
+
+            //refresh combo box datasource to reflect any new Material Grades added
+            DataTable dt = new MaterialCompDAL().LookupMaterialGrade();
+            DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvPolymer.Columns["Material"];
+            comboBoxColumn.DataSource = null;
+            comboBoxColumn.DataSource = dt;
+        }
+
+        private void btnAddMB_Click(object sender, EventArgs e)
+        {
+            AddMaterial.AddMasterBatch();
+            DataTable dt = new MasterBatchDAL().SelectMasterBatch().Tables[0];
+            DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["MBCode"];
+            comboBoxColumn.DataSource = null;
+            comboBoxColumn.DataSource = dt;
+        }
+
+        private void btnAdditive_Click(object sender, EventArgs e)
+        {
+            AddMaterial.AddAdditive();
+            DataTable dt = new MasterBatchCompDAL().SelectAdditive().Tables[0];
+            DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["Additive"];
+            comboBoxColumn.DataSource = null;
+            comboBoxColumn.DataSource = dt;
         }
 
         private void txtAdditive_TextChanged(object sender, EventArgs e)

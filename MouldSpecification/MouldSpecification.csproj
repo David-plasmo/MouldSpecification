@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MouldSpecification</RootNamespace>
     <AssemblyName>MouldSpecification</AssemblyName>
-    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -82,8 +82,13 @@
     <OutputPath>bin\x64\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ApplicationAccess">
-      <HintPath>\\plasmo-sql\Packages\ApplicationAccess\ApplicationAccess.dll</HintPath>
+    <Reference Include="AddMaterial, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AddMaterial\AddMaterial\bin\AddMaterial.dll</HintPath>
+    </Reference>
+    <Reference Include="ApplicationAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ApplicationAccess\ApplicationAccess\bin\ApplicationAccess.dll</HintPath>
     </Reference>
     <Reference Include="Azure.Core, Version=1.44.1.0, Culture=neutral, PublicKeyToken=92742159e12e44c8, processorArchitecture=MSIL">
       <HintPath>..\packages\Azure.Core.1.44.1\lib\net472\Azure.Core.dll</HintPath>
@@ -93,7 +98,7 @@
     </Reference>
     <Reference Include="InjectionMouldReports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>\\plasmo-sql\Packages\MouldSpecificationReports\Release\InjectionMouldReports.dll</HintPath>
+      <HintPath>..\..\InjectionMouldReports\InjectionMouldReports\bin\InjectionMouldReports.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
@@ -321,7 +326,6 @@
     <Compile Include="AttachedDocDAL.cs" />
     <Compile Include="AttachedDocDC.cs" />
     <Compile Include="CalendarEditingControl.cs" />
-    <Compile Include="Constants.cs" />
     <Compile Include="Customer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,8 +342,6 @@
       <DependentUpon>CustomerProductDataEntry.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomerProductDC.cs" />
-    <Compile Include="DataAccessBase.cs" />
-    <Compile Include="DataClassHelper.cs" />
     <Compile Include="MAN_ItemDAL.cs" />
     <Compile Include="MAN_ItemDC.cs" />
     <Compile Include="ProductCustomerDataEntry.cs">
@@ -614,6 +616,7 @@
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
     <Content Include="Resources\Images\delete.png" />
     <EmbeddedResource Include="Resources\Images\general.png" />
+    <None Include="Resources\Images\Polymer.png" />
     <Content Include="Resources\Images\sortAZ_green.png" />
     <Content Include="Resources\Images\sortAZ_Off.png" />
     <Content Include="Resources\Images\sortAZ_On.png" />

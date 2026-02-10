@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MouldSpecification",
+    "\\MouldSpecification\\Resources"
   ],
-  "SelectedNode": "\\MouldSpecification.sln",
+  "SelectedNode": "\\MouldSpecification\\obj",
   "PreviewInSolutionExplorer": false
 }

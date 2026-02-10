@@ -29,7 +29,8 @@ namespace Utils
             plus = 13,
             minus = 14,
             show = 15,
-            general = 16
+            general = 16,
+            polymer = 17
         }
 
 
@@ -153,6 +154,11 @@ namespace Utils
                 {
                     //myStream = myAssembly.GetManifestResourceStream("MouldSpecification.general.png");
                     myStream = myAssembly.GetManifestResourceStream("MouldSpecification.Resources.Images.general.png");
+                }
+                else if (op == ButtonOp.polymer)
+                {
+                    //myStream = myAssembly.GetManifestResourceStream("MouldSpecification.general.png");
+                    myStream = myAssembly.GetManifestResourceStream("MouldSpecification.Resources.Images.polymer.png");
                 }
 
                 Bitmap image = new Bitmap(myStream);

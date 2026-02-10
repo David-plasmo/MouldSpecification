@@ -34,6 +34,27 @@ namespace MouldSpecification
             }
         }
 
+
+        //// Create lookup table for MaterialGrade dropdown lists
+        //dt = ExecuteDataSet("LookupMaterialGrade",
+        //    CreateParameter("@MachineType", SqlDbType.VarChar, "IM")). Tables[0];
+
+        public DataTable LookupMaterialGrade()
+        {
+            try
+            {
+                return ExecuteDataSet("LookupMaterialGrade",
+                   CreateParameter("@MachineType", SqlDbType.VarChar, "IM")). Tables[0];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+        }
+
+
+
         public DataSet SelectMaterial()
         {
             try

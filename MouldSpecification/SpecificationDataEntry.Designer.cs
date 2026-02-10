@@ -55,6 +55,9 @@
             this.addProductsForCustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addCustomersForProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addEditCustomersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAdditive = new System.Windows.Forms.Button();
+            this.btnAddMB = new System.Windows.Forms.Button();
+            this.btnAddPolymer = new System.Windows.Forms.Button();
             this.txtAdditionalNotes = new System.Windows.Forms.TextBox();
             this.lblAdditionalNotes = new System.Windows.Forms.Label();
             this.btnAddNewMB = new System.Windows.Forms.Button();
@@ -202,6 +205,9 @@
             this.splitContainer1.Panel2.AutoScroll = true;
             this.splitContainer1.Panel2.AutoScrollMinSize = new System.Drawing.Size(25, 25);
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.AntiqueWhite;
+            this.splitContainer1.Panel2.Controls.Add(this.btnAdditive);
+            this.splitContainer1.Panel2.Controls.Add(this.btnAddMB);
+            this.splitContainer1.Panel2.Controls.Add(this.btnAddPolymer);
             this.splitContainer1.Panel2.Controls.Add(this.txtAdditionalNotes);
             this.splitContainer1.Panel2.Controls.Add(this.lblAdditionalNotes);
             this.splitContainer1.Panel2.Controls.Add(this.btnAddNewMB);
@@ -450,6 +456,48 @@
             this.addEditCustomersToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.addEditCustomersToolStripMenuItem.Text = "Add/Edit Customers";
             this.addEditCustomersToolStripMenuItem.Click += new System.EventHandler(this.addEditCustomersToolStripMenuItem_Click);
+            // 
+            // btnAdditive
+            // 
+            this.btnAdditive.AutoSize = true;
+            this.btnAdditive.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAdditive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdditive.Location = new System.Drawing.Point(909, 411);
+            this.btnAdditive.MinimumSize = new System.Drawing.Size(20, 20);
+            this.btnAdditive.Name = "btnAdditive";
+            this.btnAdditive.Size = new System.Drawing.Size(20, 20);
+            this.btnAdditive.TabIndex = 43;
+            this.btnAdditive.TabStop = false;
+            this.btnAdditive.UseVisualStyleBackColor = true;
+            this.btnAdditive.Click += new System.EventHandler(this.btnAdditive_Click);
+            // 
+            // btnAddMB
+            // 
+            this.btnAddMB.AutoSize = true;
+            this.btnAddMB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAddMB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMB.Location = new System.Drawing.Point(909, 381);
+            this.btnAddMB.MinimumSize = new System.Drawing.Size(20, 20);
+            this.btnAddMB.Name = "btnAddMB";
+            this.btnAddMB.Size = new System.Drawing.Size(20, 20);
+            this.btnAddMB.TabIndex = 42;
+            this.btnAddMB.TabStop = false;
+            this.btnAddMB.UseVisualStyleBackColor = true;
+            this.btnAddMB.Click += new System.EventHandler(this.btnAddMB_Click);
+            // 
+            // btnAddPolymer
+            // 
+            this.btnAddPolymer.AutoSize = true;
+            this.btnAddPolymer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAddPolymer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPolymer.Location = new System.Drawing.Point(909, 271);
+            this.btnAddPolymer.MinimumSize = new System.Drawing.Size(20, 20);
+            this.btnAddPolymer.Name = "btnAddPolymer";
+            this.btnAddPolymer.Size = new System.Drawing.Size(20, 20);
+            this.btnAddPolymer.TabIndex = 41;
+            this.btnAddPolymer.TabStop = false;
+            this.btnAddPolymer.UseVisualStyleBackColor = true;
+            this.btnAddPolymer.Click += new System.EventHandler(this.btnAddPolymer_Click);
             // 
             // txtAdditionalNotes
             // 
@@ -1791,5 +1839,8 @@
         private System.Windows.Forms.Label lblAdditionalNotes;
         private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnAddPolymer;
+        private System.Windows.Forms.Button btnAdditive;
+        private System.Windows.Forms.Button btnAddMB;
     }
 }
