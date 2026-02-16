@@ -212,6 +212,113 @@ namespace MouldSpecification
             this.Close();
         }
 
+        //private void SpecificationDataEntry_Load(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        tsbtnDelete.Click += tsbtnDelete_Click;
+        //        tsbtnAddNew.Click += tsbtnAddNew_Click;
+        //        tsbtnAddNew.Enabled = false;
+        //        tsbtnDelete.Enabled = false;
+        //        tsbtnCancel.Enabled = false;
+        //        tsbtnAccept.Enabled = false;
+        //        btnReport.Enabled = false;
+        //        lblItemID.Visible = false;
+
+        //        tscboCompany.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+        //        tscboCompany.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+        //        tscboCompany.DropDownHeight = 400;
+        //        tscboCompany.DropDownWidth = p96W(250);
+        //        tscboCompany.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+        //        tscboCompany.IntegralHeight = false;
+        //        tscboCompany.MaxDropDownItems = 9;
+        //        tscboCompany.MergeAction = System.Windows.Forms.MergeAction.Insert;
+        //        tscboCompany.Name = "tscboCompany";
+        //        tscboCompany.Size = new System.Drawing.Size(p96W(250), p96H(25));
+        //        tscboCompany.Sorted = true;
+
+        //        tscboCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+        //        tscboCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+        //        tscboCode.DropDownHeight = 400;
+        //        tscboCode.DropDownWidth = p96W(150);
+        //        tscboCode.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+        //        tscboCode.IntegralHeight = false;
+        //        tscboCode.MaxDropDownItems = 9;
+        //        tscboCode.MergeAction = System.Windows.Forms.MergeAction.Insert;
+        //        tscboCode.Name = "tscboCode";
+        //        tscboCode.Size = new System.Drawing.Size(p96W(150), p96H(25));
+        //        tscboCode.Sorted = true;
+
+        //        tscboProduct.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+        //        tscboProduct.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+        //        tscboProduct.DropDownHeight = 400;
+        //        tscboProduct.DropDownWidth = p96W(300);
+        //        tscboProduct.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+        //        tscboProduct.IntegralHeight = false;
+        //        tscboProduct.MaxDropDownItems = 9;
+        //        tscboProduct.MergeAction = System.Windows.Forms.MergeAction.Insert;
+        //        tscboProduct.Name = "tscboProduct";
+        //        tscboProduct.Size = new System.Drawing.Size(p96W(300), p96H(25));
+        //        tscboProduct.Sorted = true;
+
+        //        this.errorProvider1 = new System.Windows.Forms.ErrorProvider();
+        //        this.errorProvider1.DataMember = null;
+
+
+        //        btnCopyToNew.Click += btnCopyToNew_Click;
+        //        btnBrowseImage.Image = GetImage(ButtonOp.Browse, p96H(20), p96H(20));               
+        //        tsbtnEditCompany.Image = GetImage(ButtonOp.general, p96H(20), p96H(20));
+        //        tsbtnEditCompany.Click += tsbtnEditCompany_Click;
+        //        btnBrowseImage.Click += btnBrowseImage_Click;
+        //        //lblMBCode.Image = DrawingUtils.GetImage(ButtonOp.Expand, p96W(15), p96H(15));
+        //        //lblAdditiveCode.Image = DrawingUtils.GetImage(ButtonOp.Expand, p96W(15), p96H(15));
+
+        //        //set up buttons for deleting current Additive and Masterbatch properties
+        //        System.Drawing.Image image = Properties.Resources.delete;
+        //        //btnDeleteAdditive.Image = RescaleImage((Bitmap)image, btnDeleteAdditive.Width, btnDeleteAdditive.Height);
+        //        //btnDeleteMB.Image = RescaleImage((Bitmap)image, btnDeleteMB.Width, btnDeleteMB.Height);
+
+        //        //set up buttons for adding new rows to polymer, masterbatch and machine datagrids
+        //        image = RescaleImage(Properties.Resources.NewRow, btnAddNewMaterial.Width, btnAddNewMaterial.Height);
+        //        btnAddNewMaterial.Image = image;
+        //        btnAddNewMachine.Image = image;
+        //        btnAddNewMB.Image = image;
+        //        btnAddNewMaterial.Click += btnAddNewMaterial_Click;
+        //        btnAddNewMB.Click += btnAddNewMB_Click;
+        //        btnAddNewMachine.Click += btnAddNewMachine_Click;
+
+        //        //add buttons for adding new polymer, masterbatch and additive 
+        //        image = RescaleImage(Properties.Resources.Polymer, btnAddNewMaterial.Width, btnAddNewMaterial.Height);
+        //        btnAddPolymer.Image = image;
+        //        image = RescaleImage(Properties.Resources.show, btnAddNewMaterial.Width, btnAddNewMaterial.Height);
+        //        btnAddMB.Image = image;
+        //        image = RescaleImage(Properties.Resources.plus, btnAddNewMaterial.Width, btnAddNewMaterial.Height);
+        //        btnAdditive.Image = image;
+
+
+        //        // Create ToolTips for AddNewMachine and AddNewMaterial buttons
+        //        System.Windows.Forms.ToolTip toolTip1 = new System.Windows.Forms.ToolTip();
+        //        toolTip1.SetToolTip(this.btnAddNewMaterial, "Add new row");
+        //        toolTip1.SetToolTip(this.btnAddNewMB, "Add new row");
+        //        toolTip1.SetToolTip(this.btnAddNewMachine, "Add new machine row");
+        //        toolTip1.SetToolTip(this.btnAddPolymer, "Add new material");
+        //        toolTip1.SetToolTip(this.btnAddMB, "Add new Masterbatch");
+        //        toolTip1.SetToolTip(this.btnAdditive, "Add new Additive");
+
+        //        dgvMBCode = new DataGridView();
+        //        this.Controls.Add(dgvMBCode);
+        //        dgvMBCode.Visible = false;
+        //        dgvMBCode.Leave += dgvMBCode_Leave;
+        //        //dgvAdditive = new DataGridView();
+        //        //this.Controls.Add(dgvAdditive);
+        //        //dgvAdditive.Visible = false;
+        //        //dgvAdditive.Leave += dgvAdditive_Leave;
+        //        GetDataSets();
+        //    }
+        //    catch (Exception ex) { }
+
+        //}
+
         private void SpecificationDataEntry_Load(object sender, EventArgs e)
         {
             try
@@ -264,39 +371,95 @@ namespace MouldSpecification
                 this.errorProvider1 = new System.Windows.Forms.ErrorProvider();
                 this.errorProvider1.DataMember = null;
 
-
                 btnCopyToNew.Click += btnCopyToNew_Click;
-                btnBrowseImage.Image = GetImage(ButtonOp.Browse, p96H(20), p96H(20));               
+                btnBrowseImage.Image = GetImage(ButtonOp.Browse, p96H(20), p96H(20));
                 tsbtnEditCompany.Image = GetImage(ButtonOp.general, p96H(20), p96H(20));
                 tsbtnEditCompany.Click += tsbtnEditCompany_Click;
                 btnBrowseImage.Click += btnBrowseImage_Click;
-                //lblMBCode.Image = DrawingUtils.GetImage(ButtonOp.Expand, p96W(15), p96H(15));
-                //lblAdditiveCode.Image = DrawingUtils.GetImage(ButtonOp.Expand, p96W(15), p96H(15));
 
-                //set up buttons for deleting current Additive and Masterbatch properties
-                System.Drawing.Image image = Properties.Resources.delete;
-                //btnDeleteAdditive.Image = RescaleImage((Bitmap)image, btnDeleteAdditive.Width, btnDeleteAdditive.Height);
-                //btnDeleteMB.Image = RescaleImage((Bitmap)image, btnDeleteMB.Width, btnDeleteMB.Height);
+                // -------------------------------------------------------
+                // Uniform icon buttons — border ON, image with breathing room
+                // btnSize increased to 40 so image has space inside the border
+                // -------------------------------------------------------
+                int btnSize = p96H(28); // bigger button = more room around image
+                int imgSize = p96H(20); // image stays small — ~9px gap on each side
+                System.Drawing.Size uniformSize = new System.Drawing.Size(btnSize, btnSize);
 
-                //set up buttons for adding new rows to polymer, masterbatch and machine datagrids
-                image = RescaleImage(Properties.Resources.NewRow, btnAddNewMaterial.Width, btnAddNewMaterial.Height);
-                btnAddNewMaterial.Image = image;
-                btnAddNewMachine.Image = image;
-                btnAddNewMB.Image = image;
+                System.Drawing.Color transparentColor = System.Drawing.Color.Transparent;
+                System.Drawing.Color hoverColor = System.Drawing.Color.FromArgb(220, 220, 220);
+
+                // --- btnAddNewMaterial ---
+                btnAddNewMaterial.AutoSize = false;
+                btnAddNewMaterial.Size = uniformSize;
+                btnAddNewMaterial.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                btnAddNewMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                btnAddNewMaterial.FlatAppearance.BorderSize = 1;
+                btnAddNewMaterial.FlatAppearance.MouseOverBackColor = hoverColor;
+                btnAddNewMaterial.FlatAppearance.MouseDownBackColor = transparentColor;
+                btnAddNewMaterial.BackColor = transparentColor;
+                btnAddNewMaterial.Image = RescaleImage(Properties.Resources.NewRow, imgSize, imgSize);
                 btnAddNewMaterial.Click += btnAddNewMaterial_Click;
-                btnAddNewMB.Click += btnAddNewMB_Click;
+
+                // --- btnAddNewMachine ---
+                btnAddNewMachine.AutoSize = false;
+                btnAddNewMachine.Size = uniformSize;
+                btnAddNewMachine.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                btnAddNewMachine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                btnAddNewMachine.FlatAppearance.BorderSize = 1;
+                btnAddNewMachine.FlatAppearance.MouseOverBackColor = hoverColor;
+                btnAddNewMachine.FlatAppearance.MouseDownBackColor = transparentColor;
+                btnAddNewMachine.BackColor = transparentColor;
+                btnAddNewMachine.Image = RescaleImage(Properties.Resources.NewRow, imgSize, imgSize);
                 btnAddNewMachine.Click += btnAddNewMachine_Click;
 
-                //add buttons for adding new polymer, masterbatch and additive 
-                image = RescaleImage(Properties.Resources.Polymer, btnAddNewMaterial.Width, btnAddNewMaterial.Height);
-                btnAddPolymer.Image = image;
-                image = RescaleImage(Properties.Resources.show, btnAddNewMaterial.Width, btnAddNewMaterial.Height);
-                btnAddMB.Image = image;
-                image = RescaleImage(Properties.Resources.plus, btnAddNewMaterial.Width, btnAddNewMaterial.Height);
-                btnAdditive.Image = image;
+                // --- btnAddNewMB ---
+                btnAddNewMB.AutoSize = false;
+                btnAddNewMB.Size = uniformSize;
+                btnAddNewMB.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                btnAddNewMB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                btnAddNewMB.FlatAppearance.BorderSize = 1;
+                btnAddNewMB.FlatAppearance.MouseOverBackColor = hoverColor;
+                btnAddNewMB.FlatAppearance.MouseDownBackColor = transparentColor;
+                btnAddNewMB.BackColor = transparentColor;
+                btnAddNewMB.Image = RescaleImage(Properties.Resources.NewRow, imgSize, imgSize);
+                btnAddNewMB.Click += btnAddNewMB_Click;
 
+                // --- btnAddPolymer ---
+                btnAddPolymer.AutoSize = false;
+                btnAddPolymer.Size = uniformSize;
+                btnAddPolymer.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                btnAddPolymer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                btnAddPolymer.FlatAppearance.BorderSize = 1;
+                btnAddPolymer.FlatAppearance.MouseOverBackColor = hoverColor;
+                btnAddPolymer.FlatAppearance.MouseDownBackColor = transparentColor;
+                btnAddPolymer.BackColor = transparentColor;
+                btnAddPolymer.Image = RescaleImage(Properties.Resources.Polymer, imgSize, imgSize);
 
-                // Create ToolTips for AddNewMachine and AddNewMaterial buttons
+                // --- btnAddMB ---
+                btnAddMB.AutoSize = false;
+                btnAddMB.Size = uniformSize;
+                btnAddMB.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                btnAddMB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                btnAddMB.FlatAppearance.BorderSize = 1;
+                btnAddMB.FlatAppearance.MouseOverBackColor = hoverColor;
+                btnAddMB.FlatAppearance.MouseDownBackColor = transparentColor;
+                btnAddMB.BackColor = transparentColor;
+                btnAddMB.Image = RescaleImage(Properties.Resources.show, imgSize, imgSize);
+
+                // --- btnAdditive ---
+                btnAdditive.AutoSize = false;
+                btnAdditive.Size = uniformSize;
+                btnAdditive.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                btnAdditive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+                btnAdditive.FlatAppearance.BorderSize = 1;
+                btnAdditive.FlatAppearance.MouseOverBackColor = hoverColor;
+                btnAdditive.FlatAppearance.MouseDownBackColor = transparentColor;
+                btnAdditive.BackColor = transparentColor;
+                btnAdditive.Image = RescaleImage(Properties.Resources.plus, imgSize, imgSize);
+
+                // -------------------------------------------------------
+
+                // ToolTips
                 System.Windows.Forms.ToolTip toolTip1 = new System.Windows.Forms.ToolTip();
                 toolTip1.SetToolTip(this.btnAddNewMaterial, "Add new row");
                 toolTip1.SetToolTip(this.btnAddNewMB, "Add new row");
@@ -309,15 +472,15 @@ namespace MouldSpecification
                 this.Controls.Add(dgvMBCode);
                 dgvMBCode.Visible = false;
                 dgvMBCode.Leave += dgvMBCode_Leave;
-                //dgvAdditive = new DataGridView();
-                //this.Controls.Add(dgvAdditive);
-                //dgvAdditive.Visible = false;
-                //dgvAdditive.Leave += dgvAdditive_Leave;
+
                 GetDataSets();
             }
-            catch (Exception ex) { }
-
+            catch (Exception ex)
+            {
+                // Consider logging: MessageBox.Show(ex.Message);
+            }
         }
+
 
         private void tsbtnEditCompany_Click(object sender, EventArgs e)
         {
@@ -3133,31 +3296,92 @@ namespace MouldSpecification
 
         }
 
-        private void btnAddPolymer_Click(object sender, EventArgs e)
-        {
-            AddMaterial.AddPolymer(); //allows addition of polymer to Material Composition;  
+        //private void btnAddPolymer_Click(object sender, EventArgs e)
+        //{
+        //    AddMaterial.AddPolymer(); //allows addition of polymer to Material Composition;  
 
-            //refresh combo box datasource to reflect any new Material Grades added
-            DataTable dt = new MaterialCompDAL().LookupMaterialGrade();
-            DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvPolymer.Columns["Material"];
-            comboBoxColumn.DataSource = null;
-            comboBoxColumn.DataSource = dt;
-        }
+        //    //refresh combo box datasource to reflect any new Material Grades added
+        //    DataTable dt = new MaterialCompDAL().LookupMaterialGrade();
+        //    DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvPolymer.Columns["Material"];
+        //    comboBoxColumn.DataSource = null;
+        //    comboBoxColumn.DataSource = dt;
+        //}
 
+        //private void btnAddMB_Click(object sender, EventArgs e)
+        //{
+        //    AddMaterial.AddMasterBatch();
+        //    DataTable dt = new MasterBatchDAL().SelectMasterBatch().Tables[0];
+        //    DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["MBCode"];
+        //    comboBoxColumn.DataSource = null;
+        //    comboBoxColumn.DataSource = dt;
+        //}
+
+        //private void btnAdditive_Click(object sender, EventArgs e)
+        //{
+        //    AddMaterial.AddAdditive();
+        //    DataTable dt = new MasterBatchCompDAL().SelectAdditive().Tables[0];
+        //    DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["Additive"];
+        //    comboBoxColumn.DataSource = null;
+        //    comboBoxColumn.DataSource = dt;
+        //}
+
+
+        // btnAddMB_Click — keep feeding from dsIMSpecificationForm
         private void btnAddMB_Click(object sender, EventArgs e)
         {
             AddMaterial.AddMasterBatch();
+
+            
             DataTable dt = new MasterBatchDAL().SelectMasterBatch().Tables[0];
-            DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["MBCode"];
+            dt.TableName = "MasterBatch";  
+
+            DataGridViewComboBoxColumn comboBoxColumn =
+                (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["MBCode"];
+            comboBoxColumn.DataSource = null;
+            comboBoxColumn.DataSource = dt;
+
+            
+            comboBoxColumn = (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["MBColour"];
+            comboBoxColumn.DataSource = null;
+            comboBoxColumn.DataSource = dt;
+
+        }
+
+
+        // btnAdditive_Click
+        private void btnAdditive_Click(object sender, EventArgs e)
+        {
+            AddMaterial.AddAdditive();
+
+            DataTable dt = new MasterBatchCompDAL().SelectAdditive().Tables[0];
+            dt.TableName = "Additive";   
+
+            DataGridViewComboBoxColumn comboBoxColumn =
+                (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["Additive"];
+            comboBoxColumn.DataSource = null;
+            comboBoxColumn.DataSource = dt;
+
+           
+            comboBoxColumn = (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["AdditiveCode"];
             comboBoxColumn.DataSource = null;
             comboBoxColumn.DataSource = dt;
         }
 
-        private void btnAdditive_Click(object sender, EventArgs e)
+        // btnAddPolymer_Click
+        private void btnAddPolymer_Click(object sender, EventArgs e)
         {
-            AddMaterial.AddAdditive();
-            DataTable dt = new MasterBatchCompDAL().SelectAdditive().Tables[0];
-            DataGridViewComboBoxColumn comboBoxColumn = (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["Additive"];
+            AddMaterial.AddPolymer();
+
+            DataTable dt = new MaterialCompDAL().LookupMaterialGrade();
+            dt.TableName = "LookupMaterialGrade";  
+
+            DataGridViewComboBoxColumn comboBoxColumn =
+                (DataGridViewComboBoxColumn)dgvPolymer.Columns["Material"];
+            comboBoxColumn.DataSource = null;
+            comboBoxColumn.DataSource = dt;
+
+            
+            comboBoxColumn = (DataGridViewComboBoxColumn)dgvPolymer.Columns["Grade"];
             comboBoxColumn.DataSource = null;
             comboBoxColumn.DataSource = dt;
         }

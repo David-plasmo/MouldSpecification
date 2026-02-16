@@ -1,9 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\MouldSpecification",
-    "\\MouldSpecification\\Resources"
+    "\\MouldSpecification"
   ],
-  "SelectedNode": "\\MouldSpecification\\obj",
+  "SelectedNode": "\\MouldSpecification\\SpecificationDataEntry.cs",
   "PreviewInSolutionExplorer": false
 }

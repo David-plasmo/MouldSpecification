@@ -459,10 +459,8 @@
             // 
             // btnAdditive
             // 
-            this.btnAdditive.AutoSize = true;
-            this.btnAdditive.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAdditive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdditive.Location = new System.Drawing.Point(909, 411);
+            this.btnAdditive.Location = new System.Drawing.Point(909, 398);
             this.btnAdditive.MinimumSize = new System.Drawing.Size(20, 20);
             this.btnAdditive.Name = "btnAdditive";
             this.btnAdditive.Size = new System.Drawing.Size(20, 20);
@@ -473,10 +471,8 @@
             // 
             // btnAddMB
             // 
-            this.btnAddMB.AutoSize = true;
-            this.btnAddMB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAddMB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddMB.Location = new System.Drawing.Point(909, 381);
+            this.btnAddMB.Location = new System.Drawing.Point(909, 367);
             this.btnAddMB.MinimumSize = new System.Drawing.Size(20, 20);
             this.btnAddMB.Name = "btnAddMB";
             this.btnAddMB.Size = new System.Drawing.Size(20, 20);
@@ -487,10 +483,8 @@
             // 
             // btnAddPolymer
             // 
-            this.btnAddPolymer.AutoSize = true;
-            this.btnAddPolymer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAddPolymer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPolymer.Location = new System.Drawing.Point(909, 271);
+            this.btnAddPolymer.Location = new System.Drawing.Point(909, 261);
             this.btnAddPolymer.MinimumSize = new System.Drawing.Size(20, 20);
             this.btnAddPolymer.Name = "btnAddPolymer";
             this.btnAddPolymer.Size = new System.Drawing.Size(20, 20);
@@ -519,10 +513,8 @@
             // 
             // btnAddNewMB
             // 
-            this.btnAddNewMB.AutoSize = true;
-            this.btnAddNewMB.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAddNewMB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewMB.Location = new System.Drawing.Point(909, 355);
+            this.btnAddNewMB.Location = new System.Drawing.Point(909, 337);
             this.btnAddNewMB.MinimumSize = new System.Drawing.Size(20, 20);
             this.btnAddNewMB.Name = "btnAddNewMB";
             this.btnAddNewMB.Size = new System.Drawing.Size(20, 20);
@@ -572,10 +564,8 @@
             // 
             // btnAddNewMaterial
             // 
-            this.btnAddNewMaterial.AutoSize = true;
-            this.btnAddNewMaterial.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAddNewMaterial.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewMaterial.Location = new System.Drawing.Point(909, 245);
+            this.btnAddNewMaterial.Location = new System.Drawing.Point(909, 231);
             this.btnAddNewMaterial.MinimumSize = new System.Drawing.Size(20, 20);
             this.btnAddNewMaterial.Name = "btnAddNewMaterial";
             this.btnAddNewMaterial.Size = new System.Drawing.Size(20, 20);
@@ -636,7 +626,7 @@
             this.btnBrowseImage.AutoSize = true;
             this.btnBrowseImage.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnBrowseImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrowseImage.Location = new System.Drawing.Point(424, 171);
+            this.btnBrowseImage.Location = new System.Drawing.Point(424, 168);
             this.btnBrowseImage.MinimumSize = new System.Drawing.Size(20, 20);
             this.btnBrowseImage.Name = "btnBrowseImage";
             this.btnBrowseImage.Size = new System.Drawing.Size(20, 20);
@@ -694,14 +684,12 @@
             // 
             // btnAddNewMachine
             // 
-            this.btnAddNewMachine.AutoSize = true;
-            this.btnAddNewMachine.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAddNewMachine.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddNewMachine.Location = new System.Drawing.Point(773, 305);
+            this.btnAddNewMachine.Location = new System.Drawing.Point(789, 305);
             this.btnAddNewMachine.MinimumSize = new System.Drawing.Size(20, 20);
             this.btnAddNewMachine.Name = "btnAddNewMachine";
             this.btnAddNewMachine.Size = new System.Drawing.Size(20, 20);
-            this.btnAddNewMachine.TabIndex = 35;
+            this.btnAddNewMachine.TabIndex = 0;
             this.btnAddNewMachine.TabStop = false;
             this.btnAddNewMachine.UseVisualStyleBackColor = true;
             // 
@@ -1688,7 +1676,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picImageFile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picLabelIcon)).EndInit();
             this.gpMould.ResumeLayout(false);
-            this.gpMould.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
