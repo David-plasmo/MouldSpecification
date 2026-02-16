@@ -3331,19 +3331,19 @@ namespace MouldSpecification
         {
             AddMaterial.AddMasterBatch();
 
-            
             DataTable dt = new MasterBatchDAL().SelectMasterBatch().Tables[0];
-            dt.TableName = "MasterBatch";  
+            dt.TableName = "MasterBatch";
 
-            DataGridViewComboBoxColumn comboBoxColumn =
-                (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["MBCode"];
-            comboBoxColumn.DataSource = null;
-            comboBoxColumn.DataSource = dt;
+            //DataGridViewComboBoxColumn comboBoxColumn =
+            //    (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["MBCode"];
+            //comboBoxColumn.DataSource = null;
+            //comboBoxColumn.DataSource = dt;
 
-            
-            comboBoxColumn = (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["MBColour"];
-            comboBoxColumn.DataSource = null;
-            comboBoxColumn.DataSource = dt;
+
+            //comboBoxColumn = (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["MBColour"];
+            //comboBoxColumn.DataSource = null;
+            //comboBoxColumn.DataSource = dt;
+            FormatPolymerGrid();
 
         }
 
@@ -3370,20 +3370,22 @@ namespace MouldSpecification
         // btnAddPolymer_Click
         private void btnAddPolymer_Click(object sender, EventArgs e)
         {
+            //dgvPolymer.CellEndEdit -= dgvPolymer_CellEndEdit;  //prevent firing CellEndEdit event which causes error when trying to update MaterialComp with new MaterialGradeID before it is added to database
             AddMaterial.AddPolymer();
 
             DataTable dt = new MaterialCompDAL().LookupMaterialGrade();
             dt.TableName = "LookupMaterialGrade";  
 
-            DataGridViewComboBoxColumn comboBoxColumn =
-                (DataGridViewComboBoxColumn)dgvPolymer.Columns["Material"];
-            comboBoxColumn.DataSource = null;
-            comboBoxColumn.DataSource = dt;
+            //DataGridViewComboBoxColumn comboBoxColumn =
+            //    (DataGridViewComboBoxColumn)dgvPolymer.Columns["Material"];
+            //comboBoxColumn.DataSource = null;
+            //comboBoxColumn.DataSource = dt;
+            //comboBoxColumn = (DataGridViewComboBoxColumn)dgvPolymer.Columns["Grade"];
+            //comboBoxColumn.DataSource = null;
+            //comboBoxColumn.DataSource = dt;
 
-            
-            comboBoxColumn = (DataGridViewComboBoxColumn)dgvPolymer.Columns["Grade"];
-            comboBoxColumn.DataSource = null;
-            comboBoxColumn.DataSource = dt;
+            FormatPolymerGrid();  
+
         }
 
         private void txtAdditive_TextChanged(object sender, EventArgs e)

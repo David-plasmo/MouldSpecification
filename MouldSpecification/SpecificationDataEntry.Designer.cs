@@ -33,19 +33,11 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbtnAddNew = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnDelete = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbtnCancel = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnAccept = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.productSpecificationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productPackagingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -66,12 +58,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnAddNewMaterial = new System.Windows.Forms.Button();
             this.gpImage = new System.Windows.Forms.GroupBox();
-            this.picImageFile = new System.Windows.Forms.PictureBox();
             this.lblErrorMsg = new System.Windows.Forms.Label();
             this.lblItemID = new System.Windows.Forms.Label();
             this.btnBrowseImage = new System.Windows.Forms.Button();
             this.txtImageFile = new System.Windows.Forms.TextBox();
-            this.picLabelIcon = new System.Windows.Forms.PictureBox();
             this.lblProductImage = new System.Windows.Forms.Label();
             this.gpMould = new System.Windows.Forms.GroupBox();
             this.btnAddNewMachine = new System.Windows.Forms.Button();
@@ -155,6 +145,16 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnAddNew = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnDelete = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnCancel = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnAccept = new System.Windows.Forms.ToolStripButton();
+            this.picImageFile = new System.Windows.Forms.PictureBox();
+            this.picLabelIcon = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -165,8 +165,6 @@
             this.gpMasterBatch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMasterBatchComp)).BeginInit();
             this.gpImage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImageFile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLabelIcon)).BeginInit();
             this.gpMould.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
@@ -183,6 +181,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPolymer)).BeginInit();
             this.gpGeneral.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImageFile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLabelIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -266,27 +266,6 @@
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.AutoSize = false;
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 32);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.AutoSize = false;
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 32);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
-            // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
@@ -307,77 +286,15 @@
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 34);
             // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.AutoSize = false;
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 32);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.AutoSize = false;
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 32);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 34);
             // 
-            // tsbtnAddNew
-            // 
-            this.tsbtnAddNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAddNew.Image")));
-            this.tsbtnAddNew.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnAddNew.Name = "tsbtnAddNew";
-            this.tsbtnAddNew.Size = new System.Drawing.Size(24, 31);
-            this.tsbtnAddNew.Text = "Add";
-            this.tsbtnAddNew.ToolTipText = "Add New";
-            // 
-            // tsbtnDelete
-            // 
-            this.tsbtnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnDelete.Image")));
-            this.tsbtnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnDelete.Name = "tsbtnDelete";
-            this.tsbtnDelete.Size = new System.Drawing.Size(24, 31);
-            this.tsbtnDelete.Text = "Delete";
-            this.tsbtnDelete.ToolTipText = "Delete";
-            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 34);
-            // 
-            // tsbtnCancel
-            // 
-            this.tsbtnCancel.AutoSize = false;
-            this.tsbtnCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnCancel.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnCancel.Image")));
-            this.tsbtnCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnCancel.Name = "tsbtnCancel";
-            this.tsbtnCancel.Size = new System.Drawing.Size(32, 32);
-            this.tsbtnCancel.Text = "Cancel";
-            this.tsbtnCancel.Click += new System.EventHandler(this.tsbtnCancel_Click);
-            // 
-            // tsbtnAccept
-            // 
-            this.tsbtnAccept.AutoSize = false;
-            this.tsbtnAccept.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnAccept.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAccept.Image")));
-            this.tsbtnAccept.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnAccept.Name = "tsbtnAccept";
-            this.tsbtnAccept.Size = new System.Drawing.Size(32, 32);
-            this.tsbtnAccept.Text = "Accept";
-            this.tsbtnAccept.Click += new System.EventHandler(this.tsbtnAccept_Click);
             // 
             // menuStrip1
             // 
@@ -591,16 +508,6 @@
             this.gpImage.TabIndex = 36;
             this.gpImage.TabStop = false;
             // 
-            // picImageFile
-            // 
-            this.picImageFile.Location = new System.Drawing.Point(273, 12);
-            this.picImageFile.Margin = new System.Windows.Forms.Padding(1);
-            this.picImageFile.Name = "picImageFile";
-            this.picImageFile.Size = new System.Drawing.Size(171, 132);
-            this.picImageFile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picImageFile.TabIndex = 8;
-            this.picImageFile.TabStop = false;
-            // 
             // lblErrorMsg
             // 
             this.lblErrorMsg.AutoSize = true;
@@ -643,15 +550,6 @@
             this.txtImageFile.Size = new System.Drawing.Size(406, 20);
             this.txtImageFile.TabIndex = 30;
             this.txtImageFile.TabStop = false;
-            // 
-            // picLabelIcon
-            // 
-            this.picLabelIcon.Location = new System.Drawing.Point(128, 12);
-            this.picLabelIcon.Name = "picLabelIcon";
-            this.picLabelIcon.Size = new System.Drawing.Size(141, 132);
-            this.picLabelIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picLabelIcon.TabIndex = 16;
-            this.picLabelIcon.TabStop = false;
             // 
             // lblProductImage
             // 
@@ -1644,6 +1542,108 @@
             this.dataGridViewTextBoxColumn9.Visible = false;
             this.dataGridViewTextBoxColumn9.Width = 80;
             // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.AutoSize = false;
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(24, 32);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.AutoSize = false;
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(24, 32);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            this.bindingNavigatorMovePreviousItem.Click += new System.EventHandler(this.bindingNavigatorMovePreviousItem_Click);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.AutoSize = false;
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(24, 32);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.AutoSize = false;
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(24, 32);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // tsbtnAddNew
+            // 
+            this.tsbtnAddNew.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnAddNew.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAddNew.Image")));
+            this.tsbtnAddNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnAddNew.Name = "tsbtnAddNew";
+            this.tsbtnAddNew.Size = new System.Drawing.Size(24, 31);
+            this.tsbtnAddNew.Text = "Add";
+            this.tsbtnAddNew.ToolTipText = "Add New";
+            // 
+            // tsbtnDelete
+            // 
+            this.tsbtnDelete.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnDelete.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnDelete.Image")));
+            this.tsbtnDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnDelete.Name = "tsbtnDelete";
+            this.tsbtnDelete.Size = new System.Drawing.Size(24, 31);
+            this.tsbtnDelete.Text = "Delete";
+            this.tsbtnDelete.ToolTipText = "Delete";
+            // 
+            // tsbtnCancel
+            // 
+            this.tsbtnCancel.AutoSize = false;
+            this.tsbtnCancel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnCancel.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnCancel.Image")));
+            this.tsbtnCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnCancel.Name = "tsbtnCancel";
+            this.tsbtnCancel.Size = new System.Drawing.Size(32, 32);
+            this.tsbtnCancel.Text = "Cancel";
+            this.tsbtnCancel.Click += new System.EventHandler(this.tsbtnCancel_Click);
+            // 
+            // tsbtnAccept
+            // 
+            this.tsbtnAccept.AutoSize = false;
+            this.tsbtnAccept.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnAccept.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnAccept.Image")));
+            this.tsbtnAccept.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnAccept.Name = "tsbtnAccept";
+            this.tsbtnAccept.Size = new System.Drawing.Size(32, 32);
+            this.tsbtnAccept.Text = "Accept";
+            this.tsbtnAccept.Click += new System.EventHandler(this.tsbtnAccept_Click);
+            // 
+            // picImageFile
+            // 
+            this.picImageFile.Location = new System.Drawing.Point(273, 12);
+            this.picImageFile.Margin = new System.Windows.Forms.Padding(1);
+            this.picImageFile.Name = "picImageFile";
+            this.picImageFile.Size = new System.Drawing.Size(171, 132);
+            this.picImageFile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picImageFile.TabIndex = 8;
+            this.picImageFile.TabStop = false;
+            // 
+            // picLabelIcon
+            // 
+            this.picLabelIcon.Location = new System.Drawing.Point(128, 12);
+            this.picLabelIcon.Name = "picLabelIcon";
+            this.picLabelIcon.Size = new System.Drawing.Size(141, 132);
+            this.picLabelIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLabelIcon.TabIndex = 16;
+            this.picLabelIcon.TabStop = false;
+            // 
             // SpecificationDataEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1673,8 +1673,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMasterBatchComp)).EndInit();
             this.gpImage.ResumeLayout(false);
             this.gpImage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picImageFile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picLabelIcon)).EndInit();
             this.gpMould.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
@@ -1698,6 +1696,8 @@
             this.gpGeneral.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picImageFile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picLabelIcon)).EndInit();
             this.ResumeLayout(false);
 
         }
