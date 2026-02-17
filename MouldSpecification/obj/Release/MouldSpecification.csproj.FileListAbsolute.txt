@@ -247,12 +247,8 @@ F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\stdole.dll
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\AddMaterial.pdb
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\AddMaterial.dll.config
-F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\ApplicationAccess.pdb
-F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\ApplicationAccess.dll.config
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Azure.Core.xml
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Azure.Identity.xml
-F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\InjectionMouldReports.pdb
-F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\InjectionMouldReports.dll.config
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Bcl.TimeProvider.xml
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Data.SqlClient.xml
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Identity.Client.xml
@@ -373,3 +369,4 @@ F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpe.9F26BE33.Up2Date
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.exe
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.pdb
+F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\AddMaterial.dll
