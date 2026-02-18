@@ -3327,65 +3327,86 @@ namespace MouldSpecification
 
 
         // btnAddMB_Click — keep feeding from dsIMSpecificationForm
+        //private void btnAddMB_Click(object sender, EventArgs e)
+        //{
+        //    AddMaterial.AddMasterBatch();
+        //    DataTable dt = new MasterBatchDAL().SelectMasterBatch().Tables[0];
+        //    dt.TableName = "MasterBatch";
+        //    FormatPolymerGrid();
+
+        //}
+
         private void btnAddMB_Click(object sender, EventArgs e)
         {
             AddMaterial.AddMasterBatch();
 
-            DataTable dt = new MasterBatchDAL().SelectMasterBatch().Tables[0];
-            dt.TableName = "MasterBatch";
+            // Fetch the fresh data
+            DataTable freshDt = new MasterBatchDAL().SelectMasterBatch().Tables[0];
 
-            //DataGridViewComboBoxColumn comboBoxColumn =
-            //    (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["MBCode"];
-            //comboBoxColumn.DataSource = null;
-            //comboBoxColumn.DataSource = dt;
+            // Reload into the existing table that both cbcMBCode and cbcMBColour are bound to
+            DataTable target = dsIMSpecificationForm.Tables["MasterBatch"];
+            target.BeginLoadData();
+            target.Clear();
+            foreach (DataRow row in freshDt.Rows)
+                target.ImportRow(row);
+            target.EndLoadData();
 
-
-            //comboBoxColumn = (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["MBColour"];
-            //comboBoxColumn.DataSource = null;
-            //comboBoxColumn.DataSource = dt;
             FormatPolymerGrid();
-
         }
 
 
         // btnAdditive_Click
+        //private void btnAdditive_Click(object sender, EventArgs e)
+        //{
+        //    AddMaterial.AddAdditive();
+        //    DataTable dt = new MasterBatchCompDAL().SelectAdditive().Tables[0];
+        //    dt.TableName = "Additive";   
+        //    FormatPolymerGrid();
+        //}
+
         private void btnAdditive_Click(object sender, EventArgs e)
         {
             AddMaterial.AddAdditive();
 
-            DataTable dt = new MasterBatchCompDAL().SelectAdditive().Tables[0];
-            dt.TableName = "Additive";   
+            // Fetch the fresh data
+            DataTable freshDt = new MasterBatchCompDAL().SelectAdditive().Tables[0];
 
-            DataGridViewComboBoxColumn comboBoxColumn =
-                (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["Additive"];
-            comboBoxColumn.DataSource = null;
-            comboBoxColumn.DataSource = dt;
+            // Reload into the existing table that both cbcAdditive and cbcAdditiveCode are bound to
+            DataTable target = dsIMSpecificationForm.Tables["Additive"];
+            target.BeginLoadData();
+            target.Clear();
+            foreach (DataRow row in freshDt.Rows)
+                target.ImportRow(row);
+            target.EndLoadData();
 
-           
-            comboBoxColumn = (DataGridViewComboBoxColumn)dgvMasterBatchComp.Columns["AdditiveCode"];
-            comboBoxColumn.DataSource = null;
-            comboBoxColumn.DataSource = dt;
+            FormatPolymerGrid();
         }
 
         // btnAddPolymer_Click
+        //private void btnAddPolymer_Click(object sender, EventArgs e)
+        //{
+        //    AddMaterial.AddPolymer();
+        //    DataTable dt = new MaterialCompDAL().LookupMaterialGrade();
+        //    dt.TableName = "LookupMaterialGrade";  
+        //    FormatPolymerGrid();  
+
+        //}
+
         private void btnAddPolymer_Click(object sender, EventArgs e)
         {
-            //dgvPolymer.CellEndEdit -= dgvPolymer_CellEndEdit;  //prevent firing CellEndEdit event which causes error when trying to update MaterialComp with new MaterialGradeID before it is added to database
             AddMaterial.AddPolymer();
 
-            DataTable dt = new MaterialCompDAL().LookupMaterialGrade();
-            dt.TableName = "LookupMaterialGrade";  
+            // Reload fresh data directly into the existing table that the combo column is bound to
+            DataTable freshDt = new MaterialCompDAL().LookupMaterialGrade();
+            DataTable target = dsIMSpecificationForm.Tables["LookupMaterialGrade"];
 
-            //DataGridViewComboBoxColumn comboBoxColumn =
-            //    (DataGridViewComboBoxColumn)dgvPolymer.Columns["Material"];
-            //comboBoxColumn.DataSource = null;
-            //comboBoxColumn.DataSource = dt;
-            //comboBoxColumn = (DataGridViewComboBoxColumn)dgvPolymer.Columns["Grade"];
-            //comboBoxColumn.DataSource = null;
-            //comboBoxColumn.DataSource = dt;
+            target.BeginLoadData();
+            target.Clear();
+            foreach (DataRow row in freshDt.Rows)
+                target.ImportRow(row);
+            target.EndLoadData();
 
-            FormatPolymerGrid();  
-
+            FormatPolymerGrid();
         }
 
         private void txtAdditive_TextChanged(object sender, EventArgs e)

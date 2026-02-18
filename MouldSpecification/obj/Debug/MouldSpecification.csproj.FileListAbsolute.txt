@@ -571,6 +571,7 @@ F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\MouldSpecification.xml
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\MouldSpecification.exe
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\MouldSpecification.pdb
+F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\AddMaterial.dll
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Azure.Core.dll
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Azure.Identity.dll
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.Bcl.TimeProvider.dll
@@ -625,6 +626,7 @@ F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\stdole.dll
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\AddMaterial.pdb
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\AddMaterial.dll.config
+F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\AddMaterial.exe.config
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Azure.Core.xml
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Azure.Identity.xml
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\Microsoft.Bcl.TimeProvider.xml
@@ -747,5 +749,3 @@ F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\obj\Debug\MouldSpe.9F26BE33.Up2Date
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\obj\Debug\MouldSpecification.exe
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\obj\Debug\MouldSpecification.pdb
-F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\AddMaterial.dll
-F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Debug\AddMaterial.exe.config
