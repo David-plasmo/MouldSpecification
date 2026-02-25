@@ -82,6 +82,7 @@ namespace MouldSpecification
         public SpecificationDataEntry(int? lastItemID, int? lastCustomerID, bool customerFilterOn = true)
         {
             InitializeComponent();
+            //this.WindowState = FormWindowState.Maximized;
 
             //identifiers for last edited product and customer
             LastItemID = lastItemID;
@@ -2843,10 +2844,37 @@ namespace MouldSpecification
 
         }
 
+        private bool _isSaving = false;
+
         private void SpecificationDataEntry_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (this.DialogResult != DialogResult.Retry)
+            if (_isSaving) return;
+
+            if (this.DialogResult != DialogResult.Retry)  
                 this.DialogResult = DialogResult.OK;
+
+            bool hasChanges = dsIMSpecificationForm != null && dsIMSpecificationForm.HasChanges();
+
+            if (hasChanges)
+            {
+                DialogResult result = MessageBox.Show(
+                    "You have unsaved changes. Do you want to save before closing?",
+                    "Save Changes",
+                    MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    _isSaving = true;
+                    SaveEdits();
+                    _isSaving = false;
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    e.Cancel = true;
+                }
+            }
         }
 
         private void productAssemblyToolStripMenuItem_Click(object sender, EventArgs e)

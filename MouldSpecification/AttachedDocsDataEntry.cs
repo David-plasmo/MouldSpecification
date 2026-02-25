@@ -50,6 +50,7 @@ namespace MouldSpecification
             // Event handlers for cancel and accept buttons
             tsbtnCancel.Click += tsbtnCancel_Click;
             tsbtnAccept.Click += tsbtnAccept_Click;
+            this.FormClosing += AttachedDocsDataEntry_FormClosing;
 
             tslCompany = new ToolStripLabel() { Text = "Company" };
             tslCode = new ToolStripLabel() { Text = "Code" };
@@ -115,6 +116,36 @@ namespace MouldSpecification
         {
             // Cancel the current edit operation on the attached documents bindings source.
             bsAttachedDoc.CancelEdit();
+        }
+
+        private bool _isSaving = false;
+
+        private void AttachedDocsDataEntry_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (_isSaving) return;
+
+            bool hasChanges = dsAttachedDoc != null && dsAttachedDoc.HasChanges();
+
+            if (hasChanges)
+            {
+                DialogResult result = MessageBox.Show(
+                    "You have unsaved changes. Do you want to save before closing?",
+                    "Save Changes",
+                    MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    _isSaving = true;
+                    DoSave();
+                    _isSaving = false;
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    e.Cancel = true;
+                }
+            }
         }
 
         private void DoSave()

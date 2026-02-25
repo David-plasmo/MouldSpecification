@@ -91,6 +91,7 @@ namespace MouldSpecification
 
             tsbtnAccept.Click += tsbtnAccept_Click;
             tsbtnCancel.Click += tsbtnCancel_Click;
+            this.FormClosing += PackagingDataEntry_FormClosing;
             //tsbtnReload.Click += tsbtnReload_Click;
             //btnReport.Click += tsbtnReport_Click;
 
@@ -143,6 +144,36 @@ namespace MouldSpecification
             bsAssemblyInstructionPivot.CancelEdit();
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+        }
+
+        private bool _isSaving = false;
+
+        private void PackagingDataEntry_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (_isSaving) return;
+
+            bool hasChanges = dsPackaging != null && dsPackaging.HasChanges();
+
+            if (hasChanges)
+            {
+                DialogResult result = MessageBox.Show(
+                    "You have unsaved changes. Do you want to save before closing?",
+                    "Save Changes",
+                    MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    _isSaving = true;
+                    DoSave();
+                    _isSaving = false;
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    e.Cancel = true;
+                }
+            }
         }
 
         private void PackagingDataEntry_Load(object sender, EventArgs e)
