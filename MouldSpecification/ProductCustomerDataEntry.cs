@@ -25,7 +25,6 @@ namespace MouldSpecification
         public ProductCustomerDataEntry()
         {
             InitializeComponent();
-            this.FormClosing += ProductCustomerDataEntry_FormClosing;
         }
 
         private void ProductCustomerDataEntry_Load(object sender, EventArgs e)
@@ -71,36 +70,6 @@ namespace MouldSpecification
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
-        }
-
-        private bool _isSaving = false;
-
-        private void ProductCustomerDataEntry_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (_isSaving) return;
-
-            bool hasChanges = dsCustomerProduct != null && dsCustomerProduct.HasChanges();
-
-            if (hasChanges)
-            {
-                DialogResult result = MessageBox.Show(
-                    "You have unsaved changes. Do you want to save before closing?",
-                    "Save Changes",
-                    MessageBoxButtons.YesNoCancel,
-                    MessageBoxIcon.Question
-                );
-
-                if (result == DialogResult.Yes)
-                {
-                    _isSaving = true;
-                    SaveGrid();
-                    _isSaving = false;
-                }
-                else if (result == DialogResult.Cancel)
-                {
-                    e.Cancel = true;
-                }
-            }
         }
 
         private void btnAccept_Click(object sender, EventArgs e)

@@ -50,7 +50,6 @@ namespace MouldSpecification
 
             tsbtnAccept.Click += tsbtnAccept_Click;
             tsbtnCancel.Click += tsbtnCancel_Click;
-            this.FormClosing += QCDataEntry_FormClosing;
 
             this.SuspendLayout();
             tslCompany = new ToolStripLabel() { Text = "Company" };
@@ -111,36 +110,6 @@ namespace MouldSpecification
             bsQCInstruction.CancelEdit();            
             this.DialogResult = DialogResult.Cancel;
             this.Close();
-        }
-
-        private bool _isSaving = false;
-
-        private void QCDataEntry_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (_isSaving) return;
-
-            bool hasChanges = dsQCInstruction != null && dsQCInstruction.HasChanges();
-
-            if (hasChanges)
-            {
-                DialogResult result = MessageBox.Show(
-                    "You have unsaved changes. Do you want to save before closing?",
-                    "Save Changes",
-                    MessageBoxButtons.YesNoCancel,
-                    MessageBoxIcon.Question
-                );
-
-                if (result == DialogResult.Yes)
-                {
-                    _isSaving = true;
-                    DoSave();
-                    _isSaving = false;
-                }
-                else if (result == DialogResult.Cancel)
-                {
-                    e.Cancel = true;
-                }
-            }
         }
 
         private void QCDataEntry_Shown(object sender, EventArgs e)
