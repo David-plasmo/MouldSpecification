@@ -50,7 +50,7 @@ namespace MouldSpecification
         DataViewManager viewManager;
         DataView custView, prodView;
 
-        DataGridView dgvMBCode; //, dgvAdditive;
+        DataGridView dgvMBCode; 
 
         ToolStripLabel tslCompany;
         ToolStripButton tsbtnEditCompany;
@@ -375,9 +375,6 @@ namespace MouldSpecification
                 bsMaterialComp.EndEdit();
                 bsMaterialComp.Position = bsMaterialComp.Count - 1;
                 btnAddNewMaterial.Enabled = (dgvPolymer.Rows.Count < maxRowsMaterial);
-
-
-                //btnAddNewMaterial.Enabled = dgvPolymer.Rows.Count < maxRowsMaterial;
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }
         }

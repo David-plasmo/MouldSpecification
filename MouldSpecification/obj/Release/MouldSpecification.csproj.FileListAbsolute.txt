@@ -193,7 +193,6 @@ F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\MouldSpecification.exe.config
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\MouldSpecification.exe
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\MouldSpecification.pdb
-F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\AddMaterial.dll
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Azure.Core.dll
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Azure.Identity.dll
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Bcl.TimeProvider.dll
@@ -247,7 +246,6 @@ F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\EnvDTE.dll
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\stdole.dll
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\AddMaterial.pdb
-F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\AddMaterial.dll.config
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Azure.Core.xml
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Azure.Identity.xml
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\Microsoft.Bcl.TimeProvider.xml
@@ -370,3 +368,5 @@ F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpe.9F26BE33.Up2Date
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.exe
 F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\obj\Release\MouldSpecification.pdb
+F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\AddMaterial.exe
+F:\Plasmo Repos\David-plasmo\David-plasmo\MouldSpecification\MouldSpecification\bin\Release\AddMaterial.exe.config
